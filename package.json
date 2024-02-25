@@ -1,0 +1,24 @@
+{
+	"name": "liquor-shop",
+	"version": "1.0.0",
+	"description": "Liquor Shop",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "webpack-dev-server --config webpack.dev.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MostOfLuck/Liquor-Shop.git"
+	},
+	"author": "MostOfLuck",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/MostOfLuck/Liquor-Shop/issues"
+	},
+	"homepage": "https://github.com/MostOfLuck/Liquor-Shop#readme",
+	"dependencies": {
+		"webpack": "^5.90.3",
+		"webpack-dev-server": "^5.0.2"
+	}
+}
