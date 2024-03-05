@@ -13,8 +13,6 @@ const Home = () => {
     <>
     <MainHeader/>
     <Programs/>
-    <Values/>
-    <FAQs/>
     <Testimonials/>
     </>
   )
