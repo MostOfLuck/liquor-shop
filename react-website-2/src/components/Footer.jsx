@@ -49,7 +49,7 @@ const Footer = () => {
             </article>
         </div>
         <div className="footer__copyright">
-            <small>2022 EGATOR TUTORIALS &copy; All Rights Reserved</small>
+            <small>2024 R.I.L.L Collection &copy; All Rights Reserved</small>
         </div>
     </footer>
   )
