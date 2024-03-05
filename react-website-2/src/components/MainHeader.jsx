@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Image from '../images/main_header.png'
 
 
@@ -7,12 +7,12 @@ const MainHeader = () => {
     <header className="main__header">
       <div className="container main__header-container">
         <div className="main__header-left">
-          <h4>#100DaysOfWorkOut</h4>
-          <h1>Join The Legends Of The Fitness World</h1>
+          <h4>#instadrink</h4>
+          <h1>Discover the Finest Alcoholic Beverages at R.I.L.L Collection</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam excepturi similique eius optio. Dolorum, quaerat.
+          Best Alcohol from all over the world
           </p>
-          <Link to="/plans" className='btn lg'>Get Started</Link>
+          <Link to="/plans" className='btn lg'>View Collection</Link>
         </div>
         <div className="main__header-right">
           <div className="main__header-circle"></div>
