@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import Image from '../images/main_header.png'
+import Image from '../images/wine1.png'
 
 
 const MainHeader = () => {
@@ -12,7 +12,7 @@ const MainHeader = () => {
           <p>
           Best Alcohol from all over the world
           </p>
-          <Link to="/plans" className='btn lg'>View Collection</Link>
+          <Link to="/plans" className='btn lg'>View Pruduct</Link>
         </div>
         <div className="main__header-right">
           <div className="main__header-circle"></div>
