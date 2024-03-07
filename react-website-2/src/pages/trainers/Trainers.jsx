@@ -5,20 +5,20 @@ import {BsInstagram} from 'react-icons/bs'
 import {AiOutlineTwitter} from 'react-icons/ai'
 import {FaFacebookF} from 'react-icons/fa'
 import {FaLinkedinIn} from 'react-icons/fa'
-import Trainer from '../../components/Trainer'
+import Catalog from '../../components/Trainer'
 import './trainers.css'
 
-const Trainers = () => {
+const Catalogs = () => {
   return (
     <>
-    <Header title="Our Trainers" image={HeaderImage}>
+    <Header title="Our Catalog" image={HeaderImage}>
     Facilis, iusto numquam unde laboriosam expedita qui exercitationem? Dicta vero accusantium est aut molestiae fugit doloremque suscipit quod.
     </Header>
-    <section className="trainers">
-      <div className="container trainers__container">
+    <section className="catalog">
+      <div className="container catalog__container">
         {
           trainers.map(({id, image, name, job, socials}) => {
-            return <Trainer key={id} image={image} name={name} job={job} socials={
+            return <Catalog key={id} image={image} name={name} job={job} socials={
               [
                 {icon: <BsInstagram/>, link: socials[0]},
                 {icon: <AiOutlineTwitter/>, link: socials[1]},
@@ -34,4 +34,4 @@ const Trainers = () => {
   )
 }
 
-export default Trainers
+export default Catalogs
