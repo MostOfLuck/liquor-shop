@@ -1,27 +1,27 @@
-.trainers__container {
+.catalog__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 4rem;
 }
 
-.card.trainer {
+.card.catalog {
     padding: 1rem;
 }
 
-.trainer__img {
+.catalog__img {
     border-radius: 0 2rem;
     overflow: hidden;
 }
 
-.trainer h3 {
+.catalog h3 {
     margin-top: 2rem;
 }
 
-.trainer p {
+.catalog p {
     margin-top: 0.5rem;
 }
 
-.trainer__socials {
+.catalog__socials {
     display: flex;
     gap: 1rem;
     justify-content: center;
@@ -29,7 +29,7 @@
     margin: 2rem 0;
 }
 
-.trainer__socials a {
+.catalog__socials a {
     font-size: 0.7rem;
     background: var(--color-gray-600);
     padding: 0.8rem;
@@ -37,7 +37,7 @@
     transition: var(--transition);
 }
 
-.trainer:hover a {
+.catalog:hover a {
     background: var(--color-gray-500)
 }
 
