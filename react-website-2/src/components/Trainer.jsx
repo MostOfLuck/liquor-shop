@@ -1,18 +1,18 @@
 import Card from '../UI/Card'
 
 
-const Trainer = ({image, name, job, socials}) => {
+const Catalog = ({image, name, job, socials}) => {
   return (
-    <Card className="trainer">
-        <div className="trainer__img">
+    <Card className="catalog">
+        <div className="catalog__img">
             <img src={image} alt={name} />
         </div>
         <h3>{name}</h3>
         <p>{job}</p>
-        <div className="trainer__socials">
+        <div className="catalog__socials">
             {
                 socials.map(({icon, link}, index) => {
-                    return <a key={index} href={link} target="_blank" rel='noreffer noopener'>{icon}</a>
+                    return <a key={index} href={link} target="_blank" rel="noreffer noopener noreferrer">{icon}</a>
                 })
             }
         </div>
@@ -20,4 +20,4 @@ const Trainer = ({image, name, job, socials}) => {
   )
 }
 
-export default Trainer
+export default Catalog
