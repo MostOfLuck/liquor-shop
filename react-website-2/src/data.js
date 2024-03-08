@@ -1,4 +1,5 @@
 import { SiOpenaigym } from 'react-icons/si'
+import '../src/index.css'
 
 export const links = [
 	{
@@ -262,7 +263,7 @@ export const plans = [
 ]
 
 
-let products = {
+export const products = {
     data: [
       {
         productName: "Regular White T-Shirt",
@@ -314,4 +315,3 @@ let products = {
       },
     ],
   };
-  
