@@ -13,10 +13,6 @@ export const links = [
 		name: 'Contact',
 		path: '/contact',
 	},
-    {
-		name: 'About',
-		path: '/about',
-	},
 ]
 
 /* You can change cards here*/
@@ -265,7 +261,7 @@ export const plans = [
 	},
 ]
 
-const Trainer1 = require('./images/trainer1.jpg')
+const Product1 = require('./productImages2/774A7548.jpg')
 const Trainer2 = require('./images/trainer2.jpg')
 const Trainer3 = require('./images/trainer3.jpg')
 const Trainer4 = require('./images/trainer4.jpg')
@@ -275,9 +271,9 @@ const Trainer6 = require('./images/trainer6.jpg')
 export const trainers = [
 	{
 		id: 1,
-		image: Trainer1,
-		name: 'John Doe',
-		job: 'Aerobic Trainer',
+		image: Product1,
+		name: 'Vine',
+		job: 'Italic Vine',
 		socials: [
 			'https://instagram.com/',
 			'https://twitter.com/',
