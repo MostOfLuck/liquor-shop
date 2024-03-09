@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import Header from '../../components/Header';
-import HeaderImage from '../../productImages/WhatsApp Image 2024-03-03 at 16.04.01.jpeg';
-import './trainers.css';
+import React, { useEffect, useState } from 'react'
+import Header from '../../components/Header'
+import HeaderImage from '../../productImages/WhatsApp Image 2024-03-03 at 16.04.01.jpeg'
+import wineImage from '../../images/wine1.png';
+import tequilaImage from '../../images/Tequila.png'
+import './trainers.css'
 
 const ProductModal = ({ product, onClose }) => {
   // Обработчик событий для клика вне модального окна
@@ -14,25 +16,28 @@ const ProductModal = ({ product, onClose }) => {
   return (
     <div className='modal-overlay' onClick={handleOverlayClick}>
       <div className='modal-card'>
+        <button onClick={onClose} className='close-btn'>×</button> {/* Кнопка "крестик" */}
         <h3>{product.name}</h3>
-        <p>Price: ${product.price}</p>
+        <img className='product-wineimage' src={product.image} alt={product.name} />
+        <p className='product-description'>{product.description}</p>
         {/* Другие детали продукта */}
-        <button className='close-btn' onClick={onClose}>CLOSE</button>
       </div>
     </div>
   );
 };
 
+
 const Catalogs = () => {
+
   const products = [
-    { id: 1, name: 'Vine', price: 99.99 },
-    { id: 2, name: 'Vodka', price: 49.99 },
-    { id: 3, name: 'Tequila', price: 49.99 },
-    { id: 4, name: 'Martini', price: 49.99 },
-    { id: 5, name: 'Спортивные шорты', price: 49.99 },
-    { id: 6, name: 'Спортивные шорты', price: 49.99 },
-    { id: 7, name: 'Спортивные шорты', price: 49.99 },
-    { id: 8, name: 'Спортивные шорты', price: 49.99 },
+    { id: 1, name: 'Vine', description: 'Best wine in the world ever seen',image: wineImage },
+    { id: 2, name: 'Vodka', image: tequilaImage },
+    { id: 3, name: 'Tequila', image: wineImage },
+    { id: 4, name: 'Martini', image: tequilaImage },
+    { id: 5, name: 'Спортивные шорты', image: wineImage },
+    { id: 6, name: 'Спортивные шорты', image: tequilaImage },
+    { id: 7, name: 'Спортивные шорты', image: wineImage },
+    { id: 8, name: 'Спортивные шорты', image: tequilaImage },
     // Add other products here
   ];
 
@@ -77,8 +82,8 @@ const Catalogs = () => {
                   setIsModalOpen(true);
                 }}
               >
+                <img src={product.image} alt={product.name} />
                 <h3>{product.name}</h3>
-                <p>Price: ${product.price}</p>
               </div>
             ))}
           </div>
