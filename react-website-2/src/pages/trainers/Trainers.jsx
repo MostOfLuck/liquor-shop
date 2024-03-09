@@ -17,7 +17,7 @@ const ProductModal = ({ product, onClose }) => {
         <h3>{product.name}</h3>
         <p>Price: ${product.price}</p>
         {/* Другие детали продукта */}
-        <button onClick={onClose}>Close</button>
+        <button className='close-btn' onClick={onClose}>CLOSE</button>
       </div>
     </div>
   );
@@ -63,7 +63,7 @@ const Catalogs = () => {
           <input
             className='placeholder'
             type='text'
-            placeholder='Search for your product'
+            placeholder='Search'
             value={searchTerm}
             onChange={handleChange}
           />
