@@ -72,6 +72,14 @@
 	height: 30rem;
 }
 
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+	.modal-card {
+		width: 50%; /* or any other percentage or fixed size you want */
+		height: auto; /* adjust as needed */
+	}
+}
+
 /* Close Button */
 .modal-card button.close-button {
 	position: absolute;
@@ -112,4 +120,12 @@
 .close-btn:hover {
 	background: var(--color-secondary);
 	color: black;
+}
+
+@media (max-width: 768px) {
+	.close-btn {
+		align-items: center;
+		width: 8rem; /* or any other size you want */
+		height: 2.5rem; /* adjust as needed */
+	}
 }
