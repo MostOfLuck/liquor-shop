@@ -22,6 +22,7 @@ const MainHeader = () => {
         </div>
       </div>
     </header>
+    
   )
 }
 
