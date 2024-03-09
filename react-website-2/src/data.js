@@ -17,7 +17,7 @@ export const links = [
 ]
 
 /* You can change cards here*/
-export const programs = [
+export const products = [
 	{
 		id: 1,
 		icon: <SiOpenaigym />,
