@@ -79,7 +79,10 @@
 	right: 10px;
 	cursor: pointer;
 }
-
+.modal-card h3 {
+	color: #333;
+	text-align: center;
+}
 /* Optional Animation */
 .modal-card {
 	animation: fadeIn ease-in-out 0.3s; /* Add your fade-in animation */
@@ -94,4 +97,19 @@
 		opacity: 1;
 		transform: translateY(0);
 	}
+}
+.close-btn {
+	margin-top: 320px;
+	margin-left: 135px;
+	width: 10rem;
+	height: 3rem;
+	border-radius: 8px;
+	background: #ff8400;
+	color: white;
+	transition: var(--transition);
+}
+
+.close-btn:hover {
+	background: var(--color-secondary);
+	color: black;
 }
