@@ -27,7 +27,6 @@
 	--color-gray-500: hsl(var(--gray-hue), 44%, 25%);
 	--color-black-600: hsl(0, 0%, 0%);
 
-
 	--container-width-lg: 80%;
 	--container-width-md: 90%;
 
@@ -337,4 +336,17 @@ section {
 		grid-template-columns: auto auto;
 		grid-column-gap: 1em;
 	}
+}
+
+p.testimonial__quote {
+	color: black;
+}
+.Insights {
+	color: white;
+}
+.permalinks {
+	color: white;
+}
+.get-in-touch {
+	color: white;
 }
