@@ -1,6 +1,6 @@
 import { FaCrown } from 'react-icons/fa';
 import SectionHead from './SectionHead';
-import { programs } from '../data';
+import { products } from '../data';
 import Card from '../UI/Card';
 import wineImage from '../images/wine1.png';
 import tequilaImage from '../images/Tequila.png'
@@ -13,7 +13,7 @@ const Programs = () => {
             <div className='container programs__container'>
                 <SectionHead icon={<FaCrown />} title='Catalog' />
                 <div className='programs__wrapper'>
-                    {programs.map(({ id, title, path }) => {
+                    {products.map(({ id, title, path }) => {
                         // Определение изображения в зависимости от id
                         let imageSrc;
                         if (id === 1) {
