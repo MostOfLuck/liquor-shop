@@ -9,6 +9,7 @@
 .product-card {
 	width: 15rem; /* Ширина карточки */
 	height: 15rem;
+	margin-bottom: 20px;
 	background-color: #ffffff; /* Белый фон */
 	border: 1px solid #e0e0e0; /* Светло-серая рамка */
 	padding: 20px; /* Отступы внутри карточки */
@@ -41,10 +42,14 @@
 	justify-content: center;
 	margin-bottom: 50px;
 	margin-left: 60px;
-	border-radius: 8px;
-	width: 15rem;
+	border-radius: 15px;
+	width: 30rem;
 	height: 3rem;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.placeholder::placeholder {
+	padding-left: 20px;
 }
 
 /* styles.css (or your preferred stylesheet) */
@@ -95,7 +100,11 @@
 .modal-card {
 	animation: fadeIn ease-in-out 0.3s; /* Add your fade-in animation */
 }
-
+.close-btn {
+	position: absolute;
+	display: flex;
+	font-size: 30px;
+}
 @keyframes fadeIn {
 	from {
 		opacity: 0;
@@ -106,21 +115,6 @@
 		transform: translateY(0);
 	}
 }
-.close-btn {
-	margin-top: 320px;
-	margin-left: 135px;
-	width: 10rem;
-	height: 3rem;
-	border-radius: 8px;
-	background: #ff8400;
-	color: white;
-	transition: var(--transition);
-}
-
-.close-btn:hover {
-	background: var(--color-secondary);
-	color: black;
-}
 
 @media (max-width: 768px) {
 	.close-btn {
@@ -128,4 +122,9 @@
 		width: 8rem; /* or any other size you want */
 		height: 2.5rem; /* adjust as needed */
 	}
+}
+.product-wineimage {
+	width: 15rem;
+	margin-left: 95px;
+	margin-top: 40px;
 }
