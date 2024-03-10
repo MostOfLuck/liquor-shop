@@ -21,6 +21,7 @@
 .product-card:hover {
 	background: var(--color-gray-700);
 	border-color: var(--color-black-600);
+	transition: var(--transition);
 	cursor: default;
 }
 .product-card h3 {
@@ -127,4 +128,7 @@
 	width: 15rem;
 	margin-left: 95px;
 	margin-top: 40px;
+}
+.product-description {
+	color: #333;
 }
