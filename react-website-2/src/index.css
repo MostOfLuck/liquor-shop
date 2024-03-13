@@ -135,7 +135,6 @@ section {
 	text-align: center;
 	padding: 3rem 2rem;
 	border-radius: 0 3rem 0 3rem;
-	transition: var(--transition);
 }
 
 .card:hover {
@@ -164,8 +163,9 @@ section {
 	color: var(--color-gray-600);
 }
 .product__image {
-	width: 100%;
+	width: 50%;
 	height: 100%;
+	border-radius: 15px;
 }
 .card small {
 	margin-top: 1rem;
@@ -314,3 +314,7 @@ p.testimonial__quote {
 .get-in-touch {
 	color: white;
 }
+.catalog {
+	margin-top: 5px;
+}
+
