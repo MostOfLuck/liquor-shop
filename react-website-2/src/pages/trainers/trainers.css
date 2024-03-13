@@ -10,8 +10,8 @@
 	width: 15rem; /* Ширина карточки */
 	height: 15rem;
 	margin-bottom: 20px;
+	transition: transform 0.3s ease;
 	background-color: #ffffff; /* Белый фон */
-	border: 1px solid #e0e0e0; /* Светло-серая рамка */
 	padding: 20px; /* Отступы внутри карточки */
 	border-radius: 8px; /* Закругление углов */
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для эффекта поднятости */
@@ -19,22 +19,38 @@
 }
 
 .product-card:hover {
-	cursor: pointer;
+	transform: scale(1.1);
+	border: 3px solid #ffa600; /* Светло-серая рамка */
 }
+
+.product-card {
+	position: relative; /* Добавьте относительное позиционирование для карточки товара */
+}
+
+.product-card h3,
+.product-card p {
+	position: absolute; /* Используйте абсолютное позиционирование для текста */
+	color: #fff; /* Измените цвет текста на белый для лучшей видимости на изображении */
+}
+
 .product-card h3 {
-	color: #333;
-	font-size: 18px; /* Размер заголовка товара */
-	margin-bottom: 10px; /* Отступ после заголовка */
+	top: 10px; /* Расположите заголовок в верхней части изображения */
+	left: 10px;
 }
 
 .product-card p {
-	font-size: 14px; /* Размер текста с описанием товара */
-	color: #333; /* Цвет текста */
+	bottom: 10px; /* Расположите описание в нижней части изображения */
+	left: 10px;
 }
+
 .product-card img {
+	position: relative;
 	width: 100%;
 	height: 100%;
+	transform: scale(1.2);
+	border-radius: 5px;
 }
+
 .placeholder {
 	position: relative;
 	top: 0;
@@ -74,9 +90,9 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding: 20px;
 }
 
-/* Modal Card */
 .modal-card {
 	background-color: #fff;
 	padding: 20px;
@@ -85,11 +101,19 @@
 	width: 30rem;
 	height: 30rem;
 }
+
 /* Media Query for Mobile Devices */
 @media (max-width: 768px) {
 	.modal-card {
-		width: 50%; /* or any other percentage or fixed size you want */
-		height: auto; /* adjust as needed */
+		width: 100%; /* Use full width of the screen on mobile */
+		height: 90vw; /* Set height relative to width to maintain square shape */
+		padding: 10px; /* Reduce padding on smaller screens */
+	}
+
+	.modal-card img {
+		width: 100%; /* Set image width to 100% of its container */
+		height: 100%; /* Set image height to 100% of its container */
+		object-fit: cover; /* Ensure the image covers the whole area without distortion */
 	}
 }
 
@@ -139,8 +163,8 @@
 }
 .product-description {
 	display: flex;
-	max-height: 100px; /* Ограничить максимальную высоту */
-	overflow: auto; /* Добавить прокрутку, если контент превышает высоту */
+	max-height: 100px;
+	overflow: auto;
 	color: #333;
 }
 
@@ -148,22 +172,32 @@
 	margin-top: 50px;
 }
 
-.product__article {
-	display: flex;
-	width: 50%;
-	position: relative;
-	top: -400px;
-	left: 245px;
-	color: black;
-	text-align: left;
-}
+.product__article,
 .product__title {
 	display: flex;
 	width: 50%;
 	position: relative;
-	top: -420px;
-	font-size: 20px;
-	left: 245px;
 	color: black;
 	text-align: left;
+}
+
+.product__article {
+	top: -400px;
+	left: 230px;
+}
+
+.product__title {
+	top: -420px;
+	font-size: 20px;
+	left: 230px;
+}
+
+@media (max-width: 768px) {
+	.product__article,
+	.product__title {
+		width: 100%; /* Используйте 100% ширины на мобильных устройствах */
+		margin-top: 60px; /* Уменьшите верхний отступ на мобильных устройствах */
+		margin-left: -250px;
+		text-align: left;
+	}
 }
