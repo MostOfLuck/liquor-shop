@@ -4,6 +4,7 @@ import fiuza from '../src/productImages2/774A7541.jpg'
 import fuza from '../src/productImages2/774A7547.jpg'
 import tequilaImage from '../src/images/Tequila.png'
 import wineImage from '../src/images/wine1.png'
+import PortoCabraco from '../src/productImages2/774A7579.jpg'
 
 export const links = [
 	{
@@ -18,48 +19,6 @@ export const links = [
 		name: 'Contact',
 		path: '/contact',
 	},
-]
-export const Items = [
-	{
-		id: 1,
-		name: 'Vine',
-		category: 'Vine',
-		image: fiuza,
-		images: [fuza],
-		title: <h1 className='product__title'>Fiuza</h1>,
-		article: (
-			<p className='product__article'>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta
-				provident laboriosam vitae quibusdam magni libero natus suscipit minima
-				accusantium deserunt harum distinctio commodi placeat voluptate
-				cupiditate asperiores eveniet, iste eos!
-			</p>
-		),
-	},
-
-	{
-		id: 2,
-		name: 'Vodka',
-		category: 'Vodka',
-		image: wineImage,
-		images: [wineImage],
-		title: <h1 className='product__title'>Vine</h1>,
-		article: (
-			<p className='product__article'>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta
-				provident laboriosam vitae quibusdam magni libero natus suscipit minima
-				accusantium deserunt harum distinctio commodi placeat voluptate
-				cupiditate asperiores eveniet, iste eos!
-			</p>
-		),
-	},
-	{ id: 3, name: 'Tequila', image: wineImage },
-	{ id: 4, name: 'Martini', image: tequilaImage },
-	{ id: 5, name: 'Спортивные шорты', image: wineImage },
-	{ id: 6, name: 'Спортивные шорты', image: tequilaImage },
-	{ id: 7, name: 'Спортивные шорты', image: wineImage },
-	{ id: 8, name: 'Спортивные шорты', image: tequilaImage },
-	// Add other products here
 ]
 
 /* You can change cards here*/
