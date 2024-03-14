@@ -3,15 +3,16 @@ import SectionHead from './SectionHead';
 import { products } from '../data';
 import Card from '../UI/Card';
 import wineImage from '../images/wine1.png';
-import tequilaImage from '../images/Tequila.png'
 import { Link } from 'react-router-dom';
 import { AiFillCaretRight } from 'react-icons/ai';
+import { useTranslation } from 'react-i18next';
 
 const Programs = () => {
+    const { t } = useTranslation();
     return (
         <section className='programs'>
             <div className='container programs__container'>
-                <SectionHead icon={<FaCrown />} title='Catalog' />
+                <SectionHead icon={<FaCrown />} title={t('Catalog')} />
                 <div className='programs__wrapper'>
                     {products.map(({ id, title, path }) => {
                         // Определение изображения в зависимости от id
@@ -19,20 +20,10 @@ const Programs = () => {
                         if (id === 1) {
                             imageSrc = wineImage;
                         } else if (id === 2) {
-                            imageSrc = tequilaImage;
+                            imageSrc = wineImage;
                         } else if (id === 3) {
                             imageSrc = wineImage;
-                        } else if (id === 4) {
-                            imageSrc = tequilaImage;
-                        } else if (id === 5) {
-                            imageSrc = wineImage;
-                        } else if (id === 6) {
-                            imageSrc = tequilaImage;
-                        } else if (id === 7) {
-                            imageSrc = wineImage;
-                        } else if (id === 8) {
-                            imageSrc = tequilaImage;
-                        }
+                            }
                         
                         // Добавьте другие варианты для других id по мере необходимости
 
@@ -41,7 +32,7 @@ const Programs = () => {
                                 <h4>{title}</h4>
                                 {imageSrc && <img src={imageSrc} alt='product__image' />}
                                 <Link to={path} className='btn sm'>
-                                    Learn More <AiFillCaretRight />
+                                    {t('Learn More')} <AiFillCaretRight />
                                 </Link>
                             </Card>
                         )
