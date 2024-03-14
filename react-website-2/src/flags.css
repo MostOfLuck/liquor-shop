@@ -1,0 +1,15 @@
+.flags {
+	position: absolute;
+	right: 0;
+	padding-right: 20px;
+	padding-top: 20px;
+}
+.header .LanguageSwitcher {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.LanguageSwitcher {
+	border-radius: 8px;
+	width: 15rem;
+}
