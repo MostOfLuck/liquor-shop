@@ -1,10 +1,6 @@
 import { SiOpenaigym } from 'react-icons/si'
 import '../src/index.css'
-import fiuza from '../src/productImages2/774A7541.jpg'
-import fuza from '../src/productImages2/774A7547.jpg'
-import tequilaImage from '../src/images/Tequila.png'
-import wineImage from '../src/images/wine1.png'
-import PortoCabraco from '../src/productImages2/774A7579.jpg'
+
 
 export const links = [
 	{
@@ -26,7 +22,7 @@ export const products = [
 	{
 		id: 1,
 		icon: <SiOpenaigym />,
-		title: 'Vine',
+		title: 'Wine',
 		info: 'This is the day that the lord has made. We will rejoice!',
 		path: '/catalog',
         imageSrc: "../src/images/wine1.png"
@@ -34,61 +30,18 @@ export const products = [
 	{
 		id: 2,
 		icon: <SiOpenaigym />,
-		title: 'Tequila',
+		title: 'Cognac',
 		info: 'This is the day that the lord has made. We will rejoice!',
 		path: '/catalog',
-        imageSrc: '/images/src/wine1.png' 
+        imageSrc: "../src/images/wine1.png"
 	},
 	{
 		id: 3,
 		icon: <SiOpenaigym />,
-		title: 'Vodka',
+		title: 'Port',
 		info: 'This is the day that the lord has made. We will rejoice!',
 		path: '/catalog',
         imageSrc: '/images/src/wine1.png' 
-	},
-	{
-		id: 4,
-		icon: <SiOpenaigym />,
-		title: 'Beer',
-		info: 'This is the day that the lord has made. We will rejoice!',
-		path: '/catalog',
-        imageSrc: '/images/src/wine1.png' 
-	},
-    {
-		id: 5,
-		icon: <SiOpenaigym />,
-		title: 'Vine',
-		info: 'This is the day that the lord has made. We will rejoice!',
-		path: '/catalog',
-        imageSrc: "../src/images/wine1.png"
-	},
-    
-    {
-		id: 6,
-		icon: <SiOpenaigym />,
-		title: 'Vine',
-		info: 'This is the day that the lord has made. We will rejoice!',
-		path: '/catalog',
-        imageSrc: "../src/images/wine1.png"
-	},
-
-    {
-		id: 7,
-		icon: <SiOpenaigym />,
-		title: 'Vine',
-		info: 'This is the day that the lord has made. We will rejoice!',
-		path: '/catalog',
-        imageSrc: "../src/images/wine1.png"
-	},
-
-    {
-		id: 8,
-		icon: <SiOpenaigym />,
-		title: 'Vine',
-		info: 'This is the day that the lord has made. We will rejoice!',
-		path: '/catalog',
-        imageSrc: "../src/images/wine1.png"
 	},
 ]
 export const testimonials = [
