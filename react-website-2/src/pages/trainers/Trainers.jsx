@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useTransition } from 'react'
 import Header from '../../components/Header'
 import './trainers.css'
 import HeaderImage from '../../productImages/WhatsApp Image 2024-03-03 at 16.04.01.jpeg'
@@ -23,6 +23,10 @@ import MontesCarlos from '../../productImages2/774A8202.jpg'
 import BiancoCChadronay from '../../productImages2/774A8344.jpg'
 import VelasCorsarias from '../../productImages2/774A8374.jpg'
 import SummerMerlotAllSeasonsCollection from '../../productImages2/774A8402.jpg'
+import CabernetSauvignonTourigaNacionalAllSeansonsCollection from '../../productImages2/774A8422.jpg'
+import MaximeTrijolCognac3litr from '../../productImages2/774A8480.jpg'
+import MaximeTrijolCognac3litr2 from '../../productImages2/774A8501.jpg'
+import { useTranslation } from 'react-i18next'
 
 
 const ProductModal = ({ product, onClose }) => {
@@ -53,6 +57,7 @@ const ProductModal = ({ product, onClose }) => {
 	)
 }
 
+
 class Catalogs extends React.Component {
 	constructor(props) {
 		super(props)
@@ -62,7 +67,7 @@ class Catalogs extends React.Component {
 			items: [
 				{
 					id: 1,
-					name: 'Fiuza Chardonnay',
+					name: 'Fiuza Chardonnay Arinto',
 					category: 'Wine',
 					image: fiuza,
 					images: [fuza],
@@ -264,7 +269,11 @@ class Catalogs extends React.Component {
 					category: 'Wine',
 					image: MontesCarlos,
 					images: [MontesCarlos],
-					title: <h1 className='product__title'>Montes Carlos DOC Alentejo Tinto 2016</h1>,
+					title: (
+						<h1 className='product__title'>
+							Montes Carlos DOC Alentejo Tinto 2016
+						</h1>
+					),
 					article: (
 						<p className='product__article'>
 							Experience the essence of Portugal with Montes Carlos DOC Alentejo
@@ -282,10 +291,18 @@ class Catalogs extends React.Component {
 					category: 'Wine',
 					image: BiancoCChadronay,
 					images: [BiancoCChadronay],
-					title: <h1 className='product__title'>Bianco C Chardonnay All Seasons Collection 2020</h1>,
+					title: (
+						<h1 className='product__title'>
+							Bianco C Chardonnay All Seasons Collection 2020
+						</h1>
+					),
 					article: (
 						<p className='product__article'>
-							Elevate your senses with Bianco C Chardonnay from the All Seasons Collection 2020. This refined wine captures the essence of the vineyard with its vibrant fruit aromas, balanced acidity, and creamy texture. Perfect for any occasion, it invites you to savor the flavors of the season with every sip.
+							Elevate your senses with Bianco C Chardonnay from the All Seasons
+							Collection 2020. This refined wine captures the essence of the
+							vineyard with its vibrant fruit aromas, balanced acidity, and
+							creamy texture. Perfect for any occasion, it invites you to savor
+							the flavors of the season with every sip.
 						</p>
 					),
 				},
@@ -299,7 +316,8 @@ class Catalogs extends React.Component {
 					title: <h1 className='product__title'>Spain Velas Corsarias</h1>,
 					article: (
 						<p className='product__article'>
-							An adventurous Spanish blend, Velas Corsarias offers bold flavors of dark fruits and spice with a hint of oak.
+							An adventurous Spanish blend, Velas Corsarias offers bold flavors
+							of dark fruits and spice with a hint of oak.
 						</p>
 					),
 				},
@@ -310,10 +328,54 @@ class Catalogs extends React.Component {
 					category: 'Wine',
 					image: SummerMerlotAllSeasonsCollection,
 					images: [SummerMerlotAllSeasonsCollection],
-					title: <h1 className='product__title'>Summer Merlot All SeasonsCollection 2020</h1>,
+					title: (
+						<h1 className='product__title'>
+							Summer Merlot All SeasonsCollection 2020
+						</h1>
+					),
 					article: (
 						<p className='product__article'>
-							Transport yourself to a summer's day with Summer Merlot from the All Seasons Collection 2020. Bursting with ripe berry flavors and a touch of warmth, this wine embodies the essence of the season. 
+							Transport yourself to a summer's day with Summer Merlot from the
+							All Seasons Collection 2020. Bursting with ripe berry flavors and
+							a touch of warmth, this wine embodies the essence of the season.
+						</p>
+					),
+				},
+
+				{
+					id: 17,
+					name: 'Maxime Trijol Cognac',
+					category: 'Wine',
+					image: MaximeTrijolCognac3litr2,
+					images: [MaximeTrijolCognac3litr],
+					title: <h1 className='product__title'>Maxime Trijol Cognac</h1>,
+					article: (
+						<p className='product__article'>
+							Indulge in the timeless sophistication of Maxime Trijol Cognac.
+							Crafted with expertise and finesse, it boasts rich, complex
+							flavors of dried fruits, oak, and subtle spices, culminating in a
+							smooth, luxurious finish. Elevate your moments of leisure with
+							this exceptional French spirit.
+						</p>
+					),
+				},
+
+				{
+					id: 18,
+					name: 'Cabernet Sauvignon Touriga Nacional All Seansons Collection',
+					category: 'Wine',
+					image: CabernetSauvignonTourigaNacionalAllSeansonsCollection,
+					images: [CabernetSauvignonTourigaNacionalAllSeansonsCollection],
+					title: (
+						<h1 className='product__title'>
+							Cabernet Sauvignon Touriga Nacional All Seansons Collection
+						</h1>
+					),
+					article: (
+						<p className='product__article'>
+							Experience a symphony of flavors with this blend. Cabernet
+							Sauvignon and Touriga Nacional unite to create a rich, balanced
+							wine.
 						</p>
 					),
 				},
@@ -386,9 +448,13 @@ class Catalogs extends React.Component {
 		return (
 			<>
 				<Header title='Our Catalog' image={HeaderImage}>
-					Facilis, iusto numquam unde laboriosam expedita qui exercitationem?
-					Dicta vero accusantium est aut molestiae fugit doloremque suscipit
-					quod.
+					Explore a diverse selection of wines from the All Seasons Collection,
+					featuring blends crafted to evoke the essence of each season. From the
+					vibrant Summer Merlot bursting with ripe berries to the harmonious
+					fusion of Cabernet Sauvignon and Touriga Nacional, there's a wine for
+					every palate and occasion. Indulge in the rich heritage of Portuguese
+					wines with Velas Corsarias, offering bold flavors and a captivating
+					experience.
 				</Header>
 				{/* Удалите строку ниже, так как неизвестно что такое items */}
 				{/* <items items={this.state.currentItems} onAdd={this.addToOrder} /> */}
