@@ -5,7 +5,7 @@ import {links} from '../data'
 import { FaBars } from "react-icons/fa";
 import {MdOutlineClose} from 'react-icons/md'
 import './navbar.css'
-
+import LanguageSwitcher from './LanguageFlags'
 
 
 const Navbar = () => {
@@ -18,6 +18,7 @@ const Navbar = () => {
             <Link to="/" className='logo' onClick={() => setIsNavShowing(false)}>
                 <img src={Logo} alt="Nav Logo" />
             </Link>
+            <LanguageSwitcher />
             <ul className={`nav__links ${isNavShowing ? 'show__nav' : 'hide__Nav'}`}>
                 {
                     links.map(({name, path}, index) => {
