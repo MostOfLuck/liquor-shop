@@ -1,7 +1,6 @@
 import { SiOpenaigym } from 'react-icons/si'
 import '../src/index.css'
 
-
 export const links = [
 	{
 		name: 'Home',
@@ -16,7 +15,6 @@ export const links = [
 		path: '/contact',
 	},
 ]
-
 /* You can change cards here*/
 export const products = [
 	{
