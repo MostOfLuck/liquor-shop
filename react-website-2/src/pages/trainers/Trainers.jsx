@@ -34,7 +34,7 @@ const Catalogs = () => {
 	const { t } = useTranslation()
 	const [orders, setOrders] = useState([])
 	const [currentItems, setCurrentItems] = useState([])
-	const [items, setItems] = useState([
+	const [items] = useState([
 		{
 			id: 1,
 			name: 'Fiuza Chardonnay Arinto',
