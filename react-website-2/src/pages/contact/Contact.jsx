@@ -4,12 +4,14 @@ import {MdEmail} from 'react-icons/md'
 import {BsMessenger} from 'react-icons/bs'
 import {IoLogoWhatsapp} from 'react-icons/io'
 import './contact.css'
+import { useTranslation } from 'react-i18next'
 
 const Contact = () => {
+  const { t } = useTranslation()
   return (
     <>
-    <Header title="Get In Touch" image={HeaderImage}>
-    Fruga itaque ducimus, ad amet praesentium suscipit sit, assumenda nihil officia totam, animi culpa nobis nemo natus doloremque?
+    <Header title={t('Get In Touch')} image={HeaderImage}>
+    {t('We are in Facebook, Tiktok, & Instagram. You can also contact us via Email.')}
     </Header>
     <section className="contact">
       <div className="container contact__container">
