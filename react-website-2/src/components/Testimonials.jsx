@@ -4,7 +4,7 @@ import {ImQuotesLeft} from 'react-icons/im'
 import Card from "../UI/Card"
 import {IoIosArrowDropleftCircle, IoIosArrowDroprightCircle} from 'react-icons/io'
 import { testimonials } from "../data"
-
+import { useTranslation } from 'react-i18next'
 
 
 
@@ -31,12 +31,13 @@ const Testimonials = () => {
             setIndex(0);
         }
     }
-
+    const { t } = useTranslation()
 
   return (
+    
     <section className="testimonials">
         <div className="container testimonials__container">
-            <SectionHead icon={<ImQuotesLeft/>} title="Reviews" className="testimonials__head"/>
+            <SectionHead icon={<ImQuotesLeft/>} title={t('Reviews')} className="testimonials__head"/>
             <Card className="testimonial">
                 <div className="testimonial__avatar">
                     <img src={avatar} alt={name} />
