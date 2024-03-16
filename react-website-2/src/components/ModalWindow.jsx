@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import React from 'react';
 
 const ProductModal = ({ product, onClose }) => {
-    const { t } = useTranslation();
 
     // Обработчик событий для клика вне модального окна
     const handleOverlayClick = event => {
