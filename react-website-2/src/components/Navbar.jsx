@@ -16,7 +16,7 @@ const Navbar = () => {
     <nav>
         <div className="container nav__container">
             <Link to="/" className='logo' onClick={() => setIsNavShowing(false)}>
-                <img src={Logo} alt="Nav Logo" />
+                <img className='logo_RILL' src={Logo} alt="Nav Logo" />
             </Link>
             <LanguageSwitcher />
             <ul className={`nav__links ${isNavShowing ? 'show__nav' : 'hide__Nav'}`}>
