@@ -145,7 +145,7 @@ section {
 
 .card span {
 	width: 3rem;
-	height: 3rem;
+	height: 1rem;
 	background: var(--color-primary);
 	color: var(--color-gray-100);
 	font-size: 1.5rem;
@@ -317,4 +317,9 @@ p.testimonial__quote {
 .catalog {
 	margin-top: 5px;
 }
-
+.logo_RILL {
+	position: absolute;
+	width: 6rem;
+	height: 4rem;
+	top: 8px;
+}
