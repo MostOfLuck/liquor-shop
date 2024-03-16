@@ -1,7 +1,6 @@
 import Header from '../../components/Header'
 import HeaderImage from '../../productImages/WhatsApp Image 2024-03-03 at 16.04.03 (1).jpeg'
 import {MdEmail} from 'react-icons/md'
-import {BsMessenger} from 'react-icons/bs'
 import { FaTiktok } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
