@@ -2,7 +2,9 @@ import { FaCrown } from 'react-icons/fa';
 import SectionHead from './SectionHead';
 import { products } from '../data';
 import Card from '../UI/Card';
-import wineImage from '../images/wine1.png';
+import fiuzaImg from '../images/fiuzaImg.png'
+import cognacImg from '../images/cognacimg.png'
+import portImg from '../images/portImga.png'
 import { Link } from 'react-router-dom';
 import { AiFillCaretRight } from 'react-icons/ai';
 import { useTranslation } from 'react-i18next';
@@ -18,11 +20,11 @@ const Programs = () => {
                         // Определение изображения в зависимости от id
                         let imageSrc;
                         if (id === 1) {
-                            imageSrc = wineImage;
+                            imageSrc = fiuzaImg;
                         } else if (id === 2) {
-                            imageSrc = wineImage;
+                            imageSrc = cognacImg;
                         } else if (id === 3) {
-                            imageSrc = wineImage;
+                            imageSrc = portImg;
                             }
                         
                         // Добавьте другие варианты для других id по мере необходимости
