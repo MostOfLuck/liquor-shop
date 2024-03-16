@@ -47,39 +47,35 @@ export const testimonials = [
 		id: 1,
 		name: 'Alexander',
 		quote:
-'		Очень доволен сотрудничеством с магазином. Оперативно созвонились, уточнили. Заказ получил на следующий день.  Упаковка супер. Успехов и процветания.',
-		avatar: require('./images/avatar1.jpg'),
+'אני מאוד מרוצה משיתוף הפעולה עם החנות. מיד התקשרנו והבהרנו. קיבלתי את ההזמנה שלי למחרת.  האריזה סופר. הצלחה ושגשוג.',
+		avatar: require('./images/avatar1.png'),
 	},
 	{
 		id: 2,
-		name: 'Daniel Vinyo',
+		name: 'Daniel',
 		quote:
-			'Harum quaerat hic consequuntur molestias repellat ad quo tenetur vitae rem, labore quisquam? Atque, assumenda rerum this and that odit harum quaerat hic praesentium quisquam quae, enim iste ipsam id repellat.',
-		job: 'Software Egineer',
-		avatar: require('./images/avatar2.jpg'),
+			"תודה רבה לצוות החנות. הם תמיד יתקשרו אליך בחזרה ויסכימו על ההזמנה. השיגור מהיר. זו לא הפעם הראשונה שאני מבצע הזמנה, ואני מקווה לשיתוף פעולה נוסף",
+		avatar: require('./images/avatar1.png'),
 	},
 	{
 		id: 3,
-		name: 'Edem Quist',
+		name: 'Eden',
 		quote:
-			'Quaerat hic praesentium consequuntur molestias repellat ad quo tenetur vitae rem, labore quisquam? Atque, assumenda rerum odit harum quaerat hic praesentium quisquam quae, enim iste ipsam id repellat.',
-		job: 'University Lecturer',
-		avatar: require('./images/avatar3.jpg'),
+			'שירות מעולה! הזמנתי מוצרים כבר כמה פעמים, ובכל פעם החשיפות חיוביות בלבד. משוב מיידי, משלוח מיידי של ההזמנה. תודה על המקצועיות והשירות האיכותי',
+		avatar: require('./images/avatar1.png'),
 	},
 	{
 		id: 4,
-		name: 'Grace Lavoe',
+		name: 'Boris',
 		quote:
-			'Cupiditate deleniti sint consequuntur molestias repellat ad quo tenetur vitae rem, labore quisquam? Atque, assumenda rerum odit harum quaerat hic praesentium quisquam quae, enim iste ipsam id repellat.',
-		job: 'Talking Parrot',
-		avatar: require('./images/avatar4.jpg'),
+			'מאוד מרוצה מחוויית הקנייה בחנות זו. הצוות הקשוב מוכן תמיד לעזור ולייעץ. ההזמנה מגיעה במהירות ובמצב מצוין. אני שמח שבחרתי בחנות הזו, ואני ממליץ עליה בביטחון לכל החברים שלי',
+		avatar: require('./images/avatar1.png'),
 	},
 	{
 		id: 5,
-		name: 'Nana Yaa Dankwa',
+		name: 'Noa',
 		quote:
-			'Maxime minima cumque sit amet consectetur adipisicing elit. Praesentium ipsam facere ea a laboriosam sed? Quod vel voluptates a! Maxime minima cumque aut? In expedita numquam consectetur non officia iusto.',
-		job: 'Pharmacist',
-		avatar: require('./images/avatar5.jpg'),
+			'תודה רבה לצוות החנות על רמת השירות הגבוהה! הזמנתי מוצרים שונים שוב ושוב, ובכל פעם הייתי מרוצה. ייעוץ מקצועי, משלוח מהיר וסחורה איכותית. אני מקווה לשיתוף פעולה ארוך טווח וממליץ על חנות זו לכל מי שמעריך אמינות ואיכות',
+		avatar: require('./images/avatar1.png'),
 	},
 ]
