@@ -1,10 +1,9 @@
 import {Link} from 'react-router-dom'
 import Logo from '../images/logo.png'
-import { FaLinkedin } from 'react-icons/fa'
 import { FaFacebookF } from 'react-icons/fa'
-import { AiOutlineTwitter } from 'react-icons/ai'
 import { AiFillInstagram } from 'react-icons/ai'
 import { useTranslation } from 'react-i18next'
+import { FaTiktok } from "react-icons/fa";
 
 
 
@@ -21,9 +20,8 @@ const Footer = () => {
                 {t('Our Socials and contacts.')}
                 </p>
                 <div className="footer__socials">
-                    <a href="https://linkedin.com/" target="_blank" rel='noreferrer noopener'><FaLinkedin/></a>
                     <a href="https://facebook.com/" target="_blank" rel='noreferrer noopener'><FaFacebookF/></a>
-                    <a href="https://twitter.com/" target="_blank" rel='noreferrer noopener'><AiOutlineTwitter/></a>
+                    <a href="https://twitter.com/" target="_blank" rel='noreferrer noopener'><FaTiktok/></a>
                     <a href="https://instagram.com/" target="_blank" rel='noreferrer noopener'><AiFillInstagram/></a>
                 </div>
             </article>
