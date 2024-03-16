@@ -32,7 +32,7 @@ import ProductModal from '../../components/ModalWindow'
 
 const Catalogs = () => {
 	const { t } = useTranslation()
-	const [orders, setOrders] = useState([])
+	// eslint-disable-next-line no-unused-vars
 	const [currentItems, setCurrentItems] = useState([])
 	const [items] = useState([
 		{
