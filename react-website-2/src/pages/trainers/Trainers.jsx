@@ -72,7 +72,7 @@ const Catalogs = () => {
 			title: <h1 className='product__title'>Porto Cabraco White</h1>,
 			article: (
 				<p className='product__article'>
-					{t('Experience the delightful fusion of Porto Cabaco White. With crisp citrus notes, hints of tropical fruit, and a refreshing finish, its perfect for any occasion.')}
+					{t('Experience the delightful fusion of Porto Cabraco White. With crisp citrus notes, hints of tropical fruit, and a refreshing finish, its perfect for any occasion.')}
 
 				</p>
 			),
