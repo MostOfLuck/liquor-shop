@@ -94,8 +94,8 @@ i18n.use(initReactI18next).init({
 					'התענגו על תערובת השרדונה והאריטו של פיוזה 2017. פירות טרופיים, רמזי וניל וסיומת הדרים הופכים אותו למושלם לכל אירוע.',
 				'Experience the vibrant allure of Porto Cabraco Ruby. Rich red fruit, subtle spices, and a velvety finish create the perfect celebration companion.':
 					'בואו לחוות את הקסם התוסס של Porto Cabraco Ruby. פירות אדומים עשירים, תבלינים עדינים וסיומת קטיפתית יוצרים את בן הלוויה המושלם לחגיגה.',
-				'Experience the delightful fusion of Porto Cabaco White. With crisp citrus notes, hints of tropical fruit, and a refreshing finish, its perfect for any occasion.':
-					'בואו לחוות את המיזוג המענג של Porto Cabaco White. עם תווים פריכים של פירות הדר, רמזים לפירות טרופיים וסיומת מרעננת, הוא מושלם לכל אירוע.',
+				'Experience the delightful fusion of Porto Cabraco White. With crisp citrus notes, hints of tropical fruit, and a refreshing finish, its perfect for any occasion.':
+					'בואו לחוות את המיזוג המענג של Porto Cabraco White. עם תווים פריכים של פירות הדר, רמזים לפירות טרופיים וסיומת מרעננת, הוא מושלם לכל אירוע.',
 				'Experience the enchanting charm of Porto Cabraco Rosé. Bursting with vibrant red berry flavors, delicate floral aromas, and a crisp, refreshing finish, its the ideal choice for any occasion.':
 					'בואו לחוות את הקסם של פורטו קברקו רוזה (Porto Cabraco Rosé). עם טעמי פירות יער אדומים עזים, ניחוחות פרחוניים עדינים וסיומת פריכה ומרעננת, זוהי הבחירה האידיאלית לכל אירוע.',
 				'Savor the refined richness of Maxime Trijol Cognac. Crafted with expertise, it offers a smooth, luxurious taste of dried fruits, oak, and spices. Perfect for elevating any occasion.':
