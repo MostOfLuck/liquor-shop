@@ -7,3 +7,28 @@
 --- | --- | --- | --- | --- | --- |
 Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | 11 ✔ |
 
+
+## Instalation for developers
+1. Clone the repository by launching this command:
+```sh 
+git@github.com:MostOfLuck/Liquor-Shop.git
+```
+
+Install dependencies:
+
+```sh
+npm install
+```
+
+Build the app:
+
+```sh
+npm run build
+```
+
+Run the app:
+
+```sh
+npm start
+```
+
