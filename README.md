@@ -9,9 +9,15 @@ Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | 11 ✔ |
 
 
 ## Instalation for developers
-1. Clone the repository by launching this command:
+Clone the repository by launching this command:
 ```sh 
 git@github.com:MostOfLuck/Liquor-Shop.git
+```
+
+Enter the right directory:
+
+```sh
+cd react-website-2
 ```
 
 Install dependencies:
