@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import Header from '../../components/Header'
+import ProductModal from '../../components/ModalWindow'
 import HeaderImage from '../../productImages/WhatsApp Image 2024-03-03 at 16.04.01.jpeg'
 import fiuza from '../../productImages2/774A7541.jpg'
 import fuza from '../../productImages2/774A7547.jpg'
@@ -27,14 +28,16 @@ import CabernetSauvignonTourigaNacionalAllSeansonsCollection from '../../product
 import MaximeTrijolCognac3litr from '../../productImages2/774A8480.jpg'
 import MaximeTrijolCognac3litr2 from '../../productImages2/774A8501.jpg'
 import './trainers.css'
-import ProductModal from '../../components/ModalWindow'
-
 
 const Catalogs = () => {
 	const { t } = useTranslation()
-	// eslint-disable-next-line no-unused-vars
-	const [currentItems, setCurrentItems] = useState([])
-	const [items] = useState([
+	const [searchTerm, setSearchTerm] = useState('')
+	const [searchResults, setSearchResults] = useState([])
+	const [selectedProduct, setSelectedProduct] = useState(null)
+	const [isModalOpen, setIsModalOpen] = useState(false)
+	const [searchCategory, setSearchCategory] = useState('')
+
+	const items = useMemo(() => [
 		{
 			id: 1,
 			name: 'Fiuza Chardonnay Arinto',
@@ -44,11 +47,12 @@ const Catalogs = () => {
 			title: <h1 className='product__title'>Fiuza Chardonnay Arinto</h1>,
 			article: (
 				<p className='product__article'>
-{t('Savor the Chardonnay and Arinto blend of Fiuza 2017. Tropical fruit, vanilla hints, and citrus finish make it perfect for any occasion.')}
+					{t(
+						'Savor the Chardonnay and Arinto blend of Fiuza 2017. Tropical fruit, vanilla hints, and citrus finish make it perfect for any occasion.'
+					)}
 				</p>
 			),
 		},
-
 		{
 			id: 2,
 			name: 'Porto Cabraco Ruby',
@@ -58,8 +62,9 @@ const Catalogs = () => {
 			title: <h1 className='product__title'>Porto Cabraco Ruby</h1>,
 			article: (
 				<p className='product__article'>
-{t('Experience the vibrant allure of Porto Cabraco Ruby. Rich red fruit, subtle spices, and a velvety finish create the perfect celebration companion.')}
-
+					{t(
+						'Experience the vibrant allure of Porto Cabraco Ruby. Rich red fruit, subtle spices, and a velvety finish create the perfect celebration companion.'
+					)}
 				</p>
 			),
 		},
@@ -72,8 +77,9 @@ const Catalogs = () => {
 			title: <h1 className='product__title'>Porto Cabraco White</h1>,
 			article: (
 				<p className='product__article'>
-					{t('Experience the delightful fusion of Porto Cabraco White. With crisp citrus notes, hints of tropical fruit, and a refreshing finish, its perfect for any occasion.')}
-
+					{t(
+						'Experience the delightful fusion of Porto Cabraco White. With crisp citrus notes, hints of tropical fruit, and a refreshing finish, its perfect for any occasion.'
+					)}
 				</p>
 			),
 		},
@@ -86,8 +92,9 @@ const Catalogs = () => {
 			title: <h1 className='product__title'>Porto Cabraco Rose</h1>,
 			article: (
 				<p className='product__article'>
-					{t('Experience the enchanting charm of Porto Cabraco Rosé. Bursting with vibrant red berry flavors, delicate floral aromas, and a crisp, refreshing finish, its the ideal choice for any occasion.')}
-
+					{t(
+						'Experience the enchanting charm of Porto Cabraco Rosé. Bursting with vibrant red berry flavors, delicate floral aromas, and a crisp, refreshing finish, its the ideal choice for any occasion.'
+					)}
 				</p>
 			),
 		},
@@ -100,8 +107,9 @@ const Catalogs = () => {
 			title: <h1 className='product__title'>Maxime Trijol Cognac</h1>,
 			article: (
 				<p className='product__article'>
-					{t('Savor the refined richness of Maxime Trijol Cognac. Crafted with expertise, it offers a smooth, luxurious taste of dried fruits, oak, and spices. Perfect for elevating any occasion.')}
-
+					{t(
+						'Savor the refined richness of Maxime Trijol Cognac. Crafted with expertise, it offers a smooth, luxurious taste of dried fruits, oak, and spices. Perfect for elevating any occasion.'
+					)}
 				</p>
 			),
 		},
@@ -114,7 +122,9 @@ const Catalogs = () => {
 			title: <h1 className='product__title'>Maxime Trijol Cognac Vsop</h1>,
 			article: (
 				<p className='product__article'>
-					{t('Discover sophistication in every sip. Rich fruit, subtle florals, and a velvety finish define this French classic.')}
+					{t(
+						'Discover sophistication in every sip. Rich fruit, subtle florals, and a velvety finish define this French classic.'
+					)}
 				</p>
 			),
 		},
@@ -127,7 +137,9 @@ const Catalogs = () => {
 			title: <h1 className='product__title'>Maxime Trijol Cognac</h1>,
 			article: (
 				<p className='product__article'>
-										{t('Savor the refined richness of Maxime Trijol Cognac. Crafted with expertise, it offers a smooth, luxurious taste of dried fruits, oak, and spices. Perfect for elevating any occasion.')}
+					{t(
+						'Savor the refined richness of Maxime Trijol Cognac. Crafted with expertise, it offers a smooth, luxurious taste of dried fruits, oak, and spices. Perfect for elevating any occasion.'
+					)}
 				</p>
 			),
 		},
@@ -140,7 +152,9 @@ const Catalogs = () => {
 			title: <h1 className='product__title'>Fiuza Native Reserva 2018</h1>,
 			article: (
 				<p className='product__article'>
-					{t('Embrace the essence of Portugal with Fiuza Native Reserva 2018. This captivating blend unveils bold flavors of ripe berries, hints of spice, and a smooth, lingering finish. Perfect for those seeking an authentic taste of Portuguese terroir.')}
+					{t(
+						'Embrace the essence of Portugal with Fiuza Native Reserva 2018. This captivating blend unveils bold flavors of ripe berries, hints of spice, and a smooth, lingering finish. Perfect for those seeking an authentic taste of Portuguese terroir.'
+					)}
 				</p>
 			),
 		},
@@ -155,11 +169,12 @@ const Catalogs = () => {
 			),
 			article: (
 				<p className='product__article'>
-					{t('Experience Portugals essence with Oceanius 2019. Its vibrant fruit flavors and subtle herbal notes lead to a refreshing, harmonious finish, reminiscent of the Portuguese coast.')}
+					{t(
+						'Experience Portugals essence with Oceanius 2019. Its vibrant fruit flavors and subtle herbal notes lead to a refreshing, harmonious finish, reminiscent of the Portuguese coast.'
+					)}
 				</p>
 			),
 		},
-
 		{
 			id: 10,
 			name: 'Fiuza Cabernet Sauvignon',
@@ -169,11 +184,12 @@ const Catalogs = () => {
 			title: <h1 className='product__title'>Fiuza Cabernet Sauvignon</h1>,
 			article: (
 				<p className='product__article'>
-					{t('Elevate your palate with Fiuza Cabernet Sauvignon. This robust wine delights with intense blackberry and cassis flavors, complemented by hints of spice and a velvety texture. Perfect for moments of indulgence and celebration.')}
+					{t(
+						'Elevate your palate with Fiuza Cabernet Sauvignon. This robust wine delights with intense blackberry and cassis flavors, complemented by hints of spice and a velvety texture. Perfect for moments of indulgence and celebration.'
+					)}
 				</p>
 			),
 		},
-
 		{
 			id: 11,
 			name: 'Adega de Borba',
@@ -183,11 +199,12 @@ const Catalogs = () => {
 			title: <h1 className='product__title'>Adega de Borba</h1>,
 			article: (
 				<p className='product__article'>
-					{t('Immerse yourself in the heritage of Portugal with Adega de Borba. This esteemed winery crafts wines of exceptional quality, showcasing the rich flavors of the Alentejo region. Experience elegance and tradition in every sip.')}
+					{t(
+						'Immerse yourself in the heritage of Portugal with Adega de Borba. This esteemed winery crafts wines of exceptional quality, showcasing the rich flavors of the Alentejo region. Experience elegance and tradition in every sip.'
+					)}
 				</p>
 			),
 		},
-
 		{
 			id: 12,
 			name: 'Fiuza Merilot 2015',
@@ -197,11 +214,12 @@ const Catalogs = () => {
 			title: <h1 className='product__title'>Fiuza Merilot 2015</h1>,
 			article: (
 				<p className='product__article'>
-					{t('Indulge in the rich heritage of Fiuza Merilot 2015. This exquisite blend harmoniously combines Merlot and Cabernet Sauvignon, offering a symphony of ripe berry flavors, subtle spice notes, and a velvety texture. Perfect for moments of refined enjoyment.')}
+					{t(
+						'Indulge in the rich heritage of Fiuza Merilot 2015. This exquisite blend harmoniously combines Merlot and Cabernet Sauvignon, offering a symphony of ripe berry flavors, subtle spice notes, and a velvety texture. Perfect for moments of refined enjoyment.'
+					)}
 				</p>
 			),
 		},
-
 		{
 			id: 13,
 			name: 'Montes Carlos DOC Alentejo Tinto 2016',
@@ -215,11 +233,12 @@ const Catalogs = () => {
 			),
 			article: (
 				<p className='product__article'>
-					{t('Discover Portugal essence with Montes Carlos DOC Alentejo Tinto 2016. This captivating red wine offers rich flavors of dark fruits, hints of spice, and a smooth finish, perfect for pure enjoyment.')}
+					{t(
+						'Discover Portugal essence with Montes Carlos DOC Alentejo Tinto 2016. This captivating red wine offers rich flavors of dark fruits, hints of spice, and a smooth finish, perfect for pure enjoyment.'
+					)}
 				</p>
 			),
 		},
-
 		{
 			id: 14,
 			name: 'Bianco C Chardonnay All Seasons Collection 2020',
@@ -233,11 +252,12 @@ const Catalogs = () => {
 			),
 			article: (
 				<p className='product__article'>
-					{t('Savor Bianco C Chardonnay from the All Seasons Collection 2020. With vibrant fruit aromas and a creamy texture, its perfect for any occasion.')}
+					{t(
+						'Savor Bianco C Chardonnay from the All Seasons Collection 2020. With vibrant fruit aromas and a creamy texture, its perfect for any occasion.'
+					)}
 				</p>
 			),
 		},
-
 		{
 			id: 15,
 			name: 'Spain Velas Corsarias',
@@ -247,11 +267,12 @@ const Catalogs = () => {
 			title: <h1 className='product__title'>Spain Velas Corsarias</h1>,
 			article: (
 				<p className='product__article'>
-					{t('An adventurous Spanish blend, Velas Corsarias offers bold flavors of dark fruits and spice with a hint of oak.')}
+					{t(
+						'An adventurous Spanish blend, Velas Corsarias offers bold flavors of dark fruits and spice with a hint of oak.'
+					)}
 				</p>
 			),
 		},
-
 		{
 			id: 16,
 			name: 'Summer Merlot All SeasonsCollection 2020',
@@ -265,12 +286,12 @@ const Catalogs = () => {
 			),
 			article: (
 				<p className='product__article'>
-					{t('Transport yourself to a summers day with Summer Merlot from the All Seasons Collection 2020. Bursting with ripe berry flavors and a touch of warmth, this wine embodies the essence of the season.')}
-
+					{t(
+						'Transport yourself to a summers day with Summer Merlot from the All Seasons Collection 2020. Bursting with ripe berry flavors and a touch of warmth, this wine embodies the essence of the season.'
+					)}
 				</p>
 			),
 		},
-
 		{
 			id: 17,
 			name: 'Maxime Trijol Cognac',
@@ -280,11 +301,12 @@ const Catalogs = () => {
 			title: <h1 className='product__title'>Maxime Trijol Cognac</h1>,
 			article: (
 				<p className='product__article'>
-															{t('Savor the refined richness of Maxime Trijol Cognac. Crafted with expertise, it offers a smooth, luxurious taste of dried fruits, oak, and spices. Perfect for elevating any occasion.')}
+					{t(
+						'Savor the refined richness of Maxime Trijol Cognac. Crafted with expertise, it offers a smooth, luxurious taste of dried fruits, oak, and spices. Perfect for elevating any occasion.'
+					)}
 				</p>
 			),
 		},
-
 		{
 			id: 18,
 			name: 'Cabernet Sauvignon Touriga Nacional All Seansons Collection',
@@ -298,38 +320,145 @@ const Catalogs = () => {
 			),
 			article: (
 				<p className='product__article'>
-					{t('Experience a symphony of flavors with this blend. Cabernet Sauvignon and Touriga Nacional unite to create a rich, balanced wine.')}
+					{t(
+						'Experience a symphony of flavors with this blend. Cabernet Sauvignon and Touriga Nacional unite to create a rich, balanced wine.'
+					)}
 				</p>
 			),
 		},
 	])
-	const [searchTerm, setSearchTerm] = useState('')
-	const [searchResults, setSearchResults] = useState([])
-	const [selectedProduct, setSelectedProduct] = useState(null)
-	const [isModalOpen, setIsModalOpen] = useState(false)
-
-	useEffect(() => {
-		setCurrentItems(items)
-		setSearchResults(items)
+	const groupedItems = useMemo(() => {
+		const grouped = {}
+		items.forEach(item => {
+			if (!grouped[item.category]) {
+				grouped[item.category] = [item]
+			} else {
+				grouped[item.category].push(item)
+			}
+		})
+		return grouped
 	}, [items])
 
 	const handleChange = event => {
-		const searchTerm = event.target.value.toLowerCase()
-		setSearchTerm(searchTerm)
-		setSearchResults(
-			items.filter(
-				product =>
-					product.name.toLowerCase().includes(searchTerm) ||
-					product.category.toLowerCase().includes(searchTerm)
-			)
-		)
-	}
+    const inputValue = event.target.value.toLowerCase();
+    setSearchTerm(inputValue);
 
+    // Проверяем, является ли введенный текст категорией
+    const isCategory = Object.keys(groupedItems).includes(inputValue);
+
+    setSearchResults(
+        items.filter(product => {
+            const productNameMatch = product.name.toLowerCase().includes(inputValue);
+            const categoryMatch = product.category.toLowerCase().includes(inputValue);
+            const categorySelected = searchCategory.toLowerCase() === product.category.toLowerCase();
+            return (productNameMatch || categoryMatch) && (!searchCategory || categorySelected);
+        })
+    );
+
+    // Если введенный текст соответствует категории, устанавливаем эту категорию для фильтрации
+    if (isCategory) {
+        setSearchCategory(inputValue);
+    } else {
+        setSearchCategory('');
+    }
+};
+
+
+	const renderCategoryFilter = () => (
+		<select
+			className='select__btn'
+			value={searchCategory}
+			onChange={e => setSearchCategory(e.target.value)}
+		>
+			<option value=''>All Categories</option>
+			{Object.keys(groupedItems).map(category => (
+				<option key={category} value={category}>
+					{category}
+				</option>
+			))}
+		</select>
+	)
+
+	const renderProducts = category => (
+		<div key={category}>
+			<hr />
+			<h2>{category}</h2>
+			<hr />
+			<div className='product-grid'>
+				{groupedItems[category].map(product => (
+					<div
+						key={product.id}
+						className='product-card'
+						onClick={() => {
+							setSelectedProduct(product)
+							setIsModalOpen(true)
+						}}
+					>
+						<img src={product.image} alt={product.name} />
+						<h3>{product.name}</h3>
+					</div>
+				))}
+			</div>
+		</div>
+	)
+
+	const renderFilteredProducts = () => {
+    if (searchResults.length === 0) {
+        return <p>No results found.</p>;
+    }
+
+    const renderedCategories = Object.keys(groupedItems).map(category => {
+        if (!groupedItems[category] || (searchCategory && searchCategory !== category)) {
+            return null;
+        }
+
+        const filteredProducts = searchResults.filter(product => product.category === category);
+
+        if (filteredProducts.length === 0) {
+            return null;
+        }
+
+        return (
+            <div key={category}>
+                <hr />
+                <h2>{category}</h2>
+                <hr />
+                <div className='product-grid'>
+                    {filteredProducts.map(product => (
+                        <div key={product.id} className='product-card' onClick={() => {
+                            setSelectedProduct(product);
+                            setIsModalOpen(true);
+                        }}>
+                            <img src={product.image} alt={product.name} />
+                            <h3>{product.name}</h3>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        );
+    });
+
+    return renderedCategories;
+}
+
+
+
+	useEffect(() => {
+		const results = items.filter(item => {
+			const nameMatch = item.name
+				.toLowerCase()
+				.includes(searchTerm.toLowerCase())
+			return nameMatch && (!searchCategory || item.category === searchCategory)
+		})
+		setSearchResults(results)
+	}, [searchTerm, items, searchCategory])
 
 	return (
 		<>
 			<Header title={t('Our Catalog')} image={HeaderImage}>
-			{t('Explore the world of Portugal, Spain, and France with our diverse selection of wines and cognacs. Indulge in the exquisite flavors and aromas presented in our bottles, and discover the true gems of winemaking.')}
+				{t(
+					'Explore the world of Portugal, Spain, and France with our diverse selection of wines and cognacs. Indulge in the exquisite flavors and aromas presented in our bottles, and discover the true gems of winemaking.'
+				)}
 			</Header>
 			<section className='catalog'>
 				<div className='container catalog__container'>
@@ -340,21 +469,8 @@ const Catalogs = () => {
 						value={searchTerm}
 						onChange={handleChange}
 					/>
-					<div className='product-grid'>
-						{searchResults.map(product => (
-							<div
-								key={product.id}
-								className='product-card'
-								onClick={() => {
-									setSelectedProduct(product)
-									setIsModalOpen(true)
-								}}
-							>
-								<img src={product.image} alt={product.name} />
-								<h3>{product.name}</h3>
-							</div>
-						))}
-					</div>
+					{renderCategoryFilter()}
+					<div className='product-grid'>{renderFilteredProducts()}</div>
 				</div>
 			</section>
 			{isModalOpen && selectedProduct && (
