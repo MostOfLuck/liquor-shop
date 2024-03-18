@@ -323,3 +323,17 @@ p.testimonial__quote {
 	height: 4rem;
 	top: 8px;
 }
+
+hr {
+	border: none;
+	width: 100%;
+	height: 1px;
+	background-color: #ff8800;
+	margin: 20px 0; /* Регулируйте отступы по вашему усмотрению */
+}
+
+.select__btn {
+	border-radius: 10px;
+	width: 10rem;
+	height: 2rem;
+}
