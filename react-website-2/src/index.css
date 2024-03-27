@@ -14,12 +14,12 @@
 	/* --primary-hue: 20;
     --gray-hue: 280; */
 
-	--primary-hue: 20;
+	--primary-hue: 85;
 	--color-white: #ffffff;
 	--gray-hue: 240;
-	--color-primary: hsl(var(--primary-hue), 100%, 50%);
+	--color-primary: hsl(var(--primary-hue), 55%, 50%);
 	--color-primary-variant: hsl(var(--primary-hue), 100%, 65%);
-	--color-secondary: #18da0a;
+	--color-secondary: #42e030;
 	--color-gray-100: hsl(var(--gray-hue), 47%, 94%);
 	--color-gray-200: hsl(var(--gray-hue), 26%, 75%);
 	--color-gray-300: hsl(var(--gray-hue), 24%, 64%);
@@ -41,7 +41,7 @@ body {
 	color: var(--color-gray-200);
 	line-height: 1.7;
 	overflow-x: hidden;
-	background: var(--color-black-600) url('./images/bg_texture.png');
+	background: var(--color-gray-700) url('./images/bg_texture.png');
 }
 
 .container {
@@ -61,6 +61,7 @@ h5 {
 
 h1 {
 	font-size: 3rem;
+	color: rgb(255, 255, 255);
 }
 
 h2 {
@@ -109,7 +110,7 @@ img {
 	font-size: 0.9rem;
 }
 a.btn.sm:hover {
-	color: var(--color-black-600);
+	color: white;
 }
 section {
 	margin-top: 10rem;
@@ -131,7 +132,6 @@ section {
 
 .card {
 	background: var(--color-white);
-	border: 2px solid transparent;
 	text-align: center;
 	padding: 3rem 2rem;
 	border-radius: 0 3rem 0 3rem;
@@ -328,7 +328,7 @@ hr {
 	border: none;
 	width: 100%;
 	height: 1px;
-	background-color: #ff8800;
+	background-color: 91CB3E;
 	margin: 20px 0; /* Регулируйте отступы по вашему усмотрению */
 }
 

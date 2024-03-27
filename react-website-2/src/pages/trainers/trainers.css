@@ -20,7 +20,7 @@
 
 .product-card:hover {
 	transform: scale(1.1);
-	border: 3px solid #ffa600; /* Светло-серая рамка */
+	border: 3px solid #91cb3e; /* Светло-серая рамка */
 }
 
 .product-card {
