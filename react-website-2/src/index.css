@@ -32,7 +32,7 @@
 
 	--transition: all 500ms ease;
 
-	--color-gray-700: rgba(179, 179, 179, 0.9);
+	--color-gray-700: rgba(255, 255, 255, 0.9);
 }
 
 /* GENERAL STYLES */
@@ -41,7 +41,7 @@ body {
 	color: var(--color-gray-200);
 	line-height: 1.7;
 	overflow-x: hidden;
-	background: var(--color-gray-700) url('./images/bg_texture.png');
+	background: var(--color-gray-700);
 }
 
 .container {
@@ -56,16 +56,17 @@ h3,
 h4,
 h5 {
 	line-height: 1.2;
-	color: var(--color-gray-100);
+	color: rgb(0, 0, 0);
 }
 
 h1 {
 	font-size: 3rem;
-	color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
 }
 
 h2 {
 	font-size: 2rem;
+	color: rgb(102, 193, 100);
 }
 
 h4 {
