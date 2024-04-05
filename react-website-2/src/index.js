@@ -42,6 +42,8 @@ i18n.use(initReactI18next).init({
 					'Испытайте восхитительный фьюжн Porto Cabaco White. С хрустящими цитрусовыми нотами, оттенками тропических фруктов и освежающим послевкусием, он идеально подходит для любого случая.',
 				'Experience the enchanting charm of Porto Cabraco Rosé. Bursting with vibrant red berry flavors, delicate floral aromas, and a crisp, refreshing finish, its the ideal choice for any occasion.':
 					'Почувствуйте чарующее очарование Porto Cabraco Rosé. Наполненный яркими ароматами красных ягод, нежными цветочными ароматами и свежим, освежающим послевкусием, он является идеальным выбором для любого случая.',
+					'Experience the delightful fusion of Porto Cabraco White. With crisp citrus notes, hints of tropical fruit, and a refreshing finish, its perfect for any occasion.':
+					'Ощутите восхитительное слияние Porto Cabraco White. С хрустящими цитрусовыми нотами, оттенками тропических фруктов и освежающим финишем оно идеально подходит для любого случая.',
 				'Savor the refined richness of Maxime Trijol Cognac. Crafted with expertise, it offers a smooth, luxurious taste of dried fruits, oak, and spices. Perfect for elevating any occasion.':
 					'Насладитесь изысканным богатством коньяка Maxime Trijol. Созданный с мастерством, он предлагает мягкий, роскошный вкус сухофруктов, дуба и специй. Идеально подходит для украшения любого случая.',
 				'Discover sophistication in every sip. Rich fruit, subtle florals, and a velvety finish define this French classic.':
@@ -102,6 +104,8 @@ i18n.use(initReactI18next).init({
 					"התענגו על העושר המעודן של קוניאק מקסים טריז'ול. מיוצר במומחיות, הוא מציע טעם חלק ויוקרתי של פירות יבשים, אלון ותבלינים. מושלם לרומם כל אירוע.",
 				'Discover sophistication in every sip. Rich fruit, subtle florals, and a velvety finish define this French classic.':
 					'גלו תחכום בכל לגימה. פרי עשיר, פרחים עדינים וסיומת קטיפתית מגדירים את הקלאסיקה הצרפתית הזו.',
+					'Experience the delightful fusion of Porto Cabraco White. With crisp citrus notes, hints of tropical fruit, and a refreshing finish, its perfect for any occasion.':
+					"חווה את הפיוז'ן המענג של פורטו קברקו ווייט. עם תווים פריכים של הדרים, רמזים של פרי טרופי וסיומת מרעננת, זה מושלם לכל אירוע.",
 				'Embrace the essence of Portugal with Fiuza Native Reserva 2018. This captivating blend unveils bold flavors of ripe berries, hints of spice, and a smooth, lingering finish. Perfect for those seeking an authentic taste of Portuguese terroir.':
 					'אמצו את המהות של פורטוגל עם Fiuza Native Reserva 2018. תערובת שובת לב זו חושפת טעמים נועזים של פירות יער בשלים, רמזים לתבלין וסיומת חלקה ומתמשכת. מושלם למי שמחפש טעם אותנטי של טרואר פורטוגזי.',
 				'Experience Portugals essence with Oceanius 2019. Its vibrant fruit flavors and subtle herbal notes lead to a refreshing, harmonious finish, reminiscent of the Portuguese coast.':
