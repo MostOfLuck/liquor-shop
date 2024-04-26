@@ -66,7 +66,13 @@ i18n.use(initReactI18next).init({
 					'Авантюрная испанская смесь Velas Corsarias предлагает смелый вкус темных фруктов и специй с оттенком дуба.',
 				'Transport yourself to a summers day with Summer Merlot from the All Seasons Collection 2020. Bursting with ripe berry flavors and a touch of warmth, this wine embodies the essence of the season.':
 					'Перенеситесь в летний день с Summer Merlot из коллекции All Seasons 2020. Наполненное ароматом спелых ягод и оттенком тепла, это вино воплощает в себе сущность сезона.',
-					"Experience a symphony of flavors with this blend. Cabernet Sauvignon and Touriga Nacional unite to create a rich, balanced wine.": "Испытайте симфонию вкусов с этой смесью. Каберне Совиньон и Touriga Nacional объединяются, чтобы создать богатое, сбалансированное вино."
+					"Experience a symphony of flavors with this blend. Cabernet Sauvignon and Touriga Nacional unite to create a rich, balanced wine.": "Испытайте симфонию вкусов с этой смесью. Каберне Совиньон и Touriga Nacional объединяются, чтобы создать богатое, сбалансированное вино.",
+					"Import and marketing of quality products.": 
+					"Импорт и реализация качественной продукции.",
+					"Street 8 Azur": "Улица 8 Азур",
+					"Postal code 5802920, Israel": "Почтовый индекс 5802920, Израиль",
+					"Phone ☎: 03-6542200 Mobile 📱: 052-4448940": "Телефон ☎: 03-6542200 Мобильный 📱: 052-4448940",
+					"Email: rillcollection2023@gmail.com": "Электронная почта: rillcollection2023@gmail.com",
 			},
 		},
 		עברית: {
@@ -124,8 +130,13 @@ i18n.use(initReactI18next).init({
 					'Velas Corsarias הוא תערובת ספרדית הרפתקנית, המציעה טעמים נועזים של פירות כהים ותבלין עם נגיעות של עץ אלון.',
 				'Transport yourself to a summers day with Summer Merlot from the All Seasons Collection 2020. Bursting with ripe berry flavors and a touch of warmth, this wine embodies the essence of the season.':
 					'העבירו את עצמכם ליום קיץ עם מרלו קיץ מקולקציית All Seasons 2020. מפוצץ בטעמי פירות יער בשלים ונגיעה של חמימות, היין הזה מגלם את תמצית העונה.',
-					"Experience a symphony of flavors with this blend. Cabernet Sauvignon and Touriga Nacional unite to create a rich, balanced wine.": "בואו לחוות סימפוניה של טעמים עם תערובת זו. קברנה סוביניון וטוריגה נסיונל מתאחדים ליצירת יין עשיר ומאוזן."
-
+					"Experience a symphony of flavors with this blend. Cabernet Sauvignon and Touriga Nacional unite to create a rich, balanced wine.": "בואו לחוות סימפוניה של טעמים עם תערובת זו. קברנה סוביניון וטוריגה נסיונל מתאחדים ליצירת יין עשיר ומאוזן.",
+					"Import and marketing of quality products.": "יבוא ושיווק מוצרים איכותיים.",
+					"Street 8 Azur": "החצב 8 אזור",
+					"Postal code 5802920, Israel": "מיקוד 5802920, ישראל",
+					"Phone ☎: 03-6542200 Mobile 📱: 052-4448940": "טלפון ☎: 03-6542200 נייד 📱: 052-4448940",
+					"Email: rillcollection2023@gmail.com": "מייל: rillcollection2023@gmail.com",
+				
 			},
 		},
 	},
