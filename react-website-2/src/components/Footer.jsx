@@ -35,13 +35,26 @@ const Footer = () => {
                 <Link to="/s">{t('Blog')}</Link>
                 <Link to="/s">{t('Communities')}</Link>
             </article>
-            <article>
-                <h4 className='get-in-touch'>{t('Get In Touch')}</h4>
-                <Link to="/contact">{t('Contact Us')}</Link>
-            </article>
+            <h4 className='address'>
+  {t('Contact')} :
+  <br />
+  {t('R.I.L.L Collection Ltd')}
+  <br />
+  {t('Import and marketing of quality products.')}
+  <br />
+  {t('Street 8 Azur')}
+  <br />
+  {t('Postal code 5802920, Israel')}
+  <br />
+  {t('Phone ☎: 03-6542200 Mobile 📱: 052-4448940')}
+  <br />
+  {t('Email: rillcollection2023@gmail.com')}
+</h4>
+
+
         </div>
         <div className="footer__copyright">
-            <small>2024 R.I.L.L Collection &copy; All Rights Reserved</small>
+            <small>2024 R.I.L.L Collection LTD &copy; All Rights Reserved</small>
         </div>
     </footer>
   )
