@@ -1,4 +1,5 @@
 import { FaCrown } from 'react-icons/fa';
+import { SiOpenaigym } from 'react-icons/si'
 import SectionHead from './SectionHead';
 import Card from '../UI/Card';
 import fiuzaImg from '../images/fiuzaImg.png'
@@ -7,10 +8,37 @@ import portImg from '../images/portImga.png'
 import { Link } from 'react-router-dom';
 import { AiFillCaretRight } from 'react-icons/ai';
 import { useTranslation } from 'react-i18next';
-import { products } from '../data'
+
+
 
 const Programs = () => {
     const { t } = useTranslation();
+    const products = [
+        {
+            id: 1,
+            icon: <SiOpenaigym />,
+            title: t('Wine'),
+            info: 'This is the day that the lord has made. We will rejoice!',
+            path: '/catalog',
+            imageSrc: "../src/images/wine1.png"
+        },
+        {
+            id: 2,
+            icon: <SiOpenaigym />,
+            title: t('Cognac'),
+            info: 'This is the day that the lord has made. We will rejoice!',
+            path: '/catalog',
+            imageSrc: "../src/images/wine1.png"
+        },
+        {
+            id: 3,
+            icon: <SiOpenaigym />,
+            title: t('Port wine'),
+            info: 'This is the day that the lord has made. We will rejoice!',
+            path: '/catalog',
+            imageSrc: '/images/src/wine1.png' 
+        },
+    ]
     return (
         <section className='programs'>
             <div className='container programs__container'>
