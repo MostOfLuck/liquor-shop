@@ -1,21 +1,6 @@
 import { SiOpenaigym } from 'react-icons/si'
 import '../src/index.css'
 
-export const links = [
-	{
-		name: 'Home',
-		path: '/',
-	},
-	{
-		name: 'Catalog',
-		path: '/catalog',
-	},
-    {
-		name: 'Contact',
-		path: '/contact',
-	},
-]
-/* You can change cards here*/
 export const products = [
 	{
 		id: 1,
