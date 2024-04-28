@@ -1,32 +1,5 @@
-import { SiOpenaigym } from 'react-icons/si'
 import '../src/index.css'
 
-export const products = [
-	{
-		id: 1,
-		icon: <SiOpenaigym />,
-		title: 'Wine',
-		info: 'This is the day that the lord has made. We will rejoice!',
-		path: '/catalog',
-        imageSrc: "../src/images/wine1.png"
-	},
-	{
-		id: 2,
-		icon: <SiOpenaigym />,
-		title: 'Cognac',
-		info: 'This is the day that the lord has made. We will rejoice!',
-		path: '/catalog',
-        imageSrc: "../src/images/wine1.png"
-	},
-	{
-		id: 3,
-		icon: <SiOpenaigym />,
-		title: 'Port',
-		info: 'This is the day that the lord has made. We will rejoice!',
-		path: '/catalog',
-        imageSrc: '/images/src/wine1.png' 
-	},
-]
 export const testimonials = [
 	{
 		id: 1,
