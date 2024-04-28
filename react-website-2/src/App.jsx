@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Catalogs from './pages/trainers/Trainers';
 import './index.css';
+import favicon from './images/iconlogo.png';
 
 const Modal = ({ onUnder18Click }) => (
   <div className="modal-overlay">
@@ -35,6 +36,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
+      <link rel="icon" href={favicon} />
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
