@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import {Link, NavLink} from 'react-router-dom'
 import Logo from '../images/logo.png'
-import {links} from '../data'
+import { useTranslation } from 'react-i18next';
 import { FaBars } from "react-icons/fa";
 import {MdOutlineClose} from 'react-icons/md'
 import './navbar.css'
@@ -9,9 +9,23 @@ import LanguageSwitcher from './LanguageFlags'
 
 
 const Navbar = () => {
+    const { t } = useTranslation();
     const [isNavShowing, setIsNavShowing] = useState(false);
 
-
+    const links = [
+        {
+            name: t('Home'), // Переводим имя ссылки
+            path: '/',
+        },
+        {
+            name: t('Catalog'), // Переводим имя ссылки
+            path: '/catalog',
+        },
+        {
+            name: t('Contact'), // Переводим имя ссылки
+            path: '/contact',
+        },
+    ];
   return (
     <nav>
         <div className="container nav__container">
