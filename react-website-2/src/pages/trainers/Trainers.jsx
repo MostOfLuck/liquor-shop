@@ -362,7 +362,7 @@ const Catalogs = () => {
         setSearchCategory('');
     }
 };
-
+const categoriesText = t('All Categories')
 
 	const renderCategoryFilter = () => (
 		<select
@@ -370,7 +370,7 @@ const Catalogs = () => {
 			value={searchCategory}
 			onChange={e => setSearchCategory(e.target.value)}
 		>
-			<option value=''>All Categories</option>
+			<option value=''>{categoriesText}</option>
 			{Object.keys(groupedItems).map(category => (
 				<option key={category} value={category}>
 					{category}
