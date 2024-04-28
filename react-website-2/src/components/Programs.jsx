@@ -1,6 +1,5 @@
 import { FaCrown } from 'react-icons/fa';
 import SectionHead from './SectionHead';
-import { products } from '../data';
 import Card from '../UI/Card';
 import fiuzaImg from '../images/fiuzaImg.png'
 import cognacImg from '../images/cognacimg.png'
@@ -8,6 +7,7 @@ import portImg from '../images/portImga.png'
 import { Link } from 'react-router-dom';
 import { AiFillCaretRight } from 'react-icons/ai';
 import { useTranslation } from 'react-i18next';
+import { products } from '../data'
 
 const Programs = () => {
     const { t } = useTranslation();
