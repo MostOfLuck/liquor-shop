@@ -8,7 +8,7 @@ import logo2 from '../productImages/logofiuza.jpeg'
 import logo3 from '../productImages/logotrijol.jpeg'
 import logo4 from '../productImages/logoalonseason.jpg'
 import logo5 from '../productImages/logoporto.jpg'
-import logo6 from '../productImages/Nativereservalogo.jpg'
+import logo6 from '../productImages/Nativereservalogo.png'
 import logo7 from '../productImages/oceaniuslogo.jpg'
 
 const logos = [
