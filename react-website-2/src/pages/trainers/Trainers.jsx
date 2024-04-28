@@ -41,7 +41,7 @@ const Catalogs = () => {
 		{
 			id: 1,
 			name: 'Fiuza Chardonnay Arinto',
-			category: 'Wine',
+			category: t(t('Wine')),
 			image: fiuza,
 			images: [fuza],
 			title: <h1 className='product__title'>Fiuza Chardonnay Arinto</h1>,
@@ -56,7 +56,7 @@ const Catalogs = () => {
 		{
 			id: 2,
 			name: 'Porto Cabraco Ruby',
-			category: 'Port',
+			category: t('Port wine'),
 			image: PortoCabracoRuby2,
 			images: [PortoCabracoRuby1],
 			title: <h1 className='product__title'>Porto Cabraco Ruby</h1>,
@@ -71,7 +71,7 @@ const Catalogs = () => {
 		{
 			id: 3,
 			name: 'Porto Cabraco white',
-			category: 'Port',
+			category: t('Port wine'),
 			image: PortoCabacoWhite,
 			images: [PortoCabacoWhite],
 			title: <h1 className='product__title'>Porto Cabraco White</h1>,
@@ -86,7 +86,7 @@ const Catalogs = () => {
 		{
 			id: 4,
 			name: 'Porto Cabraco Rose',
-			category: 'Port',
+			category: t('Port wine'),
 			image: PortoCabacoRose,
 			images: [PortoCabacoRose],
 			title: <h1 className='product__title'>Porto Cabraco Rose</h1>,
@@ -101,7 +101,7 @@ const Catalogs = () => {
 		{
 			id: 5,
 			name: 'Maxime Trijol Cognac',
-			category: 'Cognac',
+			category: t('Cognac'),
 			image: MaximeTrijolCognac2,
 			images: [MaximeTrijolCognac],
 			title: <h1 className='product__title'>Maxime Trijol Cognac</h1>,
@@ -116,7 +116,7 @@ const Catalogs = () => {
 		{
 			id: 6,
 			name: 'Maxime Trijol Cognac Vsop',
-			category: 'Cognac',
+			category: t('Cognac'),
 			image: MaximeTrijolCognacVsop2,
 			images: [MaximeTrijolCognacVsop],
 			title: <h1 className='product__title'>Maxime Trijol Cognac Vsop</h1>,
@@ -131,7 +131,7 @@ const Catalogs = () => {
 		{
 			id: 7,
 			name: 'Maxime Trijol Cognac ',
-			category: 'Cognac',
+			category: t('Cognac'),
 			image: MaximeTrijolCognacSmall,
 			images: [MaximeTrijolCognacSmall2],
 			title: <h1 className='product__title'>Maxime Trijol Cognac</h1>,
@@ -146,7 +146,7 @@ const Catalogs = () => {
 		{
 			id: 8,
 			name: 'Fiuza Native Reserva 2018 ',
-			category: 'Wine',
+			category: t('Wine'),
 			image: FiuzaNativeReserva2018,
 			images: [FiuzaNativeReserva2018],
 			title: <h1 className='product__title'>Fiuza Native Reserva 2018</h1>,
@@ -161,7 +161,7 @@ const Catalogs = () => {
 		{
 			id: 9,
 			name: 'Oceanius Produto de Portugal 2019',
-			category: 'Wine',
+			category: t('Wine'),
 			image: Oceanius,
 			images: [Oceanius],
 			title: (
@@ -178,7 +178,7 @@ const Catalogs = () => {
 		{
 			id: 10,
 			name: 'Fiuza Cabernet Sauvignon',
-			category: 'Wine',
+			category: t('Wine'),
 			image: FiuzaCabernetSauvignon,
 			images: [FiuzaCabernetSauvignon],
 			title: <h1 className='product__title'>Fiuza Cabernet Sauvignon</h1>,
@@ -193,7 +193,7 @@ const Catalogs = () => {
 		{
 			id: 11,
 			name: 'Adega de Borba',
-			category: 'Wine',
+			category: t('Wine'),
 			image: AdegaDeBorba,
 			images: [AdegaDeBorba],
 			title: <h1 className='product__title'>Adega de Borba</h1>,
@@ -208,7 +208,7 @@ const Catalogs = () => {
 		{
 			id: 12,
 			name: 'Fiuza Merilot 2015',
-			category: 'Wine',
+			category: t('Wine'),
 			image: FiuzaMerilot2015,
 			images: [FiuzaMerilot2015],
 			title: <h1 className='product__title'>Fiuza Merilot 2015</h1>,
@@ -223,7 +223,7 @@ const Catalogs = () => {
 		{
 			id: 13,
 			name: 'Montes Carlos DOC Alentejo Tinto 2016',
-			category: 'Wine',
+			category: t('Wine'),
 			image: MontesCarlos,
 			images: [MontesCarlos],
 			title: (
@@ -242,7 +242,7 @@ const Catalogs = () => {
 		{
 			id: 14,
 			name: 'Bianco C Chardonnay All Seasons Collection 2020',
-			category: 'Wine',
+			category: t('Wine'),
 			image: BiancoCChadronay,
 			images: [BiancoCChadronay],
 			title: (
@@ -261,7 +261,7 @@ const Catalogs = () => {
 		{
 			id: 15,
 			name: 'Spain Velas Corsarias',
-			category: 'Wine',
+			category: t('Wine'),
 			image: VelasCorsarias,
 			images: [VelasCorsarias],
 			title: <h1 className='product__title'>Spain Velas Corsarias</h1>,
@@ -276,7 +276,7 @@ const Catalogs = () => {
 		{
 			id: 16,
 			name: 'Summer Merlot All SeasonsCollection 2020',
-			category: 'Wine',
+			category: t('Wine'),
 			image: SummerMerlotAllSeasonsCollection,
 			images: [SummerMerlotAllSeasonsCollection],
 			title: (
@@ -295,7 +295,7 @@ const Catalogs = () => {
 		{
 			id: 17,
 			name: 'Maxime Trijol Cognac',
-			category: 'Cognac',
+			category: t(t('Cognac')),
 			image: MaximeTrijolCognac3litr2,
 			images: [MaximeTrijolCognac3litr],
 			title: <h1 className='product__title'>Maxime Trijol Cognac</h1>,
@@ -310,7 +310,7 @@ const Catalogs = () => {
 		{
 			id: 18,
 			name: 'Cabernet Sauvignon Touriga Nacional All Seansons Collection',
-			category: 'Wine',
+			category: t('Wine'),
 			image: CabernetSauvignonTourigaNacionalAllSeansonsCollection,
 			images: [CabernetSauvignonTourigaNacionalAllSeansonsCollection],
 			title: (
