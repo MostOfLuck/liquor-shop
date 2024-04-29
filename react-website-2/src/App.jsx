@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useTranslation } from 'react-i18next'; // Импортируем хук для перевода
 import Home from './pages/home/Home';
@@ -11,7 +11,11 @@ import './index.css';
 import favicon from './images/iconlogo.png';
 
 const App = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    i18n.changeLanguage('עברית');
+}, []);
 
   const [isOver18, setIsOver18] = useState(null);
   const [modalShown, setModalShown] = useState(false);
@@ -24,7 +28,6 @@ const App = () => {
     }
   };
 
-  // Обертка для перевода строки "Welcome!"
   const welcomeText = t('Welcome!');
 
   const Modal = ({ onUnder18Click }) => (
@@ -32,7 +35,7 @@ const App = () => {
       <div className="modal">
         <div className="modal-content">
           <h2>{welcomeText}</h2>
-          <p>{t('Verify that you are legal age.')}</p> {/* Переводим другие тексты */}
+          <p>{t('Verify that you are legal age.')}</p>
           <button className='button1' onClick={() => onUnder18Click(false)}>{t("I'm above 18")}</button>
           <button className='button2' onClick={() => onUnder18Click(true)}>{t("I'm under 18")}</button>
         </div>
