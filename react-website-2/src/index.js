@@ -156,6 +156,7 @@ i18n.use(initReactI18next).init({
 					'טלפון ☎: 03-6542200 נייד 📱: 052-4448940',
 				'Email: rillcollection2023@gmail.com':
 					'מייל: rillcollection2023@gmail.com',
+					"Page Not Found": "הדף לא נמצא",
 				Home: 'בית',
 				'Welcome!': '!ברוך הבא',
 				'Verify that you are legal age.': 'ודא שאתה בגיל החוקי',
