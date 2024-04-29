@@ -111,7 +111,7 @@
 	}
 
 	.modal-card img {
-		width: 100%; /* Set image width to 100% of its container */
+		width: 50%; /* Set image width to 100% of its container */
 		height: 100%; /* Set image height to 100% of its container */
 		object-fit: cover; /* Ensure the image covers the whole area without distortion */
 	}
@@ -195,9 +195,12 @@
 @media (max-width: 768px) {
 	.product__article,
 	.product__title {
-		width: 100%; /* Используйте 100% ширины на мобильных устройствах */
-		margin-top: 60px; /* Уменьшите верхний отступ на мобильных устройствах */
-		margin-left: -250px;
+		top: -350px;
+		height: 10%;
+		font-size: 13px;
+		width: 50%;
+		margin-top: 60px;
+		margin-left: -40px;
 		text-align: left;
 	}
 }
