@@ -113,7 +113,7 @@
 	}
 
 	.modal-card img {
-		width: 50%; /* Set image width to 100% of its container */
+		width: 42%; /* Set image width to 100% of its container */
 		height: 100%; /* Set image height to 100% of its container */
 		object-fit: cover; /* Ensure the image covers the whole area without distortion */
 	}
@@ -201,7 +201,7 @@
 		font-size: 15px;
 		width: 50%;
 		margin-top: 60px;
-		margin-left: -2rem;
+		margin-left: -4rem;
 		text-align: left;
 		word-wrap: break-word;
 		overflow-wrap: break-word;
