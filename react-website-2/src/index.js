@@ -1,8 +1,8 @@
+import i18n from 'i18next'
 import ReactDOM from 'react-dom/client'
+import { initReactI18next } from 'react-i18next'
 import App from './App'
 import './index.css'
-import i18n from 'i18next'
-import { initReactI18next } from 'react-i18next'
 
 i18n.use(initReactI18next).init({
 	resources: {
@@ -19,18 +19,19 @@ i18n.use(initReactI18next).init({
 				'Best Alcohol from all over the world': 'Лучший алкоголь со всего мира',
 				'Open Catalog': 'Открыть Каталог',
 				Catalog: 'Каталог',
-				"Get In Touch": "Свяжитесь с нами",
-				"We are in Facebook, Tiktok, & Instagram. You can also contact us via Email.": "Мы есть в Facebook, Tiktok и Instagram. Вы также можете связаться с нами по электронной почте.",
-				"Page Not Found": "Страница не найдена",
-				"Go Back Home": "Вернутся назад",
-				"Contact Us": "Свяжитесь с нами",
-				"Contact": "Связаться",
-				"Reviews": "Отзывы",
-				"Insights": "Идеи",
-				"Permalinks": "Постоянные ссылки",
-				"Blog": "Блог",
-				"Communities": "Сообщество",
-				"Our Socials and contacts.": "Наши социальные сети и контакты.",
+				'Get In Touch': 'Свяжитесь с нами',
+				'We are in Facebook, Tiktok, & Instagram. You can also contact us via Email.':
+					'Мы есть в Facebook, Tiktok и Instagram. Вы также можете связаться с нами по электронной почте.',
+				'Page Not Found': 'Страница не найдена',
+				'Go Back Home': 'Вернутся назад',
+				'Contact Us': 'Свяжитесь с нами',
+				Contact: 'Связаться',
+				Reviews: 'Отзывы',
+				Insights: 'Идеи',
+				Permalinks: 'Постоянные ссылки',
+				Blog: 'Блог',
+				Communities: 'Сообщество',
+				'Our Socials and contacts.': 'Наши социальные сети и контакты.',
 				'Explore the world of Portugal, Spain, and France with our diverse selection of wines and cognacs. Indulge in the exquisite flavors and aromas presented in our bottles, and discover the true gems of winemaking.':
 					'Откройте для себя мир Португалии, Испании и Франции с нашим разнообразным выбором вин и коньяков. Насладитесь изысканными вкусами и ароматами, представленными в наших бутылках, и откройте для себя настоящие жемчужины виноделия.',
 				'Our Catalog': 'Наш Каталог',
@@ -42,7 +43,7 @@ i18n.use(initReactI18next).init({
 					'Испытайте восхитительный фьюжн Porto Cabaco White. С хрустящими цитрусовыми нотами, оттенками тропических фруктов и освежающим послевкусием, он идеально подходит для любого случая.',
 				'Experience the enchanting charm of Porto Cabraco Rosé. Bursting with vibrant red berry flavors, delicate floral aromas, and a crisp, refreshing finish, its the ideal choice for any occasion.':
 					'Почувствуйте чарующее очарование Porto Cabraco Rosé. Наполненный яркими ароматами красных ягод, нежными цветочными ароматами и свежим, освежающим послевкусием, он является идеальным выбором для любого случая.',
-					'Experience the delightful fusion of Porto Cabraco White. With crisp citrus notes, hints of tropical fruit, and a refreshing finish, its perfect for any occasion.':
+				'Experience the delightful fusion of Porto Cabraco White. With crisp citrus notes, hints of tropical fruit, and a refreshing finish, its perfect for any occasion.':
 					'Ощутите восхитительное слияние Porto Cabraco White. С хрустящими цитрусовыми нотами, оттенками тропических фруктов и освежающим финишем оно идеально подходит для любого случая.',
 				'Savor the refined richness of Maxime Trijol Cognac. Crafted with expertise, it offers a smooth, luxurious taste of dried fruits, oak, and spices. Perfect for elevating any occasion.':
 					'Насладитесь изысканным богатством коньяка Maxime Trijol. Созданный с мастерством, он предлагает мягкий, роскошный вкус сухофруктов, дуба и специй. Идеально подходит для украшения любого случая.',
@@ -66,22 +67,26 @@ i18n.use(initReactI18next).init({
 					'Авантюрная испанская смесь Velas Corsarias предлагает смелый вкус темных фруктов и специй с оттенком дуба.',
 				'Transport yourself to a summers day with Summer Merlot from the All Seasons Collection 2020. Bursting with ripe berry flavors and a touch of warmth, this wine embodies the essence of the season.':
 					'Перенеситесь в летний день с Summer Merlot из коллекции All Seasons 2020. Наполненное ароматом спелых ягод и оттенком тепла, это вино воплощает в себе сущность сезона.',
-					"Experience a symphony of flavors with this blend. Cabernet Sauvignon and Touriga Nacional unite to create a rich, balanced wine.": "Испытайте симфонию вкусов с этой смесью. Каберне Совиньон и Touriga Nacional объединяются, чтобы создать богатое, сбалансированное вино.",
-					"Import and marketing of quality products.": 
-					"Импорт и реализация качественной продукции.",
-					"Street 8 Azur": "Улица 8 Азур",
-					"Postal code 5802920, Israel": "Почтовый индекс 5802920, Израиль",
-					"Phone ☎: 03-6542200 Mobile 📱: 052-4448940": "Телефон ☎: 03-6542200 Мобильный 📱: 052-4448940",
-					"Email: rillcollection2023@gmail.com": "Электронная почта: rillcollection2023@gmail.com",
-					"Home": "Главная",
-					"Welcome!": "Добро пожаловать!",
-					"Verify that you are legal age.": "Убедитесь, что вы достигли совершеннолетия.",
-					"I'm above 18": "Мне больше 18",
-					"I'm under 18": "Мне меньше 18",
-					"All Categories": "Все Категории",
-					"Wine": "Вино",
-					"Port wine": "Портвейн",
-					"Cognac": "Коньяк",
+				'Experience a symphony of flavors with this blend. Cabernet Sauvignon and Touriga Nacional unite to create a rich, balanced wine.':
+					'Испытайте симфонию вкусов с этой смесью. Каберне Совиньон и Touriga Nacional объединяются, чтобы создать богатое, сбалансированное вино.',
+				'Import and marketing of quality products.':
+					'Импорт и реализация качественной продукции.',
+				'Street 8 Azur': 'Улица 8 Азур',
+				'Postal code 5802920, Israel': 'Почтовый индекс 5802920, Израиль',
+				'Phone ☎: 03-6542200 Mobile 📱: 052-4448940':
+					'Телефон ☎: 03-6542200 Мобильный 📱: 052-4448940',
+				'Email: rillcollection2023@gmail.com':
+					'Электронная почта: rillcollection2023@gmail.com',
+				Home: 'Главная',
+				'Welcome!': 'Добро пожаловать!',
+				'Verify that you are legal age.':
+					'Убедитесь, что вы достигли совершеннолетия.',
+				"I'm above 18": 'Мне больше 18',
+				"I'm under 18": 'Мне меньше 18',
+				'All Categories': 'Все Категории',
+				Wine: 'Вино',
+				'Port wine': 'Портвейн',
+				Cognac: 'Коньяк',
 			},
 		},
 		עברית: {
@@ -89,21 +94,23 @@ i18n.use(initReactI18next).init({
 				'Learn More': 'קרא עוד',
 				'Discover the Finest Alcoholic Beverages at R.I.L.L Collection':
 					'גלו את המשקאות האלכוהוליים הטובים ביותר ב-R.I.L.L Collection',
-					"Best Alcohol from all over the world": "האלכוהול הטוב ביותר מכל רחבי העולם",
-					"Open Catalog": "פתח קטלוג",
-					Catalog: 'קטלוג',
-					"Get In Touch": "צור קשר",
-					"We are in Facebook, Tiktok, & Instagram. You can also contact us via Email.": 'אנחנו בפייסבוק, בטיקטוק ובאינסטגרם. ניתן גם ליצור איתנו קשר באמצעות דוא"ל.',
-				"Page Not Found": "Страница не найдена",
-				"Go Back Home": "הדף לא נמצא",
-				"Contact Us": "צור קשר",
-				"Contact": "איש קשר",
-				"Reviews": "הדעת",
-				"Insights": "תובנות",
-				"Permalinks": "קישורים קבועים",
-				"Blog": "בלוג",
-				"Communities": "קהילות",
-				"Our Socials and contacts.": "הרשתות החברתיות ואנשי הקשר שלנו.",
+				'Best Alcohol from all over the world':
+					'האלכוהול הטוב ביותר מכל רחבי העולם',
+				'Open Catalog': 'פתח קטלוג',
+				Catalog: 'קטלוג',
+				'Get In Touch': 'צור קשר',
+				'We are in Facebook, Tiktok, & Instagram. You can also contact us via Email.':
+					'אנחנו בפייסבוק, בטיקטוק ובאינסטגרם. ניתן גם ליצור איתנו קשר באמצעות דוא"ל.',
+				'Page Not Found': 'Страница не найдена',
+				'Go Back Home': 'הדף לא נמצא',
+				'Contact Us': 'צור קשר',
+				Contact: 'איש קשר',
+				Reviews: 'הדעת',
+				Insights: 'תובנות',
+				Permalinks: 'קישורים קבועים',
+				Blog: 'בלוג',
+				Communities: 'קהילות',
+				'Our Socials and contacts.': 'הרשתות החברתיות ואנשי הקשר שלנו.',
 				'Explore the world of Portugal, Spain, and France with our diverse selection of wines and cognacs. Indulge in the exquisite flavors and aromas presented in our bottles, and discover the true gems of winemaking.':
 					'גלו את העולם של פורטוגל, ספרד וצרפת עם מבחר היינות והקוניאק המגוון שלנו. התענגו על הטעמים והניחוחות המעולים המוצגים בבקבוקים שלנו, וגלו את אבני החן האמיתיות של ייצור יין.',
 				'Our Catalog': 'הקטלוג שלנו',
@@ -119,7 +126,7 @@ i18n.use(initReactI18next).init({
 					"התענגו על העושר המעודן של קוניאק מקסים טריז'ול. מיוצר במומחיות, הוא מציע טעם חלק ויוקרתי של פירות יבשים, אלון ותבלינים. מושלם לרומם כל אירוע.",
 				'Discover sophistication in every sip. Rich fruit, subtle florals, and a velvety finish define this French classic.':
 					'גלו תחכום בכל לגימה. פרי עשיר, פרחים עדינים וסיומת קטיפתית מגדירים את הקלאסיקה הצרפתית הזו.',
-					'Experience the delightful fusion of Porto Cabraco White. With crisp citrus notes, hints of tropical fruit, and a refreshing finish, its perfect for any occasion.':
+				'Experience the delightful fusion of Porto Cabraco White. With crisp citrus notes, hints of tropical fruit, and a refreshing finish, its perfect for any occasion.':
 					"חווה את הפיוז'ן המענג של פורטו קברקו ווייט. עם תווים פריכים של הדרים, רמזים של פרי טרופי וסיומת מרעננת, זה מושלם לכל אירוע.",
 				'Embrace the essence of Portugal with Fiuza Native Reserva 2018. This captivating blend unveils bold flavors of ripe berries, hints of spice, and a smooth, lingering finish. Perfect for those seeking an authentic taste of Portuguese terroir.':
 					'אמצו את המהות של פורטוגל עם Fiuza Native Reserva 2018. תערובת שובת לב זו חושפת טעמים נועזים של פירות יער בשלים, רמזים לתבלין וסיומת חלקה ומתמשכת. מושלם למי שמחפש טעם אותנטי של טרואר פורטוגזי.',
@@ -139,26 +146,30 @@ i18n.use(initReactI18next).init({
 					'Velas Corsarias הוא תערובת ספרדית הרפתקנית, המציעה טעמים נועזים של פירות כהים ותבלין עם נגיעות של עץ אלון.',
 				'Transport yourself to a summers day with Summer Merlot from the All Seasons Collection 2020. Bursting with ripe berry flavors and a touch of warmth, this wine embodies the essence of the season.':
 					'העבירו את עצמכם ליום קיץ עם מרלו קיץ מקולקציית All Seasons 2020. מפוצץ בטעמי פירות יער בשלים ונגיעה של חמימות, היין הזה מגלם את תמצית העונה.',
-					"Experience a symphony of flavors with this blend. Cabernet Sauvignon and Touriga Nacional unite to create a rich, balanced wine.": "בואו לחוות סימפוניה של טעמים עם תערובת זו. קברנה סוביניון וטוריגה נסיונל מתאחדים ליצירת יין עשיר ומאוזן.",
-					"Import and marketing of quality products.": "יבוא ושיווק מוצרים איכותיים.",
-					"Street 8 Azur": "החצב 8 אזור",
-					"Postal code 5802920, Israel": "מיקוד 5802920, ישראל",
-					"Phone ☎: 03-6542200 Mobile 📱: 052-4448940": "טלפון ☎: 03-6542200 נייד 📱: 052-4448940",
-					"Email: rillcollection2023@gmail.com": "מייל: rillcollection2023@gmail.com",
-					"Home": "בית",
-					"Welcome!": "!ברוך הבא",
-					"Verify that you are legal age.": "ודא שאתה בגיל החוקי",
-					"I'm above 18": "אני מעל 18",
-					"I'm under 18": "אני מתחת ל 18",
-					"All Categories": "כל הקטגוריות",
-					"Wine": "יַיִן",
-					"Port wine": "יַיִן פּוֹרט",
-					"Cognac": "קוניאק",
+				'Experience a symphony of flavors with this blend. Cabernet Sauvignon and Touriga Nacional unite to create a rich, balanced wine.':
+					'בואו לחוות סימפוניה של טעמים עם תערובת זו. קברנה סוביניון וטוריגה נסיונל מתאחדים ליצירת יין עשיר ומאוזן.',
+				'Import and marketing of quality products.':
+					'יבוא ושיווק מוצרים איכותיים.',
+				'Street 8 Azur': 'החצב 8 אזור',
+				'Postal code 5802920, Israel': 'מיקוד 5802920, ישראל',
+				'Phone ☎: 03-6542200 Mobile 📱: 052-4448940':
+					'טלפון ☎: 03-6542200 נייד 📱: 052-4448940',
+				'Email: rillcollection2023@gmail.com':
+					'מייל: rillcollection2023@gmail.com',
+				Home: 'בית',
+				'Welcome!': '!ברוך הבא',
+				'Verify that you are legal age.': 'ודא שאתה בגיל החוקי',
+				"I'm above 18": 'אני מעל 18',
+				"I'm under 18": 'אני מתחת ל 18',
+				'All Categories': 'כל הקטגוריות',
+				Wine: 'יַיִן',
+				'Port wine': 'יַיִן פּוֹרט',
+				Cognac: 'קוניאק',
 			},
 		},
 	},
-	lng: 'English',
-	fallbackLng: 'English',
+	lng: 'he',
+	fallbackLng: 'he',
 	ns: ['translations'],
 	defaultNS: 'translations',
 	keySeparator: false,
