@@ -102,12 +102,14 @@
 	height: 30rem;
 }
 
-/* Media Query for Mobile Devices */
 @media (max-width: 768px) {
 	.modal-card {
 		width: 100%; /* Use full width of the screen on mobile */
 		height: 90vw; /* Set height relative to width to maintain square shape */
 		padding: 10px; /* Reduce padding on smaller screens */
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+		overflow: auto; /* Add this line */
 	}
 
 	.modal-card img {
@@ -192,15 +194,18 @@
 	left: 230px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 	.product__article,
 	.product__title {
 		top: -350px;
-		height: 10%;
-		font-size: 13px;
+		font-size: 15px;
 		width: 50%;
 		margin-top: 60px;
-		margin-left: -40px;
+		margin-left: -2rem;
 		text-align: left;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+		overflow: auto; /* Add this line */
 	}
 }
+
