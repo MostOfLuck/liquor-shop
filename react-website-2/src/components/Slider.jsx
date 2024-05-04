@@ -32,6 +32,15 @@ const settings = {
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 2000,
+  responsive: [
+    {
+      breakpoint: 480, // breakpoint from which settings should be applied
+      settings: {
+        slidesToShow: 1, // show only 1 slide on screens smaller than 480px
+        slidesToScroll: 1
+      }
+    }
+  ]
 };
 
 const SliderComponent = () => {
