@@ -46,73 +46,103 @@ const Catalogs = () => {
 			images: [fuza],
 			title: <h1 className='product__title'>Fiuza Chardonnay Arinto</h1>,
 			article: (
-				<p className='product__article'>
-					{t(
-						'Savor the Chardonnay and Arinto blend of Fiuza 2017. Tropical fruit, vanilla hints, and citrus finish make it perfect for any occasion.'
-					)}
-				</p>
+					<div>
+							<p className='product__article'>
+									{t(
+											'Savor the Chardonnay and Arinto blend of Fiuza 2017. Tropical fruit, vanilla hints, and citrus finish make it perfect for any occasion.'
+									)}
+							</p>
+							<div className='warning'>
+							<div className='warning_text'>{t('Warning: contains alcohol, it is recommended to avoid excessive drinking')}</div>
+							</div>
+					</div>
 			),
-		},
-		{
-			id: 2,
-			name: 'Porto Cabraco Ruby',
-			category: t('Port wine'),
-			image: PortoCabracoRuby2,
-			images: [PortoCabracoRuby1],
-			title: <h1 className='product__title'>Porto Cabraco Ruby</h1>,
-			article: (
-				<p className='product__article'>
-					{t(
-						'Experience the vibrant allure of Porto Cabraco Ruby. Rich red fruit, subtle spices, and a velvety finish create the perfect celebration companion.'
-					)}
-				</p>
-			),
-		},
-		{
-			id: 3,
-			name: 'Porto Cabraco white',
-			category: t('Port wine'),
-			image: PortoCabacoWhite,
-			images: [PortoCabacoWhite],
-			title: <h1 className='product__title'>Porto Cabraco White</h1>,
-			article: (
-				<p className='product__article'>
-					{t(
-						'Experience the delightful fusion of Porto Cabraco White. With crisp citrus notes, hints of tropical fruit, and a refreshing finish, its perfect for any occasion.'
-					)}
-				</p>
-			),
-		},
-		{
-			id: 4,
-			name: 'Porto Cabraco Rose',
-			category: t('Port wine'),
-			image: PortoCabacoRose,
-			images: [PortoCabacoRose],
-			title: <h1 className='product__title'>Porto Cabraco Rose</h1>,
-			article: (
-				<p className='product__article'>
-					{t(
-						'Experience the enchanting charm of Porto Cabraco Rosé. Bursting with vibrant red berry flavors, delicate floral aromas, and a crisp, refreshing finish, its the ideal choice for any occasion.'
-					)}
-				</p>
-			),
-		},
-		{
-			id: 5,
-			name: 'Maxime Trijol Cognac',
-			category: t('Cognac'),
-			image: MaximeTrijolCognac2,
-			images: [MaximeTrijolCognac],
-			title: <h1 className='product__title'>Maxime Trijol Cognac</h1>,
-			article: (
-				<p className='product__article'>
-					{t(
-						'Savor the refined richness of Maxime Trijol Cognac. Crafted with expertise, it offers a smooth, luxurious taste of dried fruits, oak, and spices. Perfect for elevating any occasion.'
-					)}
-				</p>
-			),
-		},
+	},
+	
+	{
+    id: 2,
+    name: 'Porto Cabraco Ruby',
+    category: t('Port wine'),
+    image: PortoCabracoRuby2,
+    images: [PortoCabracoRuby1],
+    title: <h1 className='product__title'>Porto Cabraco Ruby</h1>,
+    article: (
+        <div>
+            <p className='product__article'>
+                {t(
+                    'Experience the vibrant allure of Porto Cabraco Ruby. Rich red fruit, subtle spices, and a velvety finish create the perfect celebration companion.'
+                )}
+            </p>
+            <div className='warning'>
+                <div className='warning_text'>{t('Warning: contains alcohol, it is recommended to avoid excessive drinking')}</div>
+            </div>
+        </div>
+    ),
+},
+
+{
+	id: 3,
+	name: 'Porto Cabraco white',
+	category: t('Port wine'),
+	image: PortoCabacoWhite,
+	images: [PortoCabacoWhite],
+	title: <h1 className='product__title'>Porto Cabraco White</h1>,
+	article: (
+			<div>
+					<p className='product__article'>
+							{t(
+									'Experience the delightful fusion of Porto Cabraco White. With crisp citrus notes, hints of tropical fruit, and a refreshing finish, its perfect for any occasion.'
+							)}
+					</p>
+					<div className='warning'>
+							<div className='warning_text'>{t('Warning: contains alcohol, it is recommended to avoid excessive drinking')}</div>
+					</div>
+			</div>
+	),
+},
+
+{
+	id: 4,
+	name: 'Porto Cabraco Rose',
+	category: t('Port wine'),
+	image: PortoCabacoRose,
+	images: [PortoCabacoRose],
+	title: <h1 className='product__title'>Porto Cabraco Rose</h1>,
+	article: (
+			<div>
+					<p className='product__article'>
+							{t(
+									'Experience the enchanting charm of Porto Cabraco Rosé. Bursting with vibrant red berry flavors, delicate floral aromas, and a crisp, refreshing finish, its the ideal choice for any occasion.'
+							)}
+					</p>
+					<div className='warning'>
+							<div className='warning_text'>{t('Warning: contains alcohol, it is recommended to avoid excessive drinking')}</div>
+					</div>
+			</div>
+	),
+},
+
+{
+	id: 5,
+	name: 'Maxime Trijol Cognac',
+	category: t('Cognac'),
+	image: MaximeTrijolCognac2,
+	images: [MaximeTrijolCognac],
+	title: <h1 className='product__title'>Maxime Trijol Cognac</h1>,
+	article: (
+			<div>
+					<p className='product__article'>
+							{t(
+									'Savor the refined richness of Maxime Trijol Cognac. Crafted with expertise, it offers a smooth, luxurious taste of dried fruits, oak, and spices. Perfect for elevating any occasion.'
+							)}
+					</p>
+					<div className='warning'>
+							<div className='warning_text'>{t('Warning! Excessive consumption of alcohol is life-threatening and harmful to health')}</div>
+					</div>
+			</div>
+	),
+},
+
 		{
 			id: 6,
 			name: 'Maxime Trijol Cognac Vsop',
@@ -121,211 +151,289 @@ const Catalogs = () => {
 			images: [MaximeTrijolCognacVsop],
 			title: <h1 className='product__title'>Maxime Trijol Cognac Vsop</h1>,
 			article: (
-				<p className='product__article'>
-					{t(
-						'Discover sophistication in every sip. Rich fruit, subtle florals, and a velvety finish define this French classic.'
-					)}
-				</p>
+					<div>
+							<p className='product__article'>
+									{t(
+											'Discover sophistication in every sip. Rich fruit, subtle florals, and a velvety finish define this French classic.'
+									)}
+							</p>
+							<div className='warning'>
+									<div className='warning_text'>{t('Warning! Excessive consumption of alcohol is life-threatening and harmful to health')}</div>
+							</div>
+					</div>
 			),
-		},
+	},
+	
 		{
 			id: 7,
-			name: 'Maxime Trijol Cognac ',
+			name: 'Maxime Trijol Cognac',
 			category: t('Cognac'),
 			image: MaximeTrijolCognacSmall,
 			images: [MaximeTrijolCognacSmall2],
 			title: <h1 className='product__title'>Maxime Trijol Cognac</h1>,
 			article: (
-				<p className='product__article'>
-					{t(
-						'Savor the refined richness of Maxime Trijol Cognac. Crafted with expertise, it offers a smooth, luxurious taste of dried fruits, oak, and spices. Perfect for elevating any occasion.'
-					)}
-				</p>
+					<div>
+							<p className='product__article'>
+									{t(
+											'Savor the refined richness of Maxime Trijol Cognac. Crafted with expertise, it offers a smooth, luxurious taste of dried fruits, oak, and spices. Perfect for elevating any occasion.'
+									)}
+							</p>
+							<div className='warning'>
+									<div className='warning_text'>{t('Warning! Excessive consumption of alcohol is life-threatening and harmful to health')}</div>
+							</div>
+					</div>
 			),
-		},
+	},
+	
 		{
 			id: 8,
-			name: 'Fiuza Native Reserva 2018 ',
+			name: 'Fiuza Native Reserva 2018',
 			category: t('Wine'),
 			image: FiuzaNativeReserva2018,
 			images: [FiuzaNativeReserva2018],
 			title: <h1 className='product__title'>Fiuza Native Reserva 2018</h1>,
 			article: (
-				<p className='product__article'>
-					{t(
-						'Embrace the essence of Portugal with Fiuza Native Reserva 2018. This captivating blend unveils bold flavors of ripe berries, hints of spice, and a smooth, lingering finish. Perfect for those seeking an authentic taste of Portuguese terroir.'
-					)}
-				</p>
+					<div>
+							<p className='product__article'>
+									{t(
+											'Embrace the essence of Portugal with Fiuza Native Reserva 2018. This captivating blend unveils bold flavors of ripe berries, hints of spice, and a smooth, lingering finish. Perfect for those seeking an authentic taste of Portuguese terroir.'
+									)}
+							</p>
+							<div className='warning'>
+									<div className='warning_text'>{t('Warning: contains alcohol, it is recommended to avoid excessive drinking')}</div>
+							</div>
+					</div>
 			),
-		},
-		{
-			id: 9,
-			name: 'Oceanius Produto de Portugal 2019',
-			category: t('Wine'),
-			image: Oceanius,
-			images: [Oceanius],
-			title: (
-				<h1 className='product__title'>Oceanius Produto de Portugal 2019</h1>
-			),
-			article: (
-				<p className='product__article'>
-					{t(
-						'Experience Portugals essence with Oceanius 2019. Its vibrant fruit flavors and subtle herbal notes lead to a refreshing, harmonious finish, reminiscent of the Portuguese coast.'
-					)}
-				</p>
-			),
-		},
-		{
-			id: 10,
-			name: 'Fiuza Cabernet Sauvignon',
-			category: t('Wine'),
-			image: FiuzaCabernetSauvignon,
-			images: [FiuzaCabernetSauvignon],
-			title: <h1 className='product__title'>Fiuza Cabernet Sauvignon</h1>,
-			article: (
-				<p className='product__article'>
-					{t(
-						'Elevate your palate with Fiuza Cabernet Sauvignon. This robust wine delights with intense blackberry and cassis flavors, complemented by hints of spice and a velvety texture. Perfect for moments of indulgence and celebration.'
-					)}
-				</p>
-			),
-		},
-		{
-			id: 11,
-			name: 'Adega de Borba',
-			category: t('Wine'),
-			image: AdegaDeBorba,
-			images: [AdegaDeBorba],
-			title: <h1 className='product__title'>Adega de Borba</h1>,
-			article: (
-				<p className='product__article'>
-					{t(
-						'Immerse yourself in the heritage of Portugal with Adega de Borba. This esteemed winery crafts wines of exceptional quality, showcasing the rich flavors of the Alentejo region. Experience elegance and tradition in every sip.'
-					)}
-				</p>
-			),
-		},
-		{
-			id: 12,
-			name: 'Fiuza Merilot 2015',
-			category: t('Wine'),
-			image: FiuzaMerilot2015,
-			images: [FiuzaMerilot2015],
-			title: <h1 className='product__title'>Fiuza Merilot 2015</h1>,
-			article: (
-				<p className='product__article'>
-					{t(
-						'Indulge in the rich heritage of Fiuza Merilot 2015. This exquisite blend harmoniously combines Merlot and Cabernet Sauvignon, offering a symphony of ripe berry flavors, subtle spice notes, and a velvety texture. Perfect for moments of refined enjoyment.'
-					)}
-				</p>
-			),
-		},
-		{
-			id: 13,
-			name: 'Montes Carlos DOC Alentejo Tinto 2016',
-			category: t('Wine'),
-			image: MontesCarlos,
-			images: [MontesCarlos],
-			title: (
-				<h1 className='product__title'>
+	},
+	
+	{
+    id: 9,
+    name: 'Oceanius Produto de Portugal 2019',
+    category: t('Wine'),
+    image: Oceanius,
+    images: [Oceanius],
+    title: (
+        <h1 className='product__title'>Oceanius Produto de Portugal 2019</h1>
+    ),
+    article: (
+        <div>
+            <p className='product__article'>
+                {t(
+                    'Experience Portugals essence with Oceanius 2019. Its vibrant fruit flavors and subtle herbal notes lead to a refreshing, harmonious finish, reminiscent of the Portuguese coast.'
+                )}
+            </p>
+            <div className='warning'>
+                <div className='warning_text'>{t('Warning: contains alcohol, it is recommended to avoid excessive drinking')}</div>
+            </div>
+        </div>
+    ),
+},
+
+{
+	id: 10,
+	name: 'Fiuza Cabernet Sauvignon',
+	category: t('Wine'),
+	image: FiuzaCabernetSauvignon,
+	images: [FiuzaCabernetSauvignon],
+	title: <h1 className='product__title'>Fiuza Cabernet Sauvignon</h1>,
+	article: (
+			<div>
+					<p className='product__article'>
+							{t(
+									'Elevate your palate with Fiuza Cabernet Sauvignon. This robust wine delights with intense blackberry and cassis flavors, complemented by hints of spice and a velvety texture. Perfect for moments of indulgence and celebration.'
+							)}
+					</p>
+					<div className='warning'>
+							<div className='warning_text'>{t('Warning: contains alcohol, it is recommended to avoid excessive drinking')}</div>
+					</div>
+			</div>
+	),
+},
+
+{
+	id: 11,
+	name: 'Adega de Borba',
+	category: t('Wine'),
+	image: AdegaDeBorba,
+	images: [AdegaDeBorba],
+	title: <h1 className='product__title'>Adega de Borba</h1>,
+	article: (
+			<div>
+					<p className='product__article'>
+							{t(
+									'Immerse yourself in the heritage of Portugal with Adega de Borba. This esteemed winery crafts wines of exceptional quality, showcasing the rich flavors of the Alentejo region. Experience elegance and tradition in every sip.'
+							)}
+					</p>
+					<div className='warning'>
+							<div className='warning_text'>{t('Warning: contains alcohol, it is recommended to avoid excessive drinking')}</div>
+					</div>
+			</div>
+	),
+},
+
+{
+	id: 12,
+	name: 'Fiuza Merilot 2015',
+	category: t('Wine'),
+	image: FiuzaMerilot2015,
+	images: [FiuzaMerilot2015],
+	title: <h1 className='product__title'>Fiuza Merilot 2015</h1>,
+	article: (
+			<div>
+					<p className='product__article'>
+							{t(
+									'Indulge in the rich heritage of Fiuza Merilot 2015. This exquisite blend harmoniously combines Merlot and Cabernet Sauvignon, offering a symphony of ripe berry flavors, subtle spice notes, and a velvety texture. Perfect for moments of refined enjoyment.'
+							)}
+					</p>
+					<div className='warning'>
+							<div className='warning_text'>{t('Warning: contains alcohol, it is recommended to avoid excessive drinking')}</div>
+					</div>
+			</div>
+	),
+},
+
+{
+	id: 13,
+	name: 'Montes Carlos DOC Alentejo Tinto 2016',
+	category: t('Wine'),
+	image: MontesCarlos,
+	images: [MontesCarlos],
+	title: (
+			<h1 className='product__title'>
 					Montes Carlos DOC Alentejo Tinto 2016
-				</h1>
-			),
-			article: (
-				<p className='product__article'>
-					{t(
-						'Discover Portugal essence with Montes Carlos DOC Alentejo Tinto 2016. This captivating red wine offers rich flavors of dark fruits, hints of spice, and a smooth finish, perfect for pure enjoyment.'
-					)}
-				</p>
-			),
-		},
-		{
-			id: 14,
-			name: 'Bianco C Chardonnay All Seasons Collection 2020',
-			category: t('Wine'),
-			image: BiancoCChadronay,
-			images: [BiancoCChadronay],
-			title: (
-				<h1 className='product__title'>
+			</h1>
+	),
+	article: (
+			<div>
+					<p className='product__article'>
+							{t(
+									'Discover Portugal essence with Montes Carlos DOC Alentejo Tinto 2016. This captivating red wine offers rich flavors of dark fruits, hints of spice, and a smooth finish, perfect for pure enjoyment.'
+							)}
+					</p>
+					<div className='warning'>
+							<div className='warning_text'>{t('Warning: contains alcohol, it is recommended to avoid excessive drinking')}</div>
+					</div>
+			</div>
+	),
+},
+
+{
+	id: 14,
+	name: 'Bianco C Chardonnay All Seasons Collection 2020',
+	category: t('Wine'),
+	image: BiancoCChadronay,
+	images: [BiancoCChadronay],
+	title: (
+			<h1 className='product__title'>
 					Bianco C Chardonnay All Seasons Collection 2020
-				</h1>
-			),
-			article: (
-				<p className='product__article'>
-					{t(
-						'Savor Bianco C Chardonnay from the All Seasons Collection 2020. With vibrant fruit aromas and a creamy texture, its perfect for any occasion.'
-					)}
-				</p>
-			),
-		},
-		{
-			id: 15,
-			name: 'Spain Velas Corsarias',
-			category: t('Wine'),
-			image: VelasCorsarias,
-			images: [VelasCorsarias],
-			title: <h1 className='product__title'>Spain Velas Corsarias</h1>,
-			article: (
-				<p className='product__article'>
-					{t(
-						'An adventurous Spanish blend, Velas Corsarias offers bold flavors of dark fruits and spice with a hint of oak.'
-					)}
-				</p>
-			),
-		},
-		{
-			id: 16,
-			name: 'Summer Merlot All SeasonsCollection 2020',
-			category: t('Wine'),
-			image: SummerMerlotAllSeasonsCollection,
-			images: [SummerMerlotAllSeasonsCollection],
-			title: (
-				<h1 className='product__title'>
-					Summer Merlot All SeasonsCollection 2020
-				</h1>
-			),
-			article: (
-				<p className='product__article'>
-					{t(
-						'Transport yourself to a summers day with Summer Merlot from the All Seasons Collection 2020. Bursting with ripe berry flavors and a touch of warmth, this wine embodies the essence of the season.'
-					)}
-				</p>
-			),
-		},
-		{
-			id: 17,
-			name: 'Maxime Trijol Cognac',
-			category: t(t('Cognac')),
-			image: MaximeTrijolCognac3litr2,
-			images: [MaximeTrijolCognac3litr],
-			title: <h1 className='product__title'>Maxime Trijol Cognac</h1>,
-			article: (
-				<p className='product__article'>
-					{t(
-						'Savor the refined richness of Maxime Trijol Cognac. Crafted with expertise, it offers a smooth, luxurious taste of dried fruits, oak, and spices. Perfect for elevating any occasion.'
-					)}
-				</p>
-			),
-		},
-		{
-			id: 18,
-			name: 'Cabernet Sauvignon Touriga Nacional All Seansons Collection',
-			category: t('Wine'),
-			image: CabernetSauvignonTourigaNacionalAllSeansonsCollection,
-			images: [CabernetSauvignonTourigaNacionalAllSeansonsCollection],
-			title: (
-				<h1 className='product__title'>
+			</h1>
+	),
+	article: (
+			<div>
+					<p className='product__article'>
+							{t(
+									'Savor Bianco C Chardonnay from the All Seasons Collection 2020. With vibrant fruit aromas and a creamy texture, its perfect for any occasion.'
+							)}
+					</p>
+					<div className='warning'>
+							<div className='warning_text'>{t('Warning: contains alcohol, it is recommended to avoid excessive drinking')}</div>
+					</div>
+			</div>
+	),
+},
+
+{
+	id: 15,
+	name: 'Spain Velas Corsarias',
+	category: t('Wine'),
+	image: VelasCorsarias,
+	images: [VelasCorsarias],
+	title: <h1 className='product__title'>Spain Velas Corsarias</h1>,
+	article: (
+			<div>
+					<p className='product__article'>
+							{t(
+									'An adventurous Spanish blend, Velas Corsarias offers bold flavors of dark fruits and spice with a hint of oak.'
+							)}
+					</p>
+					<div className='warning'>
+							<div className='warning_text'>{t('Warning: contains alcohol, it is recommended to avoid excessive drinking')}</div>
+					</div>
+			</div>
+	),
+},
+
+{
+	id: 16,
+	name: 'Summer Merlot All Seasons Collection 2020',
+	category: t('Wine'),
+	image: SummerMerlotAllSeasonsCollection,
+	images: [SummerMerlotAllSeasonsCollection],
+	title: (
+			<h1 className='product__title'>
+					Summer Merlot All Seasons Collection 2020
+			</h1>
+	),
+	article: (
+			<div>
+					<p className='product__article'>
+							{t(
+									'Transport yourself to a summers day with Summer Merlot from the All Seasons Collection 2020. Bursting with ripe berry flavors and a touch of warmth, this wine embodies the essence of the season.'
+							)}
+					</p>
+					<div className='warning'>
+							<div className='warning_text'>{t('Warning: contains alcohol, it is recommended to avoid excessive drinking')}</div>
+					</div>
+			</div>
+	),
+},
+
+{
+	id: 17,
+	name: 'Maxime Trijol Cognac',
+	category: t(t('Cognac')),
+	image: MaximeTrijolCognac3litr2,
+	images: [MaximeTrijolCognac3litr],
+	title: <h1 className='product__title'>Maxime Trijol Cognac</h1>,
+	article: (
+			<div>
+					<p className='product__article'>
+							{t(
+									'Savor the refined richness of Maxime Trijol Cognac. Crafted with expertise, it offers a smooth, luxurious taste of dried fruits, oak, and spices. Perfect for elevating any occasion.'
+							)}
+					</p>
+					<div className='warning'>
+							<div className='warning_text'>{t('Warning! Excessive consumption of alcohol is life-threatening and harmful to health')}</div>
+					</div>
+			</div>
+	),
+},
+
+{
+	id: 18,
+	name: 'Cabernet Sauvignon Touriga Nacional All Seansons Collection',
+	category: t('Wine'),
+	image: CabernetSauvignonTourigaNacionalAllSeansonsCollection,
+	images: [CabernetSauvignonTourigaNacionalAllSeansonsCollection],
+	title: (
+			<h1 className='product__title'>
 					Cabernet Sauvignon Touriga Nacional All Seansons Collection
-				</h1>
-			),
-			article: (
-				<p className='product__article'>
-					{t(
-						'Experience a symphony of flavors with this blend. Cabernet Sauvignon and Touriga Nacional unite to create a rich, balanced wine.'
-					)}
-				</p>
-			),
-		},
+			</h1>
+	),
+	article: (
+			<div>
+					<p className='product__article'>
+							{t(
+									'Experience a symphony of flavors with this blend. Cabernet Sauvignon and Touriga Nacional unite to create a rich, balanced wine.'
+							)}
+					</p>
+					<div className='warning'>
+							<div className='warning_text'>{t('Warning: contains alcohol, it is recommended to avoid excessive drinking')}</div>
+					</div>
+			</div>
+	),
+},
+
 	])
 	const groupedItems = useMemo(() => {
 		const grouped = {}
