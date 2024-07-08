@@ -17,11 +17,13 @@
     "react-fast-marquee": "^1.6.4",
     "react-i18next": "^14.1.0",
     "react-icons": "^4.4.0",
+    "react-lazyload": "^3.2.1",
     "react-multi-carousel": "^2.8.5",
     "react-query": "^3.39.3",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-slick": "^0.30.2",
+    "react-window": "^1.8.10",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
