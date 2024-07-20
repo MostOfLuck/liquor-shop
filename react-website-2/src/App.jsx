@@ -8,7 +8,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Catalogs from './pages/trainers/Trainers';
 import './index.css';
-import favicon from './images/iconlogo.png';
+import favicon from '../src/images/iconlogo.png';
 
 const App = () => {
   const { t, i18n } = useTranslation();
