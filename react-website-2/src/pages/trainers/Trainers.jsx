@@ -641,7 +641,7 @@ const Catalogs = () => {
 					<input
 						className='placeholder'
 						type='text'
-						placeholder='Search'
+						placeholder={t('Search')}
 						value={searchTerm}
 						onChange={handleChange}
 					/>

@@ -14,6 +14,7 @@ i18n.use(initReactI18next).init({
 		Русский: {
 			translations: {
 				'Learn More': 'Узнать больше',
+				Search: 'Искать',
 				'Discover the Finest Alcoholic Beverages at R.I.L.L Collection':
 					'Откройте для себя лучшие алкогольные напитки в R.I.L.L Collection',
 				'Best Alcohol from all over the world': 'Лучший алкоголь со всего мира',
@@ -111,6 +112,7 @@ i18n.use(initReactI18next).init({
 				Insights: 'תובנות',
 				Permalinks: 'קישורים קבועים',
 				Blog: 'בלוג',
+				Search: 'לחפש',
 				Communities: 'קהילות',
 				'Our Socials and contacts.': 'הרשתות החברתיות ואנשי הקשר שלנו.',
 				'Explore the world of Portugal, Spain, and France with our diverse selection of wines and cognacs. Indulge in the exquisite flavors and aromas presented in our bottles, and discover the true gems of winemaking.':
@@ -160,7 +162,7 @@ i18n.use(initReactI18next).init({
 					'מייל: rillcollection2023@gmail.com',
 					"Page Not Found": "הדף לא נמצא",
 				Home: 'בית',
-				'Welcome!': '!ברוך הבא',
+				'Welcome!': 'ברוך הבא!',
 				'Verify that you are legal age.': 'ודא שאתה בגיל החוקי',
 				"I'm above 18": 'אני מעל 18',
 				"I'm under 18": 'אני מתחת ל 18',

@@ -7,42 +7,41 @@
 }
 
 .product-card {
-	width: 15rem; /* Ширина карточки */
-	height: 15rem;
+	width: 17rem; /* Ширина карточки */
+	height: 23rem; /* Высота карточки */
 	margin-bottom: 20px;
 	transition: transform 0.3s ease;
 	background-color: #ffffff; /* Белый фон */
 	padding: 20px; /* Отступы внутри карточки */
 	border-radius: 8px; /* Закругление углов */
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для эффекта поднятости */
 	text-align: center; /* Выравнивание текста по центру */
-}
-
-.product-card {
-	position: relative; /* Добавьте относительное позиционирование для карточки товара */
+	position: relative; /* Относительное позиционирование для внутренних элементов */
+	overflow: hidden; /* Убираем выход за границы */
 }
 
 .product-card h3,
 .product-card p {
-	position: absolute; /* Используйте абсолютное позиционирование для текста */
-	color: #000000; /* Измените цвет текста на белый для лучшей видимости на изображении */
+	color: #000000; /* Цвет текста */
+	margin: 0; /* Убираем отступы */
+	position: absolute; /* Абсолютное позиционирование */
+	left: 10px;
+	right: 10px;
 }
 
 .product-card h3 {
-	top: 250px; /* Расположите заголовок в верхней части изображения */
-	left: 10px;
+	bottom: 10px; /* Расположите заголовок чуть выше описания */
+	font-size: 1.2rem; /* Размер шрифта заголовка */
 }
 
 .product-card p {
-	bottom: 10px; /* Расположите описание в нижней части изображения */
-	left: 10px;
+	bottom: 10px; /* Расположите описание снизу */
+	font-size: 1rem; /* Размер шрифта описания */
 }
 
 .product-card img {
-	position: relative;
 	width: 100%;
-	height: 100%;
-	transform: scale(1.2);
+	height: calc(100% - 60px); /* Высота изображения с учетом пространства для текста */
+	object-fit: cover; /* Убедитесь, что изображение полностью вписывается */
 	border-radius: 5px;
 }
 
@@ -55,9 +54,9 @@
 	margin-bottom: 50px;
 	margin-left: 60px;
 	border-radius: 15px;
+	border: 1px solid;
 	width: 90%; /* Используйте проценты вместо rem */
 	height: 3rem;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	max-width: 50rem; /* Максимальная ширина для больших экранов */
 }
 
@@ -70,6 +69,7 @@
 
 .placeholder::placeholder {
 	padding-left: 20px;
+	padding-right: 20px;
 }
 
 /* styles.css (or your preferred stylesheet) */
@@ -81,7 +81,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+	background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -92,33 +92,26 @@
 	background-color: #fff;
 	padding: 20px;
 	border-radius: 15px;
-	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-	width: 30rem;
-	height: 30rem;
-	overflow: auto; /* Add this line */
+	width: 50rem;
+	height: 40rem;
+	overflow: auto;
 }
 
 @media (max-width: 768px) {
 	.modal-card {
-		width: 100%; /* Use full width of the screen on mobile */
-		height: 90vw; /* Set height relative to width to maintain square shape */
-		padding: 10px; /* Reduce padding on smaller screens */
+		width: 100%; /* Используйте всю ширину экрана на мобильных устройствах */
+		height: 90vw; /* Высота относительно ширины для сохранения квадратной формы */
+		padding: 10px; /* Уменьшите отступы на меньших экранах */
 		word-wrap: break-word;
 		overflow-wrap: break-word;
-		overflow: auto; /* Add this line */
+		overflow: auto;
 	}
 
-	.modal-card img {
-		width: 42%; /* Set image width to 100% of its container */
-		height: 100%; /* Set image height to 100% of its container */
-		object-fit: cover; /* Ensure the image covers the whole area without distortion */
-	}
 }
 
 /* Close Button */
 .modal-card button.close-button {
-	position: relative;
-	display: flex;
+	position: absolute;
 	top: 10px;
 	right: 10px;
 	cursor: pointer;
@@ -129,7 +122,7 @@
 }
 /* Optional Animation */
 .modal-card {
-	animation: fadeIn ease-in-out 0.3s; /* Add your fade-in animation */
+	animation: fadeIn ease-in-out 0.3s;
 }
 .close-btn {
 	position: absolute;
@@ -150,15 +143,11 @@
 @media (max-width: 768px) {
 	.close-btn {
 		align-items: center;
-		width: 8rem; /* or any other size you want */
-		height: 2.5rem; /* adjust as needed */
+		width: 8rem;
+		height: 2.5rem;
 	}
 }
-.product-wineimage {
-	width: 15rem;
-	margin-left: 95px;
-	margin-top: 40px;
-}
+
 .product-description {
 	display: flex;
 	max-height: 100px;
@@ -173,61 +162,56 @@
 .product__article,
 .product__title {
 	display: flex;
-	width: 50%;
+	width: 100%;
 	position: relative;
 	color: black;
 	text-align: left;
+	padding: 10px 20px;
+	box-sizing: border-box;
 }
 
 .product__article {
-	top: -400px;
-	left: 230px;
+	top: 0;
 }
 
 .product__title {
-	top: -420px;
+	justify-content: center;
+	top: 0;
 	font-size: 20px;
-	left: 230px;
 }
 
 @media (max-width: 900px) {
 	.product__article,
 	.product__title {
-		top: -350px;
 		font-size: 15px;
-		width: 50%;
-		margin-top: 60px;
-		margin-left: -4rem;
+		padding: 10px;
 		text-align: left;
 		word-wrap: break-word;
 		overflow-wrap: break-word;
-		overflow: auto; /* Add this line */
+		overflow: auto;
 	}
 }
+
 .warning {
-	position: relative;
-	top: -400px;
-	left: 230px;
-	width: 200px;
-	height: 11rem;
+	width: 100%;
 	background-color: black;
 	border: 1px solid white;
 	color: white;
+	padding: 10px;
+	box-sizing: border-box;
 }
+
 .warning_text {
 	text-align: center;
 	margin-top: 10px;
 }
 @media (max-width: 900px) {
 	.warning {
-		top: -350px;
 		font-size: 15px;
-		width: 50%;
-		margin-top: 60px;
-		margin-left: -4rem;
+		padding: 10px;
 		text-align: left;
 		word-wrap: break-word;
 		overflow-wrap: break-word;
-		overflow: auto; /* Add this line */
+		overflow: auto;
 	}
 }

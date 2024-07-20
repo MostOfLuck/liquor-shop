@@ -70,86 +70,136 @@ nav {
 /* MEDIA QUERIES (средний и малый экраны) */
 @media screen and (max-width: 1024px) {
 	.nav__toggle-btn {
-			display: inline-block;
-			background: transparent;
-			font-size: 1.8rem;
-			cursor: pointer;
+		display: inline-block;
+		background: transparent;
+		font-size: 1.8rem;
+		cursor: pointer;
 	}
 
 	.nav__toggle-btn svg {
-			color: var(--color-gray-100);
+		color: var(--color-gray-100);
 	}
 
 	.nav__links {
-			position: absolute;
-			top: 100%;
-			right: 0;
-			flex-direction: column;
-			gap: 0;
-			perspective: 400px;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		flex-direction: column;
+		gap: 0;
+		perspective: 400px;
+		display: none; /* Изначально скрываем меню */
+	}
+
+	.show__nav {
+		display: flex; /* Показываем меню при активации */
 	}
 
 	.active-nav,
 	.active-nav::after {
-			display: none;
+		display: none;
 	}
 
 	.nav__links li {
-			height: 4rem;
-			width: 100%;
-			box-shadow: -2rem 2rem 5rem rgba(0, 0, 0, 0.5);
-			animation: navAnimation 600ms ease forwards;
-			transform: rotateX(90deg);
-			opacity: 0;
-			transform-origin: top;
+		height: 4rem;
+		width: 100%;
+		box-shadow: -2rem 2rem 5rem rgba(0, 0, 0, 0.5);
+		animation: navAnimation 600ms ease forwards;
+		transform: rotateX(90deg);
+		opacity: 0;
+		transform-origin: top;
 	}
 
 	.nav__links li:nth-child(2) {
-			animation-delay: 200ms;
+		animation-delay: 200ms;
 	}
 
 	.nav__links li:nth-child(3) {
-			animation-delay: 400ms;
+		animation-delay: 400ms;
 	}
 
 	.nav__links li:nth-child(4) {
-			animation-delay: 600ms;
+		animation-delay: 600ms;
 	}
 
 	.nav__links li:nth-child(5) {
-			animation-delay: 800ms;
+		animation-delay: 800ms;
 	}
 
 	.nav__links li:nth-child(6) {
-			animation-delay: 1s;
+		animation-delay: 1s;
 	}
 
 	.nav__links li:nth-child(7) {
-			animation-delay: 1.2s;
+		animation-delay: 1.2s;
 	}
 
 	@keyframes navAnimation {
-			to {
-					transform: rotateX(0);
-					opacity: 1;
-			}
+		to {
+			transform: rotateX(0);
+			opacity: 1;
+		}
 	}
 
 	.nav__links li a {
-			background-color: var(--color-primary);
-			height: 100%;
-			width: 100%;
-			display: flex;
-			align-items: center;
-			padding: 1rem 5rem 1rem 3rem;
+		background-color: var(--color-primary);
+		height: 100%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		padding: 1rem 5rem 1rem 3rem;
 	}
 
-	.show__nav {
-			display: flex;
+	/* Стили для RTL на мобильных устройствах */
+	.rtl .nav__links {
+		right: auto;
+		left: 0;
+		flex-direction: column;
 	}
 
-	.hide__nav {
-			display: none;
+	.rtl .nav__links li {
+		text-align: right;
+		height: 4rem;
+		width: 100%;
+		box-shadow: -2rem 2rem 5rem rgba(0, 0, 0, 0.5);
+		animation: rtlNavAnimation 600ms ease forwards;
+		transform: rotateX(90deg);
+		opacity: 0;
+		transform-origin: top;
+	}
+
+	@keyframes rtlNavAnimation {
+		to {
+			transform: rotateX(0);
+			opacity: 1;
+		}
+	}
+
+	.rtl .nav__links li:nth-child(2) {
+		animation-delay: 200ms;
+	}
+
+	.rtl .nav__links li:nth-child(3) {
+		animation-delay: 400ms;
+	}
+
+	.rtl .nav__links li:nth-child(4) {
+		animation-delay: 600ms;
+	}
+
+	.rtl .nav__links li:nth-child(5) {
+		animation-delay: 800ms;
+	}
+
+	.rtl .nav__links li:nth-child(6) {
+		animation-delay: 1s;
+	}
+
+	.rtl .nav__links li:nth-child(7) {
+		animation-delay: 1.2s;
+	}
+
+	.rtl .nav__links li a {
+		padding: 1rem 3rem 1rem 5rem; /* Измените отступы для RTL */
 	}
 }
 
@@ -161,9 +211,11 @@ nav {
 .rtl .nav__container {
 	flex-direction: row-reverse;
 }
-
+@media screen and (max-width: 1024px) {
 .rtl .nav__links {
-	flex-direction: row-reverse;
+	flex-direction: column;
+	right: auto;
+	left: 0;
 }
 
 .rtl .nav__links li {
@@ -174,11 +226,48 @@ nav {
 	order: 1; /* Кнопка навигации будет отображаться с правой стороны */
 }
 
-.rtl .nav__links {
-	right: auto;
-	left: 0;
+.rtl .nav__links li {
+	height: 4rem;
+	width: 100%;
+	box-shadow: -2rem 2rem 5rem rgba(0, 0, 0, 0.5);
+	animation: rtlNavAnimation 600ms ease forwards;
+	transform: rotateX(90deg);
+	opacity: 0;
+	transform-origin: top;
+}
+
+@keyframes rtlNavAnimation {
+	to {
+		transform: rotateX(0);
+		opacity: 1;
+	}
+}
+
+.rtl .nav__links li:nth-child(2) {
+	animation-delay: 200ms;
+}
+
+.rtl .nav__links li:nth-child(3) {
+	animation-delay: 400ms;
+}
+
+.rtl .nav__links li:nth-child(4) {
+	animation-delay: 600ms;
+}
+
+.rtl .nav__links li:nth-child(5) {
+	animation-delay: 800ms;
+}
+
+.rtl .nav__links li:nth-child(6) {
+	animation-delay: 1s;
+}
+
+.rtl .nav__links li:nth-child(7) {
+	animation-delay: 1.2s;
 }
 
 .rtl .nav__links li a {
 	padding: 1rem 3rem 1rem 5rem; /* Измените отступы для RTL */
+}
 }
