@@ -28,6 +28,8 @@ import CabernetSauvignonTourigaNacionalAllSeansonsCollection from '../../product
 import MaximeTrijolCognac3litr from '../../productImages2/774A8480.jpg'
 import MaximeTrijolCognac3litr2 from '../../productImages2/774A8501.jpg'
 import './trainers.css'
+import './rtl.css'
+
 
 const Catalogs = () => {
 	const { t } = useTranslation()
@@ -548,11 +550,15 @@ const Catalogs = () => {
 			setSearchCategory('')
 		}
 	}
+	const { i18n } = useTranslation()
+
 	const categoriesText = t('All Categories')
+
+	const isHebrew = i18n.language === 'he'
 
 	const renderCategoryFilter = () => (
 		<select
-			className='select__btn'
+			className={`select__btn ${isHebrew ? 'select__btn--rtl' : ''}`}
 			value={searchCategory}
 			onChange={e => setSearchCategory(e.target.value)}
 		>
@@ -564,7 +570,6 @@ const Catalogs = () => {
 			))}
 		</select>
 	)
-
 
 	const renderFilteredProducts = () => {
 		if (searchResults.length === 0) {

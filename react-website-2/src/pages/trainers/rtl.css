@@ -1,0 +1,8 @@
+.select__btn--rtl {
+  float: right;
+}
+
+.select__btn--ltr {
+  float: left;
+}
+

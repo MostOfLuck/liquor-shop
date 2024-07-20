@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { useTranslation } from 'react-i18next'; // Импортируем хук для перевода
+import { useTranslation } from 'react-i18next';
 import Home from './pages/home/Home';
 import Contact from './pages/contact/Contact';
 import NotFound from './pages/notFound/NotFound';
@@ -12,13 +12,21 @@ import favicon from './images/iconlogo.png';
 
 const App = () => {
   const { t, i18n } = useTranslation();
-
-  useEffect(() => {
-    i18n.changeLanguage('עברית');
-}, []);
-
   const [isOver18, setIsOver18] = useState(null);
   const [modalShown, setModalShown] = useState(false);
+
+  useEffect(() => {
+    // Устанавливаем язык по умолчанию и добавляем класс к body
+    const language = 'עברית'; // или другой язык по умолчанию
+    i18n.changeLanguage(language);
+    document.body.className = language === 'עברית' ? 'rtl' : 'ltr';
+  }, [i18n]);
+
+  useEffect(() => {
+    // Сменяем класс на body при смене языка
+    const currentLanguage = i18n.language;
+    document.body.className = currentLanguage === 'עברית' ? 'rtl' : 'ltr';
+  }, [i18n.language]);
 
   const handleAgeClick = (isUnder18) => {
     setIsOver18(!isUnder18);
