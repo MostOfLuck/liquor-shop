@@ -27,9 +27,15 @@ import SummerMerlotAllSeasonsCollection from '../../productImages2/774A8402.jpg'
 import CabernetSauvignonTourigaNacionalAllSeansonsCollection from '../../productImages2/774A8422.jpg'
 import MaximeTrijolCognac3litr from '../../productImages2/774A8480.jpg'
 import MaximeTrijolCognac3litr2 from '../../productImages2/774A8501.jpg'
-import './trainers.css'
+import VodkinaMango from '../../productImages2/Vodkino mango.jpg'
+import VodkinaMango2 from '../../productImages2/VodinoMagno2.jpg'
+import VodkinaYellow from '../../productImages2/Vodkino yellow.jpg'
+import VodkinoPeach from '../../productImages2/VodkinoPeach.jpg'
+import VodkinoPeach2 from '../../productImages2/VodkinoPeach2.jpg'
+import VodkinoLemon from '../../productImages2/VodkinoLemon.jpg'
+import VodkinoOrange from '../../productImages2/VodkinoOrange.jpg'
 import './rtl.css'
-
+import './trainers.css'
 
 const Catalogs = () => {
 	const { t } = useTranslation()
@@ -502,6 +508,141 @@ const Catalogs = () => {
 						<div className='warning_text'>
 							{t(
 								'Warning: contains alcohol, it is recommended to avoid excessive drinking'
+							)}
+						</div>
+					</div>
+				</div>
+			),
+		},
+
+		{
+			id: 19,
+			name: 'Leonardo Da Vinci Vodkino Pineapple',
+			category: t(t('Vodkino')),
+			image: VodkinaYellow,
+			images: [VodkinaYellow],
+			title: (
+				<h1 className='product__title'>Leonardo Da Vinci Vodkino Pineapple</h1>
+			),
+			article: (
+				<div>
+					<p className='product__article'>
+						{t(
+							"Leonardo Da Vinci Vodka Pineapple is a premium vodka with a vibrant, tropical twist. Crafted with the finest ingredients, this vodka offers a smooth and refreshing taste, infused with the sweet and tangy essence of ripe pineapples. Each bottle contains 700 ml of pure, distilled perfection, making it the ideal choice for cocktails, mixed drinks, or enjoying neat. Whether you're hosting a party or relaxing at home, Leonardo Da Vinci Vodka Pineapple adds a touch of elegance and flavor to any occasion."
+						)}
+					</p>
+					<div className='warning'>
+						<div className='warning_text'>
+							{t(
+								'Warning! Excessive consumption of alcohol is life-threatening and harmful to health'
+							)}
+						</div>
+					</div>
+				</div>
+			),
+		},
+
+		{
+			id: 20,
+			name: 'Leonardo Da Vinci Vodkino Mango',
+			category: t(t('Vodkino')),
+			image: VodkinaMango,
+			images: [VodkinaMango2],
+			title: (
+				<h1 className='product__title'>Leonardo Da Vinci Vodkino Mango</h1>
+			),
+			article: (
+				<div>
+					<p className='product__article'>
+						{t(
+							"Leonardo Da Vinci Vodkino Mango is a premium vodka with an exotic mango twist. Crafted with the finest ingredients, this vodka delivers a smooth and refreshing taste, infused with the rich, fruity essence of ripe mangoes. Each 700 ml bottle is a testament to pure, distilled excellence, making it perfect for creating vibrant cocktails, mixed drinks, or enjoying straight. Whether you're hosting a gathering or unwinding at home, Leonardo Da Vinci Vodkino Mango adds a tropical touch and a burst of flavor to any occasion."
+						)}
+					</p>
+					<div className='warning'>
+						<div className='warning_text'>
+							{t(
+								'Warning! Excessive consumption of alcohol is life-threatening and harmful to health'
+							)}
+						</div>
+					</div>
+				</div>
+			),
+		},
+
+		{
+			id: 21,
+			name: 'Leonardo Da Vinci Vodkino Peach',
+			category: t(t('Vodkino')),
+			image: VodkinoPeach,
+			images: [VodkinoPeach2],
+			title: (
+				<h1 className='product__title'>Leonardo Da Vinci Vodkino Peach</h1>
+			),
+			article: (
+				<div>
+					<p className='product__article'>
+						{t(
+							"Leonardo Da Vinci Vodkino Peach is a premium vodka with a delightful peach infusion. Made with the finest ingredients, this vodka offers a smooth and refreshing taste, enriched with the juicy and sweet essence of ripe peaches. Each 700 ml bottle embodies pure, distilled excellence, making it ideal for crafting exquisite cocktails, mixed drinks, or enjoying straight. Whether you're celebrating with friends or relaxing at home, Leonardo Da Vinci Vodkino Peach adds a touch of fruity elegance and a burst of flavor to any occasion."
+						)}
+					</p>
+					<div className='warning'>
+						<div className='warning_text'>
+							{t(
+								'Warning! Excessive consumption of alcohol is life-threatening and harmful to health'
+							)}
+						</div>
+					</div>
+				</div>
+			),
+		},
+
+		{
+			id: 22,
+			name: 'Leonardo Da Vinci Vodkino Lemon',
+			category: t(t('Vodkino')),
+			image: VodkinoLemon,
+			images: [VodkinoLemon],
+			title: (
+				<h1 className='product__title'>Leonardo Da Vinci Vodkino Lemon</h1>
+			),
+			article: (
+				<div>
+					<p className='product__article'>
+						{t(
+							"Leonardo Da Vinci Vodkino Lemon is a premium vodka with a zesty lemon infusion. Crafted with high-quality ingredients, this vodka offers a crisp and refreshing taste, enhanced with the bright, tangy essence of fresh lemons. Each 700 ml bottle represents pure, distilled excellence, making it perfect for creating invigorating cocktails, mixed drinks, or enjoying on its own. Whether you're hosting a celebration or relaxing at home, Leonardo Da Vinci Vodkino Lemon adds a splash of citrus elegance and a burst of flavor to any occasion."
+						)}
+					</p>
+					<div className='warning'>
+						<div className='warning_text'>
+							{t(
+								'Warning! Excessive consumption of alcohol is life-threatening and harmful to health'
+							)}
+						</div>
+					</div>
+				</div>
+			),
+		},
+
+		{
+			id: 23,
+			name: 'Leonardo Da Vinci Vodkino Orange',
+			category: t(t('Vodkino')),
+			image: VodkinoOrange,
+			images: [VodkinoOrange],
+			title: (
+				<h1 className='product__title'>Leonardo Da Vinci Vodkino Orange</h1>
+			),
+			article: (
+				<div>
+					<p className='product__article'>
+						{t(
+							"Leonardo Da Vinci Vodkino Orange is a premium vodka infused with the vibrant essence of juicy oranges. Crafted from the finest ingredients, this vodka delivers a smooth and invigorating taste, highlighted by the fresh, tangy notes of sun-ripened oranges. Each 700 ml bottle embodies distilled perfection, making it ideal for creating refreshing cocktails, mixed drinks, or enjoying neat. Whether you're celebrating a special occasion or relaxing at home, Leonardo Da Vinci Vodkino Orange adds a burst of citrus flavor and a touch of elegance to any gathering."
+						)}
+					</p>
+					<div className='warning'>
+						<div className='warning_text'>
+							{t(
+								'Warning! Excessive consumption of alcohol is life-threatening and harmful to health'
 							)}
 						</div>
 					</div>
