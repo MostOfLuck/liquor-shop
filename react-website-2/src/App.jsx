@@ -6,7 +6,7 @@ import Contact from './pages/contact/Contact';
 import NotFound from './pages/notFound/NotFound';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Catalogs from './pages/trainers/Trainers';
+import Catalog from './pages/trainers/Catalog';
 import './index.css';
 import favicon from '../src/images/iconlogo.png';
 
@@ -58,7 +58,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/contact' element={<Contact />} />
-        <Route path='/catalog' element={<Catalogs />} />
+        <Route path='/catalog' element={<Catalog />} />
         <Route path='/NotFound' element={<NotFound />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
