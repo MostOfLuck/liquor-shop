@@ -381,3 +381,26 @@ hr {
 	border-radius: 10%;
 	height: 30px;
 }
+.vodkino-image {
+	margin-top: 30px; /* регулируйте значение по необходимости */
+	width: 100%; /* установите желаемую ширину */
+	height: 250px; /* установите желаемую высоту */
+	object-fit: cover; /* это свойство можно использовать для сохранения пропорций изображения */
+}
+/* index.css */
+.slick-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	z-index: 2;
+}
+
+.slick-prev {
+	left: 10px;
+}
+
+.slick-next {
+	right: 10px;
+}
+
