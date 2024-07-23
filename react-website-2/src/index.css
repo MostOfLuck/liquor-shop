@@ -37,7 +37,7 @@
 
 /* GENERAL STYLES */
 body {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Merriweather', sans-serif;
 	color: var(--color-gray-200);
 	line-height: 1.7;
 	overflow-x: hidden;
@@ -244,6 +244,13 @@ section {
 		width: 76%;
 	}
 }
+.green-icons a {
+  color: green;
+}
+
+.green-icons a:hover {
+  color: darkgreen;
+}
 
 /* MEDIA QUERIES (small screens) */
 @media screen and (max-width: 600px) {
@@ -402,5 +409,10 @@ hr {
 
 .slick-next {
 	right: 10px;
+}
+
+.select__btn--green {
+  background-color: rgb(119, 119, 119);
+  color: white; /* Чтобы текст был виден на зелёном фоне */
 }
 

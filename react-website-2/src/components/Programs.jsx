@@ -42,6 +42,7 @@ const Programs = () => {
             title: t('Port wine'),
             info: 'This is the day that the lord has made. We will rejoice!',
             path: '/catalog',
+            link: '/port',
             imageSrc: portImg,
             className: 'vodkino-image'
         },
@@ -51,6 +52,7 @@ const Programs = () => {
             title: t('Vodkino'),
             info: 'This is the day that the lord has made. We will rejoice!',
             path: '/catalog',
+            link: '/vodka',
             imageSrc: Vodkinoprev,
             className: 'vodkino-image',
         },

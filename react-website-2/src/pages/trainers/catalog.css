@@ -45,20 +45,25 @@
 	border-radius: 5px;
 }
 
+/* Стили для .placeholder */
 .placeholder {
 	position: relative;
 	top: 0;
 	right: 0;
 	display: flex;
 	justify-content: center;
+	align-items: center; /* Центрирование содержимого по вертикали */
 	margin-bottom: 50px;
-	margin-left: 60px;
+	margin-left: 300px;
 	border-radius: 15px;
-	border: 1px solid;
-	width: 90%; /* Используйте проценты вместо rem */
+	background-color: #dddbdb;
+	width: 90%;
 	height: 3rem;
-	max-width: 50rem; /* Максимальная ширина для больших экранов */
+	max-width: 50rem;
+	padding: 0 10px; /* Добавление внутреннего отступа с обеих сторон */
+	box-sizing: border-box; /* Учитывает padding и border в общей ширине и высоте */
 }
+
 
 /* Медиа-запрос для мобильных устройств */
 @media (max-width: 768px) {

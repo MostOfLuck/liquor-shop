@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Home from './pages/home/Home';
@@ -6,9 +6,11 @@ import Contact from './pages/contact/Contact';
 import NotFound from './pages/notFound/NotFound';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Catalog from './pages/trainers/Catalog';
 import './index.css';
 import favicon from '../src/images/iconlogo.png';
+
+// Correct way to use lazy loading
+const Catalog = lazy(() => import('./pages/trainers/Catalog'));
 
 const App = () => {
   const { t, i18n } = useTranslation();
@@ -16,14 +18,14 @@ const App = () => {
   const [modalShown, setModalShown] = useState(false);
 
   useEffect(() => {
-    // Устанавливаем язык по умолчанию и добавляем класс к body
-    const language = 'עברית'; // или другой язык по умолчанию
+    // Set default language and add class to body
+    const language = 'עברית'; // or any other default language
     i18n.changeLanguage(language);
     document.body.className = language === 'עברית' ? 'rtl' : 'ltr';
   }, [i18n]);
 
   useEffect(() => {
-    // Сменяем класс на body при смене языка
+    // Change body class on language change
     const currentLanguage = i18n.language;
     document.body.className = currentLanguage === 'עברית' ? 'rtl' : 'ltr';
   }, [i18n.language]);
@@ -55,13 +57,15 @@ const App = () => {
     <BrowserRouter>
       <link rel="icon" href={favicon} />
       <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/catalog' element={<Catalog />} />
-        <Route path='/NotFound' element={<NotFound />} />
-        <Route path='*' element={<NotFound />} />
-      </Routes>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/catalog' element={<Catalog />} />
+          <Route path='/NotFound' element={<NotFound />} />
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+      </Suspense>
       <Footer />
       {isOver18 === null && !modalShown && <Modal onUnder18Click={handleAgeClick} />}
     </BrowserRouter>

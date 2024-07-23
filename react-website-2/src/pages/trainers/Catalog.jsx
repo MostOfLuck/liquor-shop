@@ -34,6 +34,7 @@ import VodkinoLemon from '../../productImages2/VodkinoLemon.jpg'
 import VodkinoOrange from '../../productImages2/VodkinoOrange.jpg'
 import VodkinoPeach from '../../productImages2/VodkinoPeach.jpg'
 import VodkinoPeach2 from '../../productImages2/VodkinoPeach2.jpg'
+import ArakOrange from '../../productImages2/ArakOrange.jpg'
 import './rtl.css'
 import './catalog.css'
 
@@ -649,7 +650,35 @@ const Catalog = () => {
 				</div>
 			),
 		},
-	])
+
+		{
+			id: 24,
+			name: 'Arak with orange',
+			category: t(t('Arak')),
+			image: ArakOrange,
+			images: [ArakOrange],
+			title: (
+				<h1 className='product__title'>Arak with orange</h1>
+			),
+			article: (
+				<div>
+					<p className='product__article'>
+						{t(
+							"Leonardo Da Vinci Vodkino Orange is a premium vodka infused with the vibrant essence of juicy oranges. Crafted from the finest ingredients, this vodka delivers a smooth and invigorating taste, highlighted by the fresh, tangy notes of sun-ripened oranges. Each 700 ml bottle embodies distilled perfection, making it ideal for creating refreshing cocktails, mixed drinks, or enjoying neat. Whether you're celebrating a special occasion or relaxing at home, Leonardo Da Vinci Vodkino Orange adds a burst of citrus flavor and a touch of elegance to any gathering."
+						)}
+					</p>
+					<div className='warning'>
+						<div className='warning_text'>
+							{t(
+								'Warning! Excessive consumption of alcohol is life-threatening and harmful to health'
+							)}
+						</div>
+					</div>
+				</div>
+			),
+		},
+	], [t]);
+	
 	const groupedItems = useMemo(() => {
 		const grouped = {}
 		items.forEach(item => {
@@ -699,7 +728,7 @@ const Catalog = () => {
 
 	const renderCategoryFilter = () => (
 		<select
-			className={`select__btn ${isHebrew ? 'select__btn--rtl' : ''}`}
+			className={`select__btn ${isHebrew ? 'select__btn--rtl' : ''} select__btn--green`}
 			value={searchCategory}
 			onChange={e => setSearchCategory(e.target.value)}
 		>
@@ -711,6 +740,7 @@ const Catalog = () => {
 			))}
 		</select>
 	)
+	
 
 	const renderFilteredProducts = () => {
 		if (searchResults.length === 0) {
