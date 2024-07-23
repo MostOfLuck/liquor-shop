@@ -94,6 +94,7 @@ i18n.use(initReactI18next).init({
 				"I'm above 18": 'Мне больше 18',
 				"I'm under 18": 'Мне меньше 18',
 				'All Categories': 'Все Категории',
+				Arak: 'Арак',
 				'Warning: contains alcohol, it is recommended to avoid excessive drinking':
 					'Внимание: содержит алкоголь, рекомендуется избегать чрезмерного употребления.',
 				'Warning! Excessive consumption of alcohol is life-threatening and harmful to health':
@@ -120,6 +121,7 @@ i18n.use(initReactI18next).init({
 				'Contact Us': 'צור קשר',
 				Contact: 'איש קשר',
 				Reviews: 'הדעת',
+				Arak: 'ערק',
 				Insights: 'תובנות',
 				Permalinks: 'קישורים קבועים',
 				Blog: 'בלוג',
