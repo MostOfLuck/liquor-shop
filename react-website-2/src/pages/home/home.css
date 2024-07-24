@@ -40,7 +40,7 @@
 .main__header-circle {
 	width: 25rem;
 	height: 25rem;
-	background: linear-gradient(75deg, var(--color-secondary), transparent);
+	background: greenyellow;
 	border-radius: 50%;
 	position: absolute;
 	filter: blur(15px);

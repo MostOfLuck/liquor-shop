@@ -15,6 +15,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../index.css';
 
+
 const Programs = () => {
     const { t } = useTranslation();
     const products = [
@@ -24,8 +25,7 @@ const Programs = () => {
             title: t('Wine'),
             info: 'This is the day that the lord has made. We will rejoice!',
             path: '/catalog',
-            imageSrc: fiuzaImg,
-            className: 'vodkino-image'
+            imageSrc: "../src/images/wine1.png"
         },
         {
             id: 2,
@@ -33,8 +33,7 @@ const Programs = () => {
             title: t('Cognac'),
             info: 'This is the day that the lord has made. We will rejoice!',
             path: '/catalog',
-            imageSrc: cognacImg,
-            className: 'vodkino-image'
+            imageSrc: "../src/images/wine1.png"
         },
         {
             id: 3,
@@ -42,73 +41,52 @@ const Programs = () => {
             title: t('Port wine'),
             info: 'This is the day that the lord has made. We will rejoice!',
             path: '/catalog',
-            link: '/port',
-            imageSrc: portImg,
-            className: 'vodkino-image'
+            imageSrc: '/images/src/wine1.png' 
         },
+
         {
             id: 4,
             icon: <SiOpenaigym />,
             title: t('Vodkino'),
             info: 'This is the day that the lord has made. We will rejoice!',
             path: '/catalog',
-            link: '/vodka',
-            imageSrc: Vodkinoprev,
-            className: 'vodkino-image',
+            imageSrc: '/images/src/Vodkinoprev' 
         },
-    ];
-
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        responsive: [
-            {
-                breakpoint: 1200, // Adjust this breakpoint as needed
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 768, // Tablet breakpoint
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 480, // Mobile breakpoint
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
-
+        
+    ]
     return (
         <section className='programs'>
             <div className='container programs__container'>
                 <SectionHead icon={<FaCrown />} title={t('Catalog')} />
-                <Slider {...settings}>
-                    {products.map(({ id, title, path, className, imageSrc }) => (
-                        <Card className='programs__program' key={id}>
-                            <h4>{title}</h4>
-                            {imageSrc && <img src={imageSrc} alt='product__image' className={className} />}
-                            <Link to={path} className='btn sm'>
-                                {t('Learn More')} <AiFillCaretRight />
-                            </Link>
-                        </Card>
-                    ))}
-                </Slider>
+                <div className='programs__wrapper'>
+                    {products.map(({ id, title, path }) => {
+                        // Определение изображения в зависимости от id
+                        let imageSrc;
+                        if (id === 1) {
+                            imageSrc = fiuzaImg;
+                        } else if (id === 2) {
+                            imageSrc = cognacImg;
+                        } else if (id === 3) {
+                            imageSrc = portImg;
+                            }
+                            else if (id === 4) {
+                            imageSrc = portImg;
+                            }
+                        
+                        // Добавьте другие варианты для других id по мере необходимости
+                        return (
+                            <Card className='programs__program' key={id}>
+                                <h4>{title}</h4>
+                                {imageSrc && <img src={imageSrc} alt='product__image' />}
+                                <Link to={path} className='btn sm'>
+                                    {t('Learn More')} <AiFillCaretRight />
+                                </Link>
+                            </Card>
+                        )
+                    })}
+                </div>
             </div>
         </section>
-    );
-};
-
+    )
+}
 export default Programs;

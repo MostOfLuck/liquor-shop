@@ -98,16 +98,15 @@ img {
 	margin: 0 auto;
 	padding: 0.9rem 2rem;
 	background: var(--color-primary);
-	border-radius: 1.5rem;
 	transition: var(--transition);
 }
 
+
 .btn.lg:hover {
-	color: var(--primary-hue);
+
 }
 .btn.lg {
 	padding: 1.2rem 3rem;
-	border-radius: 2rem;
 	font-size: 1.1rem;
 }
 
@@ -388,12 +387,7 @@ hr {
 	border-radius: 10%;
 	height: 30px;
 }
-.vodkino-image {
-	margin-top: 30px; /* регулируйте значение по необходимости */
-	width: 100%; /* установите желаемую ширину */
-	height: 250px; /* установите желаемую высоту */
-	object-fit: cover; /* это свойство можно использовать для сохранения пропорций изображения */
-}
+
 /* index.css */
 .slick-arrow {
 	position: absolute;
