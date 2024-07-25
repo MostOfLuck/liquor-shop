@@ -40,7 +40,9 @@
 
 .product-card img {
 	width: 100%;
-	height: calc(100% - 60px); /* Высота изображения с учетом пространства для текста */
+	height: calc(
+		100% - 60px
+	); /* Высота изображения с учетом пространства для текста */
 	object-fit: cover; /* Убедитесь, что изображение полностью вписывается */
 	border-radius: 5px;
 }
@@ -55,7 +57,6 @@
 	align-items: center; /* Центрирование содержимого по вертикали */
 	margin-bottom: 50px;
 	margin-left: 60px;
-	border-radius: 20px;
 	background-color: #dddbdb;
 	width: 90%;
 	height: 3rem;
@@ -111,7 +112,6 @@
 		overflow-wrap: break-word;
 		overflow: auto;
 	}
-
 }
 
 /* Close Button */

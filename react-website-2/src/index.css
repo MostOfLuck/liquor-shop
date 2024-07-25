@@ -14,7 +14,7 @@
 	/* --primary-hue: 20;
     --gray-hue: 280; */
 
-	--primary-hue: 130;
+	--primary-hue: 110;
 	--color-white: #ffffff;
 	--gray-hue: 240;
 	--color-primary: hsl(var(--primary-hue), 55%, 50%);
@@ -101,21 +101,47 @@ img {
 	transition: var(--transition);
 }
 
-/* Скрыть список изначально */
 .language-dropdown {
 	opacity: 0;
 	transform: translateY(-10px);
 	transition: opacity 0.3s ease, transform 0.3s ease;
+	pointer-events: none; /* Деактивировать кликабельность, когда список скрыт */
 }
 
-/* Показать список с анимацией */
 .language-dropdown.open {
 	opacity: 1;
 	transform: translateY(0);
+	pointer-events: auto; /* Включить кликабельность, когда список открыт */
 }
 
-.btn.lg:hover {
 
+.btn.lg:hover {
+	width: 220px;
+	height: 50px;
+	border: none;
+	outline: none;
+	color: #fff;
+	background: #111;
+	cursor: pointer;
+	position: relative;
+	z-index: 0;
+	border-radius: 10px;
+}
+.btn.lg::before {
+	content: '';
+	background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+	position: absolute;
+	top: -2px;
+	left:-2px;
+	background-size: 400%;
+	z-index: -1;
+	filter: blur(5px);
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	animation: glowing 20s linear infinite;
+	opacity: 0;
+	transition: opacity .3s ease-in-out;
+	border-radius: 10px;
 }
 .btn.lg {
 	padding: 1.2rem 3rem;
@@ -150,6 +176,7 @@ section {
 	align-items: center;
 	gap: 1rem;
 }
+
 
 .product_image {
 	height: 80%;
@@ -435,3 +462,13 @@ hr {
   color: white; /* Чтобы текст был виден на зелёном фоне */
 }
 
+/* MEDIA QUERIES (small screens) */
+@media screen and (max-width: 600px) {
+	.language_switcher {
+		position: relative;
+		left: 20px;
+	}
+}
+.language_switcher {
+	left: -20px;
+}

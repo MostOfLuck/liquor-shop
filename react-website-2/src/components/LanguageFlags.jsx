@@ -25,8 +25,23 @@ const LanguageSwitcher = () => {
         setIsOpen(false);
     };
 
+    // Закрытие списка при клике вне его
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (event.target.closest('.language-dropdown') === null) {
+                setIsOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
     return (
-        <div style={{ position: 'relative' }}>
+        <div className='language_switcher' style={{ position: 'relative', right: '250px', top: '-5px' }}>
             <button
                 style={{ width: '5.4rem', height: '2rem' }}
                 onClick={toggleDropdown}

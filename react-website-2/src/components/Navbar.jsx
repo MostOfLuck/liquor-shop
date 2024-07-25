@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { FaBars } from 'react-icons/fa';
 import { MdOutlineClose } from 'react-icons/md';
 import './navbar.css';
+import '../index.css'
 import LanguageSwitcher from './LanguageFlags';
 
 const Navbar = () => {
@@ -20,6 +21,7 @@ const Navbar = () => {
     const isRTL = i18n.language === 'he'; // Определяем язык как RTL
 
     return (
+        
         <nav className={isRTL ? 'rtl' : 'ltr'}>
             <div className={`container nav__container ${isRTL ? 'rtl' : ''}`}>
                 <Link to="/" className='logo' onClick={() => setIsNavShowing(false)}>

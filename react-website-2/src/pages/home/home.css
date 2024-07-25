@@ -70,10 +70,6 @@
 	justify-content: center;
 }
 
-.programs__program:hover a {
-	background: var(--color-secondary);
-	color: var(--color-gray-600);
-}
 
 /* ===================== VALUES ===================== */
 .values__container {

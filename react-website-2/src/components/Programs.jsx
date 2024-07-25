@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import { FaCrown } from 'react-icons/fa';
+import { FaShoppingCart } from 'react-icons/fa';
 import { SiOpenaigym } from 'react-icons/si';
 import SectionHead from './SectionHead';
 import Card from '../UI/Card';
@@ -104,7 +104,7 @@ const Programs = () => {
     return (
         <section className='programs'>
             <div className='container programs__container'>
-                <SectionHead icon={<FaCrown />} title={t('Catalog')} />
+                <SectionHead icon={<FaShoppingCart />} title={t('Catalog')} />
                 <Slider {...settings}>
                     {products.map(({ id, title, path, imageSrc }) => (
                         <Card className='programs__program' key={id}>

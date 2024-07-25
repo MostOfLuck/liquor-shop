@@ -119,7 +119,7 @@ i18n.use(initReactI18next).init({
 				'Page Not Found': 'Страница не найдена',
 				'Go Back Home': 'הדף לא נמצא',
 				'Contact Us': 'צור קשר',
-				Contact: 'איש קשר',
+				Contact: 'צור קשר',
 				Reviews: 'הדעת',
 				Arak: 'ערק',
 				Insights: 'תובנות',
