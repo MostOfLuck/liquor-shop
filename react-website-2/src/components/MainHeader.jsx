@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import Image from '../images/wine1.webp'
+import '../index.css'
 
 const MainHeader = () => {
 	const { t } = useTranslation()

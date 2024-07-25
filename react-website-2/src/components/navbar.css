@@ -22,6 +22,7 @@ nav {
 	justify-content: space-between;
 	align-items: center;
 	position: relative;
+	
 }
 
 .logo {
@@ -45,11 +46,13 @@ nav {
 	height: 100%;
 	display: flex;
 	align-items: center;
+	width: 150px;
 }
 
 .nav__links a:hover {
-	color: var(--color-secondary);
+	background-color: rgba(255, 255, 255, 0.3); /* Прозрачность 30% */
 }
+
 
 .active-nav {
 	position: relative;
@@ -65,6 +68,7 @@ nav {
 	left: calc(50% - 0.6rem);
 	transform: rotate(45deg);
 	bottom: -0.5rem;
+	z-index: -20;
 }
 
 /* MEDIA QUERIES (средний и малый экраны) */
