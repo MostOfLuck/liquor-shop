@@ -45,12 +45,12 @@ body {
 }
 /* Стили для LTR (Left-to-Right) */
 .ltr {
-  direction: ltr;
+	direction: ltr;
 }
 
 /* Стили для RTL (Right-to-Left) */
 .rtl {
-  direction: rtl;
+	direction: rtl;
 }
 .container {
 	width: var(--container-width-lg);
@@ -114,7 +114,6 @@ img {
 	pointer-events: auto; /* Включить кликабельность, когда список открыт */
 }
 
-
 .btn.lg:hover {
 	width: 220px;
 	height: 50px;
@@ -125,14 +124,24 @@ img {
 	cursor: pointer;
 	position: relative;
 	z-index: 0;
-	border-radius: 10px;
 }
 .btn.lg::before {
 	content: '';
-	background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+	background: linear-gradient(
+		45deg,
+		#ff0000,
+		#ff7300,
+		#fffb00,
+		#48ff00,
+		#00ffd5,
+		#002bff,
+		#7a00ff,
+		#ff00c8,
+		#ff0000
+	);
 	position: absolute;
 	top: -2px;
-	left:-2px;
+	left: -2px;
 	background-size: 400%;
 	z-index: -1;
 	filter: blur(5px);
@@ -140,24 +149,23 @@ img {
 	height: calc(100% + 4px);
 	animation: glowing 20s linear infinite;
 	opacity: 0;
-	transition: opacity .3s ease-in-out;
-	border-radius: 10px;
+	transition: opacity 0.3s ease-in-out;
 }
 .btn.lg {
 	padding: 1.2rem 3rem;
 	font-size: 1.1rem;
 }
 .main__header-image {
-    opacity: 0;
-    transform: translateX(-100%);
-    animation: slideIn 1s ease forwards;
+	opacity: 0;
+	transform: translateX(-100%);
+	animation: slideIn 1s ease forwards;
 }
 
 @keyframes slideIn {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
 
 .btn.sm {
@@ -177,7 +185,6 @@ section {
 	gap: 1rem;
 }
 
-
 .product_image {
 	height: 80%;
 }
@@ -193,7 +200,6 @@ section {
 	background: var(--color-white);
 	text-align: center;
 	padding: 3rem 2rem;
-	border-radius: 0 3rem 0 3rem;
 }
 
 .card:hover {
@@ -298,11 +304,11 @@ section {
 	}
 }
 .green-icons a {
-  color: green;
+	color: green;
 }
 
 .green-icons a:hover {
-  color: darkgreen;
+	color: darkgreen;
 }
 
 /* MEDIA QUERIES (small screens) */
@@ -402,25 +408,25 @@ hr {
 	height: 2rem;
 }
 .modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Прозрачный фон */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5); /* Прозрачный фон */
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .modal {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
+	background-color: white;
+	padding: 20px;
+	border-radius: 8px;
 }
 
 .modal-content {
-  text-align: center;
+	text-align: center;
 }
 .button1 {
 	justify-content: left;
@@ -458,17 +464,171 @@ hr {
 }
 
 .select__btn--green {
-  background-color: rgb(119, 119, 119);
-  color: white; /* Чтобы текст был виден на зелёном фоне */
+	background-color: rgb(119, 119, 119);
+	color: white; /* Чтобы текст был виден на зелёном фоне */
 }
 
 /* MEDIA QUERIES (small screens) */
 @media screen and (max-width: 600px) {
 	.language_switcher {
 		position: relative;
-		left: 20px;
+		left: 30px;
 	}
 }
 .language_switcher {
 	left: -20px;
+}
+
+/* ProductModal.css */
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+.modal-card {
+	background: white;
+	padding: 20px;
+	max-width: 600px;
+	width: 100%;
+	position: relative;
+}
+
+.modal-close-btn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 24px;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.product__image {
+	width: 100%;
+	height: 300px;
+	border-radius: 8px;
+}
+
+.product__title {
+	font-size: 24px;
+	margin: 20px 0;
+}
+
+.product__article {
+	color: black;
+	font-size: 16px;
+	line-height: 1.5;
+}
+.search-container {
+  position: relative;
+  display: flex;
+}
+
+input {
+  padding: 8px;
+  font-size: 16px;
+}
+
+.clear-button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.clear-button:hover {
+  color: red; /* Optional: Change color on hover */
+}
+/* Стили для основного поиска */
+/* Стили для основного поиска */
+.main__search {
+	position: fixed; /* Закрепляем элемент на экране */
+	top: 2%;
+	left: 30%; /* Центрируем элемент по горизонтали */
+	right: 25%;
+	transform: translateX(-50%); /* Корректируем смещение для центрирования */
+	width: 100%; /* Ширина элемента */
+	max-width: 400px; /* Максимальная ширина элемента */
+	z-index: 100; /* Убедитесь, что z-index не конфликтует с другими элементами */
+}
+
+
+/* Стили для поля ввода */
+.main__search input {
+	width: 100%; /* Ширина поля ввода */
+	padding: 10px;
+	border: 1px solid rgba(0, 0, 0, 0.2); /* Прозрачная граница */
+	background-color: rgba(255, 255, 255, 0.7); /* Прозрачный фон */
+	animation: slideIn 0.5s ease-out; /* Применяем анимацию */
+}
+
+/* Стили для кнопки очистки */
+.search-clear-button {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: 16px;
+	color: #999;
+}
+
+/* Стили для результатов поиска */
+.search-results {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	background: rgb(24, 168, 50);
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для списка результатов */
+.search-results ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* Стили для каждого результата */
+.search-results li {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	cursor: pointer;
+	border-bottom: 1px solid #ddd;
+}
+
+/* Стили для изображений в результатах */
+.search-results li img {
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+	margin-right: 10px;
+}
+
+/* Стили для изменения фона при наведении */
+.search-results li:hover {
+	background-color: #3c9b44;
+}
+
+/* Медиазапрос для скрытия на мобильных устройствах */
+@media (max-width: 768px) {
+	.main__search {
+		display: none; /* Скрываем поле поиска на мобильных устройствах */
+	}
 }

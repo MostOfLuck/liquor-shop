@@ -13,9 +13,9 @@ i18n.use(initReactI18next).init({
 		},
 		Русский: {
 			translations: {
-				"Vodkino": "Водка с ароматами",
+				"spirits": "Водка с ароматами",
 				'Learn More': 'Узнать больше',
-				Search: 'Искать',
+				Search: 'Искать (по названию продукта латинскими буквами)',
 				'Discover the Finest Alcoholic Beverages at R.I.L.L Collection':
 					'Откройте для себя лучшие алкогольные напитки в R.I.L.L Collection',
 				'Best Alcohol from all over the world': 'Лучший алкоголь со всего мира',
@@ -94,14 +94,16 @@ i18n.use(initReactI18next).init({
 				"I'm above 18": 'Мне больше 18',
 				"I'm under 18": 'Мне меньше 18',
 				'All Categories': 'Все Категории',
-				Arak: 'Арак',
+				arak: 'Арак',
 				'Warning: contains alcohol, it is recommended to avoid excessive drinking':
 					'Внимание: содержит алкоголь, рекомендуется избегать чрезмерного употребления.',
 				'Warning! Excessive consumption of alcohol is life-threatening and harmful to health':
 					'Предупреждение! Чрезмерное употребление алкоголя опасно для жизни и вредно для здоровья',
-				Wine: 'Вино',
-				'Port wine': 'Портвейн',
-				Cognac: 'Коньяк',
+				wine: 'Вино',
+				'portWine': 'Портвейн',
+				producttitlefiuzaChardonnayArinto: 'Fiuza Chardonnay Arinto',
+				cognac: 'Коньяк',
+				productarticlfiuzaChardonnayArinto: 'Это сливочное вино с преобладанием Шардоне и долей Аринто отличается спелостью и мягкостью. Привлекательная кислотность уравновешивает открытую текстуру и теплое послевкусие. '
 			},
 		},
 		עברית: {

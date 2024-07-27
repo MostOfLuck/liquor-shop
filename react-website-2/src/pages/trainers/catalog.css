@@ -1,75 +1,68 @@
-/* Стили для карточек товаров */
+/* Общие стили для карточек продуктов */
 .product-grid {
-	display: flex; /* Отображение в ряд */
-	flex-wrap: wrap; /* Перенос на следующую строку при нехватке места */
-	gap: 55px; /* Отступ между карточками */
+	display: flex;
+	flex-wrap: wrap;
+	gap: 55px;
 	justify-content: center;
 }
 
 .product-card {
-	width: 17rem; /* Ширина карточки */
-	height: 23rem; /* Высота карточки */
+	width: 17rem;
+	height: 23rem;
 	margin-bottom: 20px;
 	transition: transform 0.3s ease;
-	background-color: #ffffff; /* Белый фон */
-	padding: 20px; /* Отступы внутри карточки */
-	border-radius: 8px; /* Закругление углов */
-	text-align: center; /* Выравнивание текста по центру */
-	position: relative; /* Относительное позиционирование для внутренних элементов */
-	overflow: hidden; /* Убираем выход за границы */
+	background-color: #ffffff;
+	padding: 20px;
+	border-radius: 8px;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
 }
 
 .product-card h3,
 .product-card p {
-	color: #000000; /* Цвет текста */
-	margin: 0; /* Убираем отступы */
-	position: absolute; /* Абсолютное позиционирование */
+	color: #000000;
+	margin: 0;
+	position: absolute;
 	left: 10px;
 	right: 10px;
 }
 
 .product-card h3 {
-	bottom: 10px; /* Расположите заголовок чуть выше описания */
-	font-size: 1.2rem; /* Размер шрифта заголовка */
+	bottom: 10px;
+	font-size: 1.2rem;
 }
 
 .product-card p {
-	bottom: 10px; /* Расположите описание снизу */
-	font-size: 1rem; /* Размер шрифта описания */
+	bottom: 10px;
+	font-size: 1rem;
 }
 
 .product-card img {
 	width: 100%;
-	height: calc(
-		100% - 60px
-	); /* Высота изображения с учетом пространства для текста */
-	object-fit: cover; /* Убедитесь, что изображение полностью вписывается */
+	height: calc(100% - 60px);
+	object-fit: cover;
 	border-radius: 5px;
 }
 
-/* Стили для .placeholder */
+/* Стили для поиска */
 .placeholder {
-	position: relative;
-	top: 0;
-	right: 0;
 	display: flex;
 	justify-content: center;
-	align-items: center; /* Центрирование содержимого по вертикали */
+	align-items: center;
 	margin-bottom: 50px;
 	margin-left: 60px;
 	background-color: #dddbdb;
 	width: 90%;
 	height: 3rem;
 	max-width: 50rem;
-	padding: 0 10px; /* Добавление внутреннего отступа с обеих сторон */
-	box-sizing: border-box; /* Учитывает padding и border в общей ширине и высоте */
+	padding: 0 10px;
+	box-sizing: border-box;
 }
 
-
-/* Медиа-запрос для мобильных устройств */
 @media (max-width: 768px) {
 	.placeholder {
-		margin-left: 5%; /* Уменьшите отступ слева для мобильных устройств */
+			margin-left: 5%;
 	}
 }
 
@@ -78,16 +71,14 @@
 	padding-right: 20px;
 }
 
-/* styles.css (or your preferred stylesheet) */
-
-/* Overlay */
+/* Стили для модального окна */
 .modal-overlay {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный */
+	background-color: rgba(0, 0, 0, 0.5);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -99,124 +90,89 @@
 	padding: 20px;
 	border-radius: 15px;
 	width: 50rem;
+	max-width: 100%;
 	height: 40rem;
+	max-height: 90vh;
 	overflow: auto;
 }
 
 @media (max-width: 768px) {
 	.modal-card {
-		width: 100%; /* Используйте всю ширину экрана на мобильных устройствах */
-		height: 90vw; /* Высота относительно ширины для сохранения квадратной формы */
-		padding: 10px; /* Уменьшите отступы на меньших экранах */
-		word-wrap: break-word;
-		overflow-wrap: break-word;
-		overflow: auto;
+			padding: 10px;
 	}
 }
 
-/* Close Button */
-.modal-card button.close-button {
+/* Кнопка закрытия модального окна */
+.modal-card .close-btn {
 	position: absolute;
 	top: 10px;
 	right: 10px;
-	cursor: pointer;
-}
-.modal-card h3 {
-	color: #333;
-	text-align: center;
-}
-/* Optional Animation */
-.modal-card {
-	animation: fadeIn ease-in-out 0.3s;
-}
-.close-btn {
-	position: absolute;
-	display: flex;
 	font-size: 30px;
+	cursor: pointer;
+	background: none;
+	border: none;
 }
+
+/* Анимация появления модального окна */
 @keyframes fadeIn {
 	from {
-		opacity: 0;
-		transform: translateY(-20px);
+			opacity: 0;
+			transform: translateY(-20px);
 	}
 	to {
-		opacity: 1;
-		transform: translateY(0);
+			opacity: 1;
+			transform: translateY(0);
 	}
 }
 
-@media (max-width: 768px) {
-	.close-btn {
-		align-items: center;
-		width: 8rem;
-		height: 2.5rem;
-	}
+.modal-card {
+	animation: fadeIn 0.3s ease-in-out;
 }
 
-.product-description {
-	display: flex;
-	max-height: 100px;
-	overflow: auto;
-	color: #333;
+.product__image {
+	width: 100%;
+	border-radius: 5px;
 }
 
-.no-images-notification {
-	margin-top: 50px;
+.product__title {
+	font-size: 1.5rem;
+	margin: 20px 0;
+	text-align: center;
 }
 
 .product__article,
-.product__title {
-	display: flex;
-	width: 100%;
-	position: relative;
-	color: black;
-	text-align: left;
+.product__warning {
+	font-size: 1rem;
+	color: #333;
+	margin: 10px 0;
 	padding: 10px 20px;
+	text-align: left;
 	box-sizing: border-box;
-}
-
-.product__article {
-	top: 0;
-}
-
-.product__title {
-	justify-content: center;
-	top: 0;
-	font-size: 20px;
-}
-
-@media (max-width: 900px) {
-	.product__article,
-	.product__title {
-		font-size: 15px;
-		padding: 10px;
-		text-align: left;
-		word-wrap: break-word;
-		overflow-wrap: break-word;
-		overflow: auto;
-	}
+	word-wrap: break-word;
 }
 
 .warning {
 	width: 100%;
 	background-color: black;
-	border: 1px solid white;
 	color: white;
 	padding: 10px;
 	box-sizing: border-box;
+	border: 1px solid white;
 }
 
 .warning_text {
 	text-align: center;
 	margin-top: 10px;
 }
+
 @media (max-width: 900px) {
+	.product__article,
+	.product__title,
+	.product__warning {
+			font-size: 0.9rem;
+			padding: 10px;
+	}
 	.warning {
-		font-size: 15px;
-		padding: 10px;
-		text-align: left;
-		word-wrap: break-word;
-		overflow-wrap: break-word;
-		overflow: auto;
+			font-size: 0.9rem;
 	}
 }

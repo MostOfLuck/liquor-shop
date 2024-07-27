@@ -1,0 +1,19 @@
+.programs__icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Расстояние между иконками */
+}
+
+.programs__icon-item {
+  text-align: center;
+  flex: 1 1 150px; /* Минимальная ширина элемента */
+}
+
+.programs__icon {
+  font-size: 3rem; /* Размер иконки */
+}
+
+.programs__title {
+  margin-top: 10px; /* Отступ между иконкой и заголовком */
+  font-size: 1.2rem; /* Размер шрифта заголовка */
+}
