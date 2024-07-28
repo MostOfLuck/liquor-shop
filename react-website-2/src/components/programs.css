@@ -1,3 +1,8 @@
+.programs_head_title {
+  margin-bottom: 150px;
+}
+
+
 .programs__icons {
   display: flex;
   flex-wrap: wrap;
@@ -16,4 +21,10 @@
 .programs__title {
   margin-top: 10px; /* Отступ между иконкой и заголовком */
   font-size: 1.2rem; /* Размер шрифта заголовка */
+}
+.programs__image {
+  position: relative;
+  width: 100px;
+  left: 110px;
+  right: 110px;
 }

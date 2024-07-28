@@ -5,7 +5,6 @@ import favicon from '../src/images/iconlogo.png'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import './index.css'
-import CategoryPage from '../src/pages/CategoryPage'
 import Contact from './pages/contact/Contact'
 import Home from './pages/home/Home'
 import NotFound from './pages/notFound/NotFound'
@@ -67,7 +66,6 @@ const App = () => {
 					<Route path='/' element={<Home />} />
 					<Route path='/contact' element={<Contact />} />
 					<Route path='/catalog' element={<Catalog />} />
-					<Route path='/catalog/:category' element={<CategoryPage />} />
 					<Route path='/NotFound' element={<NotFound />} />
 					<Route path='*' element={<NotFound />} />
 				</Routes>

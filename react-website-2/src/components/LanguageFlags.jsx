@@ -43,7 +43,7 @@ const LanguageSwitcher = () => {
 	return (
 		<div
 			className='language_switcher'
-			style={{ position: 'relative', left: '250px', top: '-8px' }}
+			style={{ position: 'relative', left: '-250px',top: '-8px' }}
 		>
 			<button
 				style={{ width: '5.4rem', height: '2rem' }}

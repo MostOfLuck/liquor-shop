@@ -1,189 +1,214 @@
-import React, { useEffect, useMemo, useState } from 'react'
-import { useTranslation } from 'react-i18next'
-import { useNavigate } from 'react-router-dom'
-import Header from '../../components/Header'
-import ProductModal from '../../components/ModalWindow'
-import HeaderImage from '../../productImages/WhatsApp Image 2024-03-03 at 16.04.01.jpeg'
-import './catalog.css'
-import { items } from './data-alc'
+import React, { useEffect, useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
+import Header from '../../components/Header';
+import ProductModal from '../../components/ModalWindow';
+import HeaderImage from '../../productImages/WhatsApp Image 2024-03-03 at 16.04.01.jpeg';
+import './catalog.css';
+import { items } from './data-alc';
 
 const Catalog = () => {
-	const { t, i18n } = useTranslation()
-	const navigate = useNavigate()
-	const [searchTerm, setSearchTerm] = useState('')
-	const [searchResults, setSearchResults] = useState([])
-	const [selectedProduct, setSelectedProduct] = useState(null)
-	const [isModalOpen, setIsModalOpen] = useState(false)
-	const [searchCategory, setSearchCategory] = useState('')
+  const { t, i18n } = useTranslation();
+  const location = useLocation();
+  const [searchTerm, setSearchTerm] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [searchCategory, setSearchCategory] = useState('');
 
-	const groupedItems = useMemo(() => {
-		const grouped = {}
-		items.forEach(item => {
-			const translatedCategory = t(item.category, {
-				defaultValue: item.category,
-			})
-			if (!grouped[translatedCategory]) {
-				grouped[translatedCategory] = [item]
-			} else {
-				grouped[translatedCategory].push(item)
-			}
-		})
-		return grouped
-	}, [t])
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const categoryFromURL = searchParams.get('category');
+    if (categoryFromURL) {
+      setSearchCategory(decodeURIComponent(categoryFromURL));
+    }
+  }, [location.search]);
 
-	const handleChange = event => {
-		const inputValue = event.target.value.toLowerCase()
-		setSearchTerm(inputValue)
+  const groupedItems = useMemo(() => {
+    const grouped = {};
+    items.forEach(item => {
+      const translatedCategory = t(item.category, {
+        defaultValue: item.category,
+      });
+      if (!grouped[translatedCategory]) {
+        grouped[translatedCategory] = [item];
+      } else {
+        grouped[translatedCategory].push(item);
+      }
+    });
+    return grouped;
+  }, [t]);
 
-		const isCategory = Object.keys(groupedItems).includes(inputValue)
+  const handleChange = event => {
+    const inputValue = event.target.value.toLowerCase();
+    setSearchTerm(inputValue);
 
-		setSearchResults(
-			items.filter(product => {
-				const productNameMatch = t(product.name, { defaultValue: product.name })
-					.toLowerCase()
-					.includes(inputValue)
-				const categoryMatch = t(product.category, {
-					defaultValue: product.category,
-				})
-					.toLowerCase()
-					.includes(inputValue)
-				const categorySelected =
-					searchCategory.toLowerCase() ===
-					t(product.category, { defaultValue: product.category }).toLowerCase()
-				return (
-					(productNameMatch || categoryMatch) &&
-					(!searchCategory || categorySelected)
-				)
-			})
-		)
+    const isCategory = Object.keys(groupedItems).includes(inputValue);
 
-		if (isCategory) {
-			setSearchCategory(inputValue)
-		} else {
-			setSearchCategory('')
-		}
-	}
+    setSearchResults(
+      items.filter(product => {
+        const productNameMatch = t(product.name, { defaultValue: product.name })
+          .toLowerCase()
+          .includes(inputValue);
+        const categoryMatch = t(product.category, {
+          defaultValue: product.category,
+        })
+          .toLowerCase()
+          .includes(inputValue);
+        const idMatch = product.id.toString() === inputValue;
+        const categorySelected =
+          searchCategory.toLowerCase() ===
+          t(product.category, { defaultValue: product.category }).toLowerCase();
+        return (
+          (productNameMatch || categoryMatch || idMatch) &&
+          (!searchCategory || categorySelected)
+        );
+      })
+    );
 
-	const isHebrew = i18n.language === 'he'
+    if (isCategory) {
+      setSearchCategory(inputValue);
+    } else {
+      setSearchCategory('');
+    }
+  };
 
-	const renderCategoryFilter = () => (
-		<select
-			className={`select__btn ${
-				isHebrew ? 'select__btn--rtl' : ''
-			} select__btn--green`}
-			value={searchCategory}
-			onChange={e => setSearchCategory(e.target.value)}
-		>
-			<option value=''>{t('All Categories')}</option>
-			{Object.keys(groupedItems).map(category => (
-				<option key={category} value={category}>
-					{category}
-				</option>
-			))}
-		</select>
-	)
+  const handleCardClick = (product) => {
+    setSelectedProduct({
+      ...product,
+      name: t(product.name, { defaultValue: product.name }),
+      article: t(product.articleKey, {
+        defaultValue: 'Article content missing',
+      }),
+      warning: t(product.warningKey, {
+        defaultValue: 'Warning content missing',
+      }),
+    });
+    setIsModalOpen(true);
+  };
 
-	const renderFilteredProducts = () => {
-		if (searchResults.length === 0) {
-			return <p>{t('No results found.')}</p>
-		}
+  useEffect(() => {
+    const results = items.filter(item => {
+      const nameMatch = t(item.name, { defaultValue: item.name })
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase());
+      const idMatch = item.id.toString() === searchTerm;
+      return (
+        (nameMatch || idMatch) &&
+        (!searchCategory ||
+          t(item.category, { defaultValue: item.category }) === searchCategory)
+      );
+    });
+    setSearchResults(results);
 
-		return Object.keys(groupedItems).map(category => {
-			if (
-				!groupedItems[category] ||
-				(searchCategory && searchCategory !== category)
-			) {
-				return null
-			}
+    if (results.length === 1) {
+      handleCardClick(results[0]);
+    }
+  }, [searchTerm, searchCategory, t]);
 
-			const filteredProducts = searchResults.filter(
-				product =>
-					t(product.category, { defaultValue: product.category }) === category
-			)
+  useEffect(() => {
+    const selectedProductId = localStorage.getItem('selectedProductId');
+    if (selectedProductId) {
+      const product = items.find(item => item.id === selectedProductId);
+      if (product) {
+        handleCardClick(product);
+      }
+      localStorage.removeItem('selectedProductId');
+    }
+  }, []);
 
-			if (filteredProducts.length === 0) {
-				return null
-			}
+  const renderCategoryFilter = () => (
+    <select
+      className={`select__btn ${
+        i18n.language === 'he' ? 'select__btn--rtl' : ''
+      } select__btn--green`}
+      value={searchCategory}
+      onChange={e => setSearchCategory(e.target.value)}
+    >
+      <option value=''>{t('All Categories')}</option>
+      {Object.keys(groupedItems).map(category => (
+        <option key={category} value={category}>
+          {category}
+        </option>
+      ))}
+    </select>
+  );
 
-			return (
-				<div key={category}>
-					<hr />
-					<h2>{category}</h2>
-					<hr />
-					<div className='product-grid'>
-						{filteredProducts.map(product => (
-							<div
-								key={product.id}
-								className='product-card'
-								onClick={() => {
-									setSelectedProduct({
-										...product,
-										name: t(product.name, { defaultValue: product.name }),
-										article: t(product.articleKey, {
-											defaultValue: 'Article content missing',
-										}),
-										warning: t(product.warningKey, {
-											defaultValue: 'Warning content missing',
-										}),
-									})
-									setIsModalOpen(true)
-								}}
-							>
-								<img
-									src={product.image}
-									alt={t(product.name, { defaultValue: product.name })}
-								/>
-								<h3>{t(product.name, { defaultValue: product.name })}</h3>
-								<p>
-									{t(product.description, {
-										defaultValue: product.description,
-									})}
-								</p>
-							</div>
-						))}
-					</div>
-				</div>
-			)
-		})
-	}
+  const renderFilteredProducts = () => {
+    if (searchResults.length === 0) {
+      return <p>{t('No results found.')}</p>;
+    }
 
-	useEffect(() => {
-		const results = items.filter(item => {
-			const nameMatch = t(item.name, { defaultValue: item.name })
-				.toLowerCase()
-				.includes(searchTerm.toLowerCase())
-			return (
-				nameMatch &&
-				(!searchCategory ||
-					t(item.category, { defaultValue: item.category }) === searchCategory)
-			)
-		})
-		setSearchResults(results)
-	}, [searchTerm, searchCategory, t])
+    return Object.keys(groupedItems).map(category => {
+      if (
+        !groupedItems[category] ||
+        (searchCategory && searchCategory !== category)
+      ) {
+        return null;
+      }
 
-	return (
-		<>
-			<Header title={t('Catalog')} image={HeaderImage} />
-			<section className='catalog'>
-				<div className='container catalog__container'>
-					<input
-						type='text'
-						placeholder={t('Search products...')}
-						value={searchTerm}
-						onChange={handleChange}
-					/>
-					{renderCategoryFilter()}
-					{renderFilteredProducts()}
-				</div>
-			</section>
-			{isModalOpen && selectedProduct && (
-				<ProductModal
-					product={selectedProduct}
-					onClose={() => setIsModalOpen(false)}
-				/>
-			)}
-		</>
-	)
-}
+      const filteredProducts = searchResults.filter(
+        product =>
+          t(product.category, { defaultValue: product.category }) === category
+      );
 
-export default Catalog
+      if (filteredProducts.length === 0) {
+        return null;
+      }
+
+      return (
+        <div key={category}>
+          <hr />
+          <h2>{category}</h2>
+          <hr />
+          <div className='product-grid'>
+            {filteredProducts.map(product => (
+              <div
+                key={product.id}
+                className='product-card'
+                onClick={() => handleCardClick(product)}
+              >
+                <img
+                  src={product.image}
+                  alt={t(product.name, { defaultValue: product.name })}
+                />
+                <h3>{t(product.name, { defaultValue: product.name })}</h3>
+                <p>
+                  {t(product.description, {
+                    defaultValue: product.description,
+                  })}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    });
+  };
+
+  return (
+    <>
+      <Header title={t('Catalog')} image={HeaderImage} />
+      <section className='catalog'>
+        <div className='container catalog__container'>
+          <input
+            type='text'
+            placeholder={t('Search products...')}
+            value={searchTerm}
+            onChange={handleChange}
+          />
+          {renderCategoryFilter()}
+          {renderFilteredProducts()}
+        </div>
+      </section>
+      {isModalOpen && selectedProduct && (
+        <ProductModal
+          product={selectedProduct}
+          onClose={() => setIsModalOpen(false)}
+        />
+      )}
+    </>
+  );
+};
+
+export default Catalog;

@@ -37,7 +37,7 @@
 
 /* GENERAL STYLES */
 body {
-	font-family: 'Merriweather', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	color: var(--color-gray-200);
 	line-height: 1.7;
 	overflow-x: hidden;
@@ -555,14 +555,29 @@ input {
 /* Стили для основного поиска */
 .main__search {
 	position: fixed; /* Закрепляем элемент на экране */
-	top: 2%;
-	left: 30%; /* Центрируем элемент по горизонтали */
-	right: 25%;
+	top: -50px; /* Начальное положение за пределами экрана */
+	left: 50%; /* Центрируем элемент по горизонтали */
+	right: 10%; /* Центрируем элемент по горизонтали */
 	transform: translateX(-50%); /* Корректируем смещение для центрирования */
 	width: 100%; /* Ширина элемента */
 	max-width: 400px; /* Максимальная ширина элемента */
 	z-index: 100; /* Убедитесь, что z-index не конфликтует с другими элементами */
+	animation: slideDown 0.5s ease-out forwards; /* Анимация появления */
+	direction: var(--direction, ltr); /* Устанавливаем направление текста на основе переменной CSS */
 }
+
+@keyframes slideDown {
+	from {
+			top: -50px; /* Начальное положение */
+			opacity: 0; /* Начальная прозрачность */
+	}
+	to {
+			top: 2%; /* Конечное положение */
+			opacity: 1; /* Конечная прозрачность */
+	}
+}
+
+
 
 
 /* Стили для поля ввода */
@@ -593,7 +608,8 @@ input {
 	top: 100%;
 	left: 0;
 	width: 100%;
-	background: rgb(24, 168, 50);
+	color: black;
+	background: white;
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -623,7 +639,7 @@ input {
 
 /* Стили для изменения фона при наведении */
 .search-results li:hover {
-	background-color: #3c9b44;
+	background-color: #e5e5e5;
 }
 
 /* Медиазапрос для скрытия на мобильных устройствах */

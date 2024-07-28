@@ -36,7 +36,7 @@ import './rtl.css';
 export const items = [
   {
     id: 1,
-    name: 'Fiuza Chardonnay Arinto',
+    name: 'Wine Fiuza Chardonnay Arinto',
     category: 'wine',
     image: fiuza,
     images: [fuza],
@@ -45,7 +45,7 @@ export const items = [
   },
   {
     id: 2,
-    name: 'Porto Cabraco Ruby',
+    name: 'Port wine Cabraco Ruby',
     category: 'portWine',
     image: PortoCabracoRuby2,
     images: [PortoCabracoRuby1],
@@ -54,7 +54,7 @@ export const items = [
   },
   {
     id: 3,
-    name: 'Porto Cabraco White',
+    name: 'Port wine Cabraco White',
     category: 'portWine',
     image: PortoCabacoWhite,
     images: [PortoCabacoWhite],
@@ -63,7 +63,7 @@ export const items = [
   },
   {
     id: 4,
-    name: 'Porto Cabraco Rose',
+    name: 'Port wine Cabraco Rose',
     category: 'portWine',
     image: PortoCabacoRose,
     images: [PortoCabacoRose],
@@ -72,7 +72,7 @@ export const items = [
   },
   {
     id: 5,
-    name: 'Maxime Trijol Cognac',
+    name: 'Cognac Maxime Trijol',
     category: 'cognac',
     image: MaximeTrijolCognac2,
     images: [MaximeTrijolCognac],
@@ -81,7 +81,7 @@ export const items = [
   },
   {
     id: 6,
-    name: 'Maxime Trijol CognacVsop',
+    name: 'Cognac Maxime Trijol Vsop',
     category: 'cognac',
     image: MaximeTrijolCognacVsop2,
     images: [MaximeTrijolCognacVsop],
@@ -90,7 +90,7 @@ export const items = [
   },
   {
     id: 7,
-    name: 'Maxime Trijol CognacSmall',
+    name: 'Cognac Maxime Trijol Small',
     category: 'cognac',
     image: MaximeTrijolCognacSmall,
     images: [MaximeTrijolCognacSmall2],
@@ -99,7 +99,7 @@ export const items = [
   },
   {
     id: 8,
-    name: 'Fiuza Native Reserva 2018',
+    name: 'Wine Fiuza Native Reserva 2018',
     category: 'wine',
     image: FiuzaNativeReserva2018,
     images: [FiuzaNativeReserva2018],
@@ -108,7 +108,7 @@ export const items = [
   },
   {
     id: 9,
-    name: 'Oceanius Produto De Portugal 2019',
+    name: 'Wine Oceanius Produto De Portugal 2019',
     category: 'wine',
     image: Oceanius,
     images: [Oceanius],
@@ -117,7 +117,7 @@ export const items = [
   },
   {
     id: 10,
-    name: 'Fiuza Cabernet Sauvignon',
+    name: 'Wine Fiuza Cabernet Sauvignon',
     category: 'wine',
     image: FiuzaCabernetSauvignon,
     images: [FiuzaCabernetSauvignon],
@@ -126,7 +126,7 @@ export const items = [
   },
   {
     id: 11,
-    name: 'Adega De Borba',
+    name: 'Wine Adega De Borba',
     category: 'wine',
     image: AdegaDeBorba,
     images: [AdegaDeBorba],
@@ -135,7 +135,7 @@ export const items = [
   },
   {
     id: 12,
-    name: 'Fiuza Merilot 2015',
+    name: 'Wine Fiuza Merilot 2015',
     category: 'wine',
     image: FiuzaMerilot2015,
     images: [FiuzaMerilot2015],
@@ -144,7 +144,7 @@ export const items = [
   },
   {
     id: 13,
-    name: 'Montes Carlos DOCA lentejo Tinto2016',
+    name: 'Wine Montes Carlos DOCA lentejo Tinto2016',
     category: 'wine',
     image: MontesCarlos,
     images: [MontesCarlos],
@@ -153,7 +153,7 @@ export const items = [
   },
   {
     id: 14,
-    name: 'Bianco Chardonnay AllSeasons Collection 2020',
+    name: 'Wine Bianco Chardonnay AllSeasons Collection 2020',
     category: 'wine',
     image: BiancoCChadronay,
     images: [BiancoCChadronay],
@@ -162,7 +162,7 @@ export const items = [
   },
   {
     id: 15,
-    name: 'Spain Velas Corsarias',
+    name: 'Wine Spain Velas Corsarias',
     category: 'wine',
     image: VelasCorsarias,
     images: [VelasCorsarias],
@@ -171,7 +171,7 @@ export const items = [
   },
   {
     id: 16,
-    name: 'Summer Merlot AllSeasons Collection 2020',
+    name: 'Wine Summer Merlot AllSeasons Collection 2020',
     category: 'wine',
     image: SummerMerlotAllSeasonsCollection,
     images: [SummerMerlotAllSeasonsCollection],
@@ -180,7 +180,7 @@ export const items = [
   },
   {
     id: 17,
-    name: 'Maxime TrijolCognac3L',
+    name: 'Cognac Maxime Trijol 3L',
     category: 'cognac',
     image: MaximeTrijolCognac3litr2,
     images: [MaximeTrijolCognac3litr],
