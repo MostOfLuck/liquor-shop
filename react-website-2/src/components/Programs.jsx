@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { FaShoppingCart, FaWineBottle, FaBeer, FaCocktail, FaGlassCheers } from 'react-icons/fa'
+import { FaShoppingCart } from 'react-icons/fa'
 import '../index.css'
 import './programs.css'
 import SectionHead from './SectionHead'
@@ -10,25 +10,21 @@ const Programs = () => {
   const products = [
     {
       id: 1,
-      icon: <FaWineBottle />, // Иконка для вина
       title: t('Wine'),
       path: '/catalog',
     },
     {
       id: 2,
-      icon: <FaCocktail />, // Иконка для коньяка
       title: t('Cognac'),
       path: '/catalog',
     },
     {
       id: 3,
-      icon: <FaBeer />, // Иконка для портвейна
       title: t('Port wine'),
       path: '/catalog',
     },
     {
       id: 4,
-      icon: <FaGlassCheers />, // Иконка для водки
       title: t('Vodka'),
       path: '/catalog',
     },
