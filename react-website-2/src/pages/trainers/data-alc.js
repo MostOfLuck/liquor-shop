@@ -1,4 +1,3 @@
-import React from 'react';
 import fiuza from '../../productImages2/774A7541.webp';
 import fuza from '../../productImages2/774A7547.webp';
 import PortoCabracoRuby1 from '../../productImages2/774A7575.webp';

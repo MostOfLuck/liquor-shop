@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 
 const Testimonials = () => {
     const [index, setIndex] = useState(0);
-    const { name, quote, job, avatar } = testimonials[index];
+    const { name, quote, job, } = testimonials[index];
     const { t } = useTranslation();
 
     const prevTestimonialHandler = () => {
