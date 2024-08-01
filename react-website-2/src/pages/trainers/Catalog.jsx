@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import Header from '../../components/Header';
 import ProductModal from '../../components/ModalWindow';
-import HeaderImage from '../../productImages/WhatsApp Image 2024-03-03 at 16.04.01.jpeg';
+import HeaderImage from '../../images/3171853.jpg'
 import './catalog.css';
 import { items } from './data-alc';
 
@@ -188,12 +188,12 @@ const Catalog = () => {
 
   return (
     <>
-      <Header title={t('Catalog')} image={HeaderImage} />
+      <Header title={t('Alcohol 🍾')} image={HeaderImage} />
       <section className='catalog'>
         <div className='container catalog__container'>
           <input
             type='text'
-            placeholder={t('Search products...')}
+            placeholder={t('Search')}
             value={searchTerm}
             onChange={handleChange}
           />

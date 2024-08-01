@@ -22,6 +22,7 @@
 .product-card h3,
 .product-card p {
 	color: #000000;
+	font-weight: 500;
 	margin: 0;
 	position: absolute;
 	left: 10px;
@@ -89,7 +90,7 @@
 	background-color: #fff;
 	padding: 20px;
 	border-radius: 15px;
-	width: 50rem;
+	width: 35rem;
 	max-width: 100%;
 	height: 40rem;
 	max-height: 90vh;
@@ -130,9 +131,12 @@
 }
 
 .product__image {
-	width: 100%;
-	border-radius: 5px;
+  display: block; /* Убедимся, что элемент является блочным */
+  margin: 0 auto; /* Центрируем изображение по горизонтали */
+  width: 30%; /* Устанавливаем ширину изображения */
+  border-radius: 5px; /* Скругляем углы изображения */
 }
+
 
 .product__title {
 	font-size: 1.5rem;

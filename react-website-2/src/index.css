@@ -70,12 +70,14 @@ h5 {
 h1 {
 	font-size: 3rem;
 	color: rgb(0, 0, 0);
+	font-weight: 500;
 }
 
 h2 {
 	text-align: center;
 	font-size: 2rem;
-	color: rgb(102, 193, 100);
+	color: black;
+	font-weight: 600;
 }
 
 h4 {
@@ -114,17 +116,22 @@ img {
 	pointer-events: auto; /* Включить кликабельность, когда список открыт */
 }
 
-.btn.lg:hover {
+.btn.lg {
 	width: 220px;
 	height: 50px;
 	border: none;
 	outline: none;
-	color: #fff;
-	background: #111;
+	color: #000000;
+	background: linear-gradient(
+		45deg,
+		#dbd703,
+		#48ff00
+	);
 	cursor: pointer;
 	position: relative;
 	z-index: 0;
 }
+
 .btn.lg::before {
 	content: '';
 	background: linear-gradient(
@@ -142,6 +149,7 @@ img {
 	position: absolute;
 	top: -2px;
 	left: -2px;
+	border-radius: 15px;
 	background-size: 400%;
 	z-index: -1;
 	filter: blur(5px);
@@ -154,6 +162,7 @@ img {
 .btn.lg {
 	padding: 1.2rem 3rem;
 	font-size: 1.1rem;
+	border-radius: 14px;
 }
 .main__header-image {
 	opacity: 0;
@@ -229,7 +238,7 @@ section {
 }
 .product__image {
 	width: 100%;
-	height: 90%;
+	height: 100%;
 	border-radius: 15px;
 }
 .card small {
@@ -273,6 +282,8 @@ section {
 
 .header__content h2 {
 	margin-bottom: 1rem;
+	color: white;
+	font-size: 50px;
 }
 
 .header__content p {
@@ -406,6 +417,7 @@ hr {
 .select__btn {
 	width: 10rem;
 	height: 2rem;
+	border-radius: 10px;
 }
 .modal-overlay {
 	position: fixed;
@@ -477,6 +489,7 @@ hr {
 }
 .language_switcher {
 	left: -20px;
+	border-radius: 10px;
 }
 
 /* ProductModal.css */
@@ -498,18 +511,26 @@ hr {
 	padding: 20px;
 	max-width: 600px;
 	width: 100%;
+	height: 100%;
 	position: relative;
 }
 
 .modal-close-btn {
-	position: absolute;
-	top: 10px;
-	right: 10px;
-	font-size: 24px;
-	background: none;
-	border: none;
-	cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px; /* Уменьшил размер шрифта для пропорциональности */
+  background: #d1d1d1; /* Серый фон */
+  border: none;
+  cursor: pointer;
+  border-radius: 50%; /* Делаем кнопку круглой */
+  width: 40px; /* Устанавливаем ширину и высоту для круга */
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 .product__image {
 	width: 100%;
@@ -530,11 +551,13 @@ hr {
 .search-container {
   position: relative;
   display: flex;
+	
 }
 
 input {
   padding: 8px;
   font-size: 16px;
+	border-radius: 14px;
 }
 
 .clear-button {
@@ -563,7 +586,9 @@ input {
 	max-width: 400px; /* Максимальная ширина элемента */
 	z-index: 100; /* Убедитесь, что z-index не конфликтует с другими элементами */
 	animation: slideDown 0.5s ease-out forwards; /* Анимация появления */
-	direction: var(--direction, ltr); /* Устанавливаем направление текста на основе переменной CSS */
+	direction: var(--direction, ltr); /* Устанавливаем направление текста на 
+	основе переменной CSS */
+	border-radius: 14px;
 }
 
 @keyframes slideDown {
@@ -611,6 +636,7 @@ input {
 	color: black;
 	background: white;
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
 }
 
 /* Стили для списка результатов */
@@ -648,3 +674,10 @@ input {
 		display: none; /* Скрываем поле поиска на мобильных устройствах */
 	}
 }
+
+.programs_head_title {
+	margin-bottom: 150px;
+	font-size: 30px;
+	font-weight: 300;
+}
+

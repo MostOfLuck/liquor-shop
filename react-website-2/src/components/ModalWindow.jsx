@@ -31,8 +31,7 @@ const ProductModal = ({ product, onClose }) => {
                 {product.warning && <p className='product__warning'>{product.warning}</p>}
                 <div className='warning'>
                     <p className='warning_text'>
-                        Внимание: Чрезмерное употребление алкоголя вредит вашему здоровью. 
-                        Пожалуйста, употребляйте ответственно.
+                    {t('warning')}
                     </p>
                 </div>
             </div>

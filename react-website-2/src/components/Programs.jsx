@@ -60,10 +60,10 @@ const Programs = () => {
               className='programs__icon-item'
               onClick={() => handleProductClick(title)}
             >
-              <h4 className='programs__title'>{title}</h4>
               {imageSrc && (
                 <img src={imageSrc} alt={title} className='programs__image' />
               )}
+              <h4 className='programs__title'>{title}</h4>
             </div>
           ))}
         </div>
