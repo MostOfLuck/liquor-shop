@@ -1,7 +1,6 @@
 import React, { lazy, Suspense, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import favicon from '../src/images/iconlogo.png'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import './index.css'
@@ -59,7 +58,6 @@ const App = () => {
 
 	return (
 		<BrowserRouter>
-			<link rel='icon' href={favicon} />
 			<Navbar />
 			<Suspense fallback={<div>Loading...</div>}>
 				<Routes>

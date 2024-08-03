@@ -123,14 +123,14 @@ const MainHeader = () => {
       <div className='container main__header-container'>
         <div className='main__header-left'>
           <div className='main__search'>
-            <input
+            <input style={{marginBottom: '30px'}}
               ref={searchInputRef}
               type='text'
               placeholder={t('Search')}
               value={searchTerm}
               onChange={handleChange}
             />
-            <button
+            <button style={{top: '20px'}}
               onClick={handleShowAllClick}
               disabled={!showAllResults}
               className='search-button'
@@ -139,7 +139,7 @@ const MainHeader = () => {
                 src='https://cdn.lordicon.com/msoeawqm.json'
                 trigger='hover'
                 colors='primary:#000000'
-                style={{ width: '24px', height: '24px' }}
+                style={{ width: '24px', height: '30px' }}
               />
             </button>
             <div className='search-results'>
