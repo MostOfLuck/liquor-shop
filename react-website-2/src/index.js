@@ -14,7 +14,7 @@ i18n.use(initReactI18next).init({
 				wine: 'Wine',
 				cognac: 'Cognac',
 				productarticlfiuzaChardonnayArinto:
-					'This creamy wine, dominated by Chardonnay and a fraction of Arinto, is ripe and soft. Attractive acidity balances the open texture and warm aftertaste.',
+					'This creamy wine, dominated by Chardonnay and a fraction of Arinto.',
 				warning:
 					'Warning: Excessive alcohol consumption can be harmful to your health. Please drink responsibly.',
 			},
@@ -70,7 +70,7 @@ i18n.use(initReactI18next).init({
 				'Port wine': 'Портвейн',
 				Wine: 'Вино',
 				warning:
-					'Внимание: Чрезмерное употребление алкоголя вредит вашему здоровью. Пожалуйста, употребляйте ответственно.',
+					'Внимание: Чрезмерное употребление алкоголя вредит вашему здоровью.',
 				Cognac: 'Коньяк',
 				'Popular product categories': 'Популярные категории товаров',
 				Communities: 'Сообщество',
@@ -147,7 +147,7 @@ i18n.use(initReactI18next).init({
 				producttitlefiuzaChardonnayArinto: 'Fiuza Chardonnay Arinto',
 				cognac: 'Коньяк',
 				productarticlfiuzaChardonnayArinto:
-					'Это сливочное вино с преобладанием Шардоне и долей Аринто отличается спелостью и мягкостью. Привлекательная кислотность уравновешивает открытую текстуру и теплое послевкусие. ',
+					'Это сливочное вино с преобладанием Шардоне и долей Аринто. ',
 			},
 		},
 		עברית: {

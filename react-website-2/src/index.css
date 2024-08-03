@@ -110,6 +110,7 @@ img {
 	pointer-events: none; /* Деактивировать кликабельность, когда список скрыт */
 }
 
+
 .language-dropdown.open {
 	opacity: 1;
 	transform: translateY(0);
@@ -121,10 +122,9 @@ img {
 	height: 50px;
 	border: none;
 	outline: none;
-	color: #000000;
+	color: white;
 	background: linear-gradient(
 		45deg,
-		#dbd703,
 		#48ff00
 	);
 	cursor: pointer;
@@ -132,6 +132,9 @@ img {
 	z-index: 0;
 }
 
+.btn.lg:hover {
+	background-color: black;
+}
 .btn.lg::before {
 	content: '';
 	background: linear-gradient(
@@ -520,7 +523,7 @@ hr {
   top: 10px;
   right: 10px;
   font-size: 30px; /* Уменьшил размер шрифта для пропорциональности */
-  background: #d1d1d1; /* Серый фон */
+  background: #e2e1e1; /* Серый фон */
   border: none;
   cursor: pointer;
   border-radius: 50%; /* Делаем кнопку круглой */
@@ -530,7 +533,9 @@ hr {
   align-items: center;
   justify-content: center;
 }
-
+.modal-close-btn:hover {
+	background: #d9d8d8;
+}
 
 .product__image {
 	width: 100%;
@@ -579,12 +584,12 @@ input {
 .main__search {
 	position: fixed; /* Закрепляем элемент на экране */
 	top: -50px; /* Начальное положение за пределами экрана */
-	left: 50%; /* Центрируем элемент по горизонтали */
+	left: 32%; /* Центрируем элемент по горизонтали */
 	right: 10%; /* Центрируем элемент по горизонтали */
 	transform: translateX(-50%); /* Корректируем смещение для центрирования */
 	width: 100%; /* Ширина элемента */
 	max-width: 400px; /* Максимальная ширина элемента */
-	z-index: 100; /* Убедитесь, что z-index не конфликтует с другими элементами */
+	z-index: 1; /* Убедитесь, что z-index не конфликтует с другими элементами */
 	animation: slideDown 0.5s ease-out forwards; /* Анимация появления */
 	direction: var(--direction, ltr); /* Устанавливаем направление текста на 
 	основе переменной CSS */
@@ -681,3 +686,51 @@ input {
 	font-weight: 300;
 }
 
+
+/* index.css */
+
+/* Add this class for RTL support */
+.rtl .main__search {
+  direction: rtl;
+}
+
+.rtl .main__search input {
+  padding-left: 30px;
+  padding-right: 10px;
+}
+
+.rtl .search-button {
+  left: 10px;
+  right: auto;
+}
+
+/* Default LTR styles */
+.main__search {
+  position: relative;
+}
+
+.main__search input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.search-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.search-button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

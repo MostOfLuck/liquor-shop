@@ -7,7 +7,7 @@ import '../index.css';
 import { items } from '../pages/trainers/data-alc.js';
 
 const MainHeader = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -15,7 +15,6 @@ const MainHeader = () => {
   const [showAllResults, setShowAllResults] = useState(false);
   const searchInputRef = useRef(null);
   const navigate = useNavigate();
-  const lordIconRef = useRef(null); // Reference for the lord-icon element
 
   useEffect(() => {
     const selectedProductId = localStorage.getItem('selectedProductId');
@@ -119,21 +118,8 @@ const MainHeader = () => {
     }
   };
 
-  // Handlers for lord-icon hover
-  const handleIconMouseEnter = () => {
-    if (lordIconRef.current) {
-      lordIconRef.current.setAttribute('colors', 'primary:#000000,secondary:#000000');
-    }
-  };
-
-  const handleIconMouseLeave = () => {
-    if (lordIconRef.current) {
-      lordIconRef.current.setAttribute('colors', 'primary:#000000,secondary:#000000');
-    }
-  };
-
   return (
-    <header className='main__header'>
+    <header className={`main__header ${i18n.dir()}`}>
       <div className='container main__header-container'>
         <div className='main__header-left'>
           <div className='main__search'>
@@ -147,21 +133,7 @@ const MainHeader = () => {
             <button
               onClick={handleShowAllClick}
               disabled={!showAllResults}
-              style={{
-                backgroundColor: 'transparent',
-                border: 'none',
-                cursor: showAllResults ? 'pointer' : 'not-allowed',
-                position: 'absolute',
-                right: '10px',
-                top: '50%',
-                transform: 'translateY(-50%)',
-                padding: 0,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                height: '100%',
-                opacity: showAllResults ? 1 : 0.5,
-              }}
+              className='search-button'
             >
               <lord-icon
                 src='https://cdn.lordicon.com/msoeawqm.json'
@@ -220,7 +192,7 @@ const MainHeader = () => {
               src='https://cdn.lordicon.com/odavpkmb.json'
               trigger='hover'
               className='lordicon'
-              colors='primary:#000000,secondary:#000000'
+              colors='primary:#ffffff,secondary:#ffffff'
               style={{
                 width: '35px',
                 height: '35px',
@@ -229,9 +201,6 @@ const MainHeader = () => {
                 marginRight: '10px',
                 transition: 'colors 0.3s ease',
               }}
-              onMouseEnter={handleIconMouseEnter}
-              onMouseLeave={handleIconMouseLeave}
-              ref={lordIconRef}
             ></lord-icon>
           </Link>
         </div>

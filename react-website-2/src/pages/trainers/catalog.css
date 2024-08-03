@@ -162,6 +162,7 @@
 	padding: 10px;
 	box-sizing: border-box;
 	border: 1px solid white;
+	border-radius: 15px;
 }
 
 .warning_text {
