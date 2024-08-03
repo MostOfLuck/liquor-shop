@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import Header from '../../components/Header';
 import ProductModal from '../../components/ModalWindow';
-import HeaderImage from '../../images/3171853.jpg'
+import HeaderImage from '../../images/catalog2.jpg'
 import './catalog.css';
 import { items } from './data-alc';
 
