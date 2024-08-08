@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa'; // Импорт иконки
 import Header from '../../components/Header';
 import ProductModal from '../../components/ModalWindow';
-import HeaderImage from '../../images/catalog1.jpg';
+import HeaderImage from '../../images/alkogol-1.webp';
 import './catalog.css';
 import { items } from './data-alc';
 
