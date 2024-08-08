@@ -14,12 +14,12 @@
 	/* --primary-hue: 20;
     --gray-hue: 280; */
 
-	--primary-hue: 110;
+	--primary-hue: 140;
 	--color-white: #ffffff;
 	--gray-hue: 240;
-	--color-primary: hsl(var(--primary-hue), 55%, 50%);
+	--color-primary: hsl(var(--primary-hue), 60%, 45%);
 	--color-primary-variant: hsl(var(--primary-hue), 100%, 65%);
-	--color-secondary: #42e030;
+	--color-secondary: #59b366;
 	--color-gray-100: hsl(var(--gray-hue), 47%, 94%);
 	--color-gray-200: hsl(var(--gray-hue), 26%, 75%);
 	--color-gray-300: hsl(var(--gray-hue), 24%, 64%);
@@ -133,34 +133,7 @@ img {
 }
 
 .btn.lg:hover {
-	background-color: black;
-}
-.btn.lg::before {
-	content: '';
-	background: linear-gradient(
-		45deg,
-		#ff0000,
-		#ff7300,
-		#fffb00,
-		#48ff00,
-		#00ffd5,
-		#002bff,
-		#7a00ff,
-		#ff00c8,
-		#ff0000
-	);
-	position: absolute;
-	top: -2px;
-	left: -2px;
-	border-radius: 15px;
-	background-size: 400%;
-	z-index: -1;
-	filter: blur(5px);
-	width: calc(100% + 4px);
-	height: calc(100% + 4px);
-	animation: glowing 20s linear infinite;
-	opacity: 0;
-	transition: opacity 0.3s ease-in-out;
+	background-color: rgb(1, 172, 12);
 }
 .btn.lg {
 	padding: 1.2rem 3rem;
@@ -281,13 +254,16 @@ section {
 	position: relative;
 	width: 44%;
 	margin: 0 auto;
-	text-align: center;
+	text-align: left;
 	color: var(--color-gray-100);
 }
 
 .header__content h2 {
+	position: relative;
 	margin-bottom: 1rem;
 	color: white;
+	text-align: center;
+	font-weight: bold;
 	font-size: 50px;
 }
 
@@ -904,8 +880,9 @@ input {
 }
 
 .category-item.active {
-  background-color: #aff6be;
+  background-color: rgba(175, 246, 190, 0.4); /* Цвет #aff6be с 60% прозрачностью */
 }
+
 
 .catalog__container {
   display: flex;
@@ -1042,4 +1019,47 @@ input {
   }
 }
 }
+.search-bar {
+	background-color: #d5d5d5;
+	border: 1px solid transparent; /* Изначально рамка прозрачная */
+	border-radius: 15px; /* Скругленные углы */
+	padding: 8px; /* Добавим немного внутреннего отступа */
+}
 
+.search-bar:focus {
+	border: 4px solid green; /* Зелёная рамка при фокусировке */
+	outline: none; /* Убираем стандартное выделение */
+}
+
+/* Скрываем placeholder при фокусировке */
+.search-bar:focus::placeholder {
+	color: transparent;
+}
+
+.search-bar-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px; /* Отступ иконки от левого края */
+  color: #000000; /* Цвет иконки */
+	font-weight: 500;
+	top: 13px;
+}
+
+.search-bar {
+  width: 100%;
+  padding-left: 35px; /* Отступ для размещения иконки внутри поля */
+  background-color: #d5d5d5;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  height: 40px;
+}
+
+.search-bar:focus {
+  border: 4px solid green;
+  outline: none;
+}

@@ -1,9 +1,10 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
+import { FaSearch } from 'react-icons/fa'; // Импорт иконки
 import Header from '../../components/Header';
 import ProductModal from '../../components/ModalWindow';
-import HeaderImage from '../../images/catalog2.jpg';
+import HeaderImage from '../../images/catalog1.jpg';
 import './catalog.css';
 import { items } from './data-alc';
 
@@ -119,17 +120,20 @@ const Catalog = () => {
 
   const renderCategoryFilter = () => (
     <>
-    <div className='category-list-container'>
-      <div className={`category-filter ${i18n.language === 'he' ? 'category-filter--rtl' : ''}`}>
-        <input
-          type='text'
-          placeholder={t('Search')}
-          value={searchTerm}
-          onChange={handleChange}
-          className='search-bar'
-        />
-      </div>
-      
+      <div className='category-list-container'>
+        <div className={`category-filter ${i18n.language === 'he' ? 'category-filter--rtl' : ''}`}>
+          <div className='search-bar-container'>
+            <FaSearch className='search-icon' /> {/* Иконка лупы */}
+            <input
+              type='text'
+              placeholder={t('Search')}
+              value={searchTerm}
+              onChange={handleChange}
+              className='search-bar'
+            />
+          </div>
+        </div>
+        
         <div className='category-wheel'>
           <div
             className={`category-item ${!searchCategory ? 'active' : ''}`}

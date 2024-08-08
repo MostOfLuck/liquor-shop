@@ -9,8 +9,9 @@ i18n.use(initReactI18next).init({
 		English: {
 			translations: {
 				Vodkino: 'Vodka Flavors',
-				Port: 'Port 🧉',
-				spirits: 'Vodka with flavors',
+				Port: 'Port 🍇',
+				Arak: 'Arak 🌿',
+				spirits: 'Vodka with flavors 🍒',
 				Wine: 'Wine 🍷',
 				Cognac: 'Cognac 🥂',
 				productarticlfiuzaChardonnayArinto:
@@ -23,9 +24,9 @@ i18n.use(initReactI18next).init({
 			translations: {
 				'Alcohol 🍾': 'Алкоголь 🍾',
 				'Show All Results': 'ВСЕ РЕЗУЛЬТАТЫ',
-				spirits: 'Водка с ароматами',
+				spirits: 'Водка с ароматами 🍒',
 				Search: 'Поиск',
-				Port: 'Портвейн 🧉',
+				Port: 'Портвейн 🍇',
 				'Wine Fiuza Chardonnay Arinto': 'Вино Fiuza Chardonnay Arinto',
 				'Port wine Cabraco Ruby': 'Портвейн Cabraco Ruby',
 				'Port wine Cabraco White': 'Портвейн Cabraco White',
@@ -69,6 +70,7 @@ i18n.use(initReactI18next).init({
 				Beer: 'Пиво',
 				'Port wine': 'Портвейн',
 				Wine: 'Вино 🍷',
+				Arak: 'Арак 🌿',
 				warning:
 					'Внимание: Чрезмерное употребление алкоголя вредит вашему здоровью.',
 				Cognac: 'Коньяк 🥂',
