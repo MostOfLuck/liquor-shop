@@ -201,11 +201,11 @@ section {
 	height: 80%;
 }
 .section__head span {
-	background: var(--color-gray-500);
+	background: white;
 	padding: 0.8rem;
 	border-radius: 1rem;
 	color: var(--color-secondary);
-	font-size: 1.5rem;
+	font-size: 3rem;
 }
 
 .card {
@@ -219,7 +219,9 @@ section {
 	border-color: var(--color-black-600);
 	cursor: default;
 }
-
+.category_name {
+	margin-bottom: 20px;
+}
 .card span {
 	width: 3rem;
 	height: 3rem;
@@ -873,3 +875,171 @@ input {
   height: auto;
   border-radius: 10px;
 }
+
+
+.category-filter {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.category-filter--rtl {
+  text-align: right;
+}
+
+.category-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.category-item {
+  cursor: pointer;
+  padding: 10px;
+	color: black;
+  background-color: #ffffff;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+.category-item:hover {
+  background-color: rgba(239, 236, 236, 0.6); 
+}
+
+.category-item.active {
+  background-color: #aff6be;
+}
+
+.catalog__container {
+  display: flex;
+}
+
+.sidebar {
+  flex: 0 0 250px;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-right: 1px solid #ddd;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-item {
+  padding: 0.5rem 0;
+  cursor: pointer;
+}
+
+.category-item.active {
+  font-weight: bold;
+}
+
+.main-content {
+  flex: 1;
+  padding: 1rem;
+}
+
+.category-section {
+  margin-bottom: 2rem;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start; /* Align items at the start of the grid */
+}
+
+.product-card {
+  width: calc(25% - 1rem); /* Fix width to ensure consistency */
+  box-sizing: border-box;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  text-align: center;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Добавляем плавный переход для трансформации и тени */
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* Увеличиваем карточку при наведении */
+}
+
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .catalog__container {
+    flex-direction: column;
+  }
+
+ /* Default desktop styles */
+.sidebar {
+  flex: 0 0 250px;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-right: 1px solid #ddd;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 1rem; /* Add margin to separate from the search bar */
+}
+
+.category-item {
+  padding: 0.5rem 0;
+  cursor: pointer;
+}
+
+.category-item.active {
+  font-weight: bold;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none; /* Hide the default sidebar on mobile */
+  }
+
+  .category-wheel {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd; /* Optional: Add border for separation */
+    margin-top: 1rem; /* Ensure space between the search bar and the category wheel */
+  }
+
+  .category-item {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .product-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-card {
+    flex: 1 1 auto;
+    margin-bottom: 1rem;
+  }
+}
+}
+

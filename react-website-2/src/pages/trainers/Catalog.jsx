@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import Header from '../../components/Header';
 import ProductModal from '../../components/ModalWindow';
-import HeaderImage from '../../images/catalog2.jpg'
+import HeaderImage from '../../images/catalog2.jpg';
 import './catalog.css';
 import { items } from './data-alc';
 
@@ -118,20 +118,37 @@ const Catalog = () => {
   }, []);
 
   const renderCategoryFilter = () => (
-    <select
-      className={`select__btn ${
-        i18n.language === 'he' ? 'select__btn--rtl' : ''
-      } select__btn--green`}
-      value={searchCategory}
-      onChange={e => setSearchCategory(e.target.value)}
-    >
-      <option value=''>{t('All Categories')}</option>
-      {Object.keys(groupedItems).map(category => (
-        <option key={category} value={category}>
-          {category}
-        </option>
-      ))}
-    </select>
+    <>
+    <div className='category-list-container'>
+      <div className={`category-filter ${i18n.language === 'he' ? 'category-filter--rtl' : ''}`}>
+        <input
+          type='text'
+          placeholder={t('Search')}
+          value={searchTerm}
+          onChange={handleChange}
+          className='search-bar'
+        />
+      </div>
+      
+        <div className='category-wheel'>
+          <div
+            className={`category-item ${!searchCategory ? 'active' : ''}`}
+            onClick={() => setSearchCategory('')}
+          >
+            {t('All Categories')}
+          </div>
+          {Object.keys(groupedItems).map(category => (
+            <div
+              key={category}
+              className={`category-item ${searchCategory === category ? 'active' : ''}`}
+              onClick={() => setSearchCategory(category)}
+            >
+              {category}
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
   );
 
   const renderFilteredProducts = () => {
@@ -157,10 +174,8 @@ const Catalog = () => {
       }
 
       return (
-        <div key={category}>
-          <hr />
-          <h2>{category}</h2>
-          <hr />
+        <div key={category} className='category-section'>
+          <h2 className='category_name'>{category}</h2>
           <div className='product-grid'>
             {filteredProducts.map(product => (
               <div
@@ -191,14 +206,10 @@ const Catalog = () => {
       <Header title={t('Alcohol 🍾')} image={HeaderImage} />
       <section className='catalog'>
         <div className='container catalog__container'>
-          <input
-            type='text'
-            placeholder={t('Search')}
-            value={searchTerm}
-            onChange={handleChange}
-          />
           {renderCategoryFilter()}
-          {renderFilteredProducts()}
+          <div className='main-content'>
+            {renderFilteredProducts()}
+          </div>
         </div>
       </section>
       {isModalOpen && selectedProduct && (

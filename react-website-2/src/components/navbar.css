@@ -1,15 +1,38 @@
-/* Общие стили для навигации */
+/* Начальные стили для навигации */
 nav {
-	height: 5rem;
-	width: 100vw;
-	background: var(--color-primary);
-	display: grid;
-	place-items: center;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 99;
+  height: 5rem;
+  width: 100vw;
+  background: var(--color-primary);
+  display: grid;
+  place-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  transition: background-color 0.3s, color 0.3s; /* Плавное изменение фона и цвета шрифтов */
 }
+
+/* Стили для навигационной панели при скролле */
+nav.scrolled {
+  background: #ffffff; /* Белый фон при скролле */
+  color: #000000; /* Черные шрифты при скролле */
+}
+
+nav.scrolled .nav__links a {
+  color: #000000; /* Черные шрифты для ссылок при скролле */
+}
+
+/* Стили для ссылок в навигации */
+.nav__links a {
+  transition: color 0.3s; /* Плавное изменение цвета текста */
+}
+
+/* Стили для изменения фона ссылки при наведении */
+.nav__links a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Прозрачность 30% */
+  border-radius: 14px;
+}
+
 
 /* только для среднего и малого экранов */
 .nav__toggle-btn {
@@ -23,6 +46,34 @@ nav {
 	align-items: center;
 	position: relative;
 	
+}
+/* Стили для иконки гамбургера */
+.nav__toggle-btn {
+  display: none;
+}
+
+.nav__toggle-btn svg {
+  color: var(--color-gray-100); /* Белый цвет по умолчанию */
+  transition: color 0.3s; /* Плавное изменение цвета */
+}
+
+/* Стили для мобильных устройств */
+@media screen and (max-width: 1024px) {
+  .nav__toggle-btn {
+    display: inline-block;
+    background: transparent;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .nav__toggle-btn svg {
+    color: var(--color-gray-100); /* Белый цвет по умолчанию */
+  }
+}
+
+/* Стили для навигационной панели при скролле */
+nav.scrolled .nav__toggle-btn svg {
+  color: #00ff00; /* Зеленый цвет при прокрутке */
 }
 
 .logo {

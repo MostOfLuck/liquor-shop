@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import Logo from '../images/logo.png';
 import { useTranslation } from 'react-i18next';
@@ -12,13 +12,33 @@ const Navbar = () => {
     const { t, i18n } = useTranslation();
     const [isNavShowing, setIsNavShowing] = useState(false);
 
+    // Определяем язык как RTL
+    const isRTL = i18n.language === 'he';
+
+    // Обрабатываем изменение класса при прокрутке страницы
+    useEffect(() => {
+        const handleScroll = () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) { // Измените значение по вашему усмотрению
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Убираем слушатель при размонтировании компонента
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     const links = [
         { name: t('Home'), path: '/' },
         { name: t('Catalog'), path: '/catalog' },
         { name: t('Contact'), path: '/contact' }
     ];
-
-    const isRTL = i18n.language === 'he'; // Определяем язык как RTL
 
     return (
         <nav className={isRTL ? 'rtl' : 'ltr'}>
@@ -31,7 +51,7 @@ const Navbar = () => {
                     {
                         links.map(({ name, path }, index) => (
                             <li key={index}>
-                                <NavLink to={path} className={({ isActive }) => isActive ? 'active-nav' : ''} onClick={() => setIsNavShowing(prev => !prev)}>
+                                <NavLink to={path} className={({ isActive }) => isActive ? 'active-nav' : ''} onClick={() => setIsNavShowing(false)}>
                                     {name}
                                 </NavLink>
                             </li>

@@ -9,10 +9,10 @@ i18n.use(initReactI18next).init({
 		English: {
 			translations: {
 				Vodkino: 'Vodka Flavors',
-				Port: 'Port',
+				Port: 'Port 🧉',
 				spirits: 'Vodka with flavors',
-				wine: 'Wine',
-				cognac: 'Cognac',
+				Wine: 'Wine 🍷',
+				Cognac: 'Cognac 🥂',
 				productarticlfiuzaChardonnayArinto:
 					'This creamy wine, dominated by Chardonnay and a fraction of Arinto.',
 				warning:
@@ -25,7 +25,7 @@ i18n.use(initReactI18next).init({
 				'Show All Results': 'ВСЕ РЕЗУЛЬТАТЫ',
 				spirits: 'Водка с ароматами',
 				Search: 'Поиск',
-				Port: 'Портвейн',
+				Port: 'Портвейн 🧉',
 				'Wine Fiuza Chardonnay Arinto': 'Вино Fiuza Chardonnay Arinto',
 				'Port wine Cabraco Ruby': 'Портвейн Cabraco Ruby',
 				'Port wine Cabraco White': 'Портвейн Cabraco White',
@@ -68,10 +68,10 @@ i18n.use(initReactI18next).init({
 				Blog: 'Блог',
 				Beer: 'Пиво',
 				'Port wine': 'Портвейн',
-				Wine: 'Вино',
+				Wine: 'Вино 🍷',
 				warning:
 					'Внимание: Чрезмерное употребление алкоголя вредит вашему здоровью.',
-				Cognac: 'Коньяк',
+				Cognac: 'Коньяк 🥂',
 				'Popular product categories': 'Популярные категории товаров',
 				Communities: 'Сообщество',
 				'Our Socials and contacts.': 'Наши социальные сети и контакты.',

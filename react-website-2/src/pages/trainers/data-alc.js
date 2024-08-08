@@ -1,5 +1,4 @@
 import fiuza from '../../productImages2/774A7547.png'
-import fuza from '../../productImages2/774A7547.webp'
 import PortoCabracoRuby1 from '../../productImages2/774A7575.png'
 import PortoCabracoRuby2 from '../../productImages2/774A7575.png'
 import PortoCabacoWhite from '../../productImages2/774A7617.png'
@@ -7,9 +6,7 @@ import PortoCabacoRose from '../../productImages2/774A7663.png'
 import MaximeTrijolCognac from '../../productImages2/774A7698.png'
 import MaximeTrijolCognac2 from '../../productImages2/774A7765.png'
 import MaximeTrijolCognacVsop2 from '../../productImages2/774A7823.png'
-import MaximeTrijolCognacVsop from '../../productImages2/774A7851.webp'
 import MaximeTrijolCognacSmall2 from '../../productImages2/774A7896.png'
-import MaximeTrijolCognacSmall1 from '../../productImages2/cognacsmall2.jpg'
 import FiuzaNativeReserva2018 from '../../productImages2/774A7991.png'
 import Oceanius from '../../productImages2/774A8055.png'
 import FiuzaCabernetSauvignon from '../../productImages2/774A8093.png'
@@ -19,10 +16,10 @@ import MontesCarlos from '../../productImages2/774A8202.png'
 import BiancoCChadronay from '../../productImages2/774A8344.png'
 import VelasCorsarias from '../../productImages2/774A8374.png'
 import SummerMerlotAllSeasonsCollection from '../../productImages2/774A8402.png'
-import MaximeTrijolCognac3litr from '../../productImages2/774A8480.webp'
 import MaximeTrijolCognac3litr2 from '../../productImages2/774A8501.png'
 import ArakOrange from '../../productImages2/ArakOrange.png'
-import ArakOrange2 from '../../productImages2/ArakOrange.jpg'
+import ArakLime from '../../productImages2/araklimon.png'
+import ArakLemon from '../../productImages2/araklemon.png'
 import VodkinaMango2 from '../../productImages2/VodinoMagno2.webp'
 import VodkinaMango from '../../productImages2/Vodkino mango.webp'
 import VodkinaYellow from '../../productImages2/Vodkino yellow.webp'
@@ -192,7 +189,7 @@ export const items = [
 		name: 'arakOrange',
 		category: 'Arak',
 		image: ArakOrange,
-		images: [ArakOrange2],
+		images: [ArakOrange],
 		titleKey: 'product.title.arakOrange',
 		articleKey: 'product.article.arakOrange',
 	},
@@ -262,10 +259,20 @@ export const items = [
 
 	{
 		id: 26,
-		name: 'arakOrange',
+		name: 'ArakLime',
 		category: 'Arak',
-		image: ArakOrange,
-		images: [ArakOrange2],
+		image: ArakLime,
+		images: [ArakLime],
+		titleKey: 'product.title.arakOrange',
+		articleKey: 'product.article.arakOrange',
+	},
+
+	{
+		id: 27,
+		name: 'ArakLemon',
+		category: 'Arak',
+		image: ArakLemon,
+		images: [ArakLemon],
 		titleKey: 'product.title.arakOrange',
 		articleKey: 'product.article.arakOrange',
 	},
