@@ -30,7 +30,7 @@ const Programs = () => {
     {
       id: 3,
       imageSrc: portImage,
-      title: t('Port wine'),
+      title: t('Port'),
       path: '/catalog',
     },
     {
@@ -60,10 +60,13 @@ const Programs = () => {
               className='programs__icon-item'
               onClick={() => handleProductClick(title)}
             >
-              {imageSrc && (
-                <img src={imageSrc} alt={title} className='programs__image' />
-              )}
-              <h4 className='programs__title'>{title}</h4>
+{imageSrc && (
+  <div className="programs__image-container">
+    <img src={imageSrc} alt={title} className='programs__image' />
+    <h4 className='programs__title'>{title}</h4>
+  </div>
+)}
+
             </div>
           ))}
         </div>

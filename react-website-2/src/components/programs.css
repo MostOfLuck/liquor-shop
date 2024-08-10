@@ -21,17 +21,37 @@
 }
 
 .programs__title {
+	position: relative;
+	display: flex;
+	text-align: center;
 	margin-top: 15px; /* Отступ между иконкой и заголовком */
-	font-size: 1.2rem; /* Размер шрифта заголовка */
+	font-size: 1.5rem; /* Размер шрифта заголовка */
 	font-weight: 500;
 }
 .programs__image {
 	position: relative;
-	width: 100px;
-	left: 110px;
-	right: 110px;
+	display: flex;
+	justify-content: center;
+	margin-left: 75px;
+	margin-right: 75px;
+	width: 150px;
 }
 .programs__image:hover {
 	cursor: pointer;
 }
 
+.programs__image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрирует заголовок и изображение по горизонтали */
+}
+
+.programs__image {
+  max-width: 100%;
+  height: auto;
+}
+
+.programs__title {
+  margin-top: 8px; /* Добавляет отступ сверху */
+  text-align: center; /* Центрирует текст под изображением */
+}

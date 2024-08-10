@@ -1,20 +1,32 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next';
+import { useNavigate, useLocation } from 'react-router-dom';
 import '../index.css'; // Подключение общего CSS файла
 
 const ProductModal = ({ product, onClose }) => {
-    const { t } = useTranslation()
+    const { t } = useTranslation();
+    const navigate = useNavigate();
+    const location = useLocation();
+
     // Обработчик событий для клика вне модального окна
     const handleOverlayClick = event => {
         if (event.target.className === 'modal-overlay') {
-            onClose();
+            handleClose();
         }
+    };
+
+    // Закрытие модального окна с изменением URL
+    const handleClose = () => {
+        // Удаление параметра продукта из URL
+        const newUrl = location.pathname;
+        navigate(newUrl);
+        onClose();
     };
 
     return (
         <div className='modal-overlay' onClick={handleOverlayClick}>
             <div className='modal-card'>
-                <button className='modal-close-btn' onClick={onClose}>
+                <button className='modal-close-btn' onClick={handleClose}>
                     &times;
                 </button>
                 {product.images &&
@@ -31,7 +43,7 @@ const ProductModal = ({ product, onClose }) => {
                 {product.warning && <p className='product__warning'>{product.warning}</p>}
                 <div className='warning'>
                     <p className='warning_text'>
-                    {t('warning')}
+                        {t('warning')}
                     </p>
                 </div>
             </div>

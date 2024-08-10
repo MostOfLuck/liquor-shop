@@ -20,13 +20,19 @@ import MaximeTrijolCognac3litr2 from '../../productImages2/774A8501.png'
 import ArakOrange from '../../productImages2/ArakOrange.png'
 import ArakLime from '../../productImages2/araklimon.png'
 import ArakLemon from '../../productImages2/araklemon.png'
-import VodkinaMango2 from '../../productImages2/VodinoMagno2.webp'
+import VodkinaMango2 from '../../productImages2/VodinoMagno2.png'
 import VodkinaMango from '../../productImages2/Vodkino mango.webp'
-import VodkinaYellow from '../../productImages2/Vodkino yellow.webp'
-import VodkinoLemon from '../../productImages2/VodkinoLemon.webp'
-import VodkinoOrange from '../../productImages2/VodkinoOrange.webp'
-import VodkinoPeach from '../../productImages2/VodkinoPeach.webp'
-import VodkinoPeach2 from '../../productImages2/VodkinoPeach2.webp'
+import VodkinaYellow from '../../productImages2/Vodkino yellow.png'
+import VodkinoLemon from '../../productImages2/VodkinoLemon.png'
+import VodkinoOrange from '../../productImages2/VodkinoOrange.png'
+import VodkinoPeach from '../../productImages2/VodkinoPeach.png'
+import EichbaumBeer from '../../productImages2/EichbaumBeer.png'
+import EichbaumBeerHelles from '../../productImages2/EichbaumBeerHelles.png'
+import EichbaumBeerPilsener from '../../productImages2/EichbaumPilsener.png'
+import SuperiotStout from '../../productImages2/SuperiorBeerStout.png'
+import Chernigivske from '../../productImages2/Chernigivske.png'
+import KrauzerBrau from '../../productImages2/KrauzerBrau.png'
+import Taller from '../../productImages2/Taller.png'
 import './catalog.css'
 import './rtl.css'
 
@@ -193,26 +199,18 @@ export const items = [
 		titleKey: 'product.title.arakOrange',
 		articleKey: 'product.article.arakOrange',
 	},
+
 	{
 		id: 19,
-		name: 'vodkinaMango2',
+		name: 'vodkinaMango',
 		category: 'spirits',
 		image: VodkinaMango2,
 		images: [VodkinaMango2],
-		titleKey: 'product.title.vodkinaMango2',
-		articleKey: 'product.article.vodkinaMango2',
-	},
-	{
-		id: 20,
-		name: 'vodkinaMango',
-		category: 'spirits',
-		image: VodkinaMango,
-		images: [VodkinaMango],
 		titleKey: 'product.title.vodkinaMango',
 		articleKey: 'product.article.vodkinaMango',
 	},
 	{
-		id: 21,
+		id: 20,
 		name: 'vodkinaYellow',
 		category: 'spirits',
 		image: VodkinaYellow,
@@ -221,7 +219,7 @@ export const items = [
 		articleKey: 'product.article.vodkinaYellow',
 	},
 	{
-		id: 22,
+		id: 21,
 		name: 'vodkinaLemon',
 		category: 'spirits',
 		image: VodkinoLemon,
@@ -230,7 +228,7 @@ export const items = [
 		articleKey: 'product.article.vodkinaLemon',
 	},
 	{
-		id: 23,
+		id: 22,
 		name: 'vodkinaOrange',
 		category: 'spirits',
 		image: VodkinoOrange,
@@ -239,7 +237,7 @@ export const items = [
 		articleKey: 'product.article.vodkinaOrange',
 	},
 	{
-		id: 24,
+		id: 23,
 		name: 'vodkinaPeach',
 		category: 'spirits',
 		image: VodkinoPeach,
@@ -247,18 +245,9 @@ export const items = [
 		titleKey: 'product.title.vodkinaPeach',
 		articleKey: 'product.article.vodkinaPeach',
 	},
-	{
-		id: 25,
-		name: 'vodkinaPeach2',
-		category: 'spirits',
-		image: VodkinoPeach2,
-		images: [VodkinoPeach2],
-		titleKey: 'product.title.vodkinaPeach2',
-		articleKey: 'product.article.vodkinaPeach2',
-	},
 
 	{
-		id: 26,
+		id: 24,
 		name: 'ArakLime',
 		category: 'Arak',
 		image: ArakLime,
@@ -268,12 +257,82 @@ export const items = [
 	},
 
 	{
-		id: 27,
+		id: 25,
 		name: 'ArakLemon',
 		category: 'Arak',
 		image: ArakLemon,
 		images: [ArakLemon],
 		titleKey: 'product.title.arakOrange',
 		articleKey: 'product.article.arakOrange',
+	},
+
+	{
+		id: 26,
+		name: 'Eichbaum Hefeweizen Hell',
+		category: 'Beer',
+		image: EichbaumBeer,
+		images: [EichbaumBeer],
+		titleKey: 'product.title.Eichbaum',
+		articleKey: 'product.article.Eichbaum',
+	},
+
+	{
+		id: 27,
+		name: 'Eichbaum Helles Large Hell',
+		category: 'Beer',
+		image: EichbaumBeerHelles,
+		images: [EichbaumBeerHelles],
+		titleKey: 'product.title.EichbaumHell',
+		articleKey: 'product.article.EichbaumHell',
+	},
+
+	{
+		id: 28,
+		name: 'Eichbaum Pilsener',
+		category: 'Beer',
+		image: EichbaumBeerPilsener,
+		images: [EichbaumBeerPilsener],
+		titleKey: 'product.title.EichbaumPilsener',
+		articleKey: 'product.article.EichbaumPilsener',
+	},
+
+	{
+		id: 29,
+		name: 'Superior Stout',
+		category: 'Beer',
+		image: SuperiotStout,
+		images: [SuperiotStout],
+		titleKey: 'product.title.Superior',
+		articleKey: 'product.article.Superior',
+	},
+
+	{
+		id: 30,
+		name: 'Chernigivske',
+		category: 'Beer',
+		image: Chernigivske,
+		images: [Chernigivske],
+		titleKey: 'product.title.Chernigivske',
+		articleKey: 'product.article.Chernigivske',
+	},
+
+	{
+		id: 31,
+		name: 'Krauzer Brau',
+		category: 'Beer',
+		image: KrauzerBrau,
+		images: [KrauzerBrau],
+		titleKey: 'product.title.KrauzerBrau',
+		articleKey: 'product.article.KrauzerBrau',
+	},
+
+	{
+		id: 32,
+		name: 'Taller',
+		category: 'Beer',
+		image: Taller,
+		images: [Taller],
+		titleKey: 'product.title.Taller',
+		articleKey: 'product.article.Taller',
 	},
 ]

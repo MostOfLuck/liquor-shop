@@ -1,26 +1,27 @@
 import i18n from 'i18next'
 import React, { useEffect, useState } from 'react'
+import { AiFillCaretDown } from 'react-icons/ai' // Импорт иконки
 import '../index.css'
 
 const LanguageSwitcher = () => {
-	const [language, setLanguage] = useState('עברית')
+	const [language, setLanguage] = useState('HE')
 	const [isOpen, setIsOpen] = useState(false)
 	const languages = {
-		עברית: 'Hebrew',
-		English: 'English',
-		Русский: 'Russian',
+		HE: 'עברית',
+		EN: 'English',
+		RU: 'Русский',
 	}
 
 	useEffect(() => {
-		i18n.changeLanguage('עברית')
-	}, [])
+		i18n.changeLanguage(languages[language])
+	}, [language])
 
 	const toggleDropdown = () => {
 		setIsOpen(!isOpen)
 	}
 
 	const selectLanguage = lang => {
-		i18n.changeLanguage(lang)
+		i18n.changeLanguage(languages[lang])
 		setLanguage(lang)
 		setIsOpen(false)
 	}
@@ -43,13 +44,14 @@ const LanguageSwitcher = () => {
 	return (
 		<div
 			className='language_switcher'
-			style={{ position: 'relative', left: '20px',top: '-8px', borderRadius: '10px', }}
+			style={{ position: 'relative', left: '20px', top: '-8px', borderRadius: '10px' }}
 		>
 			<button
-				style={{ width: '5.4rem', height: '2rem', borderRadius: '5px', }}
+				style={{ width: '5.4rem', height: '2rem', borderRadius: '5px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 0.5rem' }}
 				onClick={toggleDropdown}
 			>
-				{language} 🌐
+				{language}
+				<AiFillCaretDown /> {/* Иконка раскрытия */}
 			</button>
 			<ul
 				className={`language-dropdown ${isOpen ? 'open' : ''}`}

@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa'; // Импорт иконки
 import Header from '../../components/Header';
 import ProductModal from '../../components/ModalWindow';
@@ -11,6 +11,7 @@ import { items } from './data-alc';
 const Catalog = () => {
   const { t, i18n } = useTranslation();
   const location = useLocation();
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -20,8 +21,17 @@ const Catalog = () => {
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
     const categoryFromURL = searchParams.get('category');
+    const productFromURL = searchParams.get('product');
+
     if (categoryFromURL) {
       setSearchCategory(decodeURIComponent(categoryFromURL));
+    }
+
+    if (productFromURL) {
+      const product = items.find(item => item.id === parseInt(productFromURL, 10));
+      if (product) {
+        handleCardClick(product, false);
+      }
     }
   }, [location.search]);
 
@@ -74,7 +84,7 @@ const Catalog = () => {
     }
   };
 
-  const handleCardClick = (product) => {
+  const handleCardClick = (product, updateUrl = true) => {
     setSelectedProduct({
       ...product,
       name: t(product.name, { defaultValue: product.name }),
@@ -86,6 +96,10 @@ const Catalog = () => {
       }),
     });
     setIsModalOpen(true);
+
+    if (updateUrl) {
+      navigate(`?product=${product.id}`, { replace: true });
+    }
   };
 
   useEffect(() => {
@@ -107,16 +121,11 @@ const Catalog = () => {
     }
   }, [searchTerm, searchCategory, t]);
 
-  useEffect(() => {
-    const selectedProductId = localStorage.getItem('selectedProductId');
-    if (selectedProductId) {
-      const product = items.find(item => item.id === selectedProductId);
-      if (product) {
-        handleCardClick(product);
-      }
-      localStorage.removeItem('selectedProductId');
-    }
-  }, []);
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedProduct(null);
+    navigate('', { replace: true });
+  };
 
   const renderCategoryFilter = () => (
     <>
@@ -219,7 +228,7 @@ const Catalog = () => {
       {isModalOpen && selectedProduct && (
         <ProductModal
           product={selectedProduct}
-          onClose={() => setIsModalOpen(false)}
+          onClose={handleCloseModal}
         />
       )}
     </>

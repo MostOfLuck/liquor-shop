@@ -9,6 +9,16 @@
 	text-decoration: none;
 	box-sizing: border-box;
 }
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	scroll-behavior: smooth;
+	overflow-y: scroll;
+	scroll-snap-type: y proximity;
+	scroll-snap-stop: always;
+}
 
 :root {
 	/* --primary-hue: 20;
@@ -20,6 +30,7 @@
 	--color-primary: hsl(var(--primary-hue), 60%, 45%);
 	--color-primary-variant: hsl(var(--primary-hue), 100%, 65%);
 	--color-secondary: #59b366;
+	--color-green: #59b366;
 	--color-gray-100: hsl(var(--gray-hue), 47%, 94%);
 	--color-gray-200: hsl(var(--gray-hue), 26%, 75%);
 	--color-gray-300: hsl(var(--gray-hue), 24%, 64%);
@@ -34,7 +45,35 @@
 
 	--color-gray-700: rgba(255, 255, 255, 0.9);
 }
+.popular-products {
+  background: #fff;
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
+}
 
+.popular-products__container {
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+}
+
+.popular-products__button {
+	position: relative;
+  background: #f0f0f0;
+	justify-content: right;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+	width: 200px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.popular-products__button:hover {
+  background: #e0e0e0;
+}
 /* GENERAL STYLES */
 body {
 	font-family: 'Montserrat', sans-serif;
@@ -99,7 +138,7 @@ img {
 	width: fit-content;
 	margin: 0 auto;
 	padding: 0.9rem 2rem;
-	background: var(--color-primary);
+	background: var(--color-green);
 	transition: var(--transition);
 }
 
@@ -110,26 +149,10 @@ img {
 	pointer-events: none; /* Деактивировать кликабельность, когда список скрыт */
 }
 
-
 .language-dropdown.open {
 	opacity: 1;
 	transform: translateY(0);
 	pointer-events: auto; /* Включить кликабельность, когда список открыт */
-}
-
-.btn.lg {
-	width: 220px;
-	height: 50px;
-	border: none;
-	outline: none;
-	color: white;
-	background: linear-gradient(
-		45deg,
-		#48ff00
-	);
-	cursor: pointer;
-	position: relative;
-	z-index: 0;
 }
 
 .btn.lg:hover {
@@ -497,19 +520,19 @@ hr {
 }
 
 .modal-close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 30px; /* Уменьшил размер шрифта для пропорциональности */
-  background: #e2e1e1; /* Серый фон */
-  border: none;
-  cursor: pointer;
-  border-radius: 50%; /* Делаем кнопку круглой */
-  width: 40px; /* Устанавливаем ширину и высоту для круга */
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 30px; /* Уменьшил размер шрифта для пропорциональности */
+	background: #e2e1e1; /* Серый фон */
+	border: none;
+	cursor: pointer;
+	border-radius: 50%; /* Делаем кнопку круглой */
+	width: 40px; /* Устанавливаем ширину и высоту для круга */
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .modal-close-btn:hover {
 	background: #d9d8d8;
@@ -532,30 +555,29 @@ hr {
 	line-height: 1.5;
 }
 .search-container {
-  position: relative;
-  display: flex;
-	
+	position: relative;
+	display: flex;
 }
 
 input {
-  padding: 8px;
-  font-size: 16px;
+	padding: 8px;
+	font-size: 16px;
 	border-radius: 14px;
 }
 
 .clear-button {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: transparent;
+	border: none;
+	font-size: 20px;
+	cursor: pointer;
 }
 
 .clear-button:hover {
-  color: red; /* Optional: Change color on hover */
+	color: red; /* Optional: Change color on hover */
 }
 /* Стили для основного поиска */
 /* Стили для основного поиска */
@@ -568,57 +590,57 @@ input {
 	max-width: 400px; /* Максимальная ширина элемента */
 	z-index: 1; /* Убедитесь, что z-index не конфликтует с другими элементами */
 	animation: slideDown 0.5s ease-out forwards; /* Анимация появления */
-	direction: var(--direction, ltr); /* Устанавливаем направление текста на 
+	direction: var(
+		--direction,
+		ltr
+	); /* Устанавливаем направление текста на 
 	основе переменной CSS */
 	border-radius: 14px;
 }
 
 @keyframes slideDown {
 	from {
-			top: -50px; /* Начальное положение */
-			opacity: 0; /* Начальная прозрачность */
+		top: -50px; /* Начальное положение */
+		opacity: 0; /* Начальная прозрачность */
 	}
 	to {
-			top: 2%; /* Конечное положение */
-			opacity: 1; /* Конечная прозрачность */
+		top: 2%; /* Конечное положение */
+		opacity: 1; /* Конечная прозрачность */
 	}
 }
 
+/* Search input container */
+.main__search {
+	position: relative; /* Relative to the container */
+	width: 100%; /* Full width of the container */
+	max-width: 500px; /* Set a max width for the search bar */
+	margin-left: 50px;
+}
 
-
-
-/* Стили для поля ввода */
+/* Search input styles */
 .main__search input {
-	width: 100%; /* Ширина поля ввода */
+	width: 100%; /* Input takes full width of the container */
 	padding: 10px;
-	border: 1px solid rgba(0, 0, 0, 0.2); /* Прозрачная граница */
-	background-color: rgba(255, 255, 255, 0.7); /* Прозрачный фон */
-	animation: slideIn 0.5s ease-out; /* Применяем анимацию */
+	border: 1px solid rgba(0, 0, 0, 0.2); /* Semi-transparent border */
+	background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+	animation: slideIn 0.5s ease-out; /* Slide-in animation */
+	box-sizing: border-box; /* Ensure padding doesn't affect the width */
+	border-radius: 5px; /* Rounded corners */
 }
 
-/* Стили для кнопки очистки */
-.search-clear-button {
-	position: absolute;
-	right: 10px;
-	top: 50%;
-	transform: translateY(-50%);
-	background: none;
-	border: none;
-	cursor: pointer;
-	font-size: 16px;
-	color: #999;
-}
-
-/* Стили для результатов поиска */
+/* Search results styles */
 .search-results {
 	position: absolute;
-	top: 100%;
+	top: 10%; /* Position results directly below the input */
 	left: 0;
-	width: 100%;
+	width: 100%; /* Match the width of the input field */
+	max-width: 500px; /* Same max width as the input */
 	color: black;
 	background: white;
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-	border-radius: 5px;
+	border-radius: 5px; /* Rounded corners to match input */
+	z-index: 100; /* Ensure results appear above other content */
+	box-sizing: border-box; /* Consistent box model */
 }
 
 /* Стили для списка результатов */
@@ -652,8 +674,14 @@ input {
 
 /* Медиазапрос для скрытия на мобильных устройствах */
 @media (max-width: 768px) {
-	.main__search {
-		display: none; /* Скрываем поле поиска на мобильных устройствах */
+	.main_input {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	.class_lord_loop {
+		display: none;
 	}
 }
 
@@ -663,361 +691,362 @@ input {
 	font-weight: 300;
 }
 
-
 /* index.css */
 
 /* Add this class for RTL support */
 .rtl .main__search {
-  direction: rtl;
+	direction: rtl;
 }
 
 .rtl .main__search input {
-  padding-left: 30px;
-  padding-right: 10px;
+	padding-left: 30px;
+	padding-right: 10px;
 }
 
 .rtl .search-button {
-  left: 10px;
-  right: auto;
+	left: 10px;
+	right: auto;
 }
 
 /* Default LTR styles */
 .main__search {
-  position: relative;
+	position: relative;
 }
 
 .main__search input {
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
 }
 
 .search-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
 }
 
 .search-button[disabled] {
-  cursor: not-allowed;
-  opacity: 0.5;
+	cursor: not-allowed;
+	opacity: 0.5;
 }
-
-
 
 /* index.css */
 
 /* Add this class for RTL support */
 .rtl .main__search {
-  direction: rtl;
+	direction: rtl;
 }
 
 .rtl .main__search input {
-  padding-left: 30px;
-  padding-right: 10px;
+	padding-left: 30px;
+	padding-right: 10px;
 }
 
 .rtl .search-button {
-  left: 10px;
-  right: auto;
+	left: 10px;
+	right: auto;
 }
 
 /* Default LTR styles */
 .main__search {
-  position: relative;
+	position: relative;
 }
 
 .main__search input {
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
 }
 
 .search-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
 }
 
 .search-button[disabled] {
-  cursor: not-allowed;
-  opacity: 0.5;
+	cursor: not-allowed;
+	opacity: 0.5;
 }
-
 
 /* index.css */
 
 /* Add this class for RTL support */
 .rtl .main__search {
-  direction: rtl;
+	direction: rtl;
 }
 
 .rtl .main__search input {
-  padding-left: 30px;
-  padding-right: 10px;
+	padding-left: 30px;
+	padding-right: 10px;
 }
 
 .rtl .search-button {
-  left: 10px;
-  right: auto;
+	left: 10px;
+	right: auto;
 }
 
 .rtl .main__header-right {
-  order: -1;
+	order: -1;
 }
 
 .rtl .main__header-left {
-  order: 1;
+	order: 1;
 }
 
 /* Default LTR styles */
 .main__search {
-  position: relative;
+	position: relative;
 }
 
 .main__search input {
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	background-color: #d5d5d5;
 }
 
+
 .search-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
 }
 
 .search-button[disabled] {
-  cursor: not-allowed;
-  opacity: 0.5;
+	cursor: not-allowed;
+	opacity: 0.5;
 }
 
 .main__header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
-.main__header-left, .main__header-right {
-  flex: 1;
+.main__header-left,
+.main__header-right {
+	flex: 1;
 }
 
 .main__header-right {
-  text-align: right;
+	text-align: right;
 }
 
 .main__header-circle {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background-color: #f3f3f3;
-  position: absolute;
-  right: 0;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	background-color: #f3f3f3;
+	position: absolute;
+	right: 0;
 }
 
 .main__header-image {
-  position: relative;
+	position: relative;
 }
 
 .main__header-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
 }
 
-
 .category-filter {
-  margin-top: 20px;
-  margin-bottom: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .category-filter--rtl {
-  text-align: right;
+	text-align: right;
 }
 
 .category-list {
-  list-style-type: none;
-  padding: 0;
+	list-style-type: none;
+	padding: 0;
 }
 
 .category-item {
-  cursor: pointer;
-  padding: 10px;
+	cursor: pointer;
+	padding: 10px;
 	color: black;
-  background-color: #ffffff;
-  margin-bottom: 5px;
-  border-radius: 5px;
+	background-color: #ffffff;
+	margin-bottom: 5px;
+	border-radius: 5px;
 }
 .category-item:hover {
-  background-color: rgba(239, 236, 236, 0.6); 
+	background-color: rgba(239, 236, 236, 0.6);
 }
 
 .category-item.active {
-  background-color: rgba(175, 246, 190, 0.4); /* Цвет #aff6be с 60% прозрачностью */
+	background-color: rgba(
+		175,
+		246,
+		190,
+		0.6
+	); /* Цвет #aff6be с 60% прозрачностью */
 }
 
-
 .catalog__container {
-  display: flex;
+	display: flex;
 }
 
 .sidebar {
-  flex: 0 0 250px;
-  max-height: 80vh;
-  overflow-y: auto;
-  border-right: 1px solid #ddd;
-  padding: 1rem;
-  box-sizing: border-box;
+	flex: 0 0 250px;
+	max-height: 80vh;
+	overflow-y: auto;
+	border-right: 1px solid #ddd;
+	padding: 1rem;
+	box-sizing: border-box;
 }
 
 .search-bar {
-  width: 100%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
+	width: 100%;
+	padding: 0.5rem;
+	margin-bottom: 1rem;
 }
 
 .category-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 .category-item {
-  padding: 0.5rem 0;
-  cursor: pointer;
+	padding: 0.5rem 0;
+	cursor: pointer;
 }
 
 .category-item.active {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .main-content {
-  flex: 1;
-  padding: 1rem;
+	flex: 1;
+	padding: 1rem;
 }
 
 .category-section {
-  margin-bottom: 2rem;
+	margin-bottom: 2rem;
 }
 
 .product-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: flex-start; /* Align items at the start of the grid */
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: flex-start; /* Align items at the start of the grid */
 }
 
 .product-card {
-  width: calc(25% - 1rem); /* Fix width to ensure consistency */
-  box-sizing: border-box;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  cursor: pointer;
-  text-align: center;
-  background-color: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Добавляем плавный переход для трансформации и тени */
+	width: calc(25% - 1rem); /* Fix width to ensure consistency */
+	box-sizing: border-box;
+	padding: 1rem;
+	border: 1px solid #ddd;
+	cursor: pointer;
+	text-align: center;
+	background-color: #fff;
+	transition: transform 0.3s ease, box-shadow 0.3s ease; /* Добавляем плавный переход для трансформации и тени */
 }
 
 .product-card:hover {
-  transform: scale(1.05); /* Увеличиваем карточку при наведении */
+	transform: scale(1.05); /* Увеличиваем карточку при наведении */
 }
-
 
 .product-card img {
-  max-width: 100%;
-  height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 @media (max-width: 768px) {
-  .catalog__container {
-    flex-direction: column;
-  }
+	.catalog__container {
+		flex-direction: column;
+	}
 
- /* Default desktop styles */
-.sidebar {
-  flex: 0 0 250px;
-  max-height: 80vh;
-  overflow-y: auto;
-  border-right: 1px solid #ddd;
-  padding: 1rem;
-  box-sizing: border-box;
-}
+	/* Default desktop styles */
+	.sidebar {
+		flex: 0 0 250px;
+		max-height: 80vh;
+		overflow-y: auto;
+		border-right: 1px solid #ddd;
+		padding: 1rem;
+		box-sizing: border-box;
+	}
 
-.category-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  margin-top: 1rem; /* Add margin to separate from the search bar */
-}
+	.category-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		margin-top: 1rem; /* Add margin to separate from the search bar */
+	}
 
-.category-item {
-  padding: 0.5rem 0;
-  cursor: pointer;
-}
+	.category-item {
+		padding: 0.5rem 0;
+		cursor: pointer;
+	}
 
-.category-item.active {
-  font-weight: bold;
-}
+	.category-item.active {
+		font-weight: bold;
+	}
 
-/* Mobile-specific styles */
-@media (max-width: 768px) {
-  .sidebar {
-    display: none; /* Hide the default sidebar on mobile */
-  }
+	/* Mobile-specific styles */
+	@media (max-width: 768px) {
+		.sidebar {
+			display: none; /* Hide the default sidebar on mobile */
+		}
 
-  .category-wheel {
-    display: flex;
-    overflow-x: auto;
-    white-space: nowrap;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #ddd; /* Optional: Add border for separation */
-    margin-top: 1rem; /* Ensure space between the search bar and the category wheel */
-  }
+		.category-wheel {
+			display: flex;
+			overflow-x: auto;
+			white-space: nowrap;
+			padding: 0.5rem 0;
+			border-bottom: 1px solid #ddd; /* Optional: Add border for separation */
+			margin-top: 1rem; /* Ensure space between the search bar and the category wheel */
+		}
 
-  .category-item {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    white-space: nowrap;
-  }
+		.category-item {
+			display: inline-block;
+			padding: 0.5rem 1rem;
+			cursor: pointer;
+			white-space: nowrap;
+		}
 
-  .product-grid {
-    display: flex;
-    flex-direction: column;
-  }
+		.product-grid {
+			display: flex;
+			flex-direction: column;
+		}
 
-  .product-card {
-    flex: 1 1 auto;
-    margin-bottom: 1rem;
-  }
-}
+		.product-card {
+			flex: 1 1 auto;
+			margin-bottom: 1rem;
+		}
+	}
 }
 .search-bar {
 	background-color: #d5d5d5;
@@ -1037,29 +1066,29 @@ input {
 }
 
 .search-bar-container {
-  position: relative;
-  display: flex;
-  align-items: center;
+	position: relative;
+	display: flex;
+	align-items: center;
 }
 
 .search-icon {
-  position: absolute;
-  left: 10px; /* Отступ иконки от левого края */
-  color: #000000; /* Цвет иконки */
+	position: absolute;
+	left: 10px; /* Отступ иконки от левого края */
+	color: #000000; /* Цвет иконки */
 	font-weight: 500;
 	top: 13px;
 }
 
 .search-bar {
-  width: 100%;
-  padding-left: 35px; /* Отступ для размещения иконки внутри поля */
-  background-color: #d5d5d5;
-  border: 1px solid transparent;
-  border-radius: 15px;
-  height: 40px;
+	width: 100%;
+	padding-left: 35px; /* Отступ для размещения иконки внутри поля */
+	background-color: #d5d5d5;
+	border: 1px solid transparent;
+	border-radius: 15px;
+	height: 40px;
 }
 
 .search-bar:focus {
-  border: 4px solid green;
-  outline: none;
+	border: 4px solid green;
+	outline: none;
 }

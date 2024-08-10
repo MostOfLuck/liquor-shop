@@ -125,6 +125,7 @@ const MainHeader = () => {
           <div className='main__search'>
             <input style={{marginBottom: '30px'}}
               ref={searchInputRef}
+              className='main_input'
               type='text'
               placeholder={t('Search')}
               value={searchTerm}
@@ -136,6 +137,7 @@ const MainHeader = () => {
               className='search-button'
             >
               <lord-icon
+              className='class_lord_loop'
                 src='https://cdn.lordicon.com/msoeawqm.json'
                 trigger='hover'
                 colors='primary:#000000'
@@ -181,8 +183,7 @@ const MainHeader = () => {
                 </>
               )}
             </div>
-          </div>
-          <h1>
+            <h1 className='main_header_header'>
             {t('Discover the Finest Alcoholic Beverages at R.I.L.L Collection')}
           </h1>
           <p>{t('Best Alcohol from all over the world')}</p>
@@ -203,6 +204,7 @@ const MainHeader = () => {
               }}
             ></lord-icon>
           </Link>
+          </div>
         </div>
         <div className='main__header-right'>
           <div className='main__header-circle'></div>
