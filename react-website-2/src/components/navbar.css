@@ -73,7 +73,7 @@ nav.scrolled .nav__links a {
 
 /* Стили для навигационной панели при скролле */
 nav.scrolled .nav__toggle-btn svg {
-  color: #00ff00; /* Зеленый цвет при прокрутке */
+  color: #0d7e0d; /* Зеленый цвет при прокрутке */
 }
 
 .logo {

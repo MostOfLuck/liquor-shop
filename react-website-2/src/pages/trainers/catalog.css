@@ -181,3 +181,13 @@
 			font-size: 0.9rem;
 	}
 }
+
+@media screen and (max-width: 768px) {
+	.product-card {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		right: 30px;
+		left: 30px;
+	}
+}

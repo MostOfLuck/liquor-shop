@@ -808,9 +808,15 @@ input {
 	order: -1;
 }
 
-.rtl .main__header-left {
-	order: 1;
+@media screen and (max-width: 765px) {
+	.rtl .main__header-left {
+		order: 1;
+		position: relative;
+		top: -200px;
+	}
 }
+
+
 
 /* Default LTR styles */
 .main__search {
