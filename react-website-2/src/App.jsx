@@ -7,7 +7,6 @@ import './index.css';
 import Contact from './pages/contact/Contact';
 import Home from './pages/home/Home';
 import NotFound from './pages/notFound/NotFound';
-import ChatBot from './components/ChatBot'
 
 // Correct way to use lazy loading
 const Catalog = lazy(() => import('./pages/trainers/Catalog'));

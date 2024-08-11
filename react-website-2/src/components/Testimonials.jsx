@@ -5,7 +5,6 @@ import Card from "../UI/Card";
 import { IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from 'react-icons/io';
 import { testimonials } from "../data";
 import { useTranslation } from 'react-i18next';
-import ChatBot from './ChatBot'
 
 const Testimonials = () => {
     const [index, setIndex] = useState(0);
@@ -28,7 +27,6 @@ const Testimonials = () => {
 
     return (
         <section className="testimonials">
-                    <ChatBot/>
             <div className="container testimonials__container">
                 <SectionHead icon={<ImQuotesLeft />} title={t('Reviews')} className="testimonials__head" />
                 <Card className="testimonial">
