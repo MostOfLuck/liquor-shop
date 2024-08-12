@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa'; // Импорт иконки
@@ -18,6 +18,24 @@ const Catalog = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchCategory, setSearchCategory] = useState('');
 
+  const handleCardClick = useCallback((product, updateUrl = true) => {
+    setSelectedProduct({
+      ...product,
+      name: t(product.name, { defaultValue: product.name }),
+      article: t(product.articleKey, {
+        defaultValue: 'Article content missing',
+      }),
+      warning: t(product.warningKey, {
+        defaultValue: 'Warning content missing',
+      }),
+    });
+    setIsModalOpen(true);
+
+    if (updateUrl) {
+      navigate(`?product=${product.id}`, { replace: true });
+    }
+  }, [navigate, t]);
+
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
     const categoryFromURL = searchParams.get('category');
@@ -33,7 +51,7 @@ const Catalog = () => {
         handleCardClick(product, false);
       }
     }
-  }, [location.search]);
+  }, [location.search, handleCardClick]);
 
   const groupedItems = useMemo(() => {
     const grouped = {};
@@ -50,7 +68,7 @@ const Catalog = () => {
     return grouped;
   }, [t]);
 
-  const handleChange = event => {
+  const handleChange = useCallback((event) => {
     const inputValue = event.target.value.toLowerCase();
     setSearchTerm(inputValue);
 
@@ -82,25 +100,7 @@ const Catalog = () => {
     } else {
       setSearchCategory('');
     }
-  };
-
-  const handleCardClick = (product, updateUrl = true) => {
-    setSelectedProduct({
-      ...product,
-      name: t(product.name, { defaultValue: product.name }),
-      article: t(product.articleKey, {
-        defaultValue: 'Article content missing',
-      }),
-      warning: t(product.warningKey, {
-        defaultValue: 'Warning content missing',
-      }),
-    });
-    setIsModalOpen(true);
-
-    if (updateUrl) {
-      navigate(`?product=${product.id}`, { replace: true });
-    }
-  };
+  }, [groupedItems, searchCategory, t]);
 
   useEffect(() => {
     const results = items.filter(item => {
@@ -119,13 +119,13 @@ const Catalog = () => {
     if (results.length === 1) {
       handleCardClick(results[0]);
     }
-  }, [searchTerm, searchCategory, t]);
+  }, [searchTerm, searchCategory, t, handleCardClick]);
 
-  const handleCloseModal = () => {
+  const handleCloseModal = useCallback(() => {
     setIsModalOpen(false);
     setSelectedProduct(null);
     navigate('', { replace: true });
-  };
+  }, [navigate]);
 
   const renderCategoryFilter = () => (
     <>
@@ -199,6 +199,7 @@ const Catalog = () => {
                 <img
                   src={product.image}
                   alt={t(product.name, { defaultValue: product.name })}
+                  loading="lazy" // Ленивая загрузка изображения
                 />
                 <h3>{t(product.name, { defaultValue: product.name })}</h3>
                 <p>

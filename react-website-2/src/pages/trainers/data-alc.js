@@ -33,6 +33,9 @@ import SuperiotStout from '../../productImages2/SuperiorBeerStout.png'
 import Chernigivske from '../../productImages2/Chernigivske.png'
 import KrauzerBrau from '../../productImages2/KrauzerBrau.png'
 import Taller from '../../productImages2/Taller.png'
+import CognacSikvaruli from  '../../productImages2/CognacSikvaruli.png'
+import CognacSikvaruli5 from  '../../productImages2/CognacSikvaruli5.png'
+import VodkaRusStandart from '../../productImages2/VodkaRusStandart1896.png'
 import './catalog.css'
 import './rtl.css'
 
@@ -268,7 +271,7 @@ export const items = [
 
 	{
 		id: 26,
-		name: 'Eichbaum Hefeweizen Hell',
+		name: 'Beer Eichbaum Hefeweizen Hell',
 		category: 'Beer',
 		image: EichbaumBeer,
 		images: [EichbaumBeer],
@@ -278,7 +281,7 @@ export const items = [
 
 	{
 		id: 27,
-		name: 'Eichbaum Helles Large Hell',
+		name: 'Beer Eichbaum Helles Large Hell',
 		category: 'Beer',
 		image: EichbaumBeerHelles,
 		images: [EichbaumBeerHelles],
@@ -288,7 +291,7 @@ export const items = [
 
 	{
 		id: 28,
-		name: 'Eichbaum Pilsener',
+		name: 'Beer Eichbaum Pilsener',
 		category: 'Beer',
 		image: EichbaumBeerPilsener,
 		images: [EichbaumBeerPilsener],
@@ -298,7 +301,7 @@ export const items = [
 
 	{
 		id: 29,
-		name: 'Superior Stout',
+		name: 'Beer Superior Stout',
 		category: 'Beer',
 		image: SuperiotStout,
 		images: [SuperiotStout],
@@ -308,7 +311,7 @@ export const items = [
 
 	{
 		id: 30,
-		name: 'Chernigivske',
+		name: 'Beer Chernigivske',
 		category: 'Beer',
 		image: Chernigivske,
 		images: [Chernigivske],
@@ -318,7 +321,7 @@ export const items = [
 
 	{
 		id: 31,
-		name: 'Krauzer Brau',
+		name: 'Beer Krauzer Brau',
 		category: 'Beer',
 		image: KrauzerBrau,
 		images: [KrauzerBrau],
@@ -328,11 +331,41 @@ export const items = [
 
 	{
 		id: 32,
-		name: 'Taller',
+		name: 'Beer Taller',
 		category: 'Beer',
 		image: Taller,
 		images: [Taller],
 		titleKey: 'product.title.Taller',
 		articleKey: 'product.article.Taller',
+	},
+
+	{
+		id: 33,
+		name: 'Cognac Sikvaruli 3',
+		category: 'Cognac',
+		image: CognacSikvaruli,
+		images: [CognacSikvaruli],
+		titleKey: 'product.title.CognacSikvaruli',
+		articleKey: 'product.article.CognacSikvaruli',
+	},
+
+	{
+		id: 34,
+		name: 'Cognac Sikvaruli 5',
+		category: 'Cognac',
+		image: CognacSikvaruli5,
+		images: [CognacSikvaruli5],
+		titleKey: 'product.title.CognacSikvaruli5',
+		articleKey: 'product.article.CognacSikvaruli5',
+	},
+
+	{
+		id: 35,
+		name: 'Vodka Russian Standart 1894',
+		category: 'Vodka',
+		image: VodkaRusStandart,
+		images: [VodkaRusStandart],
+		titleKey: 'product.title.VodkaRusStandart',
+		articleKey: 'product.article.VodkaRusStandart',
 	},
 ]

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useLocation } from 'react-router-dom';
 import '../index.css'; // Подключение общего CSS файла
@@ -8,8 +8,16 @@ const ProductModal = ({ product, onClose }) => {
     const navigate = useNavigate();
     const location = useLocation();
 
+    // Блокировка прокрутки при открытии модального окна
+    useEffect(() => {
+        document.body.style.overflow = 'hidden'; // Отключаем прокрутку
+        return () => {
+            document.body.style.overflow = ''; // Восстанавливаем прокрутку при закрытии модального окна
+        };
+    }, []);
+
     // Обработчик событий для клика вне модального окна
-    const handleOverlayClick = event => {
+    const handleOverlayClick = (event) => {
         if (event.target.className === 'modal-overlay') {
             handleClose();
         }
