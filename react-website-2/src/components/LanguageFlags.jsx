@@ -41,6 +41,21 @@ const LanguageSwitcher = () => {
 		}
 	}, [])
 
+	// Проверка устройства
+	const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints;
+
+	const handleMouseOver = () => {
+		if (!isTouchDevice) {
+			setIsOpen(true);
+		}
+	};
+
+	const handleMouseOut = () => {
+		if (!isTouchDevice) {
+			setIsOpen(false);
+		}
+	};
+
 	return (
 		<div
 			className='language_switcher'
@@ -49,6 +64,8 @@ const LanguageSwitcher = () => {
 			<button
 				style={{ width: '5.4rem', height: '2rem', borderRadius: '5px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 0.5rem' }}
 				onClick={toggleDropdown}
+				onMouseOver={handleMouseOver} // Открытие меню при наведении
+				onMouseOut={handleMouseOut}  // Закрытие меню при уходе мыши
 			>
 				{language}
 				<AiFillCaretDown /> {/* Иконка раскрытия */}
@@ -64,7 +81,10 @@ const LanguageSwitcher = () => {
 					margin: 0,
 					boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
 					zIndex: 1,
+					display: isOpen ? 'block' : 'none',
 				}}
+				onMouseOver={handleMouseOver} // Оставляем меню открытым при наведении на него
+				onMouseOut={handleMouseOut}  // Закрываем меню при уходе мыши
 			>
 				{Object.keys(languages).map(lang => (
 					<li
@@ -75,7 +95,7 @@ const LanguageSwitcher = () => {
 						}}
 						onClick={() => selectLanguage(lang)}
 					>
-						{lang}
+						{languages[lang]}
 					</li>
 				))}
 			</ul>

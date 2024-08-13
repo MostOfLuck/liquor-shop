@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useLocation } from 'react-router-dom';
 import '../index.css'; // Подключение общего CSS файла
@@ -7,12 +7,13 @@ const ProductModal = ({ product, onClose }) => {
     const { t } = useTranslation();
     const navigate = useNavigate();
     const location = useLocation();
+    const [showDetails, setShowDetails] = useState(false); // State to toggle between descriptions
 
     // Блокировка прокрутки при открытии модального окна
     useEffect(() => {
-        document.body.style.overflow = 'hidden'; // Отключаем прокрутку
+        document.body.style.overflow = 'hidden';
         return () => {
-            document.body.style.overflow = ''; // Восстанавливаем прокрутку при закрытии модального окна
+            document.body.style.overflow = '';
         };
     }, []);
 
@@ -25,7 +26,6 @@ const ProductModal = ({ product, onClose }) => {
 
     // Закрытие модального окна с изменением URL
     const handleClose = () => {
-        // Удаление параметра продукта из URL
         const newUrl = location.pathname;
         navigate(newUrl);
         onClose();
@@ -47,13 +47,46 @@ const ProductModal = ({ product, onClose }) => {
                         />
                     ))}
                 <h2 className='product__title'>{product.name}</h2>
-                <p className='product__article'>{product.article}</p>
-                {product.warning && <p className='product__warning'>{product.warning}</p>}
-                <div className='warning'>
-                    <p className='warning_text'>
-                        {t('warning')}
-                    </p>
+
+                <div className='button-group'>
+                    <button
+                        className={`toggle-btn ${!showDetails ? 'active' : ''}`}
+                        onClick={() => setShowDetails(false)}
+                    >
+                        {t('Description')}
+                    </button>
+                    <button
+                        className={`toggle-btn ${showDetails ? 'active' : ''}`}
+                        onClick={() => setShowDetails(true)}
+                    >
+                        {t('More Details')}
+                    </button>
                 </div>
+
+                {!showDetails ? (
+                    <div>
+                        <p className='product__description'>{t(product.articleKey)}</p>
+                        {/* Новая надпись о вреде алкоголя */}
+                        <p className='product___warning'>{t('Warning about alcohol')}</p>
+                    </div>
+                ) : (
+                    <div>
+                        <div className='details-table'>
+                            <div className='table-row'>
+                                <div className='table-cell'>{t('Alcohol Strength')}</div>
+                                <div className='table-cell'>{product.alcoholStrength}</div>
+                            </div>
+                            <div className='table-row'>
+                                <div className='table-cell'>{t('Origin')}</div>
+                                <div className='table-cell'>{product.origin}</div>
+                            </div>
+                            <div className='table-row'>
+                                <div className='table-cell'>{t('Bottle Volume')}</div>
+                                <div className='table-cell'>{product.bottleVolume}</div>
+                            </div>
+                        </div>
+                    </div>
+                )}
             </div>
         </div>
     );

@@ -41,14 +41,19 @@ import './rtl.css'
 
 export const items = [
 	{
-		id: 1,
-		name: 'Wine Fiuza Chardonnay Arinto',
-		category: 'Wine',
-		image: fiuza,
-		images: [fiuza],
-		titleKey: 'producttitlefiuzaChardonnayArinto',
-		articleKey: 'productarticlfiuzaChardonnayArinto',
-	},
+    id: 1,
+    name: 'Wine Fiuza Chardonnay Arinto Native Reserva 2017',
+    category: 'Wine',
+    image: fiuza,
+    images: [fiuza],
+    titleKey: 'producttitlefiuzaChardonnayArinto',
+    articleKey: 'productarticlfiuzaChardonnayArinto',
+    detailsKey: 'productdetailsfiuzaChardonnayArinto',
+    alcoholStrength: '13.5%',
+    origin: 'Portugal',
+    bottleVolume: '750ml', // Add bottle volume here
+},
+	
 	{
 		id: 2,
 		name: 'Port wine Cabraco Ruby',
@@ -78,7 +83,7 @@ export const items = [
 	},
 	{
 		id: 5,
-		name: 'Cognac Maxime Trijol',
+		name: 'Cognac Maxime Trijol Eiffel Tower',
 		category: 'Cognac',
 		image: MaximeTrijolCognac2,
 		images: [MaximeTrijolCognac],
@@ -111,6 +116,9 @@ export const items = [
 		images: [FiuzaNativeReserva2018],
 		titleKey: 'producttitlefiuzaNativeReserva2018',
 		articleKey: 'product.article.fiuzaNativeReserva2018',
+		alcoholStrength: '13%',
+    origin: 'Portugal',
+    bottleVolume: '750ml', // Add bottle volume here
 	},
 	{
 		id: 9,
@@ -120,6 +128,9 @@ export const items = [
 		images: [Oceanius],
 		titleKey: 'product.title.oceaniusProdutoDePortugal2019',
 		articleKey: 'product.article.oceaniusProdutoDePortugal2019',
+		alcoholStrength: '12.5%',
+    origin: 'Portugal',
+    bottleVolume: '750ml',
 	},
 	{
 		id: 10,
