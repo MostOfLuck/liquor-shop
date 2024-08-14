@@ -2,48 +2,34 @@
 .product-grid {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 55px;
-	justify-content: center;
+	gap: 0; /* Убираем отступы между карточками */
+	justify-content: flex-start; /* Выравнивание карточек слева */
 }
 
 .product-card {
-	width: 17rem;
-	height: 23rem;
-	margin-bottom: 20px;
+	width: calc(25% - 10px); /* Четыре карточки в ряд на больших экранах */
+	height: auto; /* Высота автоматически подстраивается */
 	transition: transform 0.3s ease;
 	background-color: #ffffff;
 	padding: 20px;
 	border-radius: 8px;
 	text-align: center;
 	position: relative;
+	font-size: 13px;
+	font-weight: lighter;
 	overflow: hidden;
-}
-
-.product-card h3,
-.product-card p {
-	color: #000000;
-	font-weight: 500;
-	margin: 0;
-	position: absolute;
-	left: 10px;
-	right: 10px;
-}
-
-.product-card h3 {
-	bottom: 10px;
-	font-size: 1.2rem;
-}
-
-.product-card p {
-	bottom: 10px;
-	font-size: 1rem;
+	box-sizing: border-box; /* Включаем padding в расчет ширины */
 }
 
 .product-card img {
 	width: 100%;
-	height: calc(100% - 60px);
+	height: 20rem; /* Устанавливаем фиксированную высоту изображения */
 	object-fit: cover;
 	border-radius: 5px;
+}
+
+.product-card:hover {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкая тень при наведении */
 }
 
 /* Стили для поиска */
@@ -63,7 +49,7 @@
 
 @media (max-width: 768px) {
 	.placeholder {
-			margin-left: 5%;
+		margin-left: 5%;
 	}
 }
 
@@ -99,7 +85,7 @@
 
 @media (max-width: 768px) {
 	.modal-card {
-			padding: 10px;
+		padding: 10px;
 	}
 }
 
@@ -117,12 +103,12 @@
 /* Анимация появления модального окна */
 @keyframes fadeIn {
 	from {
-			opacity: 0;
-			transform: translateY(-20px);
+		opacity: 0;
+		transform: translateY(-20px);
 	}
 	to {
-			opacity: 1;
-			transform: translateY(0);
+		opacity: 1;
+		transform: translateY(0);
 	}
 }
 
@@ -131,15 +117,14 @@
 }
 
 .product__image {
-  display: block; /* Убедимся, что элемент является блочным */
-  margin: 0 auto; /* Центрируем изображение по горизонтали */
-  width: 30%; /* Устанавливаем ширину изображения */
-  border-radius: 5px; /* Скругляем углы изображения */
+	display: block; /* Убедимся, что элемент является блочным */
+	margin: 0 auto; /* Центрируем изображение по горизонтали */
+	width: 30%; /* Устанавливаем ширину изображения */
+	border-radius: 5px; /* Скругляем углы изображения */
 }
 
-
 .product__title {
-	font-size: 1.5rem;
+	font-size: 1rem;
 	margin: 20px 0;
 	text-align: center;
 }
@@ -174,20 +159,70 @@
 	.product__article,
 	.product__title,
 	.product__warning {
-			font-size: 0.9rem;
-			padding: 10px;
+		font-size: 0.9rem;
+		padding: 10px;
 	}
 	.warning {
-			font-size: 0.9rem;
+		font-size: 0.9rem;
 	}
 }
 
 @media screen and (max-width: 768px) {
 	.product-card {
-		position: relative;
-		display: flex;
-		justify-content: center;
-		right: 30px;
-		left: 30px;
+		width: calc(50% - 10px); /* Две карточки в ряд для устройств меньше 768px */
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.product-card {
+		width: calc(100% - 10px); /* Одна карточка в ряд для самых маленьких экранов */
+	}
+}
+
+
+@media screen and (width: 1024px) {
+	.product-card {
+		width: calc(50% - 10px); /* Одна карточка в ряд для самых маленьких экранов */
+	}
+}
+
+@media screen and (width: 820px) {
+	.product-card {
+		width: calc(50% - 10px); /* Одна карточка в ряд для самых маленьких экранов */
+	}
+}
+
+@media screen and (width: 768px) {
+	.product-card {
+		width: calc(50% - 10px); /* Одна карточка в ряд для самых маленьких экранов */
+		margin-left: 160px;
+	}
+}
+.product__warning {
+	background-color: black;
+	width: 500px;
+	color: white;
+	border-radius: 10px;
+}
+
+.product-card {
+  position: relative;
+}
+
+.image-count-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+	.all-products-button {
+		display: none;
 	}
 }

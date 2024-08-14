@@ -9,6 +9,7 @@
 	text-decoration: none;
 	box-sizing: border-box;
 }
+
 html {
 	scroll-behavior: smooth;
 }
@@ -105,11 +106,20 @@ h4,
 h5 {
 	line-height: 1.2;
 	color: rgb(0, 0, 0);
+	font-weight: 400;
 }
-
+h3 {
+	line-height: 1.126em;
+	font-weight: 500;
+	
+}
 h1 {
 	font-size: 3rem;
 	color: rgb(0, 0, 0);
+	font-weight: 500;
+}
+
+.main_header_header {
 	font-weight: 500;
 }
 .product___warning {
@@ -1042,10 +1052,6 @@ input {
 	transition: transform 0.3s ease, box-shadow 0.3s ease; /* Добавляем плавный переход для трансформации и тени */
 }
 
-.product-card:hover {
-	transform: scale(1.05); /* Увеличиваем карточку при наведении */
-}
-
 .product-card img {
 	max-width: 100%;
 	height: auto;
@@ -1161,25 +1167,38 @@ input {
 }
 
 .toggle-btn {
-	background-color: transparent;
-	border: 2px solid #59b366;
-	color: #59b366;
-	padding: 10px 20px;
-	margin-right: 10px;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: transparent;
+  border: none; /* Remove the border */
+  color: #59b366;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+  font-weight: bold; /* Optional: makes the text bold */
 }
 
-.toggle-btn.active {
-	background-color: #59b366;
-	color: white;
+.toggle-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px; /* Thickness of the underline */
+  background-color: #59b366;
+  transition: width 0.3s ease;
 }
 
+.toggle-btn.active,
 .toggle-btn:hover {
-	background-color: #59b366;
-	color: white;
+  color: #59b366;
 }
+
+.toggle-btn.active::after,
+.toggle-btn:hover::after {
+  width: 100%; /* Full width underline on hover or active state */
+}
+
 
 .button-container {
 	display: flex;
@@ -1192,3 +1211,4 @@ input {
 	font-size: 16px;
 	line-height: 1.5;
 }
+

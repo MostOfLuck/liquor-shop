@@ -31,7 +31,12 @@ i18n.use(initReactI18next).init({
 		Русский: {
 			translations: {
 				Description: 'Описание',
+				HOME: 'ГЛАВНАЯ',
+				CATALOG: 'КАТАЛОГ',
+				CONTACT: 'КОНТАКТ',
+				'ALL PRODUCTS': 'ВСЕ ПРОДУКТЫ',
 				'More Details': 'Подробнее',
+				'Bottle Volume': 'Объем бутылки',
 				Origin: 'Страна',
 				'Alcohol Strength': 'Содержание алкоголя',
 				'Alcohol 🍾': 'Алкоголь 🍾',
@@ -72,7 +77,7 @@ i18n.use(initReactI18next).init({
 				'Discover the Finest Alcoholic Beverages at R.I.L.L Collection':
 					'Откройте для себя лучшие алкогольные напитки в R.I.L.L Collection',
 				'Best Alcohol from all over the world': 'Лучший алкоголь со всего мира',
-				'Open Catalog': 'Весь Каталог',
+				'Open Catalog': 'ВЕСЬ КАТАЛОГ',
 				Catalog: 'Каталог',
 				'Get In Touch': 'Свяжитесь с нами',
 				'We are in Facebook, Tiktok, & Instagram. You can also contact us via Email.':

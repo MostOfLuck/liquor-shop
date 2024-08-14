@@ -1,6 +1,7 @@
 import i18n from 'i18next'
 import React, { useEffect, useState } from 'react'
-import { AiFillCaretDown } from 'react-icons/ai' // Импорт иконки
+import { AiFillCaretDown } from 'react-icons/ai' // Импорт иконки стрелки
+import { FaGlobe } from 'react-icons/fa' // Импорт иконки глобуса
 import '../index.css'
 
 const LanguageSwitcher = () => {
@@ -62,13 +63,14 @@ const LanguageSwitcher = () => {
 			style={{ position: 'relative', left: '20px', top: '-8px', borderRadius: '10px' }}
 		>
 			<button
-				style={{ width: '5.4rem', height: '2rem', borderRadius: '5px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 0.5rem' }}
+				style={{ width: '6.5rem', height: '2rem', borderRadius: '5px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 0.5rem' }}
 				onClick={toggleDropdown}
 				onMouseOver={handleMouseOver} // Открытие меню при наведении
 				onMouseOut={handleMouseOut}  // Закрытие меню при уходе мыши
 			>
+				<FaGlobe style={{ marginRight: '0.5rem' }} /> {/* Иконка глобуса */}
 				{language}
-				<AiFillCaretDown /> {/* Иконка раскрытия */}
+				<AiFillCaretDown /> {/* Иконка стрелки */}
 			</button>
 			<ul
 				className={`language-dropdown ${isOpen ? 'open' : ''}`}

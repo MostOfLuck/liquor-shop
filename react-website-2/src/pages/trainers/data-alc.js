@@ -36,23 +36,26 @@ import Taller from '../../productImages2/Taller.png'
 import CognacSikvaruli from  '../../productImages2/CognacSikvaruli.png'
 import CognacSikvaruli5 from  '../../productImages2/CognacSikvaruli5.png'
 import VodkaRusStandart from '../../productImages2/VodkaRusStandart1896.png'
+import fiuzaHover from '../../productImages2/fiuza-chardonnay-white-2022.jpg'
+import hoverSauvignon from '../../productImages2/hOVERSAUVOURGN.png'
 import './catalog.css'
 import './rtl.css'
 
 export const items = [
-	{
+  {
     id: 1,
     name: 'Wine Fiuza Chardonnay Arinto Native Reserva 2017',
     category: 'Wine',
-    image: fiuza,
-    images: [fiuza],
+    image: fiuza, // основное изображение
+    hoverImage: fiuzaHover, // изображение при наведении
+    images: [fiuza, fiuzaHover], // массив изображений
     titleKey: 'producttitlefiuzaChardonnayArinto',
     articleKey: 'productarticlfiuzaChardonnayArinto',
     detailsKey: 'productdetailsfiuzaChardonnayArinto',
     alcoholStrength: '13.5%',
     origin: 'Portugal',
-    bottleVolume: '750ml', // Add bottle volume here
-},
+    bottleVolume: '750ml', 
+  },
 	
 	{
 		id: 2,
@@ -138,6 +141,8 @@ export const items = [
 		category: 'Wine',
 		image: FiuzaCabernetSauvignon,
 		images: [FiuzaCabernetSauvignon],
+		hoverImage: hoverSauvignon, // изображение при наведении
+    images: [FiuzaCabernetSauvignon, hoverSauvignon], // массив изображений
 		titleKey: 'product.title.fiuzaCabernetSauvignon',
 		articleKey: 'product.article.fiuzaCabernetSauvignon',
 	},

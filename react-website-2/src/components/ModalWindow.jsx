@@ -37,15 +37,14 @@ const ProductModal = ({ product, onClose }) => {
                 <button className='modal-close-btn' onClick={handleClose}>
                     &times;
                 </button>
-                {product.images &&
-                    product.images.map((image, index) => (
-                        <img
-                            className='product__image'
-                            key={index}
-                            src={image}
-                            alt={`Product ${index}`}
-                        />
-                    ))}
+                {/* Отображение только основной фотографии */}
+                {product.image && (
+                    <img
+                        className='product__image'
+                        src={product.image}
+                        alt={product.name}
+                    />
+                )}
                 <h2 className='product__title'>{product.name}</h2>
 
                 <div className='button-group'>
@@ -66,8 +65,8 @@ const ProductModal = ({ product, onClose }) => {
                 {!showDetails ? (
                     <div>
                         <p className='product__description'>{t(product.articleKey)}</p>
-                        {/* Новая надпись о вреде алкоголя */}
-                        <p className='product___warning'>{t('Warning about alcohol')}</p>
+                        {/* Возвращено предупреждение о вреде алкоголя */}
+                        <p className='product__warning'>{t('Warning about alcohol')}</p>
                     </div>
                 ) : (
                     <div>
