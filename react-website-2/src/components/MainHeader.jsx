@@ -12,7 +12,6 @@ const MainHeader = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [showAllResults, setShowAllResults] = useState(false);
   const searchInputRef = useRef(null);
   const navigate = useNavigate();
 
@@ -73,15 +72,6 @@ const MainHeader = () => {
     });
 
     setSearchResults(results.slice(0, 4));
-
-    const isCategorySearch = items.some((product) =>
-      t(`categories.${product.category}`, {
-        defaultValue: product.category,
-      })
-        .toLowerCase()
-        .includes(inputValue)
-    );
-    setShowAllResults(isCategorySearch);
   };
 
   const handleSearchSubmit = (product) => {
@@ -104,26 +94,12 @@ const MainHeader = () => {
     setSelectedProduct(null);
   };
 
-  const handleShowAllClick = () => {
-    const matchedCategory = items.find((product) =>
-      t(`categories.${product.category}`, {
-        defaultValue: product.category,
-      })
-        .toLowerCase()
-        .includes(searchTerm.toLowerCase())
-    )?.category;
-
-    if (matchedCategory) {
-      navigate(`/catalog?category=${encodeURIComponent(matchedCategory)}`);
-    }
-  };
-
   return (
     <header className={`main__header ${i18n.dir()}`}>
       <div className='container main__header-container'>
         <div className='main__header-left'>
           <div className='main__search'>
-            <input style={{marginBottom: '30px'}}
+            <input style={{ marginBottom: '30px' }}
               ref={searchInputRef}
               className='main_input'
               type='text'
@@ -131,19 +107,6 @@ const MainHeader = () => {
               value={searchTerm}
               onChange={handleChange}
             />
-            <button style={{top: '20px'}}
-              onClick={handleShowAllClick}
-              disabled={!showAllResults}
-              className='search-button'
-            >
-              <lord-icon
-              className='class_lord_loop'
-                src='https://cdn.lordicon.com/msoeawqm.json'
-                trigger='hover'
-                colors='primary:#000000'
-                style={{ width: '24px', height: '30px' }}
-              />
-            </button>
             <div className='search-results'>
               {searchTerm && searchResults.length > 0 && (
                 <>
@@ -163,47 +126,30 @@ const MainHeader = () => {
                       </li>
                     ))}
                   </ul>
-                  {showAllResults && (
-                    <button
-                      onClick={handleShowAllClick}
-                      style={{
-                        display: 'block',
-                        margin: '10px auto',
-                        padding: '0.5rem 1rem',
-                        backgroundColor: '#ffffff',
-                        color: '#04861c',
-                        border: 'none',
-                        width: '400px',
-                        cursor: 'pointer',
-                      }}
-                    >
-                      {t('Show All Results')}
-                    </button>
-                  )}
                 </>
               )}
             </div>
             <h1 className='main_header_header'>
-            {t('Discover the Finest Alcoholic Beverages at R.I.L.L Collection')}
-          </h1>
-          <p>{t('Best Alcohol from all over the world')}</p>
-          <Link to='/Catalog' className='btn lg'>
-            {t('Open Catalog')}
-            <lord-icon
-              src='https://cdn.lordicon.com/odavpkmb.json'
-              trigger='hover'
-              className='lordicon'
-              colors='primary:#ffffff,secondary:#ffffff'
-              style={{
-                width: '35px',
-                height: '35px',
-                marginLeft: '10px',
-                top: '10px',
-                marginRight: '10px',
-                transition: 'colors 0.3s ease',
-              }}
-            ></lord-icon>
-          </Link>
+              {t('Discover the Finest Alcoholic Beverages at R.I.L.L Collection')}
+            </h1>
+            <p className='paragraph_header'>{t('Best Alcohol from all over the world')}</p>
+            <Link to='/Catalog' className='btn lg'>
+              {t('Open Catalog')}
+              <lord-icon
+                src='https://cdn.lordicon.com/odavpkmb.json'
+                trigger='hover'
+                className='lordicon'
+                colors='primary:#ffffff,secondary:#ffffff'
+                style={{
+                  width: '35px',
+                  height: '35px',
+                  marginLeft: '10px',
+                  top: '10px',
+                  marginRight: '10px',
+                  transition: 'colors 0.3s ease',
+                }}
+              ></lord-icon>
+            </Link>
           </div>
         </div>
         <div className='main__header-right'>

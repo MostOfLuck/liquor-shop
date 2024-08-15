@@ -119,6 +119,10 @@ h1 {
 	font-weight: 500;
 }
 
+.paragraph_header {
+	font-weight: 500;
+	
+}
 .main_header_header {
 	font-weight: 500;
 }
@@ -216,6 +220,7 @@ img {
 
 .language-dropdown {
 	opacity: 0;
+	font-weight: 500;
 	transform: translateY(-10px);
 	transition: opacity 0.3s ease, transform 0.3s ease;
 	pointer-events: none; /* Деактивировать кликабельность, когда список скрыт */
@@ -233,6 +238,7 @@ img {
 .btn.lg {
 	padding: 1.2rem 3rem;
 	font-size: 1.1rem;
+	font-weight: 500;
 	border-radius: 14px;
 }
 .main__header-image {
@@ -281,7 +287,9 @@ section {
 	text-align: center;
 	padding: 3rem 2rem;
 }
-
+.address {
+	font-weight: 500;
+}
 .card:hover {
 	background: var(--color-gray-700);
 	border-color: var(--color-black-600);
@@ -648,9 +656,6 @@ input {
 	cursor: pointer;
 }
 
-.clear-button:hover {
-	color: red; /* Optional: Change color on hover */
-}
 /* Стили для основного поиска */
 /* Стили для основного поиска */
 .main__search {
@@ -744,17 +749,8 @@ input {
 	background-color: #e5e5e5;
 }
 
-/* Медиазапрос для скрытия на мобильных устройствах */
-@media (max-width: 768px) {
-	.main_input {
-	}
-}
 
-@media (max-width: 768px) {
-	.class_lord_loop {
-		display: none;
-	}
-}
+
 
 .programs_head_title {
 	margin-bottom: 150px;
@@ -1060,23 +1056,6 @@ input {
 @media (max-width: 768px) {
 	.catalog__container {
 		flex-direction: column;
-	}
-
-	/* Default desktop styles */
-	.sidebar {
-		flex: 0 0 250px;
-		max-height: 80vh;
-		overflow-y: auto;
-		border-right: 1px solid #ddd;
-		padding: 1rem;
-		box-sizing: border-box;
-	}
-
-	.category-list {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		margin-top: 1rem; /* Add margin to separate from the search bar */
 	}
 
 	.category-item {

@@ -33,7 +33,7 @@ i18n.use(initReactI18next).init({
 				Description: 'Описание',
 				HOME: 'ГЛАВНАЯ',
 				CATALOG: 'КАТАЛОГ',
-				CONTACT: 'КОНТАКТ',
+				CONTACT: 'КОНТАКТЫ',
 				'ALL PRODUCTS': 'ВСЕ ПРОДУКТЫ',
 				'More Details': 'Подробнее',
 				'Bottle Volume': 'Объем бутылки',

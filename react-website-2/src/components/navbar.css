@@ -487,7 +487,7 @@ nav.scrolled .nav__toggle-btn svg {
 	position: fixed;
 	top: 80;
 	left: 100;
-	width: 85vw; /* Полная ширина экрана */
+	width: 50vw; /* Полная ширина экрана */
 	height: 100vh; /* Полная высота экрана */
 	background-color: white;
 	color: black;
@@ -529,11 +529,11 @@ nav.scrolled .nav__toggle-btn svg {
 .sidebar-categories li {
 	padding: 0.5rem;
 	cursor: pointer;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid #ffffff;
 }
 
 .sidebar-categories li:hover {
-	background-color: #e0e0e0;
+	background-color: #ffffff;
 }
 
 .sidebar-products {
@@ -589,6 +589,7 @@ nav.scrolled .nav__toggle-btn svg {
 /* Исходные стили кнопки и иконки */
 .all-products-button {
 	color: white;
+	top: -5px;
 	background-color: transparent;
 }
 
@@ -603,4 +604,34 @@ nav.scrolled .nav__toggle-btn svg {
 
 .scrolled-icon div {
 	background-color: black;
+}
+
+.sidebar-data-row {
+	display: flex;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 16px;
+	background-color: white;
+	border-radius: 8px;
+}
+
+.sidebar-column {
+	flex: 1;
+	padding: 12px;
+	background-color: white;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+.sidebar-column h4 {
+	font-size: 16px;
+	margin-bottom: 8px;
+	color: #15af37;
+}
+
+.sidebar-column p {
+	margin: 4px 0;
+	font-size: 14px;
+	color: #555;
 }
