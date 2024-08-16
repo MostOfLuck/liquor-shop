@@ -161,7 +161,7 @@ const Catalog = () => {
         return filteredCategoryKeys.slice(startIndex, endIndex)
     }, [groupedItems, currentPage, searchCategory])
 
-    const renderCategoryFilter = () => (
+    const renderCategoryFilter = useCallback(() => (
         <>
             <div className='category-list-container'>
                 <div
@@ -192,25 +192,22 @@ const Catalog = () => {
                         {t('All Categories')}
                     </div>
                     {Object.keys(groupedItems).map(category => (
-                        <div
+                        <CategoryItem
                             key={category}
-                            className={`category-item ${
-                                searchCategory === category ? 'active' : ''
-                            }`}
+                            category={category}
+                            isActive={searchCategory === category}
                             onClick={() => {
                                 setSearchCategory(category)
                                 setCurrentPage(1)
                             }}
-                        >
-                            {category}
-                        </div>
+                        />
                     ))}
                 </div>
             </div>
         </>
-    )
+    ), [groupedItems, searchCategory, searchTerm, handleChange, i18n.language, t])
 
-    const renderFilteredProducts = () => {
+    const renderFilteredProducts = useCallback(() => {
         if (searchResults.length === 0) {
             return <p>{t('No results found.')}</p>
         }
@@ -227,37 +224,20 @@ const Catalog = () => {
                     <h2 className='category_name'>{category}</h2>
                     <div className='product-grid'>
                         {filteredProducts.map(product => (
-                            <div
+                            <ProductCard
                                 key={product.id}
-                                className='product-card'
+                                product={product}
+                                isHovered={hoveredProductId === product.id}
                                 onMouseEnter={() => handleMouseEnter(product.id)}
                                 onMouseLeave={handleMouseLeave}
                                 onClick={() => handleCardClick(product)}
-                            >
-                                <LazyLoad height={200} offset={100}>
-                                    <img
-                                        src={
-                                            hoveredProductId === product.id && product.hoverImage
-                                                ? product.hoverImage
-                                                : product.image
-                                        }
-                                        alt={t(product.name, { defaultValue: product.name })}
-                                        loading='lazy'
-                                    />
-                                </LazyLoad>
-                                <h3>{t(product.name, { defaultValue: product.name })}</h3>
-                                <p>
-                                    {t(product.description, {
-                                        defaultValue: product.description,
-                                    })}
-                                </p>
-                            </div>
+                            />
                         ))}
                     </div>
                 </div>
             )
         })
-    }
+    }, [searchResults, paginatedCategories, groupedItems, hoveredProductId, handleMouseEnter, handleMouseLeave, handleCardClick, t])
 
     return (
         <>
@@ -291,4 +271,38 @@ const Catalog = () => {
     )
 }
 
-export default Catalog
+const CategoryItem = React.memo(({ category, isActive, onClick }) => {
+    const { t } = useTranslation()
+    return (
+        <div
+            className={`category-item ${isActive ? 'active' : ''}`}
+            onClick={onClick}
+        >
+            {t(category)}
+        </div>
+    )
+})
+
+const ProductCard = React.memo(({ product, isHovered, onMouseEnter, onMouseLeave, onClick }) => {
+    const { t } = useTranslation()
+    return (
+        <div
+            className='product-card'
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+            onClick={onClick}
+        >
+            <LazyLoad height={200} offset={100}>
+                <img
+                    src={isHovered && product.hoverImage ? product.hoverImage : product.image}
+                    alt={t(product.name, { defaultValue: product.name })}
+                    loading='lazy'
+                />
+            </LazyLoad>
+            <h3>{t(product.name, { defaultValue: product.name })}</h3>
+            <p>{t(product.description, { defaultValue: product.description })}</p>
+        </div>
+    )
+})
+
+export default React.memo(Catalog)

@@ -23,17 +23,11 @@ const Navbar = () => {
     useEffect(() => {
         const handleScroll = () => {
             const nav = document.querySelector('nav');
-            const allProductsButton = document.querySelector('.all-products-button');
-            const iconMenuSquare = document.querySelector('.icon_menu_square');
 
             if (window.scrollY > 50) {
                 nav.classList.add('scrolled');
-                allProductsButton.classList.add('scrolled-button');
-                iconMenuSquare.classList.add('scrolled-icon');
             } else {
                 nav.classList.remove('scrolled');
-                allProductsButton.classList.remove('scrolled-button');
-                iconMenuSquare.classList.remove('scrolled-icon');
             }
         };
 
@@ -85,17 +79,6 @@ const Navbar = () => {
                 <Link to="/" className='logo' onClick={() => setIsNavShowing(false)}>
                     <img className='logo_RILL' src={Logo} alt="Nav Logo" />
                 </Link>
-                <li>
-                    <Link to="/catalog" className='all-products-button'>
-                        <div className='icon_menu_square' style={{ marginRight: '8px' }}>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        {t('ALL PRODUCTS')}
-                    </Link>
-                </li>
                 <LanguageSwitcher />
                 <ul className={`nav__links ${isNavShowing ? 'show__nav' : 'hide__nav'}`}>
                     {links.map(({ name, path }, index) => (
