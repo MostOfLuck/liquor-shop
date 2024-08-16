@@ -41,22 +41,21 @@ import './catalog.css'
 import './rtl.css'
 
 export const items = [
-  {
-    id: 1,
-    name: 'Wine Fiuza Chardonnay Arinto Native Reserva 2017',
-    category: 'Wine',
-    image: fiuza, // основное изображение
-    hoverImage: fiuzaHover, // изображение при наведении
-    images: [fiuza, fiuzaHover], // массив изображений
-    titleKey: 'producttitlefiuzaChardonnayArinto',
-    articleKey: 'productarticlfiuzaChardonnayArinto',
-    detailsKey: 'productdetailsfiuzaChardonnayArinto',
-    alcoholStrength: '13.5%',
-    origin: 'Portugal',
-    bottleVolume: '750ml', 
-  },
-	
 	{
+		id: 1,
+		name: 'Wine Fiuza Chardonnay Arinto Native Reserva 2017',
+		category: 'Wine',
+		image: fiuza, // основное изображение
+		hoverImage: fiuzaHover, // изображение при наведении
+		images: [fiuza, fiuzaHover], // массив изображений
+		titleKey: 'producttitlefiuzaChardonnayArinto',
+		articleKey: 'productarticlfiuzaChardonnayArinto',
+		detailsKey: 'productdetailsfiuzaChardonnayArinto',
+		alcoholStrength: '13.5%',
+		origin: 'Portugal',
+		bottleVolume: '750ml', 
+	  },
+	  {
 		id: 2,
 		name: 'Port wine Cabraco Ruby',
 		category: 'Port',
@@ -64,8 +63,11 @@ export const items = [
 		images: [PortoCabracoRuby1],
 		titleKey: 'product.title.portoCabracoRuby',
 		articleKey: 'product.article.portoCabracoRuby',
-	},
-	{
+		alcoholStrength: '20%',
+		origin: 'Portugal',
+		bottleVolume: '750ml',
+	  },
+	  {
 		id: 3,
 		name: 'Port wine Cabraco White',
 		category: 'Port',
@@ -73,8 +75,11 @@ export const items = [
 		images: [PortoCabacoWhite],
 		titleKey: 'product.title.portoCabracoWhite',
 		articleKey: 'product.article.portoCabracoWhite',
-	},
-	{
+		alcoholStrength: '19%',
+		origin: 'Portugal',
+		bottleVolume: '750ml',
+	  },
+	  {
 		id: 4,
 		name: 'Port wine Cabraco Rose',
 		category: 'Port',
@@ -82,8 +87,11 @@ export const items = [
 		images: [PortoCabacoRose],
 		titleKey: 'product.title.portoCabracoRose',
 		articleKey: 'product.article.portoCabracoRose',
-	},
-	{
+		alcoholStrength: '19.5%',
+		origin: 'Portugal',
+		bottleVolume: '750ml',
+	  },
+	  {
 		id: 5,
 		name: 'Cognac Maxime Trijol Eiffel Tower',
 		category: 'Cognac',
@@ -91,8 +99,11 @@ export const items = [
 		images: [MaximeTrijolCognac],
 		titleKey: 'product.title.maximeTrijolCognac',
 		articleKey: 'product.article.maximeTrijolCognac',
-	},
-	{
+		alcoholStrength: '40%',
+		origin: 'France',
+		bottleVolume: '700ml',
+	  },
+	  {
 		id: 6,
 		name: 'Cognac Maxime Trijol Vsop',
 		category: 'Cognac',
@@ -100,8 +111,11 @@ export const items = [
 		images: [MaximeTrijolCognacVsop2],
 		titleKey: 'product.title.maximeTrijolCognacVsop',
 		articleKey: 'product.article.maximeTrijolCognacVsop',
-	},
-	{
+		alcoholStrength: '40%',
+		origin: 'France',
+		bottleVolume: '700ml',
+	  },
+	  {
 		id: 7,
 		name: 'Cognac Maxime Trijol Small',
 		category: 'Cognac',
@@ -109,8 +123,11 @@ export const items = [
 		images: [MaximeTrijolCognacSmall2],
 		titleKey: 'product.title.maximeTrijolCognacSmall',
 		articleKey: 'product.article.maximeTrijolCognacSmall',
-	},
-	{
+		alcoholStrength: '40%',
+		origin: 'France',
+		bottleVolume: '350ml',
+	  },
+	  {
 		id: 8,
 		name: 'Wine Fiuza Native Reserva 2018',
 		category: 'Wine',
@@ -119,10 +136,10 @@ export const items = [
 		titleKey: 'producttitlefiuzaNativeReserva2018',
 		articleKey: 'product.article.fiuzaNativeReserva2018',
 		alcoholStrength: '13%',
-    origin: 'Portugal',
-    bottleVolume: '750ml', // Add bottle volume here
-	},
-	{
+		origin: 'Portugal',
+		bottleVolume: '750ml',
+	  },
+	  {
 		id: 9,
 		name: 'Wine Oceanius Produto De Portugal 2019',
 		category: 'Wine',
@@ -131,21 +148,24 @@ export const items = [
 		titleKey: 'product.title.oceaniusProdutoDePortugal2019',
 		articleKey: 'product.article.oceaniusProdutoDePortugal2019',
 		alcoholStrength: '12.5%',
-    origin: 'Portugal',
-    bottleVolume: '750ml',
-	},
-	{
+		origin: 'Portugal',
+		bottleVolume: '750ml',
+	  },
+	  {
 		id: 10,
 		name: 'Wine Fiuza Cabernet Sauvignon',
 		category: 'Wine',
 		image: FiuzaCabernetSauvignon,
 		images: [FiuzaCabernetSauvignon],
 		hoverImage: hoverSauvignon, // изображение при наведении
-    images: [FiuzaCabernetSauvignon, hoverSauvignon], // массив изображений
+		images: [FiuzaCabernetSauvignon, hoverSauvignon], // массив изображений
 		titleKey: 'product.title.fiuzaCabernetSauvignon',
 		articleKey: 'product.article.fiuzaCabernetSauvignon',
-	},
-	{
+		alcoholStrength: '13%',
+		origin: 'Portugal',
+		bottleVolume: '750ml',
+	  },
+	  {
 		id: 11,
 		name: 'Wine Adega De Borba',
 		category: 'Wine',
@@ -153,8 +173,11 @@ export const items = [
 		images: [AdegaDeBorba],
 		titleKey: 'product.title.adegaDeBorba',
 		articleKey: 'product.article.adegaDeBorba',
-	},
-	{
+		alcoholStrength: '13%',
+		origin: 'Portugal',
+		bottleVolume: '750ml',
+	  },
+	  {
 		id: 12,
 		name: 'Wine Fiuza Merilot 2015',
 		category: 'Wine',
@@ -162,8 +185,11 @@ export const items = [
 		images: [FiuzaMerilot2015],
 		titleKey: 'product.title.fiuzaMerilot2015',
 		articleKey: 'product.article.fiuzaMerilot2015',
-	},
-	{
+		alcoholStrength: '13%',
+		origin: 'Portugal',
+		bottleVolume: '750ml',
+	  },
+	  {
 		id: 13,
 		name: 'Wine Montes Carlos DOCA lentejo Tinto 2016',
 		category: 'Wine',
@@ -171,8 +197,11 @@ export const items = [
 		images: [MontesCarlos],
 		titleKey: 'product.title.montesCarlosDOCAlentejoTinto2016',
 		articleKey: 'product.article.montesCarlosDOCAlentejoTinto2016',
-	},
-	{
+		alcoholStrength: '13.5%',
+		origin: 'Portugal',
+		bottleVolume: '750ml',
+	  },
+	  {
 		id: 14,
 		name: 'Wine Bianco Chardonnay AllSeasons Collection 2020',
 		category: 'Wine',
@@ -180,8 +209,11 @@ export const items = [
 		images: [BiancoCChadronay],
 		titleKey: 'product.title.biancoCChardonnayAllSeasonsCollection2020',
 		articleKey: 'product.article.biancoCChardonnayAllSeasonsCollection2020',
-	},
-	{
+		alcoholStrength: '12.5%',
+		origin: 'Italy',
+		bottleVolume: '750ml',
+	  },
+	  {
 		id: 15,
 		name: 'Wine Spain Velas Corsarias',
 		category: 'Wine',
@@ -189,8 +221,11 @@ export const items = [
 		images: [VelasCorsarias],
 		titleKey: 'product.title.spainVelasCorsarias',
 		articleKey: 'product.article.spainVelasCorsarias',
-	},
-	{
+		alcoholStrength: '13%',
+		origin: 'Spain',
+		bottleVolume: '750ml',
+	  },
+	  {
 		id: 16,
 		name: 'Wine Summer Merlot AllSeasons Collection 2020',
 		category: 'Wine',
@@ -198,8 +233,11 @@ export const items = [
 		images: [SummerMerlotAllSeasonsCollection],
 		titleKey: 'product.title.summerMerlotAllSeasonsCollection2020',
 		articleKey: 'product.article.summerMerlotAllSeasonsCollection2020',
-	},
-	{
+		alcoholStrength: '13%',
+		origin: 'France',
+		bottleVolume: '750ml',
+	  },
+	  {
 		id: 17,
 		name: 'Cognac Maxime Trijol 3L',
 		category: 'Cognac',
@@ -207,8 +245,11 @@ export const items = [
 		images: [MaximeTrijolCognac3litr2],
 		titleKey: 'product.title.maximeTrijolCognac3L',
 		articleKey: 'product.article.maximeTrijolCognac3L',
-	},
-	{
+		alcoholStrength: '40%',
+		origin: 'France',
+		bottleVolume: '3000ml',
+	  },
+	  {
 		id: 18,
 		name: 'arakOrange',
 		category: 'Arak',
@@ -216,9 +257,11 @@ export const items = [
 		images: [ArakOrange],
 		titleKey: 'product.title.arakOrange',
 		articleKey: 'product.article.arakOrange',
-	},
-
-	{
+		alcoholStrength: '50%',
+		origin: 'Lebanon',
+		bottleVolume: '750ml',
+	  },
+	  {
 		id: 19,
 		name: 'vodkinaMango',
 		category: 'spirits',
@@ -226,8 +269,11 @@ export const items = [
 		images: [VodkinaMango2],
 		titleKey: 'product.title.vodkinaMango',
 		articleKey: 'product.article.vodkinaMango',
-	},
-	{
+		alcoholStrength: '40%',
+		origin: 'Russia',
+		bottleVolume: '700ml',
+	  },
+	  {
 		id: 20,
 		name: 'vodkinaYellow',
 		category: 'spirits',
@@ -235,8 +281,11 @@ export const items = [
 		images: [VodkinaYellow],
 		titleKey: 'product.title.vodkinaYellow',
 		articleKey: 'product.article.vodkinaYellow',
-	},
-	{
+		alcoholStrength: '40%',
+		origin: 'Russia',
+		bottleVolume: '700ml',
+	  },
+	  {
 		id: 21,
 		name: 'vodkinaLemon',
 		category: 'spirits',
@@ -244,8 +293,11 @@ export const items = [
 		images: [VodkinoLemon],
 		titleKey: 'product.title.vodkinaLemon',
 		articleKey: 'product.article.vodkinaLemon',
-	},
-	{
+		alcoholStrength: '40%',
+		origin: 'Russia',
+		bottleVolume: '700ml',
+	  },
+	  {
 		id: 22,
 		name: 'vodkinaOrange',
 		category: 'spirits',
@@ -253,8 +305,11 @@ export const items = [
 		images: [VodkinoOrange],
 		titleKey: 'product.title.vodkinaOrange',
 		articleKey: 'product.article.vodkinaOrange',
-	},
-	{
+		alcoholStrength: '40%',
+		origin: 'Russia',
+		bottleVolume: '700ml',
+	  },
+	  {
 		id: 23,
 		name: 'vodkinaPeach',
 		category: 'spirits',
@@ -262,9 +317,11 @@ export const items = [
 		images: [VodkinoPeach],
 		titleKey: 'product.title.vodkinaPeach',
 		articleKey: 'product.article.vodkinaPeach',
-	},
-
-	{
+		alcoholStrength: '40%',
+		origin: 'Russia',
+		bottleVolume: '700ml',
+	  },
+	  {
 		id: 24,
 		name: 'ArakLime',
 		category: 'Arak',
@@ -272,9 +329,11 @@ export const items = [
 		images: [ArakLime],
 		titleKey: 'product.title.arakOrange',
 		articleKey: 'product.article.arakOrange',
-	},
-
-	{
+		alcoholStrength: '50%',
+		origin: 'Lebanon',
+		bottleVolume: '750ml',
+	  },
+	  {
 		id: 25,
 		name: 'ArakLemon',
 		category: 'Arak',
@@ -282,9 +341,11 @@ export const items = [
 		images: [ArakLemon],
 		titleKey: 'product.title.arakOrange',
 		articleKey: 'product.article.arakOrange',
-	},
-
-	{
+		alcoholStrength: '50%',
+		origin: 'Lebanon',
+		bottleVolume: '750ml',
+	  },
+	  {
 		id: 26,
 		name: 'Beer Eichbaum Hefeweizen Hell',
 		category: 'Beer',
@@ -292,9 +353,11 @@ export const items = [
 		images: [EichbaumBeer],
 		titleKey: 'product.title.Eichbaum',
 		articleKey: 'product.article.Eichbaum',
-	},
-
-	{
+		alcoholStrength: '5.3%',
+		origin: 'Germany',
+		bottleVolume: '500ml',
+	  },
+	  {
 		id: 27,
 		name: 'Beer Eichbaum Helles Large Hell',
 		category: 'Beer',
@@ -302,9 +365,11 @@ export const items = [
 		images: [EichbaumBeerHelles],
 		titleKey: 'product.title.EichbaumHell',
 		articleKey: 'product.article.EichbaumHell',
-	},
-
-	{
+		alcoholStrength: '5.3%',
+		origin: 'Germany',
+		bottleVolume: '500ml',
+	  },
+	  {
 		id: 28,
 		name: 'Beer Eichbaum Pilsener',
 		category: 'Beer',
@@ -312,9 +377,11 @@ export const items = [
 		images: [EichbaumBeerPilsener],
 		titleKey: 'product.title.EichbaumPilsener',
 		articleKey: 'product.article.EichbaumPilsener',
-	},
-
-	{
+		alcoholStrength: '4.9%',
+		origin: 'Germany',
+		bottleVolume: '500ml',
+	  },
+	  {
 		id: 29,
 		name: 'Beer Superior Stout',
 		category: 'Beer',
@@ -322,7 +389,10 @@ export const items = [
 		images: [SuperiotStout],
 		titleKey: 'product.title.Superior',
 		articleKey: 'product.article.Superior',
-	},
+		alcoholStrength: '6%',
+		origin: 'Ireland',
+		bottleVolume: '500ml',
+	  },
 
 	{
 		id: 30,

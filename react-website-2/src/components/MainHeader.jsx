@@ -94,6 +94,10 @@ const MainHeader = () => {
     setSelectedProduct(null);
   };
 
+  const handleAllResultsClick = () => {
+    navigate(`/catalog?search=${encodeURIComponent(searchTerm)}`);
+  };
+
   return (
     <header className={`main__header ${i18n.dir()}`}>
       <div className='container main__header-container'>
@@ -126,6 +130,9 @@ const MainHeader = () => {
                       </li>
                     ))}
                   </ul>
+                  <button onClick={handleAllResultsClick} className='all-results-button'>
+                    {t('All Results')}
+                  </button>
                 </>
               )}
             </div>

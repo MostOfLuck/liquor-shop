@@ -12,7 +12,7 @@ const LanguageSwitcher = () => {
 		EN: 'English',
 		RU: 'Русский',
 	}
-
+	
 	useEffect(() => {
 		i18n.changeLanguage(languages[language])
 	}, [language])
@@ -20,7 +20,7 @@ const LanguageSwitcher = () => {
 	const toggleDropdown = () => {
 		setIsOpen(!isOpen)
 	}
-
+	
 	const selectLanguage = lang => {
 		i18n.changeLanguage(languages[lang])
 		setLanguage(lang)

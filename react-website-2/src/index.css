@@ -218,6 +218,40 @@ img {
 	transition: var(--transition);
 }
 
+.pagination-button {
+    background: var(--color-green);
+    color: var(--color-gray-700);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin: 0 0.5rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.pagination-button:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+    transform: translateY(-2px); /* Slightly lift the button */
+}
+
+.all-results-button {
+    background: var(--color-green);
+    color: var(--color-gray-700);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-top: 0.5rem;    
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    width: 100%; /* Make the button occupy the full width */
+    display: block; /* Ensure the button is a block element */
+}
+
+.all-results-button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
 .language-dropdown {
 	opacity: 0;
 	font-weight: 500;
@@ -233,7 +267,8 @@ img {
 }
 
 .btn.lg:hover {
-	background-color: rgb(1, 172, 12);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+	transform: translateY(-5px);
 }
 .btn.lg {
 	padding: 1.2rem 3rem;
@@ -444,6 +479,8 @@ section {
 	padding: 1em;
 	box-shadow: 1em 2em 2.5em rgba(1, 2, 68, 0.08);
 }
+
+
 .image-containers {
 	text-align: center;
 }
