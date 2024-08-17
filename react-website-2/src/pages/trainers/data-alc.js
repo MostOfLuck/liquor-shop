@@ -37,6 +37,13 @@ import CognacSikvaruli5 from  '../../productImages2/CognacSikvaruli5.webp'
 import VodkaRusStandart from '../../productImages2/VodkaRusStandart1896.webp'
 import fiuzaHover from '../../productImages2/fiuza-chardonnay-white-2022.jpg'
 import hoverSauvignon from '../../productImages2/hOVERSAUVOURGN.png'
+import VodkaNepoborna from '../../productImages2/Nepoborna.png'
+import VodkaIcePalace from '../../productImages2/ICEPalaceVodka.png'
+import VodkaPrimeNoir from '../../productImages2/VodkaPrimeNoir.png'
+import VodkaPrimeBlanche from '../../productImages2/PrimeBlanche.png'
+import VodkaIcePalace500ml from '../../productImages2/VodkaIcePalace500nl.png'
+import VodkaManhattan from '../../productImages2/VodkaManhattan.png'
+import VodkaMoskva from '../../productImages2/VodkaMoskva.png'
 import './catalog.css'
 import './rtl.css'
 
@@ -452,5 +459,96 @@ export const items = [
 		images: [VodkaRusStandart],
 		titleKey: 'product.title.VodkaRusStandart',
 		articleKey: 'product.article.VodkaRusStandart',
+	},
+
+	{
+		id: 36,
+		name: 'Vodka Nepoborna',
+		category: 'Vodka',
+		image: VodkaNepoborna,
+		images: [VodkaNepoborna],
+		titleKey: 'product.title.VodkaNepoborna',
+		articleKey: 'product.article.VodkaNepoborna',
+		origin: 'Ukraine',
+		alcoholStrength: '40%',
+		bottleVolume: '700ml'
+	},
+
+	{
+		id: 37,
+		name: 'Vodka Ice Palace 1l',
+		category: 'Vodka',
+		image: VodkaIcePalace,
+		images: [VodkaIcePalace],
+		titleKey: 'product.title.VodkaIcePalace',
+		articleKey: 'product.article.VodkaIcePalace',
+		origin: 'Ukraine',
+		alcoholStrength: '40%',
+		bottleVolume: '1l'
+	},
+
+	{
+		id: 38,
+		name: 'Vodka Prime Noir',
+		category: 'Vodka',
+		image: VodkaPrimeNoir,
+		images: [VodkaPrimeNoir],
+		titleKey: 'product.title.VodkaPrimeNoir',
+		articleKey: 'product.article.VodkaPrimeNoir',
+		origin: 'Ukraine',
+		alcoholStrength: '40%',
+		bottleVolume: '500ml'
+	},
+
+	{
+		id: 39,
+		name: 'Vodka Prime Blanche',
+		category: 'Vodka',
+		image: VodkaPrimeBlanche,
+		images: [VodkaPrimeBlanche],
+		titleKey: 'product.title.VodkaPrimeBlanche',
+		articleKey: 'product.article.VodkaPrimeBlanche',
+		origin: 'Ukraine',
+		alcoholStrength: '40%',
+		bottleVolume: '500ml'
+	},
+
+	{
+		id: 40,
+		name: 'Vodka Ice Palace 500ml',
+		category: 'Vodka',
+		image: VodkaIcePalace500ml,
+		images: [VodkaIcePalace500ml],
+		titleKey: 'product.title.VodkaIcePalace500',
+		articleKey: 'product.article.VodkaIcePalace500',
+		origin: 'Ukraine',
+		alcoholStrength: '40%',
+		bottleVolume: '500ml'
+	},
+
+	{
+		id: 41,
+		name: 'Vodka Manhattan',
+		category: 'Vodka',
+		image: VodkaManhattan,
+		images: [VodkaManhattan],
+		titleKey: 'product.title.VodkaManhattan',
+		articleKey: 'product.article.VodkaManhattan',
+		origin: 'Israel',
+		alcoholStrength: '37.5%',
+		bottleVolume: '700ml'
+	},
+
+	{
+		id: 42,
+		name: 'Vodka Moskva',
+		category: 'Vodka',
+		image: VodkaMoskva,
+		images: [VodkaMoskva],
+		titleKey: 'product.title.VodkaMoskva',
+		articleKey: 'product.article.VodkaMoskva',
+		origin: 'Israel',
+		alcoholStrength: '35%',
+		bottleVolume: '175ml'
 	},
 ]

@@ -30,8 +30,8 @@ body {
 	--gray-hue: 240;
 	--color-primary: hsl(var(--primary-hue), 60%, 45%);
 	--color-primary-variant: hsl(var(--primary-hue), 100%, 65%);
-	--color-secondary: #59b366;
-	--color-green: #59b366;
+	--color-secondary: #5bbd4d;
+	--color-green: #5bbd4d;
 	--color-gray-100: hsl(var(--gray-hue), 47%, 94%);
 	--color-gray-200: hsl(var(--gray-hue), 26%, 75%);
 	--color-gray-300: hsl(var(--gray-hue), 24%, 64%);
@@ -235,7 +235,6 @@ img {
     background: var(--color-green);
     color: var(--color-gray-700);
     padding: 0.5rem 1rem;
-    border-radius: 5px;
     margin: 0 0.5rem;
     font-weight: 500;
     transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
@@ -251,7 +250,6 @@ img {
     background: var(--color-green);
     color: var(--color-gray-700);
     padding: 0.5rem 1rem;
-    border-radius: 5px;
     margin-top: 0.5rem;    
     font-weight: 500;
     cursor: pointer;
@@ -261,10 +259,12 @@ img {
 }
 
 .all-results-button:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px);
+background-color: #2e2e2e;
 }
 
+.green-icons a {
+    color: green;
+}
 .language-dropdown {
 	opacity: 0;
 	font-weight: 500;
@@ -280,14 +280,12 @@ img {
 }
 
 .btn.lg:hover {
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-	transform: translateY(-5px);
+	background-color: #2e2e2e;
 }
 .btn.lg {
 	padding: 1.2rem 3rem;
 	font-size: 1.1rem;
 	font-weight: 500;
-	border-radius: 14px;
 }
 .main__header-image {
 	opacity: 0;
@@ -446,13 +444,7 @@ section {
 		width: 76%;
 	}
 }
-.green-icons a {
-	color: green;
-}
 
-.green-icons a:hover {
-	color: darkgreen;
-}
 
 /* MEDIA QUERIES (small screens) */
 @media screen and (max-width: 600px) {
@@ -592,22 +584,6 @@ hr {
 	height: 30px;
 }
 
-/* index.css */
-.slick-arrow {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	cursor: pointer;
-	z-index: 2;
-}
-
-.slick-prev {
-	left: 10px;
-}
-
-.slick-next {
-	right: 10px;
-}
 
 .select__btn--green {
 	background-color: rgb(119, 119, 119);
@@ -1158,7 +1134,7 @@ input {
 }
 
 .search-bar:focus {
-	border: 4px solid green; /* Зелёная рамка при фокусировке */
+	border: 4px solid #5bbd4d; /* Зелёная рамка при фокусировке */
 	outline: none; /* Убираем стандартное выделение */
 }
 
@@ -1186,19 +1162,15 @@ input {
 	padding-left: 35px; /* Отступ для размещения иконки внутри поля */
 	background-color: #d5d5d5;
 	border: 1px solid transparent;
-	border-radius: 15px;
+	border-radius: 5px;
 	height: 40px;
 }
 
-.search-bar:focus {
-	border: 4px solid green;
-	outline: none;
-}
 
 .toggle-btn {
   background-color: transparent;
   border: none; /* Remove the border */
-  color: #59b366;
+  color: #5bbd4d;
   padding: 10px 20px;
   margin-right: 10px;
   cursor: pointer;
@@ -1214,13 +1186,13 @@ input {
   left: 0;
   width: 0;
   height: 2px; /* Thickness of the underline */
-  background-color: #59b366;
+  background-color: #5bbd4d;
   transition: width 0.3s ease;
 }
 
 .toggle-btn.active,
 .toggle-btn:hover {
-  color: #59b366;
+  color: #5bbd4d;
 }
 
 .toggle-btn.active::after,

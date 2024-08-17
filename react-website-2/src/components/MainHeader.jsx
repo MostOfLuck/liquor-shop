@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, Link } from 'react-router-dom';
 import ProductModal from '../components/ModalWindow';
@@ -15,7 +15,6 @@ const MainHeader = () => {
   const searchInputRef = useRef(null);
   const navigate = useNavigate();
   const [isInputActive, setIsInputActive] = useState(false);
-  const inputRef = useRef(null);
 
   useEffect(() => {
     const selectedProductId = localStorage.getItem('selectedProductId');
@@ -35,10 +34,6 @@ const MainHeader = () => {
         setIsModalOpen(true);
       }
       localStorage.removeItem('selectedProductId');
-    }
-
-    if (searchInputRef.current) {
-      searchInputRef.current.focus();
     }
 
     const handleClickOutside = (event) => {
@@ -97,7 +92,25 @@ const MainHeader = () => {
   };
 
   const handleAllResultsClick = () => {
-    navigate(`/catalog?search=${encodeURIComponent(searchTerm)}`);
+    // Additional logic before navigating
+    console.log('All Results button clicked');
+
+    // Collect categories of the search results
+    const categories = searchResults.map((product) =>
+      t(`categories.${product.category}`, {
+        defaultValue: product.category,
+      })
+    );
+
+    // Create a unique list of categories
+    const uniqueCategories = [...new Set(categories)];
+
+    // Navigate to the catalog with search term and categories
+    navigate(
+      `/catalog?search=${encodeURIComponent(searchTerm)}&categories=${encodeURIComponent(
+        uniqueCategories.join(',')
+      )}`
+    );
   };
 
   const handleInputClick = () => {
@@ -106,7 +119,7 @@ const MainHeader = () => {
 
   useEffect(() => {
     if (isInputActive) {
-      inputRef.current.focus();
+      searchInputRef.current.focus();
     }
   }, [isInputActive]);
 
@@ -115,13 +128,15 @@ const MainHeader = () => {
       <div className='container main__header-container'>
         <div className='main__header-left'>
           <div className='main__search'>
-            <input style={{ marginBottom: '30px' }}
+            <input
+              style={{ marginBottom: '30px' }}
               ref={searchInputRef}
               className='main_input'
               type='text'
               placeholder={t('Search')}
               value={searchTerm}
               onChange={handleChange}
+              onClick={handleInputClick}
             />
             <div className='search-results'>
               {searchTerm && searchResults.length > 0 && (
@@ -142,16 +157,23 @@ const MainHeader = () => {
                       </li>
                     ))}
                   </ul>
-                  <button onClick={handleAllResultsClick} className='all-results-button'>
+                  <button
+                    onClick={handleAllResultsClick}
+                    className='all-results-button'
+                  >
                     {t('All Results')}
                   </button>
                 </>
               )}
             </div>
             <h1 className='main_header_header'>
-              {t('Discover the Finest Alcoholic Beverages at R.I.L.L Collection')}
+              {t(
+                'Discover the Finest Alcoholic Beverages at R.I.L.L Collection'
+              )}
             </h1>
-            <p className='paragraph_header'>{t('Best Alcohol from all over the world')}</p>
+            <p className='paragraph_header'>
+              {t('Best Alcohol from all over the world')}
+            </p>
             <Link to='/Catalog' className='btn lg'>
               {t('Open Catalog')}
               <lord-icon
@@ -181,11 +203,6 @@ const MainHeader = () => {
       {isModalOpen && selectedProduct && (
         <ProductModal product={selectedProduct} onClose={handleCloseModal} />
       )}
-      <input
-        ref={inputRef}
-        onClick={handleInputClick}
-        style={{ display: isInputActive ? 'block' : 'none' }}
-      />
     </header>
   );
 };
