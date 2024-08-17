@@ -14,6 +14,8 @@ const MainHeader = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const searchInputRef = useRef(null);
   const navigate = useNavigate();
+  const [isInputActive, setIsInputActive] = useState(false);
+  const inputRef = useRef(null);
 
   useEffect(() => {
     const selectedProductId = localStorage.getItem('selectedProductId');
@@ -98,6 +100,16 @@ const MainHeader = () => {
     navigate(`/catalog?search=${encodeURIComponent(searchTerm)}`);
   };
 
+  const handleInputClick = () => {
+    setIsInputActive(true);
+  };
+
+  useEffect(() => {
+    if (isInputActive) {
+      inputRef.current.focus();
+    }
+  }, [isInputActive]);
+
   return (
     <header className={`main__header ${i18n.dir()}`}>
       <div className='container main__header-container'>
@@ -169,6 +181,11 @@ const MainHeader = () => {
       {isModalOpen && selectedProduct && (
         <ProductModal product={selectedProduct} onClose={handleCloseModal} />
       )}
+      <input
+        ref={inputRef}
+        onClick={handleInputClick}
+        style={{ display: isInputActive ? 'block' : 'none' }}
+      />
     </header>
   );
 };

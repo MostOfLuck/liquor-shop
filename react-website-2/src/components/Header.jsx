@@ -8,7 +8,7 @@ const Header = ({title, image, children}) => {
             </div>
             <div className="header__content">
                 <h2>{title}</h2>
-                <p>{children}</p>
+                <p className="childeren_catalog">{children}</p>
             </div>
         </div>
     </header>

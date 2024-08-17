@@ -326,14 +326,7 @@ nav.scrolled .nav__toggle-btn svg {
 	z-index: 1000;
 }
 
-.modal-content {
-	background: white;
-	padding: 2rem;
-	border-radius: 8px;
-	width: 90%;
-	max-width: 600px;
-	position: relative;
-}
+
 
 .modal-close {
 	position: absolute;

@@ -205,6 +205,11 @@
 	border-radius: 10px;
 }
 
+@media screen and (max-width: 768px) {
+	.product__warning {
+		width: 100%;
+	}
+}
 .product-card {
   position: relative;
 }

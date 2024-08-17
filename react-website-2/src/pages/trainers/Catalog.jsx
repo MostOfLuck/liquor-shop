@@ -241,7 +241,7 @@ const Catalog = () => {
 
     return (
         <>
-            <Header title={t('Alcohol 🍾')} image={HeaderImage} />
+            <Header children={t('R.I.L.L Collection online storefront')} title={t('Alcohol 🍾')} image={HeaderImage} />
             <section className='catalog'>
                 <div className='container catalog__container'>
                     {renderCategoryFilter()}

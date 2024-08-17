@@ -187,11 +187,24 @@ img {
 	display: contents;
 }
 
+.childeren_catalog {
+	display: flex;
+	font-weight: 500;
+	color: white;
+	font-size: larger;
+	justify-content: center;
+}
 .table-cell {
 	padding: 10px;
 	border: 1px solid #ccc;
 	background-color: #fff;
 	color: #000;
+}
+
+@media screen and (max-width: 768px) {
+	.details-table {
+		grid-template-columns: 1fr;
+	}
 }
 .details-table .table-row {
 	display: flex;
