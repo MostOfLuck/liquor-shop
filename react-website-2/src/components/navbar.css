@@ -29,8 +29,9 @@ nav.scrolled .nav__links a {
 
 /* Стили для изменения фона ссылки при наведении */
 .nav__links a:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Прозрачность 30% */
-  border-radius: 14px;
+  position: relative;
+  display: flex;
+  height: 100%;
 }
 
 
@@ -100,10 +101,7 @@ nav.scrolled .nav__toggle-btn svg {
 	width: 150px;
 }
 
-.nav__links a:hover {
-	background-color: rgba(255, 255, 255, 0.2); /* Прозрачность 30% */
-	border-radius: 14px;
-}
+
 
 
 

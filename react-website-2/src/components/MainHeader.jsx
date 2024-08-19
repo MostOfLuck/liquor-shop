@@ -68,7 +68,7 @@ const MainHeader = () => {
       );
     });
 
-    setSearchResults(results.slice(0, 4));
+    setSearchResults(results.slice(0, 15));
   };
 
   const handleSearchSubmit = (product) => {

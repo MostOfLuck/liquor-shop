@@ -1053,31 +1053,12 @@ input {
 }
 
 .category-section {
-	margin-bottom: 2rem;
+	margin-bottom: 7rem;
+	margin-top: 3rem;
 }
 
-.product-grid {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 1rem;
-	justify-content: flex-start; /* Align items at the start of the grid */
-}
 
-.product-card {
-	width: calc(25% - 1rem); /* Fix width to ensure consistency */
-	box-sizing: border-box;
-	padding: 1rem;
-	border: 1px solid #ddd;
-	cursor: pointer;
-	text-align: center;
-	background-color: #fff;
-	transition: transform 0.3s ease, box-shadow 0.3s ease; /* Добавляем плавный переход для трансформации и тени */
-}
-
-.product-card img {
-	max-width: 100%;
-	height: auto;
-}
+/* MEDIA QUERIES */
 
 @media (max-width: 768px) {
 	.catalog__container {
@@ -1162,7 +1143,7 @@ input {
 	padding-left: 35px; /* Отступ для размещения иконки внутри поля */
 	background-color: #d5d5d5;
 	border: 1px solid transparent;
-	border-radius: 5px;
+	border-radius: 0px;
 	height: 40px;
 }
 
@@ -1213,3 +1194,21 @@ input {
 	line-height: 1.5;
 }
 
+.green-button {
+    background-color: green;
+    color: white;
+	position: relative;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+	top: -7px;
+	right: 2px;
+	height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.green-button:hover {
+    background-color: darkgreen;
+}

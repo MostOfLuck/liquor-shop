@@ -104,8 +104,8 @@ export const items = [
 		category: 'Cognac',
 		image: MaximeTrijolCognac2,
 		images: [MaximeTrijolCognac],
-		titleKey: 'product.title.maximeTrijolCognac',
-		articleKey: 'product.article.maximeTrijolCognac',
+		titleKey: 'product.title.maximeTrijolCognacEiffelTower',
+		articleKey: 'product.article.maximeTrijolCognacEiffelTower',
 		alcoholStrength: '40%',
 		origin: 'France',
 		bottleVolume: '700ml',
@@ -166,8 +166,8 @@ export const items = [
 		images: [FiuzaCabernetSauvignon],
 		hoverImage: hoverSauvignon, // изображение при наведении
 		images: [FiuzaCabernetSauvignon, hoverSauvignon], // массив изображений
-		titleKey: 'product.title.fiuzaCabernetSauvignon',
-		articleKey: 'product.article.fiuzaCabernetSauvignon',
+		titleKey: 'product.title.fiuzaCabernet.Sauvignon',
+		articleKey: 'product.article.fiuzaCabernet.Sauvignon',
 		alcoholStrength: '13%',
 		origin: 'Portugal',
 		bottleVolume: '750ml',
@@ -258,7 +258,7 @@ export const items = [
 	  },
 	  {
 		id: 18,
-		name: 'arakOrange',
+		name: 'Arak Orange 750ml',
 		category: 'Arak',
 		image: ArakOrange,
 		images: [ArakOrange],
@@ -270,7 +270,7 @@ export const items = [
 	  },
 	  {
 		id: 19,
-		name: 'vodkinaMango',
+		name: 'Vodkino Mango',
 		category: 'spirits',
 		image: VodkinaMango2,
 		images: [VodkinaMango2],
@@ -282,7 +282,7 @@ export const items = [
 	  },
 	  {
 		id: 20,
-		name: 'vodkinaYellow',
+		name: 'Vodkino Yellow',
 		category: 'spirits',
 		image: VodkinaYellow,
 		images: [VodkinaYellow],
@@ -294,7 +294,7 @@ export const items = [
 	  },
 	  {
 		id: 21,
-		name: 'vodkinaLemon',
+		name: 'Vodkino Lemon',
 		category: 'spirits',
 		image: VodkinoLemon,
 		images: [VodkinoLemon],
@@ -306,7 +306,7 @@ export const items = [
 	  },
 	  {
 		id: 22,
-		name: 'vodkinaOrange',
+		name: 'VodkinO Orange',
 		category: 'spirits',
 		image: VodkinoOrange,
 		images: [VodkinoOrange],
@@ -318,7 +318,7 @@ export const items = [
 	  },
 	  {
 		id: 23,
-		name: 'vodkinaPeach',
+		name: 'Vodkino Peach',
 		category: 'spirits',
 		image: VodkinoPeach,
 		images: [VodkinoPeach],
@@ -330,7 +330,7 @@ export const items = [
 	  },
 	  {
 		id: 24,
-		name: 'ArakLime',
+		name: 'Arak Lime 750ml',
 		category: 'Arak',
 		image: ArakLime,
 		images: [ArakLime],
@@ -342,12 +342,12 @@ export const items = [
 	  },
 	  {
 		id: 25,
-		name: 'ArakLemon',
+		name: 'Arak Lemon 750ml',
 		category: 'Arak',
 		image: ArakLemon,
 		images: [ArakLemon],
-		titleKey: 'product.title.arakOrange',
-		articleKey: 'product.article.arakOrange',
+		titleKey: 'product.title.arakLemon',
+		articleKey: 'product.article.arakLemon',
 		alcoholStrength: '50%',
 		origin: 'Lebanon',
 		bottleVolume: '750ml',
@@ -371,7 +371,7 @@ export const items = [
 		image: EichbaumBeerHelles,
 		images: [EichbaumBeerHelles],
 		titleKey: 'product.title.EichbaumHell',
-		articleKey: 'product.article.EichbaumHell',
+		articleKey: 'product.article.EichbaumHellBeer',
 		alcoholStrength: '5.3%',
 		origin: 'Germany',
 		bottleVolume: '500ml',
@@ -383,7 +383,7 @@ export const items = [
 		image: EichbaumBeerPilsener,
 		images: [EichbaumBeerPilsener],
 		titleKey: 'product.title.EichbaumPilsener',
-		articleKey: 'product.article.EichbaumPilsener',
+		articleKey: 'product.article.EichbaumPilsenerBeer',
 		alcoholStrength: '4.9%',
 		origin: 'Germany',
 		bottleVolume: '500ml',
@@ -395,7 +395,7 @@ export const items = [
 		image: SuperiotStout,
 		images: [SuperiotStout],
 		titleKey: 'product.title.Superior',
-		articleKey: 'product.article.Superior',
+		articleKey: 'product.article.Superior.Beer',
 		alcoholStrength: '6%',
 		origin: 'Ireland',
 		bottleVolume: '500ml',
@@ -418,7 +418,7 @@ export const items = [
 		image: KrauzerBrau,
 		images: [KrauzerBrau],
 		titleKey: 'product.title.KrauzerBrau',
-		articleKey: 'product.article.KrauzerBrau',
+		articleKey: 'product.article.KrauzerBrau.Beer',
 	},
 
 	{
@@ -428,7 +428,7 @@ export const items = [
 		image: Taller,
 		images: [Taller],
 		titleKey: 'product.title.Taller',
-		articleKey: 'product.article.Taller',
+		articleKey: 'product.article.Taller.Beer',
 	},
 
 	{
@@ -438,7 +438,7 @@ export const items = [
 		image: CognacSikvaruli,
 		images: [CognacSikvaruli],
 		titleKey: 'product.title.CognacSikvaruli',
-		articleKey: 'product.article.CognacSikvaruli',
+		articleKey: 'product.article.Cognac.Sikvaruli',
 	},
 
 	{
@@ -453,12 +453,15 @@ export const items = [
 
 	{
 		id: 35,
-		name: 'Vodka Russian Standart 1894',
+		name: 'Vodka Russian Standart 1894 1l',
 		category: 'Vodka',
 		image: VodkaRusStandart,
 		images: [VodkaRusStandart],
 		titleKey: 'product.title.VodkaRusStandart',
-		articleKey: 'product.article.VodkaRusStandart',
+		articleKey: 'product.article.VodkaRusStandart.1l',
+		origin: 'Russia',
+		alcoholStrength: '40%',
+		bottleVolume: '1l'
 	},
 
 	{
@@ -520,7 +523,7 @@ export const items = [
 		image: VodkaIcePalace500ml,
 		images: [VodkaIcePalace500ml],
 		titleKey: 'product.title.VodkaIcePalace500',
-		articleKey: 'product.article.VodkaIcePalace500',
+		articleKey: 'product.article.VodkaIcePalace500ml',
 		origin: 'Ukraine',
 		alcoholStrength: '40%',
 		bottleVolume: '500ml'
