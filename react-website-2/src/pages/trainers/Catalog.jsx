@@ -8,6 +8,7 @@ import ProductModal from '../../components/ModalWindow';
 import HeaderImage from '../../images/alkogol-1.webp';
 import './catalog.css';
 import { items } from './data-alc';
+import Loading from '../../components/Loading'; // Import the Loading component
 
 const Catalog = () => {
     const { t, i18n } = useTranslation();
@@ -20,6 +21,7 @@ const Catalog = () => {
     const [searchCategory, setSearchCategory] = useState('');
     const [hoveredProductId, setHoveredProductId] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
+    const [isLoading, setIsLoading] = useState(true); // Add loading state
 
     const handleCardClick = useCallback(
         (product, updateUrl = true) => {
@@ -59,6 +61,11 @@ const Catalog = () => {
                 handleCardClick(product, false);
             }
         }
+
+        // Simulate data fetching delay
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 2000); // Adjust the delay as needed
     }, [location.search, handleCardClick]);
 
     const groupedItems = useMemo(() => {
@@ -274,6 +281,10 @@ const Catalog = () => {
             </div>
         ));
     }, [paginatedCategories, groupedItems, hoveredProductId, handleMouseEnter, handleMouseLeave, handleCardClick, t]);
+
+    if (isLoading) {
+        return <Loading />; // Display loading animation while loading
+    }
 
     return (
         <>
