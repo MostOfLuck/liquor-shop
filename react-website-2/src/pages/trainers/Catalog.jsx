@@ -22,6 +22,7 @@ const Catalog = () => {
     const [hoveredProductId, setHoveredProductId] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
     const [isLoading, setIsLoading] = useState(true); // Add loading state
+    const [animate, setAnimate] = useState(false); // Add animation state
 
     const handleCardClick = useCallback(
         (product, updateUrl = true) => {
@@ -65,6 +66,7 @@ const Catalog = () => {
         // Simulate data fetching delay
         setTimeout(() => {
             setIsLoading(false);
+            setAnimate(true); // Trigger animation
         }, 2000); // Adjust the delay as needed
     }, [location.search, handleCardClick]);
 
@@ -255,12 +257,13 @@ const Catalog = () => {
                             onMouseEnter={() => handleMouseEnter(product.id)}
                             onMouseLeave={handleMouseLeave}
                             onClick={() => handleCardClick(product)}
+                            animate={animate} // Pass animation state
                         />
                     ))}
                 </div>
             </div>
         ));
-    }, [searchResults, hoveredProductId, handleMouseEnter, handleMouseLeave, handleCardClick, t, groupedItems]);
+    }, [searchResults, hoveredProductId, handleMouseEnter, handleMouseLeave, handleCardClick, t, groupedItems, animate]);
 
     const renderCategoriesWithProducts = useCallback(() => {
         return paginatedCategories.map(category => (
@@ -275,12 +278,13 @@ const Catalog = () => {
                             onMouseEnter={() => handleMouseEnter(product.id)}
                             onMouseLeave={handleMouseLeave}
                             onClick={() => handleCardClick(product)}
+                            animate={animate} // Pass animation state
                         />
                     ))}
                 </div>
             </div>
         ));
-    }, [paginatedCategories, groupedItems, hoveredProductId, handleMouseEnter, handleMouseLeave, handleCardClick, t]);
+    }, [paginatedCategories, groupedItems, hoveredProductId, handleMouseEnter, handleMouseLeave, handleCardClick, t, animate]);
 
     if (isLoading) {
         return <Loading />; // Display loading animation while loading
@@ -332,11 +336,11 @@ const CategoryItem = React.memo(({ category, className, isActive, onClick }) => 
     );
 });
 
-const ProductCard = React.memo(({ product, isHovered, onMouseEnter, onMouseLeave, onClick }) => {
+const ProductCard = React.memo(({ product, isHovered, onMouseEnter, onMouseLeave, onClick, animate }) => {
     const { t } = useTranslation();
     return (
         <div
-            className='product-card'
+            className={`product-card ${animate ? 'animate' : ''}`}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
             onClick={onClick}
