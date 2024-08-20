@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import Logo from '../images/logo.png';
 import { useTranslation } from 'react-i18next';
-import { FaBars } from 'react-icons/fa';
+import { FaBars, FaPhone } from 'react-icons/fa'; // Import FaPhone icon
 import { MdOutlineClose } from 'react-icons/md';
 import './navbar.css';
 import '../index.css';
@@ -13,6 +13,7 @@ const Navbar = () => {
     const { t, i18n } = useTranslation();
     const [isNavShowing, setIsNavShowing] = useState(false);
     const [activeCategory, setActiveCategory] = useState(null);
+    const [isNotificationVisible, setIsNotificationVisible] = useState(false); // Add state for notification
     const navigate = useNavigate();
 
     // Determine if the language is RTL
@@ -61,6 +62,16 @@ const Navbar = () => {
         setIsNavShowing(false); // Close nav after click
     };
 
+    const handleCopyPhoneNumber = () => {
+        const phoneNumber = '+03-6542200'; // Replace with your phone number
+        navigator.clipboard.writeText(phoneNumber).then(() => {
+            setIsNotificationVisible(true);
+            setTimeout(() => {
+                setIsNotificationVisible(false);
+            }, 2000); // Hide notification after 2 seconds
+        });
+    };
+
     const links = [
         { name: t('HOME'), path: '/' },
         { name: t('CATALOG'), path: '/catalog' },
@@ -80,6 +91,19 @@ const Navbar = () => {
                     <img className='logo_RILL' src={Logo} alt="Nav Logo" />
                 </Link>
                 <LanguageSwitcher />
+                <div className="nav__phone-container">
+                    <button className="nav__phone-btn" onClick={handleCopyPhoneNumber}>
+                        <FaPhone />
+                        <span className="tooltip">{t('Copy phone number')}</span>
+                    </button>
+                    <button className="phone-number" onClick={handleCopyPhoneNumber}>
+                        03-6542200
+                        <span className="tooltip">{t('Copy phone number')}</span>
+                    </button>
+                </div>
+                <button className="nav__toggle-btn" onClick={() => setIsNavShowing(!isNavShowing)}>
+                    {isNavShowing ? <MdOutlineClose /> : <FaBars />}
+                </button>
                 <ul className={`nav__links ${isNavShowing ? 'show__nav' : 'hide__nav'}`}>
                     {links.map(({ name, path }, index) => (
                         <li key={index}>
@@ -89,9 +113,7 @@ const Navbar = () => {
                         </li>
                     ))}
                 </ul>
-                <button className="nav__toggle-btn" onClick={() => setIsNavShowing(prev => !prev)}>
-                    {isNavShowing ? <MdOutlineClose /> : <FaBars />}
-                </button>
+                {isNotificationVisible && <div className="notification">{t('Phone number copied!')}</div>}
             </div>
         </nav>
     );

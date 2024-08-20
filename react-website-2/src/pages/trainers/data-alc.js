@@ -44,6 +44,7 @@ import VodkaPrimeBlanche from '../../productImages2/PrimeBlanche.png'
 import VodkaIcePalace500ml from '../../productImages2/VodkaIcePalace500nl.png'
 import VodkaManhattan from '../../productImages2/VodkaManhattan.png'
 import VodkaMoskva from '../../productImages2/VodkaMoskva.png'
+import Albergaria from '../../productImages2/Albergaria.png'
 import './catalog.css'
 import './rtl.css'
 
@@ -553,5 +554,18 @@ export const items = [
 		origin: 'Israel',
 		alcoholStrength: '35%',
 		bottleVolume: '175ml'
+	},
+
+	{
+		id: 43,
+		name: 'Albergaria Limoncello Liquor 700ml',
+		category: 'Liquor',
+		image: Albergaria,
+		images: [Albergaria],
+		titleKey: 'product.title.Albergaria',
+		articleKey: 'product.article.Albergaria.Limoncello.liqour',
+		origin: 'Portugal',
+		alcoholStrength: '25%',
+		bottleVolume: '700ml'
 	},
 ]

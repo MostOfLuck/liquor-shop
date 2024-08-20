@@ -164,11 +164,7 @@ const Catalog = () => {
             );
         });
         setSearchResults(results);
-
-        if (results.length === 1) {
-            handleCardClick(results[0]);
-        }
-    }, [searchTerm, searchCategory, t, handleCardClick]);
+    }, [searchTerm, searchCategory, t]);
 
     const handleMouseEnter = useCallback(productId => {
         setHoveredProductId(productId);

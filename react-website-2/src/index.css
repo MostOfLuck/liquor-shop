@@ -66,11 +66,18 @@ body {
     z-index: 1000;
     transition: width 0.25s ease-out;
 }
-
+.rtl .scroll-progress {
+    left: auto;
+    right: 0;
+}
 .denied_acses {
 	display: flex;
 	justify-content: center;
 	color: #5bbd4d;
+}
+
+.legal_age_verification {
+	color: black;
 }
 .popular-products__button {
 	position: relative;

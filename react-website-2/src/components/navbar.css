@@ -22,6 +22,10 @@ nav.scrolled .nav__links a {
   color: #000000; /* Черные шрифты для ссылок при скролле */
 }
 
+nav.scrolled .nav__phone-container {
+  color: #000000; /* Черный цвет иконки гамбургера при скролле */
+  }
+
 /* Стили для ссылок в навигации */
 .nav__links a {
   transition: color 0.3s; /* Плавное изменение цвета текста */
@@ -100,9 +104,147 @@ nav.scrolled .nav__toggle-btn svg {
 	justify-content: center;
 	width: 150px;
 }
+.nav__phone-container {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
 
+.nav__phone-btn {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    position: relative;
+}
 
+.phone-number {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 1rem;
+    position: relative;
+}
 
+.tooltip {
+    visibility: hidden;
+    width: 160px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 0.5rem;
+	top: 50px;
+	font-size: 15px;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    margin-left: -80px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.nav__phone-btn:hover .tooltip,
+.phone-number:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.notification {
+	position: fixed;
+	bottom: 1rem;
+	right: 45rem;
+	background-color: #4caf50;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	z-index: 1000;
+	animation: fadeOut 5s ease forwards;
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		display: none;
+	}
+} 
+.nav__phone-container {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.nav__phone-btn {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.phone-number {
+    font-size: 1rem;
+	margin-bottom: 1rem;
+    color: inherit;
+}
+.nav__phone-container {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.nav__phone-btn {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.phone-number {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+@media screen and (max-width: 1024px) {
+	.nav__phone-btn,
+	.phone-number
+	 {
+		display: none;
+	}
+}
+.notification {
+    position: fixed;
+    bottom: 1rem;
+    right: 45rem;
+    background-color: #4caf50;
+    color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
 
 
 /* MEDIA QUERIES (средний и малый экраны) */

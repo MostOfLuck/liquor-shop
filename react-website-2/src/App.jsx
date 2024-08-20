@@ -50,7 +50,7 @@ const App = () => {
       <div className='modal'>
         <div className='modal-content'>
           <h2>{welcomeText}</h2>
-          <p>{t('Verify that you are legal age.')}</p>
+          <p className='legal_age_verification'>{t('Verify that you are legal age.')}</p>
           <button className='button1' onClick={() => onUnder18Click(false)}>
             {t("I'm above 18")}
           </button>
