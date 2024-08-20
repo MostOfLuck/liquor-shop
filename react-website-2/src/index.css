@@ -57,8 +57,21 @@ body {
 	justify-content: right;
 	gap: 20px;
 }
+.scroll-progress {
+    position: fixed;
+    top: 80px; /* Adjust this value to match the height of your navbar */
+    left: 0;
+    height: 5px;
+    background-color: #5bbd4d;
+    z-index: 1000;
+    transition: width 0.25s ease-out;
+}
 
-
+.denied_acses {
+	display: flex;
+	justify-content: center;
+	color: #5bbd4d;
+}
 .popular-products__button {
 	position: relative;
 	background: #f0f0f0;

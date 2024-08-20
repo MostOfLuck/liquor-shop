@@ -354,7 +354,7 @@ export const items = [
 	  },
 	  {
 		id: 26,
-		name: 'Beer Eichbaum Hefeweizen Hell',
+		name: 'Beer Eichbaum Hefeweizen Hell 500ml',
 		category: 'Beer',
 		image: EichbaumBeer,
 		images: [EichbaumBeer],
@@ -366,7 +366,7 @@ export const items = [
 	  },
 	  {
 		id: 27,
-		name: 'Beer Eichbaum Helles Large Hell',
+		name: 'Beer Eichbaum Helles Large Hell 500ml',
 		category: 'Beer',
 		image: EichbaumBeerHelles,
 		images: [EichbaumBeerHelles],
@@ -378,7 +378,7 @@ export const items = [
 	  },
 	  {
 		id: 28,
-		name: 'Beer Eichbaum Pilsener',
+		name: 'Beer Eichbaum Pilsener 500ml',
 		category: 'Beer',
 		image: EichbaumBeerPilsener,
 		images: [EichbaumBeerPilsener],
@@ -390,7 +390,7 @@ export const items = [
 	  },
 	  {
 		id: 29,
-		name: 'Beer Superior Stout',
+		name: 'Beer Superior Stout 500ml',
 		category: 'Beer',
 		image: SuperiotStout,
 		images: [SuperiotStout],
@@ -408,7 +408,7 @@ export const items = [
 		image: Chernigivske,
 		images: [Chernigivske],
 		titleKey: 'product.title.Chernigivske',
-		articleKey: 'product.article.Chernigivske',
+		articleKey: 'product.article.Chernigivske.Beer',
 	},
 
 	{
@@ -466,7 +466,7 @@ export const items = [
 
 	{
 		id: 36,
-		name: 'Vodka Nepoborna',
+		name: 'Vodka Nepoborna 700ml',
 		category: 'Vodka',
 		image: VodkaNepoborna,
 		images: [VodkaNepoborna],
@@ -492,7 +492,7 @@ export const items = [
 
 	{
 		id: 38,
-		name: 'Vodka Prime Noir',
+		name: 'Vodka Prime Noir 500ml',
 		category: 'Vodka',
 		image: VodkaPrimeNoir,
 		images: [VodkaPrimeNoir],
@@ -505,7 +505,7 @@ export const items = [
 
 	{
 		id: 39,
-		name: 'Vodka Prime Blanche',
+		name: 'Vodka Prime Blanche 500ml',
 		category: 'Vodka',
 		image: VodkaPrimeBlanche,
 		images: [VodkaPrimeBlanche],

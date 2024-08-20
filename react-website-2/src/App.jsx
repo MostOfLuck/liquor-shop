@@ -36,9 +36,10 @@ const App = () => {
   }, [i18n.language]);
 
   const handleAgeClick = isUnder18 => {
-    setIsOver18(!isUnder18);
     if (isUnder18) {
-      window.location.href = '/NotFound';
+      setIsOver18(false);
+    } else {
+      setIsOver18(true);
     }
   };
 
@@ -63,6 +64,15 @@ const App = () => {
 
   if (isOver18 === null) {
     return <Modal onUnder18Click={handleAgeClick} />;
+  }
+
+  if (isOver18 === false) {
+    return (
+      <div className='underage-message'>
+        <h2>{t('Access Denied')}</h2>
+        <p className='denied_acses'>{t('You must be over 18 to access this site.')}</p>
+      </div>
+    );
   }
 
   return (

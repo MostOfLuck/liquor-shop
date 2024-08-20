@@ -23,6 +23,7 @@ const Catalog = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [isLoading, setIsLoading] = useState(true); // Add loading state
     const [animate, setAnimate] = useState(false); // Add animation state
+    const [scrollProgress, setScrollProgress] = useState(0); // Add scroll progress state
 
     const handleCardClick = useCallback(
         (product, updateUrl = true) => {
@@ -69,6 +70,21 @@ const Catalog = () => {
             setAnimate(true); // Trigger animation
         }, 2000); // Adjust the delay as needed
     }, [location.search, handleCardClick]);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            setScrollProgress(scrollPercent);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     const groupedItems = useMemo(() => {
         const grouped = {};
@@ -293,6 +309,7 @@ const Catalog = () => {
     return (
         <>
             <Header children={t('R.I.L.L Collection online storefront')} title={t('Alcohol 🍾')} image={HeaderImage} />
+            <div className='scroll-progress' style={{ width: `${scrollProgress}%` }}></div> {/* Add scroll progress bar */}
             <section className='catalog'>
                 <div className='container catalog__container'>
                     {renderCategoryFilter()}
