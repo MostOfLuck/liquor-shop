@@ -18,9 +18,9 @@ const Contact = () => {
         <div className="container contact__container">
           <div className="contact__wrapper">
             <a href="mailto:rillcollection2023@gmail.com" target="_blank" rel="noreferrer noopener"><MdEmail color="#D44638" /></a>
-            <a href="https://www.instagram.com/rillcollection2023" target="_blank" rel="noreferrer noopener"><FaInstagramSquare color="#E4405F" /></a>
-            <a href="https://www.facebook.com/rillcollection2023" target="_blank" rel="noreferrer noopener"><FaFacebookSquare color="#1877F2" /></a>
-            <a href="https://www.tiktok.com/@r.i.l.l_collection?_t=8kg2tmwazac&_r=1" target="_blank" rel="noreferrer noopener"><FaTiktok color="#000000" /></a>
+            <a href="https://www.instagram.com/rill_collection?igsh=MTh1bm90MTU4eXphbA%3D%3D" target="_blank" rel="noreferrer noopener"><FaInstagramSquare color="#E4405F" /></a>
+            <a href="https://www.facebook.com/profile.php?id=61550841014733&mibextid=LQQJ4d" target="_blank" rel="noreferrer noopener"><FaFacebookSquare color="#1877F2" /></a>
+            <a href="https://www.tiktok.com/@r.i.l.l.collectio?_t=8p1i50r7Gd7&_r=1https://www.tiktok.com/@r.i.l.l.collectio?_t=8p1i50r7Gd7&_r=1" target="_blank" rel="noreferrer noopener"><FaTiktok color="#000000" /></a>
           </div>
         </div>
       </section>

@@ -186,6 +186,11 @@
 	}
 }
 
+@media screen and (width: 1200px) {
+	.product-card {
+		width: calc(50% - 10px); /* Одна карточка в ряд для самых маленьких экранов */
+	}
+}
 @media screen and (width: 820px) {
 	.product-card {
 		width: calc(50% - 10px); /* Одна карточка в ряд для самых маленьких экранов */

@@ -15,9 +15,9 @@ const Footer = () => {
                     </Link>
                     <p>{t('Our Socials and contacts.')}</p>
                     <div className="footer__socials green-icons">
-                        <a href="https://facebook.com/" target="_blank" rel='noreferrer noopener'><FaFacebookF /></a>
-                        <a href="https://twitter.com/" target="_blank" rel='noreferrer noopener'><FaTiktok /></a>
-                        <a href="https://instagram.com/" target="_blank" rel='noreferrer noopener'><AiFillInstagram /></a>
+                        <a href="https://www.facebook.com/profile.php?id=61550841014733&mibextid=LQQJ4d" target="_blank" rel='noreferrer noopener'><FaFacebookF /></a>
+                        <a href="https://www.tiktok.com/@r.i.l.l.collectio?_t=8p1i50r7Gd7&_r=1https://www.tiktok.com/@r.i.l.l.collectio?_t=8p1i50r7Gd7&_r=1" target="_blank" rel='noreferrer noopener'><FaTiktok /></a>
+                        <a href="https://www.instagram.com/rill_collection?igsh=MTh1bm90MTU4eXphbA%3D%3D" target="_blank" rel='noreferrer noopener'><AiFillInstagram /></a>
                     </div>
                 </article>
                 <article>

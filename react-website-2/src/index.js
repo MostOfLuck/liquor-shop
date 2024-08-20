@@ -10,6 +10,7 @@ i18n.use(initReactI18next).init({
 	resources: {
 		English: {
 			translations: {
+				'We are on Facebook, Tiktok, & Instagram. You can also contact us via Email.': 'We are on Facebook, Tiktok, & Instagram. You can also contact us via Email.',
 				Vodkino: 'Vodka Flavors',
 				Port: 'Port 🍇',
 				Arak: 'Arak 🌿',
@@ -259,6 +260,7 @@ i18n.use(initReactI18next).init({
 				"I'm under 18": 'Мне меньше 18',
 				'All Categories': 'Все Категории',
 				arak: 'Арак',
+				'We are on Facebook, Tiktok, & Instagram. You can also contact us via Email.': 'Мы есть в Facebook, Tiktok и Instagram. Вы также можете связаться с нами по электронной почте.',
 				'Warning: contains alcohol, it is recommended to avoid excessive drinking':
 					'Внимание: содержит алкоголь, рекомендуется избегать чрезмерного употребления.',
 				'Warning! Excessive consumption of alcohol is life-threatening and harmful to health':
@@ -294,6 +296,7 @@ i18n.use(initReactI18next).init({
 				Origin: 'מָקוֹר',
 				'Phone number copied!': 'מספר הטלפון הועתק',
 				Liquor: 'לִיקֵר 🥃',
+				'We are on Facebook, Tiktok, & Instagram. You can also contact us via Email.': 'אנחנו בפייסבוק, טיקטוק ואינסטגרם. ניתן גם ליצור איתנו קשר באמצעות דוא"ל.',
 				'Copy phone number': 'העתק מספר טלפון',
 				'You must be over 18 to access this site.': 'עליך להיות מעל גיל 18 כדי לגשת לאתר זה.',
 				'Access Denied': 'גישה נדחתה',
