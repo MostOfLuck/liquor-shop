@@ -1,48 +1,49 @@
-import i18n from 'i18next'
-import React, { useEffect, useState } from 'react'
-import { AiFillCaretDown } from 'react-icons/ai' // Импорт иконки стрелки
-import { FaGlobe } from 'react-icons/fa' // Импорт иконки глобуса
-import '../index.css'
+import i18n from 'i18next';
+import React, { useEffect, useState } from 'react';
+import { AiFillCaretDown } from 'react-icons/ai'; // Импорт иконки стрелки
+import { FaGlobe } from 'react-icons/fa'; // Импорт иконки глобуса
+import '../index.css';
 
 const LanguageSwitcher = () => {
-    const savedLanguage = localStorage.getItem('language') || 'HE'
-    const [language, setLanguage] = useState(savedLanguage)
-    const [isOpen, setIsOpen] = useState(false)
+    const savedLanguage = localStorage.getItem('language') || 'HE';
+    const [language, setLanguage] = useState(savedLanguage);
+    const [isOpen, setIsOpen] = useState(false);
     const languages = {
         HE: 'עברית',
         EN: 'English',
         RU: 'Русский',
-    }
+    };
     
     useEffect(() => {
-        i18n.changeLanguage(languages[language])
-        localStorage.setItem('language', language)
-    }, [language])
+        i18n.changeLanguage(languages[language]);
+        localStorage.setItem('language', language);
+    }, [language]);
 
     const toggleDropdown = () => {
-        setIsOpen(!isOpen)
-    }
+        setIsOpen(!isOpen);
+    };
     
     const selectLanguage = lang => {
-        i18n.changeLanguage(languages[lang])
-        setLanguage(lang)
-        setIsOpen(false)
-    }
+        i18n.changeLanguage(languages[lang]);
+        setLanguage(lang);
+        setIsOpen(false);
+        window.location.reload(); // Reload the page after language switch
+    };
 
     // Закрытие списка при клике вне его
     useEffect(() => {
         const handleClickOutside = event => {
             if (event.target.closest('.language-dropdown') === null) {
-                setIsOpen(false)
+                setIsOpen(false);
             }
-        }
+        };
 
-        document.addEventListener('mousedown', handleClickOutside)
+        document.addEventListener('mousedown', handleClickOutside);
 
         return () => {
-            document.removeEventListener('mousedown', handleClickOutside)
-        }
-    }, [])
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
 
     // Проверка устройства
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints;
@@ -104,7 +105,7 @@ const LanguageSwitcher = () => {
                 ))}
             </ul>
         </div>
-    )
-}
+    );
+};
 
-export default LanguageSwitcher
+export default LanguageSwitcher;

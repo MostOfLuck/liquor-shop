@@ -242,7 +242,7 @@ const Catalog = () => {
             </div>
         </>
     ), [groupedItems, searchCategory, searchTerm, handleChange, handleClearSearch, i18n.language, t]);
-
+    
     const renderFilteredProducts = useCallback(() => {
         if (searchResults.length === 0) {
             return <p>{t('No results found.')}</p>;

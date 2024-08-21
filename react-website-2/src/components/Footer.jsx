@@ -27,8 +27,8 @@ const Footer = () => {
                 </article>
                 <article>
                     <h4 className='Insights'>{t('Insights')}</h4>
-                    <Link to="/s">{t('Blog')}</Link>
-                    <Link to="/s">{t('Communities')}</Link>
+                    <Link to="https://www.instagram.com/rill_collection?igsh=MTh1bm90MTU4eXphbA%3D%3D">{t('Blog')}</Link>
+                    <Link to="https://www.facebook.com/profile.php?id=61550841014733&mibextid=LQQJ4d">{t('Communities')}</Link>
                 </article>
                 <h4 className='address'>
                     {t('Contact')} :<br />

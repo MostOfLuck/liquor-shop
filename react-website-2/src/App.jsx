@@ -35,11 +35,21 @@ const App = () => {
     localStorage.setItem('language', currentLanguage);
   }, [i18n.language]);
 
+  useEffect(() => {
+    // Check if the user has already verified their age
+    const ageVerified = localStorage.getItem('isOver18');
+    if (ageVerified !== null) {
+      setIsOver18(ageVerified === 'true');
+    }
+  }, []);
+
   const handleAgeClick = isUnder18 => {
     if (isUnder18) {
       setIsOver18(false);
+      localStorage.setItem('isOver18', 'false');
     } else {
       setIsOver18(true);
+      localStorage.setItem('isOver18', 'true');
     }
   };
 

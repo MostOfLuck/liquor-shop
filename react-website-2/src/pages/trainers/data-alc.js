@@ -45,6 +45,31 @@ import VodkaIcePalace500ml from '../../productImages2/VodkaIcePalace500nl.png'
 import VodkaManhattan from '../../productImages2/VodkaManhattan.png'
 import VodkaMoskva from '../../productImages2/VodkaMoskva.png'
 import Albergaria from '../../productImages2/Albergaria.png'
+import BeresheetCabernet from '../../productImages2/Beresheet Cabernet Sauvignon.png'
+import BeresheetReserve from '../../productImages2/BeresheetReserve2023.png'
+import BeresheetPort from '../../productImages2/BeresheetPort.png'
+import BeresheetReserveMerilotShraz from '../../productImages2/BeresheetReserve2023MerilotShraz.png'
+import WineGeorgianAlazaniValleyRedSemiSweet from '../../productImages2/GeorgianAlazaniValley.png'
+import WineGeorgianAlazaniValleyWhiteSemiSweet from '../../productImages2/GeorgianAlazaniValleyWhite.png'
+import WineGrandNoirRose from '../../productImages2/GrandNoirRose.png'
+import BrandyLouisXVOrange from '../../productImages2/louis-xv-orange-brandy-p13693-23904_image.jpg'
+import BrandyLouisXVOrangeHover from '../../productImages2/louis-xv-orange-brandy-p13693-23905_image.jpg'
+import BrandyLouisXVFineOldBrand from '../../productImages2/FineOldBrandy.jpg'
+import VodkaRusStandart200ml from '../../productImages2/VodkaRussianStandtart0.2.png'
+import GalitosBlack from '../../productImages2/GalitosBlack.png'
+import GalitosRose from '../../productImages2/GalitosRose.png'
+import GalitosWhite from '../../productImages2/GalitosWhite.png'
+import GalitosRosatoFrizzante from '../../productImages2/RosatoFritz.png'
+import WineVelasCorsarias from '../../productImages2/Velas Corsarias White.png'
+import WineDurelloGlera from '../../productImages2/Durello-Glera.png'
+import LouisXVDelicieuxBrand from '../../productImages2/LouisXVDelicieuxBrand.png'
+import MaximeTrijolCognacVSOP700ML from '../../productImages2/CognacVsop700ml.png'
+import FiuzaNativeReservaWhite2018 from '../../productImages2/FiuzaNativeReserva2018.png'
+import MaximeTrijolCognacVSOP50ML from '../../productImages2/MaximeTrijolVSOP.png'
+import MaximeTrijolCognacXO50ML from '../../productImages2/MaximeTrijolXO.png'
+import MaximeTrijolCognacVS50ML from '../../productImages2/MaximeTrijolVS.png'
+import MaximeTrijolCognacVSOP750ML from '../../productImages2/MaximeVSOP.png'
+import CognacMaximeTrijolVSOPGrandeChampagne from '../../productImages2/DeCognac.png'
 import './catalog.css'
 import './rtl.css'
 
@@ -125,7 +150,7 @@ export const items = [
 	  },
 	  {
 		id: 7,
-		name: 'Cognac Maxime Trijol Small',
+		name: 'Cognac Maxime Trijol Mini',
 		category: 'Cognac',
 		image: MaximeTrijolCognacSmall2,
 		images: [MaximeTrijolCognacSmall2],
@@ -133,7 +158,7 @@ export const items = [
 		articleKey: 'product.article.maximeTrijolCognacSmall',
 		alcoholStrength: '40%',
 		origin: 'France',
-		bottleVolume: '350ml',
+		bottleVolume: '700ml',
 	  },
 	  {
 		id: 8,
@@ -558,7 +583,7 @@ export const items = [
 
 	{
 		id: 43,
-		name: 'Albergaria Limoncello Liquor 700ml',
+		name: 'Liquor Albergaria Limoncello  700ml',
 		category: 'Liquor',
 		image: Albergaria,
 		images: [Albergaria],
@@ -566,6 +591,320 @@ export const items = [
 		articleKey: 'product.article.Albergaria.Limoncello.liqour',
 		origin: 'Portugal',
 		alcoholStrength: '25%',
+		bottleVolume: '700ml'
+	},
+
+	{
+		id: 45,
+		name: 'Wine Beresheet Cabernet Sauvignon 2023',
+		category: 'Wine',
+		image: BeresheetCabernet,
+		images: [BeresheetCabernet],
+		titleKey: 'product.title.BeresheetCabernet',
+		articleKey: 'product.article.Beresheet.Cabernet.2023.wine',
+		origin: 'Israel',
+		alcoholStrength: '16.5%',
+		bottleVolume: '750ml'
+	},
+
+	{
+		id: 46,
+		name: 'Wine Beresheet Reserve Cabernet Sauvignon 2023',
+		category: 'Wine',
+		image: BeresheetReserve,
+		images: [BeresheetReserve],
+		titleKey: 'product.title.BeresheetReserve',
+		articleKey: 'product.article.Beresheet.Reserve.2023.wine',
+		origin: 'Israel',
+		alcoholStrength: '16.5%',
+		bottleVolume: '750ml'
+	},
+
+	{
+		id: 47,
+		name: 'Port Beresheet 2023',
+		category: 'Port',
+		image: BeresheetPort,
+		images: [BeresheetPort],
+		titleKey: 'product.title.BeresheetPort',
+		articleKey: 'product.article.Beresheet.Port.2023.wine',
+		origin: 'Israel',
+		alcoholStrength: '16.5%',
+		bottleVolume: '750ml'
+	},
+
+	{
+		id: 48,
+		name: 'Wine Beresheet Reserve Merilot Shraz 2023',
+		category: 'Wine',
+		image: BeresheetReserveMerilotShraz,
+		images: [BeresheetReserveMerilotShraz],
+		titleKey: 'product.title.BeresheetBeresheetReserveMerilotShraz',
+		articleKey: 'product.article.Beresheet.BeresheetReserveMerilotShraz.2023.wine',
+		origin: 'Israel',
+		alcoholStrength: '13.5%',
+		bottleVolume: '750ml'
+	},
+
+	{
+		id: 49,
+		name: 'Wine Georgian Alazani Valley Red Semi-Sweet',
+		category: 'Wine',
+		image: WineGeorgianAlazaniValleyRedSemiSweet,
+		images: [WineGeorgianAlazaniValleyRedSemiSweet,],
+		titleKey: 'product.title.BeresheetWineGeorgianAlazaniValleyRedSemiSweet,',
+		articleKey: 'product.article.Beresheet.WineGeorgianAlazaniValleyRedSemiSweet,.2023.wine',
+		origin: 'Georgia',
+		alcoholStrength: '11%',
+		bottleVolume: '750ml'
+	},
+
+	{
+		id: 50,
+		name: 'Wine Georgian Alazani Valley White Semi-Sweet',
+		category: 'Wine',
+		image: WineGeorgianAlazaniValleyWhiteSemiSweet,
+		images: [WineGeorgianAlazaniValleyWhiteSemiSweet,],
+		titleKey: 'product.title.BeresheetWineGeorgianAlazaniValleyWhiteSemiSweet,',
+		articleKey: 'product.article.Beresheet.WineGeorgianAlazaniValleyWhiteSemiSweetwine',
+		origin: 'Georgia',
+		alcoholStrength: '11%',
+		bottleVolume: '750ml'
+	},
+
+	{
+		id: 51,
+		name: 'Wine Le Grand Noir Rose',
+		category: 'Wine',
+		image: WineGrandNoirRose,
+		images: [WineGrandNoirRose,,],
+		titleKey: 'product.title.BeresheetWineGrandNoirRose,,',
+		articleKey: 'product.article.Beresheet.WineGrandNoirRose,wine',
+		origin: 'France',
+		alcoholStrength: '12.5%',
+		bottleVolume: '750ml'
+	},
+
+	{
+		id: 52,
+		name: 'Brandy Louis XV Orange',
+		category: 'Brandy',
+		image: BrandyLouisXVOrange,
+		images: [BrandyLouisXVOrange],
+		hoverImage: BrandyLouisXVOrangeHover, // изображение при наведении
+		images: [BrandyLouisXVOrange, BrandyLouisXVOrangeHover], // массив изображений
+		titleKey: 'product.title.BeresheetBrandyLouisXVOrange,,',
+		articleKey: 'product.article.Beresheet.BrandyLouisXVOrange,wine',
+		origin: 'Israel',
+		alcoholStrength: '35%',
+		bottleVolume: '700ml'
+	},
+
+	{
+		id: 53,
+		name: 'Brandy Louis XV Fine Old Brand',
+		category: 'Brandy',
+		image: BrandyLouisXVFineOldBrand,
+		images: [BrandyLouisXVFineOldBrand],
+		titleKey: 'product.title.BeresheetBrandyLouisXVFineOldBrand,,',
+		articleKey: 'product.article.Beresheet.BrandyLouisXVFineOldBrand,wine',
+		origin: 'Israel',
+		alcoholStrength: '40%',
+		bottleVolume: '175ml'
+	},
+
+	{
+		id: 54,
+		name: 'Vodka Russian Standart 1894 200ml',
+		category: 'Vodka',
+		image: VodkaRusStandart200ml,
+		images: [VodkaRusStandart200ml,],
+		titleKey: 'product.title.BeresheetVodkaRusStandart200ml',
+		articleKey: 'product.article.Beresheet.VodkaRusStandart200ml',
+		origin: 'Russia',
+		alcoholStrength: '40%',
+		bottleVolume: '200ml'
+	},
+
+	{
+		id: 55,
+		name: 'Wine Galitos Tinto Regional Alentejo',
+		category: 'Wine',
+		image: GalitosBlack,
+		images: [GalitosBlack,],
+		titleKey: 'product.title.BeresheetGalitosBlack',
+		articleKey: 'product.article.Beresheet.GalitosTintoRegionalAlentejo',
+		origin: 'Portugal',
+		alcoholStrength: '13.5%',
+		bottleVolume: '750ml'
+	},
+
+	{
+		id: 56,
+		name: 'Wine Galitos Rose',
+		category: 'Wine',
+		image: GalitosRose,
+		images: [GalitosRose,],
+		titleKey: 'product.title.BeresheetGalitosRose',
+		articleKey: 'product.article.Beresheet.GalitosRose',
+		origin: 'Portugal',
+		alcoholStrength: '12.5%',
+		bottleVolume: '750ml'
+	},
+
+	{
+		id: 57,
+		name: 'Wine Galitos White',
+		category: 'Wine',
+		image: GalitosWhite,
+		images: [GalitosWhite,],
+		titleKey: 'product.title.BeresheetGalitosWhite',
+		articleKey: 'product.article.Beresheet.GalitosWhite',
+		origin: 'Portugal',
+		alcoholStrength: '13%',
+		bottleVolume: '750ml'
+	},
+
+	{
+		id: 58,
+		name: 'Wine ROSATO FRIZZANTE - EASY FRITZ',
+		category: 'Wine',
+		image: GalitosRosatoFrizzante,
+		images: [GalitosRosatoFrizzante,],
+		titleKey: 'product.title.WineRosatoFrizzante',
+		articleKey: 'product.article.WineRosatoFrizzante',
+		origin: 'Italy',
+		alcoholStrength: '11%',
+		bottleVolume: '750ml'
+	},
+
+	{
+		id: 59,
+		name: 'Wine Velas Corsarias',
+		category: 'Wine',
+		image: WineVelasCorsarias,
+		images: [WineVelasCorsarias],
+		titleKey: 'product.title.WineVelasCorsarias',
+		articleKey: 'product.article.WineVelasCorsariasWhite',
+		origin: 'Spain',
+		alcoholStrength: '13%',
+		bottleVolume: '750ml'
+	},
+
+	{
+		id: 60,
+		name: 'Wine Easy Fritz Durello-Glera',
+		category: 'Wine',
+		image: WineDurelloGlera,
+		images: [WineDurelloGlera],
+		titleKey: 'product.title.WineDurelloGlera',
+		articleKey: 'product.article.WineEasyFritzDurelloGleraWhite',
+		origin: 'Spain',
+		alcoholStrength: '11%',
+		bottleVolume: '750ml'
+	},
+
+	{
+		id: 61,
+		name: 'Brandy Louis XV Delicieux Brand',
+		category: 'Brandy',
+		image: LouisXVDelicieuxBrand,
+		images: [LouisXVDelicieuxBrand],
+		titleKey: 'product.title.LouisXVDelicieuxBrand',
+		articleKey: 'product.article.BrandyLouisXVDelicieuxBrand',
+		origin: 'Israel',
+		alcoholStrength: '40%',
+		bottleVolume: '700ml'
+	},
+
+	{
+		id: 62,
+		name: 'Cognac Maxime Trijol V.S.O.P 700ml',
+		category: 'Cognac',
+		image: MaximeTrijolCognacVSOP700ML,
+		images: [MaximeTrijolCognacVSOP700ML],
+		titleKey: 'product.title.MaximeTrijolCognacVSOP700ML',
+		articleKey: 'product.article.MaximeTrijolCognacVSOP700ML',
+		origin: 'France',
+		alcoholStrength: '40%',
+		bottleVolume: '700ml'
+	},
+
+	{
+		id: 63,
+		name: 'Wine Fiuza Native Reserva White 2018',
+		category: 'Wine',
+		image: FiuzaNativeReservaWhite2018,
+		images: [FiuzaNativeReservaWhite2018],
+		titleKey: 'product.title.FiuzaNativeReservaWhite2018,',
+		articleKey: 'product.article.WineFiuzaNativeReservaWhite2018,',
+		origin: 'Portugal',
+		alcoholStrength: '12.5%',
+		bottleVolume: '750ml'
+	},
+
+	{
+		id: 64,
+		name: 'Cognac Maxime Trijol V.S.O.P 50ml',
+		category: 'Cognac',
+		image: MaximeTrijolCognacVSOP50ML,
+		images: [MaximeTrijolCognacVSOP50ML],
+		titleKey: 'product.title.MaximeTrijolCognacVSOP50ML',
+		articleKey: 'product.article.MaximeTrijolCognacVSOP50ML',
+		origin: 'France',
+		alcoholStrength: '40%',
+		bottleVolume: '50ml'
+	},
+
+	{
+		id: 65,
+		name: 'Cognac Maxime Trijol XO 50ml',
+		category: 'Cognac',
+		image: MaximeTrijolCognacXO50ML,
+		images: [MaximeTrijolCognacXO50ML],
+		titleKey: 'product.title.MaximeTrijolCognacXO50ML',
+		articleKey: 'product.article.MaximeTrijolCognacXO50ML',
+		origin: 'France',
+		alcoholStrength: '40%',
+		bottleVolume: '50ml'
+	},
+
+	{
+		id: 66,
+		name: 'Cognac Maxime Trijol VS 50ml',
+		category: 'Cognac',
+		image: MaximeTrijolCognacVS50ML,
+		images: [MaximeTrijolCognacVS50ML],
+		titleKey: 'product.title.MaximeTrijolCognacVS50ML',
+		articleKey: 'product.article.MaximeTrijolCognacVS50ML',
+		origin: 'France',
+		alcoholStrength: '40%',
+		bottleVolume: '50ml'
+	},
+
+	{
+		id: 67,
+		name: 'Cognac Maxime Trijol V.S.O.P 750ml',
+		category: 'Cognac',
+		image: MaximeTrijolCognacVSOP750ML,
+		images: [MaximeTrijolCognacVSOP750ML],
+		titleKey: 'product.title.MaximeTrijolCognacVSOP750ML',
+		articleKey: 'product.article.MaximeTrijolCognacVSOP750ML',
+		origin: 'France',
+		alcoholStrength: '40%',
+		bottleVolume: '750ml'
+	},
+
+	{
+		id: 68,
+		name: 'Cognac Maxime Trijol V.S.O.P Grande Champagne',
+		category: 'Cognac',
+		image: CognacMaximeTrijolVSOPGrandeChampagne,
+		images: [CognacMaximeTrijolVSOPGrandeChampagne],
+		titleKey: 'product.title.CognacMaximeTrijolVSOPGrandeChampagne',
+		articleKey: 'product.article.CognacMaximeTrijolVSOPGrandeChampagne',
+		origin: 'France',
+		alcoholStrength: '40%',
 		bottleVolume: '700ml'
 	},
 ]
