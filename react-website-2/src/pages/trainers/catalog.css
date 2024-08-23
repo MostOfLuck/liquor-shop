@@ -240,22 +240,68 @@
 /* catalog.css */
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 .product-card {
-    opacity: 0;
-    animation: fadeInUp 0.5s ease-in-out forwards;
+	opacity: 0;
+	animation: fadeInUp 0.5s ease-in-out forwards;
 }
 
 .product-card.animate {
-    opacity: 1;
+	opacity: 1;
+}
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateY(20px);
+	}
 }
 
+.scroll-to-top.animate-out {
+	opacity: 0;
+	animation: fadeOut 0.5s ease-in-out forwards;
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.scroll-to-top {
+	position: fixed;
+	bottom: 200px;
+	right: 20px;
+	width: 50px;
+	height: 50px;
+	background-color: #4f944b;
+	color: white;
+	border: none;
+	border-radius: 50%;
+	padding: 10px;
+	cursor: pointer;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	z-index: 1000;
+	transition: background-color 0.3s;
+	animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.scroll-to-top:hover {
+	background-color: #3f763c;
+}

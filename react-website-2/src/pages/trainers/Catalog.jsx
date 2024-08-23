@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FaSearch, FaTimes } from 'react-icons/fa';
+import { FaSearch, FaTimes, FaArrowUp } from 'react-icons/fa'; // Import FaArrowUp icon
 import LazyLoad from 'react-lazyload';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Header from '../../components/Header';
@@ -24,6 +24,7 @@ const Catalog = () => {
     const [isLoading, setIsLoading] = useState(true); // Add loading state
     const [animate, setAnimate] = useState(false); // Add animation state
     const [scrollProgress, setScrollProgress] = useState(0); // Add scroll progress state
+    const [hasScrolled, setHasScrolled] = useState(false); // Add state to track if user has started scrolling
 
     const handleCardClick = useCallback(
         (product, updateUrl = true) => {
@@ -77,6 +78,13 @@ const Catalog = () => {
             const docHeight = document.documentElement.scrollHeight - window.innerHeight;
             const scrollPercent = (scrollTop / docHeight) * 100;
             setScrollProgress(scrollPercent);
+
+            // Check if user has started scrolling
+            if (scrollTop > 0) {
+                setHasScrolled(true);
+            } else {
+                setHasScrolled(false);
+            }
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -298,6 +306,10 @@ const Catalog = () => {
         ));
     }, [paginatedCategories, groupedItems, hoveredProductId, handleMouseEnter, handleMouseLeave, handleCardClick, t, animate]);
 
+    const handleScrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     if (isLoading) {
         return <Loading />; // Display loading animation while loading
     }
@@ -332,6 +344,11 @@ const Catalog = () => {
             </section>
             {isModalOpen && selectedProduct && (
                 <ProductModal product={selectedProduct} onClose={handleCloseModal} />
+            )}
+            {hasScrolled && (
+                <button className='scroll-to-top' onClick={handleScrollToTop}>
+                    <FaArrowUp />
+                </button>
             )}
         </>
     );

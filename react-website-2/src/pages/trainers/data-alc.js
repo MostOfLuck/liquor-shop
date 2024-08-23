@@ -70,6 +70,17 @@ import MaximeTrijolCognacXO50ML from '../../productImages2/MaximeTrijolXO.png'
 import MaximeTrijolCognacVS50ML from '../../productImages2/MaximeTrijolVS.png'
 import MaximeTrijolCognacVSOP750ML from '../../productImages2/MaximeVSOP.png'
 import CognacMaximeTrijolVSOPGrandeChampagne from '../../productImages2/DeCognac.png'
+import CognacMaximeTrijolXOGrandeChampagne from '../../productImages2/CognacPremierMini.png'
+import WineConvetoDaVilaBranco2023 from '../../productImages2/ConventoDaVila.png'
+import WineConvetoDaVilaRed from '../../productImages2/DaVilaRed.png'
+import GILADOrange from '../../productImages2/GiladOrange.png'
+import GILADApricot from '../../productImages2/GiladApricot.png'
+import HarelCurrants from '../../productImages2/HarelRed.png'
+import GILADLemon from '../../productImages2/GiladLemon.png'
+import HarelBlueBerry from '../../productImages2/Harelblueberry.png'
+import GiladRaspberry from '../../productImages2/GiladRaspberry.png'
+import GiladCherry from '../../productImages2/GiladCherry.png'
+import GiladApple from '../../productImages2/GiladApple.png'
 import './catalog.css'
 import './rtl.css'
 
@@ -906,5 +917,148 @@ export const items = [
 		origin: 'France',
 		alcoholStrength: '40%',
 		bottleVolume: '700ml'
+	},
+
+	{
+		id: 69,
+		name: 'Cognac Maxime Trijol XO Grande Champagne',
+		category: 'Cognac',
+		image: CognacMaximeTrijolXOGrandeChampagne,
+		images: [CognacMaximeTrijolXOGrandeChampagne],
+		titleKey: 'product.title.CognacMaximeTrijolXOGrandeChampagne',
+		articleKey: 'product.article.CognacMaximeTrijolXOGrandeChampagne',
+		origin: 'France',
+		alcoholStrength: '40%',
+		bottleVolume: '700ml'
+	},
+
+	{
+		id: 70,
+		name: 'Wine Convento Da Vila Branco 2023',
+		category: 'Wine',
+		image: WineConvetoDaVilaBranco2023,
+		images: [WineConvetoDaVilaBranco2023,],
+		titleKey: 'product.title.WineConvetoDaVilaBranco2023,',
+		articleKey: 'product.article.WineConvetoDaVilaBranco2023,',
+		origin: 'Portugal',
+		alcoholStrength: '13%',
+		bottleVolume: '1l'
+	},
+
+	{
+		id: 71,
+		name: 'Wine Convento Da Vila Red',
+		category: 'Wine',
+		image: WineConvetoDaVilaRed,
+		images: [WineConvetoDaVilaRed,],
+		titleKey: 'product.title.WineConvetoDaVilaRed,',
+		articleKey: 'product.article.WineConvetoDaVilaRed,',
+		origin: 'Portugal',
+		alcoholStrength: '13.5%',
+		bottleVolume: '1l'
+	},
+
+	{
+		id: 72,
+		name: 'Vilage Wine GILAD Orange taste',
+		category: 'VilageWine',
+		image: GILADOrange,
+		images: [GILADOrange,],
+		titleKey: 'product.title.GILADOrange,',
+		articleKey: 'product.article.GILADOrange,',
+		origin: 'Israel',
+		alcoholStrength: '12%',
+		bottleVolume: '500ml'
+	},
+
+	{
+		id: 73,
+		name: 'Vilage Wine GILAD Orange Apricot taste',
+		category: 'VilageWine',
+		image: GILADApricot,
+		images: [GILADApricot,],
+		titleKey: 'product.title.GILADApricot,',
+		articleKey: 'product.article.GILADApricot,',
+		origin: 'Israel',
+		alcoholStrength: '12%',
+		bottleVolume: '500ml'
+	},
+
+	{
+		id: 74,
+		name: 'Vilage Wine Harel Currants',
+		category: 'VilageWine',
+		image: HarelCurrants,
+		images: [HarelCurrants],
+		titleKey: 'product.title.HarelCurrants',
+		articleKey: 'product.article.HarelCurrantsVilageWine',
+		origin: 'Israel',
+		alcoholStrength: '12%',
+		bottleVolume: '500ml'
+	},
+
+	{
+		id: 75,
+		name: 'Vilage Wine GILAD Lemon taste',
+		category: 'VilageWine',
+		image: GILADLemon,
+		images: [GILADLemon],
+		titleKey: 'product.title.GILADLemon',
+		articleKey: 'product.article.GILADLemonVilageWine',
+		origin: 'Israel',
+		alcoholStrength: '12%',
+		bottleVolume: '500ml'
+	},
+
+	{
+		id: 76,
+		name: 'Vilage Wine Harel Blueberry taste',
+		category: 'VilageWine',
+		image: HarelBlueBerry,
+		images: [HarelBlueBerry],
+		titleKey: 'product.title.HarelBlueBerry',
+		articleKey: 'product.article.HarelBlueBerryVilageWine',
+		origin: 'Israel',
+		alcoholStrength: '12%',
+		bottleVolume: '500ml'
+	},
+
+	{
+		id: 77,
+		name: 'Vilage Wine GILAD Raspberry taste',
+		category: 'VilageWine',
+		image: GiladRaspberry,
+		images: [GiladRaspberry],
+		titleKey: 'product.title.GiladRaspberry',
+		articleKey: 'product.article.GiladRaspberryVilageWine',
+		origin: 'Israel',
+		alcoholStrength: '12%',
+		bottleVolume: '500ml'
+	},
+
+	{
+		id: 78,
+		name: 'Vilage Wine GILAD Cherry taste',
+		category: 'VilageWine',
+		image: GiladCherry,
+		images: [GiladCherry],
+		titleKey: 'product.title.GiladCherry',
+		articleKey: 'product.article.GiladCherryVilageWine',
+		origin: 'Israel',
+		alcoholStrength: '12%',
+		bottleVolume: '500ml'
+	},
+
+	{
+		id: 79,
+		name: 'Vilage Wine GILAD Apple taste',
+		category: 'VilageWine',
+		image: GiladApple,
+		images: [GiladApple],
+		titleKey: 'product.title.GiladApple',
+		articleKey: 'product.article.GiladAppleVilageWine',
+		origin: 'Israel',
+		alcoholStrength: '12%',
+		bottleVolume: '500ml'
 	},
 ]
