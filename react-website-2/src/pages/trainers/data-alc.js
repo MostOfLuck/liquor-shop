@@ -81,6 +81,18 @@ import HarelBlueBerry from '../../productImages2/Harelblueberry.png'
 import GiladRaspberry from '../../productImages2/GiladRaspberry.png'
 import GiladCherry from '../../productImages2/GiladCherry.png'
 import GiladApple from '../../productImages2/GiladApple.png'
+import VodkaImperial from '../../productImages2/ImperialVodka.png'
+import RoseBrandyLouisXVDelicieuxBrand from '../../productImages2/pwi339.png'
+import AppleBrandyLouisXVDelicieuxBrand from '../../productImages2/BrandyApple.png'
+import HoneyBrandyLouisXVDelicieuxBrand from '../../productImages2/BrandyHoney.png'
+import CherryBrandyLouisXVDelicieuxBrand from '../../productImages2/BrandyChery.png'
+import MapleBrandyLouisXVDelicieuxBrand from '../../productImages2/BrandyMaple.png'
+import VodkaManhattanPineapple from '../../productImages2/VodkaManhattanPineapple.png'
+import VodkaManhattanAsay from '../../productImages2/VodkaManhattanAsay.png'
+import VodkaManhattanMelon from '../../productImages2/VodkaManhattanMelon.png'
+import BeresheetReserve2021 from '../../productImages2/Beresheet2021.png'
+import CabernetSauvignon2021 from '../../productImages2/Beresheet Cabernet Sauvignon 2021.png'
+import GinTraditional from '../../productImages2/GinTraditional.png'
 import './catalog.css'
 import './rtl.css'
 
@@ -1060,5 +1072,160 @@ export const items = [
 		origin: 'Israel',
 		alcoholStrength: '12%',
 		bottleVolume: '500ml'
+	},
+
+	{
+		id: 80,
+		name: 'Vodka Imperial 700ml',
+		category: 'Vodka',
+		image: VodkaImperial,
+		images: [VodkaImperial],
+		titleKey: 'product.title.BeresheetVodkaImperial,',
+		articleKey: 'product.article.Beresheet.VodkaImperial',
+		origin: 'Israel',
+		alcoholStrength: '37.5%',
+		bottleVolume: '700ml'
+	},
+
+	{
+		id: 81,
+		name: 'Brandy Louis XV Delicieux Brand Clasic',
+		category: 'Brandy',
+		image: RoseBrandyLouisXVDelicieuxBrand,
+		images: [RoseBrandyLouisXVDelicieuxBrand],
+		titleKey: 'product.title.RoseBrandyLouisXVDelicieuxBrand,',
+		articleKey: 'product.article.BrandyRoseBrandyLouisXVDelicieuxBrand',
+		origin: 'Israel',
+		alcoholStrength: '40%',
+		bottleVolume: '700ml'
+	},
+
+	{
+		id: 82,
+		name: 'Brandy Louis XV Delicieux Brand Apple',
+		category: 'Brandy',
+		image: AppleBrandyLouisXVDelicieuxBrand,
+		images: [AppleBrandyLouisXVDelicieuxBrand],
+		titleKey: 'product.title.AppleBrandyLouisXVDelicieuxBrand,',
+		articleKey: 'product.article.BrandyAppleBrandyLouisXVDelicieuxBrand',
+		origin: 'Israel',
+		alcoholStrength: '40%',
+		bottleVolume: '700ml'
+	},
+
+	{
+		id: 83,
+		name: 'Brandy Louis XV Delicieux Brand Honey',
+		category: 'Brandy',
+		image: HoneyBrandyLouisXVDelicieuxBrand,
+		images: [HoneyBrandyLouisXVDelicieuxBrand],
+		titleKey: 'product.title.HoneyBrandyLouisXVDelicieuxBrand,',
+		articleKey: 'product.article.BrandyHoneyBrandyLouisXVDelicieuxBrand',
+		origin: 'Israel',
+		alcoholStrength: '40%',
+		bottleVolume: '700ml'
+	},
+
+	{
+		id: 84,
+		name: 'Brandy Louis XV Delicieux Brand Cherry',
+		category: 'Brandy',
+		image: CherryBrandyLouisXVDelicieuxBrand,
+		images: [CherryBrandyLouisXVDelicieuxBrand],
+		titleKey: 'product.title.CherryBrandyLouisXVDelicieuxBrand,',
+		articleKey: 'product.article.BrandyCherryBrandyLouisXVDelicieuxBrand',
+		origin: 'Israel',
+		alcoholStrength: '40%',
+		bottleVolume: '700ml'
+	},
+
+	{
+		id: 85,
+		name: 'Brandy Louis XV Delicieux Brand Maple',
+		category: 'Brandy',
+		image: MapleBrandyLouisXVDelicieuxBrand,
+		images: [MapleBrandyLouisXVDelicieuxBrand],
+		titleKey: 'product.title.MapleBrandyLouisXVDelicieuxBrand,',
+		articleKey: 'product.article.BrandyMapleBrandyLouisXVDelicieuxBrand',
+		origin: 'Israel',
+		alcoholStrength: '40%',
+		bottleVolume: '700ml'
+	},
+
+	{
+		id: 86,
+		name: 'Vodka Manhattan Pineapple',
+		category: 'Vodka',
+		image: VodkaManhattanPineapple,
+		images: [VodkaManhattanPineapple],
+		titleKey: 'product.title.VodkaManhattanPineapple,',
+		articleKey: 'product.article.VodkaManhattanPineapple',
+		origin: 'Israel',
+		alcoholStrength: '37.5%',
+		bottleVolume: '700ml'
+	},
+
+	{
+		id: 87,
+		name: 'Vodka Manhattan Asay',
+		category: 'Vodka',
+		image: VodkaManhattanAsay,
+		images: [VodkaManhattanAsay],
+		titleKey: 'product.title.VodkaManhattanAsay,',
+		articleKey: 'product.article.VodkaManhattanAsay',
+		origin: 'Israel',
+		alcoholStrength: '37.5%',
+		bottleVolume: '700ml'
+	},
+
+	{
+		id: 88,
+		name: 'Vodka Manhattan Melon',
+		category: 'Vodka',
+		image: VodkaManhattanMelon,
+		images: [VodkaManhattanMelon],
+		titleKey: 'product.title.VodkaManhattanMelon,',
+		articleKey: 'product.article.VodkaManhattanMelon',
+		origin: 'Israel',
+		alcoholStrength: '37.5%',
+		bottleVolume: '700ml'
+	},
+
+	{
+		id: 89,
+		name: 'Wine Beresheet Reserve 2021',
+		category: 'Wine',
+		image: BeresheetReserve2021,
+		images: [BeresheetReserve2021],
+		titleKey: 'product.title.BeresheetReserve2021',
+		articleKey: 'product.article.Beresheet.Reserve.2021.wine',
+		origin: 'Israel',
+		alcoholStrength: '16.5%',
+		bottleVolume: '750ml'
+	},
+
+	{
+		id: 90,
+		name: 'Wine Beresheet Cabernet Sauvignon 2021',
+		category: 'Wine',
+		image: CabernetSauvignon2021,
+		images: [CabernetSauvignon2021],
+		titleKey: 'product.title.CabernetSauvignon2021',
+		articleKey: 'product.article.Beresheet.Cabernet.2021.wine',
+		origin: 'Israel',
+		alcoholStrength: '16.5%',
+		bottleVolume: '750ml'
+	},
+
+	{
+		id: 91,
+		name: 'Gin experience traditional Premium',
+		category: 'Gin',
+		image: GinTraditional,
+		images: [GinTraditional],
+		titleKey: 'product.title.GinTraditional',
+		articleKey: 'product.article.GINTraditional',
+		origin: 'Israel',
+		bottleVolume: '1l'
 	},
 ]
