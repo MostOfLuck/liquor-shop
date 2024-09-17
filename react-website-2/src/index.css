@@ -586,23 +586,6 @@ hr {
 .modal-content {
 	text-align: center;
 }
-.button1 {
-	justify-content: left;
-	margin-top: 20px;
-	margin-right: 20px;
-	margin-left: 10px;
-	width: 100px;
-	border-radius: 10%;
-	height: 30px;
-}
-.button2 {
-	justify-content: right;
-	margin-left: 20px;
-	margin-top: 20px;
-	width: 100px;
-	border-radius: 10%;
-	height: 30px;
-}
 
 
 .select__btn--green {
@@ -691,16 +674,7 @@ input {
 	border-radius: 14px;
 }
 
-.clear-button {
-	position: absolute;
-	right: 10px;
-	top: 50%;
-	transform: translateY(-50%);
-	background: transparent;
-	border: none;
-	font-size: 20px;
-	cursor: pointer;
-}
+
 
 /* Стили для основного поиска */
 /* Стили для основного поиска */
@@ -832,74 +806,6 @@ input {
 	box-sizing: border-box;
 }
 
-.search-button {
-	background-color: transparent;
-	border: none;
-	cursor: pointer;
-	position: absolute;
-	right: 10px;
-	top: 50%;
-	transform: translateY(-50%);
-	padding: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100%;
-}
-
-.search-button[disabled] {
-	cursor: not-allowed;
-	opacity: 0.5;
-}
-
-/* index.css */
-
-/* Add this class for RTL support */
-.rtl .main__search {
-	direction: rtl;
-}
-
-.rtl .main__search input {
-	padding-left: 30px;
-	padding-right: 10px;
-}
-
-.rtl .search-button {
-	left: 10px;
-	right: auto;
-}
-
-/* Default LTR styles */
-.main__search {
-	position: relative;
-}
-
-.main__search input {
-	width: 100%;
-	padding: 10px;
-	box-sizing: border-box;
-}
-
-.search-button {
-	background-color: transparent;
-	border: none;
-	cursor: pointer;
-	position: absolute;
-	right: 10px;
-	top: 50%;
-	transform: translateY(-50%);
-	padding: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100%;
-}
-
-.search-button[disabled] {
-	cursor: not-allowed;
-	opacity: 0.5;
-}
-
 /* index.css */
 
 /* Add this class for RTL support */
@@ -927,72 +833,6 @@ input {
 		position: relative;
 		top: -100px;
 	}
-}
-
-/* Default LTR styles */
-.main__search {
-	position: relative;
-}
-
-.main__search input {
-	width: 100%;
-	padding: 10px;
-	box-sizing: border-box;
-	background-color: #d5d5d5;
-}
-
-.search-button {
-	background-color: transparent;
-	border: none;
-	cursor: pointer;
-	position: absolute;
-	right: 10px;
-	top: 50%;
-	transform: translateY(-50%);
-	padding: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100%;
-}
-
-.search-button[disabled] {
-	cursor: not-allowed;
-	opacity: 0.5;
-}
-
-.main__header-container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.main__header-left,
-.main__header-right {
-	flex: 1;
-}
-
-.main__header-right {
-	text-align: right;
-}
-
-.main__header-circle {
-	width: 300px;
-	height: 300px;
-	border-radius: 50%;
-	background-color: #f3f3f3;
-	position: absolute;
-	right: 0;
-}
-
-.main__header-image {
-	position: relative;
-}
-
-.main__header-image img {
-	width: 100%;
-	height: auto;
-	border-radius: 10px;
 }
 
 .category-filter {
@@ -1037,20 +877,7 @@ input {
 	display: flex;
 }
 
-.sidebar {
-	flex: 0 0 250px;
-	max-height: 80vh;
-	overflow-y: auto;
-	border-right: 1px solid #ddd;
-	padding: 1rem;
-	box-sizing: border-box;
-}
 
-.search-bar {
-	width: 100%;
-	padding: 0.5rem;
-	margin-bottom: 1rem;
-}
 
 .category-list {
 	list-style: none;
@@ -1127,17 +954,6 @@ input {
 		}
 	}
 }
-.search-bar {
-	background-color: #d5d5d5;
-	border: 1px solid transparent; /* Изначально рамка прозрачная */
-	border-radius: 15px; /* Скругленные углы */
-	padding: 8px; /* Добавим немного внутреннего отступа */
-}
-
-.search-bar:focus {
-	border: 4px solid #5bbd4d; /* Зелёная рамка при фокусировке */
-	outline: none; /* Убираем стандартное выделение */
-}
 
 /* Скрываем placeholder при фокусировке */
 .search-bar:focus::placeholder {
@@ -1161,7 +977,7 @@ input {
 .search-bar {
 	width: 100%;
 	padding-left: 35px; /* Отступ для размещения иконки внутри поля */
-	background-color: #d5d5d5;
+	background-color: #ffffff;
 	border: 1px solid transparent;
 	border-radius: 0px;
 	height: 40px;
@@ -1231,4 +1047,29 @@ input {
 
 .green-button:hover {
     background-color: darkgreen;
+}
+
+.product-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.placeholder-image {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.placeholder-text {
+    color: #999;
+    font-size: 14px;
+    text-align: center;
 }

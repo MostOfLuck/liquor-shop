@@ -22,6 +22,7 @@ const Catalog = () => {
     const [hoveredProductId, setHoveredProductId] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
     const [isLoading, setIsLoading] = useState(true); // Add loading state
+    const [isProductsLoading, setIsProductsLoading] = useState(true); // Add products loading state
     const [animate, setAnimate] = useState(false); // Add animation state
     const [scrollProgress, setScrollProgress] = useState(0); // Add scroll progress state
     const [hasScrolled, setHasScrolled] = useState(false); // Add state to track if user has started scrolling
@@ -68,6 +69,7 @@ const Catalog = () => {
         // Simulate data fetching delay
         setTimeout(() => {
             setIsLoading(false);
+            setIsProductsLoading(false); // Update products loading state
             setAnimate(true); // Trigger animation
         }, 2000); // Adjust the delay as needed
     }, [location.search, handleCardClick]);
@@ -278,12 +280,13 @@ const Catalog = () => {
                             onMouseLeave={handleMouseLeave}
                             onClick={() => handleCardClick(product)}
                             animate={animate} // Pass animation state
+                            isLoading={isProductsLoading} // Pass loading state
                         />
                     ))}
                 </div>
             </div>
         ));
-    }, [searchResults, hoveredProductId, handleMouseEnter, handleMouseLeave, handleCardClick, t, groupedItems, animate]);
+    }, [searchResults, hoveredProductId, handleMouseEnter, handleMouseLeave, handleCardClick, t, groupedItems, animate, isProductsLoading]);
 
     const renderCategoriesWithProducts = useCallback(() => {
         return paginatedCategories.map(category => (
@@ -299,12 +302,13 @@ const Catalog = () => {
                             onMouseLeave={handleMouseLeave}
                             onClick={() => handleCardClick(product)}
                             animate={animate} // Pass animation state
+                            isLoading={isProductsLoading} // Pass loading state
                         />
                     ))}
                 </div>
             </div>
         ));
-    }, [paginatedCategories, groupedItems, hoveredProductId, handleMouseEnter, handleMouseLeave, handleCardClick, t, animate]);
+    }, [paginatedCategories, groupedItems, hoveredProductId, handleMouseEnter, handleMouseLeave, handleCardClick, t, animate, isProductsLoading]);
 
     const handleScrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -366,7 +370,7 @@ const CategoryItem = React.memo(({ category, className, isActive, onClick }) => 
     );
 });
 
-const ProductCard = React.memo(({ product, isHovered, onMouseEnter, onMouseLeave, onClick, animate }) => {
+const ProductCard = React.memo(({ product, isHovered, onMouseEnter, onMouseLeave, onClick, animate, isLoading }) => {
     const { t } = useTranslation();
     return (
         <div
@@ -375,15 +379,25 @@ const ProductCard = React.memo(({ product, isHovered, onMouseEnter, onMouseLeave
             onMouseLeave={onMouseLeave}
             onClick={onClick}
         >
-            <LazyLoad height={200} offset={100}>
-                <img
-                    src={isHovered && product.hoverImage ? product.hoverImage : product.image}
-                    alt={t(product.name, { defaultValue: product.name })}
-                    loading='lazy'
-                />
-            </LazyLoad>
-            <h3>{t(product.name, { defaultValue: product.name })}</h3>
-            <p>{t(product.description, { defaultValue: product.description })}</p>
+            {isLoading ? (
+                <div className="product-placeholder">
+                    <div className="placeholder-image"></div>
+                    <h3 className="placeholder-text">{t('Loading...')}</h3>
+                    <p className="placeholder-text">{t('Please wait')}</p>
+                </div>
+            ) : (
+                <>
+                    <LazyLoad height={200} offset={100}>
+                        <img
+                            src={isHovered && product.hoverImage ? product.hoverImage : product.image}
+                            alt={t(product.name, { defaultValue: product.name })}
+                            loading='lazy'
+                        />
+                    </LazyLoad>
+                    <h3>{t(product.name, { defaultValue: product.name })}</h3>
+                    <p>{t(product.description, { defaultValue: product.description })}</p>
+                </>
+            )}
         </div>
     );
 });

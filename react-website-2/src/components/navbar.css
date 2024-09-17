@@ -154,20 +154,21 @@ nav.scrolled .nav__toggle-btn svg {
 }
 
 .notification {
-	position: fixed;
-	bottom: 1rem;
-	right: 45rem;
-	background-color: #4caf50;
-	color: white;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	padding: 0.5rem 1rem;
-	border-radius: 5px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-	z-index: 1000;
-	animation: fadeOut 5s ease forwards;
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4caf50;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: fadeOut 5s ease forwards;
 }
 
 @keyframes fadeOut {
@@ -514,248 +515,6 @@ nav.scrolled .nav__toggle-btn svg {
 	cursor: pointer; /* Курсор в виде указателя */
 }
 
-.icon_menu_catalog {
-	font-size: 20px; /* Размер иконки */
-	margin-top: -6px;
-	font-weight: bold;
-}
-
-.all-products-button span {
-	margin-top: -2px; /* Поднимаем текст немного вверх */
-}
-.icon_menu_square {
-	width: 24px;
-	height: 24px;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-}
-
-.icon_menu_square div {
-	width: 6px;
-	height: 6px;
-	background-color: white;
-	border-radius: 50%;
-	position: absolute;
-}
-
-.icon_menu_square div:nth-child(1) {
-	top: 4px;
-	left: 4px;
-}
-
-.icon_menu_square div:nth-child(2) {
-	top: 4px;
-	right: 4px;
-}
-
-.icon_menu_square div:nth-child(3) {
-	bottom: 4px;
-	left: 4px;
-}
-
-.icon_menu_square div:nth-child(4) {
-	bottom: 4px;
-	right: 4px;
-}
-
-/* Стили для боковой панели */
-.sidebar {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 250px;
-	height: 100%;
-	background-color: white;
-	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-	z-index: 1000;
-	transform: translateX(-100%);
-	transition: transform 0.3s ease;
-}
-
-.sidebar-content {
-	padding: 1rem;
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-}
-
-.sidebar-close {
-	align-self: flex-end;
-	background: none;
-	border: none;
-	font-size: 1.5rem;
-	cursor: pointer;
-}
-
-.sidebar-categories {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-
-.sidebar-categories li {
-	padding: 0.5rem 0;
-	cursor: pointer;
-}
-
-.sidebar-products ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-
-.sidebar-products li {
-	padding: 0.5rem 0;
-}
-
-.sidebar.open {
-	transform: translateX(0);
-}
-
-/* Стили для боковой панели */
-.sidebar {
-	position: fixed;
-	top: 80;
-	left: 100;
-	width: 50vw; /* Полная ширина экрана */
-	height: 100vh; /* Полная высота экрана */
-	background-color: white;
-	color: black;
-	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-	z-index: 1000;
-	transform: translateY(-100%); /* Скрыть панель выше экрана */
-	transition: transform 0.3s ease;
-	overflow: hidden; /* Скрыть скролл */
-}
-
-.sidebar-content {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-}
-
-.sidebar-close {
-	align-self: flex-end;
-	background: none;
-	border: none;
-	font-size: 1.5rem;
-	cursor: pointer;
-	padding: 0.5rem;
-}
-
-.sidebar-inner {
-	display: flex;
-	height: calc(100% - 2rem); /* Оставить место для кнопки закрытия */
-}
-
-.sidebar-categories {
-	width: 250px;
-	background-color: #f5f5f5;
-	list-style: none;
-	padding: 1rem;
-	margin: 0;
-}
-
-.sidebar-categories li {
-	padding: 0.5rem;
-	cursor: pointer;
-	border-bottom: 1px solid #ffffff;
-}
-
-.sidebar-categories li:hover {
-	background-color: #ffffff;
-}
-
-.sidebar-products {
-	flex-grow: 1;
-	padding: 1rem;
-}
-
-.sidebar-products ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-
-.sidebar-products li {
-	padding: 0.5rem 0;
-}
-
-.sidebar.open {
-	transform: translateY(0); /* Открыть панель */
-}
-/* Затемнение фона при открытом боковом меню */
-.sidebar-overlay {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
-	z-index: 999;
-}
-
-/* Затемнение фона */
-.overlay {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный */
-	z-index: 10; /* Убедитесь, что z-index меньше, чем у navbar */
-}
-
-/* Стили для sidebar и overlay */
-.sidebar-overlay {
-	top: 0;
-	right: 0;
-	bottom: 0;
-	background-color: transparent;
-	width: 0px; /* Ширина sidebar */
-	z-index: 15; /* sidebar должен быть поверх затемнения */
-}
-
-/* Исходные стили кнопки и иконки */
-.all-products-button {
-	color: white;
-	top: -5px;
-	background-color: transparent;
-}
-
-.icon_menu_square div {
-	background-color: white;
-}
-
-/* Стили для кнопки и иконки при скролле */
-.scrolled-button {
-	color: black;
-}
-
-.scrolled-icon div {
-	background-color: black;
-}
-
-.sidebar-data-row {
-	display: flex;
-	justify-content: space-between;
-	gap: 16px;
-	padding: 16px;
-	background-color: white;
-	border-radius: 8px;
-}
-
-.sidebar-column {
-	flex: 1;
-	padding: 12px;
-	background-color: white;
-	border-radius: 8px;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-	text-align: center;
-}
 
 .sidebar-column h4 {
 	font-size: 16px;
